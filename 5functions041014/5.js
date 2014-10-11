@@ -27,7 +27,7 @@ var zoo = [{
 var specials = [];
 
 var newRow = zoo.forEach(function(animal) {
-	if (animal.id % 4 === 0) {
+	if (animal.id % 2 === 0) {
 		specials.push(animal);
 	}
 	return newRow;
