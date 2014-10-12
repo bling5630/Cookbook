@@ -13,4 +13,3 @@ var a = school.map(function(x) {
 });
 
 console.log(a);
-

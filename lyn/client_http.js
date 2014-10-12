@@ -1,7 +1,7 @@
 var http = require('http');
-var dir = process.argv[2];
+var path = process.argv[2];
 
-http.get(dir, function(response) {
+http.get(path, function(response) {
 	response.setEncoding('utf8')
 	response.on('data', console.log)
 	response.on('error', console.error)
