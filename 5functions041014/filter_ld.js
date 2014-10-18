@@ -1,3 +1,5 @@
+var lodash = require('lodash');
+
 var zoo = [{
 	id: Math.floor(Math.random() * 10000000).toString(),
 	species: 'Mammal',
@@ -24,12 +26,7 @@ var zoo = [{
 	food: 'Strawberry',
 }];
 
-var specials = [];
-
-var newRow = zoo.forEach(function(animal) {
-	if (animal.id % 5 === 0) {
-		specials.push(animal);
-	}
-	return newRow;
+var result = lodash.filter(zoo, function(animal) {
+	return animal.id % 4 === 0;
 });
-console.log(specials);
+console.log(result);
