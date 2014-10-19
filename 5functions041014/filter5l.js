@@ -26,7 +26,8 @@ var zoo = [{
 	food: 'Strawberry',
 }];
 
-var result = lodash.filter(zoo, function(animal) {
-	return animal.id % 4 === 0;
+var specials = lodash.filter(zoo, function(animal) {
+	return animal.id % 3 === 0;
 });
-console.log(result);
+
+console.log(specials);

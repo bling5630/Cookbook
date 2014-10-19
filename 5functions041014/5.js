@@ -24,6 +24,7 @@ var zoo = [{
 	food: 'Strawberry',
 }];
 
+/*
 var specials = [];
 
 var newRow = zoo.forEach(function(animal) {
@@ -32,4 +33,10 @@ var newRow = zoo.forEach(function(animal) {
 	}
 	return newRow;
 });
-console.log(specials);
+console.log(specials);*/
+
+zoo.forEach(function(animal) {
+	if (animal.id % 5 === 0) {
+		console.log(animal);
+	}
+});

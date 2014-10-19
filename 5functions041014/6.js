@@ -4,14 +4,14 @@ Array.prototype.filter = function(grade) {
 	var result = [];
 	this.forEach(function(item) {
 		if (grade(item)) {
-			result.push(item)
+			result.push(item);
 		}
-	})
+	});
 	return result;
-}
+};
 
 var a = school.filter(function(x) {
-	return x > 3 && x < 8
-})
+	return x > 3 && x < 8;
+});
 
-console.log(a)
+console.log(a);
