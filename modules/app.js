@@ -9,6 +9,8 @@ var users = require('./lib/users');
 
 app.use(login);
 app.use(signup);
+app.use(posts);
+app.use(users);
 
 app.listen(3000);
 console.log('listen port 3000');
