@@ -6,7 +6,7 @@ Steps:
 mkdir x && cd $_ && npm init -y
 
 2:
-npm install -- express jade
+npm install -- save express jade
 
 3:
 touch app.js w/
@@ -22,6 +22,10 @@ mkdir -p lib/{login,signup,users,posts}
 
 5:
 touch lib/{login,posts,signup,users}/{package.json,index.js}
+
+or
+
+touch lib/{login,list,sort,add,update,delete}/index.js
 
 6:
 delete

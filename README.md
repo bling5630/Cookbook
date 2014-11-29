@@ -1,4 +1,4 @@
 Cookbook
 ========
 
-Posts, articles &amp; tutorials regarding my #lowlevelcoding_:)
+Posts, articles & tutorials regarding my #lowlevelcoding_:)
