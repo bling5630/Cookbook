@@ -13,7 +13,8 @@ connectionString = 'mongodb://localhost27017' + dbName;
 mongoose.connect(connectionString);
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded(
+	{extended: false}));
 app.use(morgan("dev"));
 app.use('/api', movies); //This is our route middleware
  

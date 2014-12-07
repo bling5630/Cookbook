@@ -1,0 +1,19 @@
+{
+  "name": "modules3",
+  "version": "1.0.0",
+  "description": "Node.js, Module.Exports and Organizing Express.js Routes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
+  "author": "Tamas Puski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.4",
+    "morgan": "^1.5.0"
+  }
+}
