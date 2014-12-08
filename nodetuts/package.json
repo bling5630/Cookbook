@@ -1,6 +1,6 @@
 {
   "name": "nodetuts",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.10.4"
+    "express": "^4.10.4",
+    "morgan": "*"
   }
 }
