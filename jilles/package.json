@@ -1,0 +1,23 @@
+{
+  "name": "jillies1",
+  "version": "1.0.0",
+  "description": "Understanding the Express app.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "express"
+  ],
+  "author": "Tamas Puski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.10.4",
+    "morgan": "^1.5.0",
+    "path": "^0.4.9",
+    "serve-favicon": "^2.1.7"
+  }
+}
