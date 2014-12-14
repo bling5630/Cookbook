@@ -55,6 +55,7 @@ router.get('/secret', function() {
 	};
 	res.render('secret', user);
 });
+
 //listen on localhost:3000
 
 app.listen(3000);
