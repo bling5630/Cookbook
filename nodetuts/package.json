@@ -12,6 +12,7 @@
     "event-stream": "^3.1.7",
     "express": "^4.10.4",
     "json-stream": "^0.2.2",
-    "morgan": "*"
+    "morgan": "*",
+    "pup": "0.0.2"
   }
 }
