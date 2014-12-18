@@ -1,0 +1,19 @@
+{
+  "name": "ExpressRoute",
+  "version": "1.0.0",
+  "description": "Learn to Use the New Router in ExpressJS 4.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "nodejs"
+  ],
+  "author": "Tamas Puski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.6",
+    "morgan": "^1.5.0"
+  }
+}
