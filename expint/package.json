@@ -1,0 +1,21 @@
+{
+  "name": "ExpressIntro",
+  "version": "1.0.0",
+  "description": "Introduction to Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs"
+  ],
+  "author": "Tamas Puski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "express": "^4.10.6",
+    "hbs": "^2.7.0",
+    "morgan": "^1.5.0"
+  }
+}
