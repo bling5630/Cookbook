@@ -1,0 +1,32 @@
+The Command Line Crash Course
+
+http://cli.learncodethehardway.org/book/
+
+Zed A. Shaw - @zedshaw
+
+Preface - Done
+Introduction: Shut Up And Shell - Done
+The Setup - Done
+Paths, Folders, Directories (pwd) - Done
+What's Your Computer's Name? (hostname) - Done
+Make A Directory (mkdir) - Done
+Change Directory (cd) - Done
+List Directory (ls)
+Remove Directory (rmdir)
+Moving Around (pushd, popd)
+Making Empty Files (Touch, New-Item)
+Copy A File (cp)
+Moving A File (mv)
+View A File (less, MORE)
+Stream A File (cat)
+Removing A File (rm)
+Pipes And Redirection
+Wildcard Matching
+Finding Files (find, DIR -R)
+Looking Inside Files (grep, select-string)
+Getting Command Help (man, HELP)
+Finding Help (apropos, HELP)
+What's In Your Environment (env, echo, Env:)
+Changing Environment Variables (export, Env:)
+Exiting Your Terminal (exit)
+Next Steps
