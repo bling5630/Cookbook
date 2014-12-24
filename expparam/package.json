@@ -1,0 +1,22 @@
+{
+  "name": "expparam",
+  "version": "1.0.0",
+  "description": "Use ExpressJS to Get URL and POST Parameters",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node.js",
+    "express.js",
+    "tutorial"
+  ],
+  "author": "Tamas Puski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "express": "^4.10.6",
+    "morgan": "^1.5.0"
+  }
+}
