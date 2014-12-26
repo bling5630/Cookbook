@@ -1,0 +1,27 @@
+Non relational DB
+
+Doesn't host datas in tables
+
+Using JSON {"a" : 4, "b" : 5}
+
+JSON documents store
+
+Documents are hierarchical
+
+Schemaless
+
+Different documents don't have to show the same schema
+
+Where MongoDB fit for the world?
+
+High scalability & performance & depth of functionality
+
+Not support joins, transactions
+
+mongoDB-app-client (C++, V8, JavaScript)
+
+mongo-show dbs - use x
+
+
+
+
