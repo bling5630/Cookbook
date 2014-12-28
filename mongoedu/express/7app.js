@@ -4,6 +4,7 @@
 
 var app = require('express')(),
 	logger = require('morgan'),
+	bodyParser = require('body-parser'),
 	cons = require('consolidate');
 
 // Add all environments
@@ -11,6 +12,11 @@ var app = require('express')(),
 app.engine('html', cons.swig);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
+app.use(logger("dev"));
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
+app.use(bodyParser.json());
 
 // Handler for internal server errors
 
@@ -24,29 +30,30 @@ function errorHandler(err, req, res, next) {
 }
 
 app.use(errorHandler);
-app.use(logger("dev"));
 
 // Routing
 
-app.get('/:name', function(req, res, next) {
-	var name = req.params.name;
-	var getvar1 = req.query.getvar1;
-	var getvar2 = req.query.getvar2;
-	res.render('hello2', {
-		name: name,
-		getvar1: getvar1,
-		getvar2: getvar2
+app.get('/', function(req, res, next) {
+	res.render('fruitPicker', {
+		'fruits': [
+			'apple',
+			'orange',
+			'banana',
+			'peach'
+		]
 	});
 });
 
-/*
-app.get('*', function(req, res) {
-	res.status(404)
-		.send("Page not found!!!");
+app.post('/favorite_fruit', function(req, res, next) {
+	var favorite = req.body.fruit;
+	if (typeof favorite === 'undefined') {
+		next(Error('Please choose a fruit!'));
+	} else {
+		res.send("Your favorite fruit is " + favorite);
+	}
 });
-*/
 
-//listen on localhost:8080
+// Listen on localhost:8080
 
 app.listen(8080);
 console.log('Express server listening on port 8080');
