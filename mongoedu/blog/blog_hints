@@ -1,0 +1,12 @@
+// Directory tree
+
+---README.md
+---package.json
+	routes directory
+---usres.js
+---app.js
+---posts.js
+---sessions.js
+	views directory
+
+--------------------------

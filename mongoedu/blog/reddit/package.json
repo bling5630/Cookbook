@@ -1,0 +1,20 @@
+{
+  "name": "reddit_parse",
+  "version": "1.0.0",
+  "description": "parsing reddit JSON with node and mongo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "reddit",
+    "mongo"
+  ],
+  "author": "@tpuski - Tamas Puski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^1.4.26",
+    "request": "^2.51.0"
+  }
+}

@@ -1,0 +1,13 @@
+Step #1
+
+http://www.reddit.com/r/technology.json
+
+Step #2
+
+curl http://www.reddit.com/r/technology.json > reddit.json
+
+Step #3
+
+
+Step #1
+Step #1
