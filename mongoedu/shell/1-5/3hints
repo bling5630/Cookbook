@@ -1,0 +1,50 @@
+// In general
+$ mongo
+> run the commands
+
+// #1 exercise
+
+> for (i = 0; i < 3; i++) print("hello, MongoDB Developer!");
+hello, MongoDB Developer!
+hello, MongoDB Developer!
+hello, MongoDB Developer!
+
+// #2 exercise
+
+> for (i = 10; i < 13; i++) print("hello, MongoDB Developer!" + i);
+hello, MongoDB Developer!10
+hello, MongoDB Developer!11
+hello, MongoDB Developer!12
+
+// #3 exercise
+
+> x = 1
+1
+> x
+1
+> y = "abc"
+abc
+> y
+abc
+> z = { a : 1}
+{ "a" : 1 }
+> z
+{ "a" : 1 }
+
+// #4 exercise
+
+> z = { a : 1}
+{ "a" : 1 }
+> z
+{ "a" : 1 }
+> z.a
+1
+> z["a"]
+1
+> z.a
+1
+> w="a"
+a
+> z[w]
+1
+

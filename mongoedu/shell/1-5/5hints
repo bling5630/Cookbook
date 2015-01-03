@@ -1,0 +1,30 @@
+/** 
+* Intro to BSON
+* http://bsonspec.org/
+*/
+
+// #1 exercise
+
+> NumberInt(1)
+NumberInt(1)
+> NumberLong(1)
+NumberLong(1)
+> NumberLong(1)+NumberLong(3)
+4
+
+// #2 exercise
+
+> new Date()
+ISODate("2015-01-03T18:19:39.771Z")
+
+// #3 exercise
+
+> obj = {"a":1, "b": "hello", "c": ["apples", "tomatoes"]}
+{ "a" : 1, "b" : "hello", "c" : [ "apples", "tomatoes" ] }
+
+// #4 exercise
+
+> obj = {"a":1, "b": ISODate(), "c": NumberLong(42)}
+{ "a" : 1, "b" : ISODate("2015-01-03T18:24:42.718Z"), "c" : NumberLong(42) }
+
+
