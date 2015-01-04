@@ -1,0 +1,42 @@
+// $ sign Example (app.js) - Step #1
+
+/**
+* using as a query specifier
+* {'$gt':80,'$lt':95} ===
+* greater than 80 less than 95
+*/ 
+
+------------------------------------------
+
+// RegEx Example - Step #1
+
+tamas@tamas-Lenovo-IdeaPad-S400:~/Desktop/cookbook$ mongo course
+MongoDB shell version: 2.6.1
+connecting to: course
+> db.reddit.find({'title': {'$regex':'NSA'}});
+
+// tons of hits
+
+// RegEx Example (app1.js) - Step #2
+
+2015-01-04T18:24:04.636+0100 SyntaxError: Unexpected token }
+> db.reddit.find({'title': {'$regex':'NSA'}}, {'title':1,'_id':0});
+{ "title" : "Leaked NSA Documents Reveal How To Hide From The NSA" }
+{ "title" : "NSA spooks count on holiday distractions to hide misbehavior" }
+{ "title" : "Leaked NSA Documents Reveal How To Hide From The NSA" }
+{ "title" : "NSA spooks count on holiday distractions to hide misbehavior" }
+
+// less hits
+
+// node.js solution -> app1.js
+
+------------------------------------------
+
+// DotNotation Example (app2.js) - Step #1
+
+
+
+
+// RegEx Example - Step #
+// RegEx Example - Step #
+// RegEx Example - Step #

@@ -1,0 +1,34 @@
+// #1 exercise
+
+> db.people.findOne()
+{
+	"_id" : ObjectId("54a96a6b7e7f9b6cd3d962f6"),
+	"name" : "Smith",
+	"age" : 30,
+	"profession" : "hacker"
+}
+// find a random item-> schema
+
+// #2 exercise
+
+> db.people.findOne({"name":"Jones"})
+{
+	"_id" : ObjectId("54a96bee7e7f9b6cd3d962f7"),
+	"name" : "Jones",
+	"age" : 25,
+	"profession" : "baker"
+}
+
+// what criteria I am looking for
+
+// #3 exercise
+
+> db.people.findOne({"name":"Jones"}, {"name": true, "_id":false, "age":true})
+{ "name" : "Jones", "age" : 25 }
+
+/** 
+* which criteria I like to see
+* using true\false key:value
+* commands, "_id" is a default
+*/
+

@@ -1,0 +1,23 @@
+// #1 exercise
+
+> doc = {"name":"Smith", "age":30,"profession":"hacker"}
+{ "name" : "Smith", "age" : 30, "profession" : "hacker" }
+
+> db
+test
+
+> db.people.insert(doc)
+WriteResult({ "nInserted" : 1 })
+
+> db.people.find()
+{ "_id" : ObjectId("54a96a6b7e7f9b6cd3d962f6"), "name" : "Smith", "age" : 30, "profession" : "hacker" }
+
+> db.people.find().pretty()
+{
+	"_id" : ObjectId("54a96a6b7e7f9b6cd3d962f6"),
+	"name" : "Smith",
+	"age" : 30,
+	"profession" : "hacker"
+}
+// this is the primary key: "_id"
+
