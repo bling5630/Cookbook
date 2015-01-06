@@ -1,0 +1,11 @@
+// #1 exercise
+
+// create a db 6 times
+
+db.people.insert({name:"Shannon"});
+
+// print names 
+
+db.people.find({name:{$lt : "Z", $gt:"D"}})
+
+---------------------------------------

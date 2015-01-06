@@ -1,0 +1,39 @@
+// #1 exercise
+
+// create scores db
+
+for (i = 0; i < 1000; i++) {
+	names = ["exam", "essay", "quiz"];
+	for (j = 0; j < 3; j++) {
+		db.scores.insert({"student": i, "type": names[j], score: Math.round(Math.random() * 100)
+		});
+}
+}
+
+// find the elements
+
+db.scores.find()
+
+---------------------------------------
+
+// #2 exercise
+
+// print essay
+
+db.scores.find({type : "essay"}).pretty()
+
+// print student 19
+
+db.scores.find({student : 19}).pretty()
+
+//  even smaller item
+
+db.scores.find({student : 19, type : "essay"}).pretty()
+
+// only print the score
+
+db.scores.find({student : 19, type : "essay"},{"score" : true}).pretty()
+
+// only print score
+
+db.scores.find({student : 19, type : "essay"},{"score" : true, "_id" : false}).pretty()

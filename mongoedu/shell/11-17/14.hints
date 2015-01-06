@@ -1,0 +1,18 @@
+// #1 exercise
+
+// score greater than 95
+
+db.scores.find({score : {$gt:95}}).pretty()
+
+
+// score greater than 95, type essay
+
+db.scores.find({score : {$gt:95}, type:"essay"}).pretty()
+
+// score greater than 95 less than 98, essay
+
+db.scores.find({score : {$gt:95, $lte:98}, type:"essay"}).pretty()
+
+
+---------------------------------------
+
