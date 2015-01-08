@@ -1,0 +1,21 @@
+// #1 exercise 
+
+// step #1 - 20 
+
+db.people.find({$or:[{name: {$regex: "e$"}},{age: {$exists: true}}]});
+
+//... input is incomplete!!!!!, do double click
+
+
+---------------------------------------
+
+// #2 exercise
+
+// step #1 - 22
+
+db.people.find({$and : [{name : {$gt : "C"}}, {name: {$regex:"a"}}]});
+
+---------------------------------------
+
+
+
