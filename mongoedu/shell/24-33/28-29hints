@@ -1,0 +1,23 @@
+// #28 exercise - dot notation
+
+// step#1 - make a document
+
+db.users2.insert({name:"richard", email:{work:"richard@10gen.com", personal:"kreuter@example.com"}})
+
+// step#2 - find the document & add result
+
+db.users2.find({email:{work:"richard@10gen.com", personal:"kreuter@example.com"}}).pretty()
+
+// step#3 - find the document & doesn't add result
+
+db.users2.find({email:{ personal:"kreuter@example.com", work:"richard@10gen.com"}}).pretty()
+
+// step#4 - find the document & doesn't add result
+
+db.users2.find({email:{work:"richard@10gen.com"}}).pretty()
+
+// step#5 - find the document with dot notation
+
+db.users2.find({"email.work":"richard@10gen.com"})
+
+---------------------------------------

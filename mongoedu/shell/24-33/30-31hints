@@ -1,0 +1,64 @@
+// #30 exercise - cursors
+
+// step#1 - trial - set up new cursor
+
+> cur = db.people.find(); null;
+null
+
+// step#2 - cur has methods such as..
+
+> cur.hasNext()
+true
+
+> cur.next()
+{
+	"_id" : ObjectId("54a96a6b7e7f9b6cd3d962f6"),
+	"name" : "Smith",
+	"age" : 30,
+	"profession" : "hacker"
+}
+
+> while (cur.hasNext()) printjson(cur.next());
+
+> cur.limit(5)
+
+> cur.sort({name: -1})
+
+> cur.sort({name: -1}).limit(3);
+
+> cur.sort({name: -1}).limit(3).skip(2); null;
+
+
+// step#2 - full cur cycle
+
+> cur = db.people.find(); null;
+null
+
+> cur.sort({name: -1}).limit(3).skip(2); null;
+null
+
+> while (cur.hasNext()) printjson(cur.next());
+
+{ "_id" : ObjectId("54ac322bf47794ba2840d7b8"), "name" : "Tamas" }
+{
+	"_id" : ObjectId("54a96a6b7e7f9b6cd3d962f6"),
+	"name" : "Smith",
+	"age" : 30,
+	"profession" : "hacker"
+}
+{ "_id" : ObjectId("54ac324df47794ba2840d7bc"), "name" : "Shannon" }
+> cur = db.people.find(); null;
+null
+> cur.sort({name: -1}).limit(3).skip(2);null;
+null
+> while (cur.hasNext()) printjson(cur.next());
+{ "_id" : ObjectId("54ac324df47794ba2840d7bc"), "name" : "Shannon" }
+{ "_id" : ObjectId("54ac323bf47794ba2840d7ba"), "name" : "Ken" }
+{
+	"_id" : ObjectId("54a96bee7e7f9b6cd3d962f7"),
+	"name" : "Jones",
+	"age" : 25,
+	"profession" : "baker"
+}
+
+---------------------------------------

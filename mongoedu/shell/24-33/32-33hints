@@ -1,0 +1,12 @@
+// #30 exercise - counting results
+
+// step#1 - use score documents
+
+db.scores.find()
+
+db.scores.find({type:"exam"})
+
+> db.scores.count({type:"exam"})
+1000
+
+---------------------------------------

@@ -1,0 +1,18 @@
+// #26 exercise - $in and $all
+
+// step#1 - check the same db & add new items
+
+db.accounts.find().pretty()
+
+// we have various type of favorites & use $all
+
+db.accounts.find({favorites:{$all:["pretzels","beer"]}}).pretty()
+
+// use $in
+
+ db.accounts.find({name:{$in:["Howard", "John"]}}).pretty()
+
+ db.accounts.find({favorites:{$in:["beer", "ice cream"]}}).pretty()
+
+ 
+---------------------------------------

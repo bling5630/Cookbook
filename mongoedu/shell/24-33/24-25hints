@@ -1,0 +1,28 @@
+// #24 exercise - querying inside arrays
+
+// step #1 - make db
+
+> db.accounts.insert({name:"George", favorites:["ice cream","pretzels"]});
+WriteResult({ "nInserted" : 1 })
+> db.accounts.insert({name:"Howard", favorites:["pretzels","beer"]});
+WriteResult({ "nInserted" : 1 })
+
+
+// step #2 - querying in arrays
+// polymorphic & polymorphism
+
+db.accounts.find({favorites:"pretzels"}).pretty()
+
+// the result is: two items that we made
+
+db.accounts.find({favorites:"beer"}).pretty()
+
+// the result is only one item
+
+
+// step #3 - do precise querying
+
+db.accounts.find({favorites:"beer", name: {$gt: "H"}}).pretty()
+
+
+---------------------------------------
