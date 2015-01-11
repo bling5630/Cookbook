@@ -1,0 +1,64 @@
+// #40 exercise - $push $pop $pull $pushAll $pullAll
+
+// step #1 - making an array
+
+db.arrays.insert({_id: 0,a:[1,2,3,4]})
+
+db.arrays.findOne()
+
+// step # - update an element
+
+db.arrays.update({_id:0},{$set:{"a.2":5}})
+
+db.arrays.findOne()
+
+// step #2 - using push
+
+db.arrays.update({_id:0},{$push:{a:10}})
+
+{ "_id" : 0, "a" : [ 1, 2, 5, 4, 10 ] }
+
+// step #3 - using pop (remove)
+
+db.arrays.update({_id:0},{$pop:{a:-1}})
+
+{ "_id" : 0, "a" : [ 2, 5, 4, 10 ] }
+
+// step #4 - using pushAll
+
+db.arrays.update({_id:0},{$pushAll:{a:[12,23,34,45,56,67]}})
+
+	"_id" : 0,
+	"a" : [
+		2,
+		5,
+		4,
+		10,
+		12,
+		23,
+		34,
+		45,
+		56,
+		67
+	]
+
+// step #5 - using pull (remove from the array apart from the place\index)
+
+db.arrays.update({_id:0},{$pull:{a:34}})
+
+{ "_id" : 0, "a" : [ 2, 5, 4, 10, 12, 23, 45, 56, 67 ] }
+
+
+// step #6 - using pullAll (remove list of items)
+
+db.arrays.update({_id:0},{$pullAll:{a:[4, 10, 12, 23]}})
+
+{ "_id" : 0, "a" : [ 2, 5, 45, 56, 67 ] }
+
+// step #7 - using addToSet
+
+db.arrays.update({_id:0},{$addToSet:{a:334}})
+
+{ "_id" : 0, "a" : [ 2, 5, 45, 56, 67, 334 ] }
+
+---------------------------------------

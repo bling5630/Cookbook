@@ -1,0 +1,11 @@
+// #34 exercise - updating of whole document
+
+// step #1 - using people collection
+
+// update means 4 different things
+
+db.people.update({name:"Smith"}, {name:"Thompson", salary:50000})
+
+// it has 2 arguments
+
+---------------------------------------

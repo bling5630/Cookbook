@@ -1,0 +1,13 @@
+// #36 exercise - using set command
+
+// step #1 - using people collection
+
+db.people.update({name:"Alice"}, {$set:{age:30}})
+
+// update well queries
+
+db.people.update({name:"Alice"}, {$inc:{age:1}})
+
+// using $inc
+
+---------------------------------------

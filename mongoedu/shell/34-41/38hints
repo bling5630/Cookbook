@@ -1,0 +1,9 @@
+// #38 exercise - using $unset
+
+// step #1 - using people collection
+
+// remove file from the document
+
+db.people.update({name:"Alice"}, {$unset:{age:36}})
+
+---------------------------------------
