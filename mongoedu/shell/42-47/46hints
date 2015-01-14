@@ -1,0 +1,11 @@
+// #46 exercise - removing data
+
+// step #1 - using people collection
+
+// db.people.remove() clear all the items
+
+// db.people.remove({name : {$gt : "M"} }) can specify
+
+// db.people.drop() faster & efficient
+ 
+---------------------------------------

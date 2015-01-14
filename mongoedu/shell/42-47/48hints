@@ -1,0 +1,7 @@
+// #48 exercise - CRUD - getLastError
+
+// step #1 - using people collection
+
+db.runCommand({getLastError:1})
+ 
+---------------------------------------

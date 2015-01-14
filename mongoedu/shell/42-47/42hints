@@ -1,0 +1,11 @@
+// #42 exercise - upserts
+
+// step #1 - using people collection
+
+db.people.update({name:"Tamas"},{$set:{age:40}})
+
+// step #2 - using upsert to create new item
+
+ db.people.update({name:"David"},{$set:{age:40}}, {upsert : true})
+ 
+---------------------------------------

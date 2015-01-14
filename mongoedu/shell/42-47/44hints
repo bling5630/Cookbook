@@ -1,0 +1,9 @@
+// #44 exercise - multi update
+
+// step #1 - using people collection
+
+db.people.update({},{$set:{title:"Dr"}}, {multi:true})
+
+// have to add the multi argument
+ 
+---------------------------------------
