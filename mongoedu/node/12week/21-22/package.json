@@ -1,0 +1,19 @@
+{
+  "name": "nodemongo2122",
+  "version": "1.0.0",
+  "description": "node mongo tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "mongo",
+    "tutorial"
+  ],
+  "author": "@tpuski - Tamas Puski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^1.4.28"
+  }
+}
