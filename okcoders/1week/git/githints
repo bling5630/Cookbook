@@ -1,0 +1,81 @@
+Introduction to Git
+
+https://github.com/okcoders/bash-heroku-class/blob/master/git.md
+
+by @pdow - Philip Dow
+
+---------------------------------------
+References
+
+Pro Git is an excellent book on git available for free. The first three chapters are invaluable.
+
+http://git-scm.com/book/en/v2
+
+GitHub offers free practice with git commands in a web browser.
+
+https://try.github.io/levels/1/challenges/1
+
+Git Tower offers additional free learning materials for git.
+
+http://www.git-tower.com/learn/
+
+---------------------------------------
+Exercise #1
+
+git
+
+Print out the list of commands that git accepts.
+
+Exercise #2
+
+git init
+
+Create a new git repository. cd into the directory you'd like to use first.
+
+Exercise #3
+
+git status
+
+Print the status of the repository. Shows what branch you are on (more on branches later) and the status of any files that are being tracked.
+
+Exercise #4
+
+git add
+
+Add a file or folder to the git index. 
+
+Exercise #5
+
+git rm
+
+Remove a file or folder from the git index
+
+Exercise #6
+
+git commit
+
+Saves changes to any tracked files. 
+
+Exercise #7
+
+git checkout
+
+Undoes any changes to a file made since the last commit.
+
+Exercise #8
+
+git log
+
+View the project's change history
+
+Exercise #9
+
+git remote
+
+An advanced command that manages remote repositories
+
+Exercise #10
+
+git push
+
+Pushes any commited changes in your local repository to the specified remote repository.

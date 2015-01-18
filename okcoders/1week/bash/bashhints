@@ -1,0 +1,122 @@
+Introduction to Bash & The Command Line
+
+https://github.com/okcoders/bash-heroku-class/blob/master/bash.md
+
+by @pdow - Philip Dow
+
+---------------------------------------
+References
+
+The Linux Command Line, by William Shots is an excellent book on the command line available as a free PDF download. I highly recommend it.
+
+http://linuxcommand.org/tlcl.php
+
+---------------------------------------
+
+Exercise #1
+
+echo
+
+mbp-phil:~ okcoders$ echo "just what I typed back to the screen"
+just what I typed back to the screen
+
+Exercise #2
+
+pwd
+
+mbp-phil:~ okcoders$ pwd
+/Users/okcoders 
+
+Exercise #3
+
+ls -l \ -al....
+
+mbp-phil:~ okcoders$ ls
+Applications    Documents   Library     Music 
+
+Exercise #4
+
+mbp-phil:~ okcoders$ ls Documents/
+OK-Coder
+
+Exercise #5
+
+cd 
+
+mbp-phil:~ okcoders$ cd Documents/
+mbp-phil:Documents okcoders$ pwd
+/Users/okcoders/Documents
+
+Exercise #6
+
+mkdir
+
+Creates a folder just like creating a new folder in the Finder or in Explorer. Pass it the name of the folder you want to create:
+
+Exercise #7
+
+rmdir
+
+Removes the directory specified. Go ahead and remove the OK-Coders directory you just created
+
+Exercise #8
+
+touch
+
+Changes the date modified property of a file and is often used to create an empty file. We'll normally use it to create new, empty files:
+
+Exercise #9
+
+rm
+
+Remove a file or directory, that is, delete it. Remove the newfile.txt file you just created:
+
+Exercise #10
+
+mv
+
+Move a file or directory. mv is also used to rename files.
+
+Exercise #11
+
+cp
+
+Copy a file or directory. cp expect a source and target arguments with the following format:
+
+cp source target
+
+Exercise #12
+
+cat
+
+Concatenate and print files. cat allows us to modify files from the command line and to quickly view the contents of files. We'll learn how to modify files in a later lesson. Here is how you view the contents of a file:
+
+Exercise #13
+
+head
+
+Prints the first lines of a file to the terminal. head is like cat but is used to peak at the beginning of a file:
+
+Exercise #14
+
+tail
+
+Prints the last lines of a file to the terminal. tail is like cat but is used to peak at the end of a file:
+
+Exercise #15
+
+which
+
+Indicates which executable will be used for a program and where it is located. Use which to confirm that you have installed a command line program:
+
+Exercise #16
+
+man
+
+Displays the manual for a command, showing all the options and arguments a command takes. Use man when you're stuck!
+
+Exercise #17
+
+less
+
+Shows the contents of a file or other input in segments, allowing you to scroll through them on the terminal.
