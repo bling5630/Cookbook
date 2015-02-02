@@ -22,11 +22,11 @@ Stream A File (cat) - Done
 Removing A File (rm) - Done
 Pipes And Redirection - Done
 Wildcard Matching - Done
-Finding Files (find, DIR -R)
-Looking Inside Files (grep, select-string)
-Getting Command Help (man, HELP)
-Finding Help (apropos, HELP)
-What's In Your Environment (env, echo, Env:)
-Changing Environment Variables (export, Env:)
-Exiting Your Terminal (exit)
-Next Steps
+Finding Files (find, DIR -R) - Done
+Looking Inside Files (grep, select-string) -  Done
+Getting Command Help (man, HELP) - Done
+Finding Help (apropos, HELP) - Done
+What's In Your Environment (env, echo, Env:) - Done
+Changing Environment Variables (export, Env:) - Done
+Exiting Your Terminal (exit) - Done
+Next Steps - Done
