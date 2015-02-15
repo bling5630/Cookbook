@@ -1,0 +1,3 @@
+var misc = require('./misc');
+
+console.log('Adding %d to 10 gives us %d', misc.x, misc.addX(10));
