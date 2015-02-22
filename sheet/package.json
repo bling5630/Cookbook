@@ -1,0 +1,19 @@
+{
+  "name": "spreadsheet",
+  "version": "1.0.0",
+  "description": "basic usage of the Google spreadsheet module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@tpuski - Tamas Puski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.2",
+    "google-spreadsheet": "^0.2.8",
+    "google-spreadsheet-stream-reader": "^1.0.10",
+    "google-spreadsheets": "^0.3.0",
+    "gsx": "^1.1.2",
+    "xmlhttprequest": "^1.7.0"
+  }
+}
