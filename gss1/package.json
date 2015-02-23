@@ -1,0 +1,15 @@
+{
+  "name": "spreadsheet1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "puskitamas@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "google-spreadsheet": "^0.2.8",
+    "xml2js": "^0.4.5"
+  }
+}
