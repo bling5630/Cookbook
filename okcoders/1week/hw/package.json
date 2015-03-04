@@ -1,0 +1,21 @@
+{
+  "name": "homework1",
+  "version": "1.0.0",
+  "description": "Create an express app and upload it to heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "heroku",
+    "express"
+  ],
+  "author": "@tpuski <Tamas Puski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "express": "^4.12.2",
+    "lodash": "^3.3.1",
+    "morgan": "^1.5.1"
+  }
+}
