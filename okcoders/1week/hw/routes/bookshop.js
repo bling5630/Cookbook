@@ -1,7 +1,7 @@
 var express = require('express'),
 	router = express.Router();
 
-// Get home page
+// Welcome message, first question and order
 
 router.get('/bookshop', function(req, res) {
 	res.send("Welcome, do you like the bookshop?");

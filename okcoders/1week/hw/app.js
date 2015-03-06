@@ -6,7 +6,7 @@ var app = require('express')(),
 	logger = require('morgan'),
 	bodyParser = require('body-parser'),
 	_ = require('lodash'),
-	port = process.env.PORT || 3000;
+	port = process.env.PORT || 5000;
 
 var routes = require('./routes/index');
 var	bookshop = require('./routes/bookshop');
