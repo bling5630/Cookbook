@@ -4,7 +4,7 @@ var express = require('express'),
 // Get home page
 
 router.get('/', function(req, res) {
-	res.send("Hello I am your bookshelf");
+	res.send("Hello @ conferenceFreak!!!");
 });
 
 module.exports = router;
