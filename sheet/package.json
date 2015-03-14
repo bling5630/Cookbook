@@ -1,19 +1,19 @@
 {
-  "name": "spreadsheet",
+  "name": "spreadsheets",
   "version": "1.0.0",
-  "description": "basic usage of the Google spreadsheet module",
+  "description": "edit google spreadsheets",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "node.js",
+    "google",
+    "spreadsheets"
+  ],
   "author": "@tpuski - Tamas Puski <puskitamas@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.11.2",
-    "google-spreadsheet": "^0.2.8",
-    "google-spreadsheet-stream-reader": "^1.0.10",
-    "google-spreadsheets": "^0.3.0",
-    "gsx": "^1.1.2",
-    "xmlhttprequest": "^1.7.0"
+    "edit-google-spreadsheet": "^0.2.16"
   }
 }

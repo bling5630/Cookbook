@@ -8,6 +8,6 @@ function FizzBuzz(n) {
   } else if (n % 5 === 0) {
           return "Buzz";
   } else {
-      return n;
+      return "Mehh";
   }
 }
