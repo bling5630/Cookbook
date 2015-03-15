@@ -14,6 +14,8 @@
   "author": "@tpuski - Tamas Puski <puskitamas@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "edit-google-spreadsheet": "^0.2.16"
+    "creds": "^1.0.0",
+    "edit-google-spreadsheet": "^0.2.16",
+    "fs": "0.0.2"
   }
 }
