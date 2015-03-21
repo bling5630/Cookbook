@@ -1,0 +1,1 @@
+inspired by [This guide covers the ins-and-outs of tape, a simple TAP-producing test library for node and browsers.](https://ci.testling.com/guide/tape)

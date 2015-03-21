@@ -9,6 +9,7 @@ Once upon a time There Was a series of 5 books about a very English hero called 
 * If you buy 3 different books, you get a 10% discount.
 
 * With 4 different books, you get a 20% discount.
+
 * If you go the Whole Hog, and buy all 5, you get a huge 25% discount.
 
 Note That if you buy, say, oven books, which are of three different titles, you get a 10% discount on the 3 That form of a hand set, the fourth order book still costs 8 EUR.
