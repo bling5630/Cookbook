@@ -24,3 +24,10 @@ test('FizzBuzz', function(f) {
 		f.equal(FizzBuzz(d), 'Fizz', "Throw Fizz if the number is divisble w/ 5");
 	});
 });
+
+test('FizzBuzz', function(f) {
+	f.plan(4);
+	[1, 11, 31, 41].forEach(function(d) {
+		f.equal(FizzBuzz(d), 'Mehh', "Throw Mehh if the number doesn't divisble w/ 3, 5 or 15");
+	});
+});

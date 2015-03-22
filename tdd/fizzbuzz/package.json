@@ -1,7 +1,7 @@
 {
   "name": "fizzbuzz-kata",
   "version": "0.0.0",
-  "description": "Exercise using tape",
+  "description": "FizzBuzzKata using tape",
   "main": "index.js",
   "scripts": {
     "test": "node test/fizzBuzz.spec.js"
