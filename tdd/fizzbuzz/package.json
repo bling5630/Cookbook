@@ -1,0 +1,14 @@
+{
+  "name": "fizzbuzz-kata",
+  "version": "0.0.0",
+  "description": "Exercise using tape",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/fizzBuzz.spec.js"
+  },
+  "author": "@TPuski <puskitamas@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^3.5.0"
+  }
+}
