@@ -10,9 +10,6 @@ FizzBuzz = function(number) {
 	} else if (number % 3 === 0) {
 		return "Buzz";
 	} else {
-		return "Mehh";
-	}
-};
 
 module.exports = FizzBuzz;
 **/
@@ -37,8 +34,7 @@ var numberDivisibleBy3 = (number % 3) === 0,
 		return "Buzz";
 	} else {
 		return "Mehh";
-	}
-};
+	}};
 
 console.log(FizzBuzz(15));
 
