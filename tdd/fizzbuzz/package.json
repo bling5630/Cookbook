@@ -9,6 +9,10 @@
   "author": "@TPuski <puskitamas@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "tap-spec": "^2.2.2",
     "tape": "^3.5.0"
+  },
+  "dependencies": {
+    "faucet": "0.0.1"
   }
 }

@@ -7,7 +7,7 @@ test("FizzBuzz", function(f) {
 		FizzBuzz();
 	});
 
-	f.equal(kataFizzBuzzCalclulator(5), "Buzz");
+	f.equal(kataFizzBuzzCalclulator(15), "FizzBuzz");
 	f.end();
 });
 
