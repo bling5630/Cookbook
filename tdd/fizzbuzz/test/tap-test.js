@@ -3,7 +3,7 @@ var test = require('tape'),
 	kataFizzBuzzCalclulator = require('../src/2fizzBuzz');
 
 test("FizzBuzz", function(f) {
-	f.plan(5);
+	f.plan(9);
 
 	f.throws(function() {
 		FizzBuzz();
@@ -12,7 +12,11 @@ test("FizzBuzz", function(f) {
 	f.equal(kataFizzBuzzCalclulator(15), "FizzBuzz");
 	f.equal(kataFizzBuzzCalclulator(5), "Buzz");
 	f.equal(kataFizzBuzzCalclulator(3), "Fizz");
-	f.equal(kataFizzBuzzCalclulator(), "Mehh");
+	f.equal(kataFizzBuzzCalclulator(31), "Mehh");
+	f.equal(kataFizzBuzzCalclulator(45), "FizzBuzz");
+	f.equal(kataFizzBuzzCalclulator(10), "Buzz");
+	f.equal(kataFizzBuzzCalclulator(33), "Fizz");
+	f.equal(kataFizzBuzzCalclulator("Mehh"), "Mehh");
 
 	f.end();
 });

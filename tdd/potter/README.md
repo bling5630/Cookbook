@@ -1,6 +1,7 @@
-**KataFizzBuzz**
+**KataPotter**
 
-Inspired by [KataFizzBuzz](http://codingdojo.org/cgi-bin/index.pl?KataFizzBuzz) and using 
+Inspired by [KataPotter](http://www.solveet.com/exercises/Kata-Potter/29)
+
 * [Tape](https://www.npmjs.com/package/tape) by **[@substack](https://www.npmjs.com/~substack)** 
 
  as well as 
