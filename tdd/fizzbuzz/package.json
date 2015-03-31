@@ -13,6 +13,7 @@
     "tape": "^3.5.0"
   },
   "dependencies": {
-    "faucet": "0.0.1"
+    "faucet": "0.0.1",
+    "jasmine-node": "^1.14.5"
   }
 }

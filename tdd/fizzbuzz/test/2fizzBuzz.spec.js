@@ -9,7 +9,7 @@ test("FizzBuzz", function(f) {
 	f.equal(kataFizzBuzzCalclulator(15), "FizzBuzz");
 	f.equal(kataFizzBuzzCalclulator(5), "Buzz");
 	f.equal(kataFizzBuzzCalclulator(3), "Fizz");
-	f.equal(kataFizzBuzzCalclulator(5), "Mehh");
+	f.equal(kataFizzBuzzCalclulator("cdc"), "Mehh");
 	f.end();
 });
 
