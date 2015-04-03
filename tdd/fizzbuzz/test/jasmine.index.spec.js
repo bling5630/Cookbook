@@ -37,4 +37,10 @@ describe("kataFizzBuzzCalclulator", function() {
 	it("Throw Mehh if number doesen't divisible 3, 5 or 15", function() {
 		expect(kataFizzBuzzCalclulator(1)).toEqual("Mehh");
 	});
+
+	it("Throw error if no argument", function() {
+		expect(function() {
+			kataFizzBuzzCalclulator();
+		}).toThrow();
+	});
 });

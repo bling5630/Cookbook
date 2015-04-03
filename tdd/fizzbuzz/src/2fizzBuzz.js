@@ -11,7 +11,15 @@ var FIZZ_3 = 3,
 
 function kataFizzBuzzCalclulator(number) {
 
+	validateInput(number);
+
 	return calculateOutput(number);
+}
+
+function validateInput(number) {
+	if (typeof number !== "number") {
+		throw new Error();
+	}
 }
 
 function calculateOutput(number) {
