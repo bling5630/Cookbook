@@ -1,30 +1,47 @@
 // kataPotter
 
 var BASE_PRICE = 8,
-	BOOK_LIST = [1, 0, 0, 0, 0],
-	DISCOUNTS = {
-		'1': 1,
-		'2': 0.95,
-		'3': 0.90,
-		'4': 0.80,
-		'5': 0.75
+	DISCOUNT = {
+		1: 1,
+		2: 0.95,
+		3: 0.90,
+		4: 0.80,
+		5: 0.75
 	};
 
-function kataPotter(book, price) {
-	return book * price;
+function kataPotter(books) {
+	validateInput(books);
+	return calculateOutput(books);
 }
 
-function getDiscount(bookDiscount) {
-	return bookDiscount === 0 && 0 ||
-		bookDiscount === 1 && 0 ||
-		bookDiscount === 2 && 0.95 ||
-		bookDiscount === 3 && 0.9 ||
-		bookDiscount === 4 && 0.8 ||
-		bookDiscount === 5 && 0.75;
+function validateInput(books) {
+	if (!books) {
+		throw new Error('No book provided!!');
+	}
 }
 
+function calculateOutput(books) {
+	if (!books.length) {
+		return 0;
+	}
+	if (isAllElementsSame(books)) {
+		return calculateDiscountedPrice(books);
+	}
+	return books.length * BASE_PRICE;
+}
 
-console.log(kataPotter(8, 3));
-console.log(BOOK_LIST[0]);
+function calculateDiscountedPrice(books) {
+	return BASE_PRICE * books.length * DISCOUNT[books.length];
+}
+
+function isAllElementsSame(list) {
+	var first = list[0];
+	for (var i = 1; i < list.length; i++) {
+		if (first !== list[i]) {
+			return false;
+		}
+	}
+	return true;
+}
 
 module.exports = kataPotter;
