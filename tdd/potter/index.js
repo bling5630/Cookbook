@@ -27,12 +27,14 @@ function calculateOutput(books) {
 	if (isAllElementsSame(books)) {
 		return calculateDiscountedPrice(books);
 	}
+
 	return books.length * BASE_PRICE;
 }
 
 function calculateDiscountedPrice(books) {
-	return BASE_PRICE * books.length * DISCOUNT[books.length];
+	return books.length * BASE_PRICE * DISCOUNT[books.length];
 }
+
 
 function isAllElementsSame(list) {
 	var first = list[0];
@@ -43,5 +45,7 @@ function isAllElementsSame(list) {
 	}
 	return true;
 }
+
+console.log(kataPotter([1, 2]));
 
 module.exports = kataPotter;
