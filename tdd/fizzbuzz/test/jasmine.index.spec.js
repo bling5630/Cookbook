@@ -35,9 +35,20 @@ describe("kataFizzBuzzCalclulator", function() {
 		expect(kataFizzBuzzCalclulator(11)).toEqual("Mehh");
 	});
 	it("Throw Mehh if number doesen't divisible 3, 5 or 15", function() {
-		expect(kataFizzBuzzCalclulator(1)).toEqual("Mehh");
+		expect(kataFizzBuzzCalclulator(17)).toEqual("Mehh");
 	});
-
+	it("Throw **Magic_Fizz** because number contains 3 even though ain't divisble 3", function() {
+		expect(kataFizzBuzzCalclulator(1234567)).toEqual("**Magic_Fizz**");
+	});
+	it("Throw **Magic_Fizz** because number contains 3 even though ain't divisble 3", function() {
+		expect(kataFizzBuzzCalclulator(311)).toEqual("**Magic_Fizz**");
+	});
+		it("Throw **Magic_Fizz** because number contains 3 even though ain't divisble 3", function() {
+		expect(kataFizzBuzzCalclulator(13)).toEqual("**Magic_Fizz**");
+	});
+	it("Throw **Magic_Fizz** because number contains 3 even though ain't divisble 3", function() {
+		expect(kataFizzBuzzCalclulator(31)).toEqual("**Magic_Fizz**");
+	});
 	it("Throw error if no argument", function() {
 		expect(function() {
 			kataFizzBuzzCalclulator();

@@ -3,11 +3,13 @@
 var FIZZ_MESSAGE = "Fizz",
 	BUZZ_MESSAGE = "Buzz",
 	FIZZBUZZ_MESSAGE = "FizzBuzz",
-	MEHH_MESSAGE = "Mehh";
+	MEHH_MESSAGE = "Mehh",
+	MAGIC_FIZZ_MESSAGE = "**Magic_Fizz**";
 
 var FIZZ_3 = 3,
 	BUZZ_5 = 5,
-	FIZZ_15 = 15;
+	FIZZ_15 = 15,
+	MAGIC_FIZZ = 3;
 
 function kataFizzBuzzCalclulator(number) {
 
@@ -29,6 +31,8 @@ function calculateOutput(number) {
 		return BUZZ_MESSAGE;
 	} else if (isDivisible(number, FIZZ_3)) {
 		return FIZZ_MESSAGE;
+	} else if (containMagicNumbers(number, MAGIC_FIZZ_MESSAGE)) {
+		return MAGIC_FIZZ_MESSAGE;
 	} else {
 		return MEHH_MESSAGE;
 	}
@@ -38,6 +42,26 @@ function isDivisible(number, divident) {
 	return number % divident === 0;
 }
 
-console.log(kataFizzBuzzCalclulator(3));
+function containMagicNumbers(number) {
+
+	Array.prototype.contains = function(elem) {
+		for (var i in this) {
+			if (this[i] == elem) return true;
+		}
+		return false;
+	};
+
+	var digits = number.toString()
+		.split("")
+		.map(function containThree(n) {
+			return parseInt(n);
+		});
+
+	if (digits.contains(MAGIC_FIZZ)) {
+		return MAGIC_FIZZ_MESSAGE;
+	}
+}
+
+console.log(kataFizzBuzzCalclulator(1234567));
 
 module.exports = kataFizzBuzzCalclulator;
