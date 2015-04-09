@@ -31,7 +31,7 @@ function calculateOutput(number) {
 		return BUZZ_MESSAGE;
 	} else if (isDivisible(number, FIZZ_3)) {
 		return FIZZ_MESSAGE;
-	} else if (containMagicNumbers(number, MAGIC_FIZZ_MESSAGE)) {
+	} else if (containMagicNumbers(number, MAGIC_FIZZ)) {
 		return MAGIC_FIZZ_MESSAGE;
 	} else {
 		return MEHH_MESSAGE;
@@ -41,6 +41,7 @@ function calculateOutput(number) {
 function isDivisible(number, divident) {
 	return number % divident === 0;
 }
+
 
 function containMagicNumbers(number) {
 
@@ -62,6 +63,6 @@ function containMagicNumbers(number) {
 	}
 }
 
-console.log(kataFizzBuzzCalclulator(1234567));
+console.log(kataFizzBuzzCalclulator(11));
 
 module.exports = kataFizzBuzzCalclulator;

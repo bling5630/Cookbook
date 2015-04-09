@@ -46,6 +46,10 @@ function isAllElementsSame(list) {
 	return true;
 }
 
+function areElementsNotSame(list) {
+	
+}
+
 console.log(kataPotter([1, 2]));
 
 module.exports = kataPotter;

@@ -32,6 +32,17 @@ function containMagicNumbers(number) {
 }
 */
 
+/*
+function include(arr, obj) {
+    for(var i=0; i<arr.length; i++) {
+        if (arr[i] == obj) return true;
+    }
+}
+
+include([1,2,3,4], 3); // true
+include([1,2,3,4], 6); // undefined
+*/
+
 function addDigit(number) {
 
 	var digits = number.toString();
