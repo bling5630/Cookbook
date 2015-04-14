@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 var BASE_PRICE = 8,
 	DISCOUNT = {
 		1: 1,
@@ -7,25 +9,26 @@ var BASE_PRICE = 8,
 		5: 0.75
 	};
 
+// example[1, 1, 2] -> 23.2
+
 function calculateDiscountedPrice(books) {
 	return books.length * BASE_PRICE * DISCOUNT[books.length];
 }
 
-function listOrder(books) {
-	var result = books.reduce(function(p, c) {
-		if (c in p) {
-			p[c] ++;
-		} else {
-			p[c] = 1;
-		}
-		return p;
-	}, {});
-	return result;
+function sliceBooks(books) {
+	var combo = _.remove(books, function(book) {
+		return book !== 1;
+	});
+	return combo.length * BASE_PRICE + calculateDiscountedPrice(books);
 }
 
-function sortOrder(books) {
+// example[1, 1, 2, 2] -> 30.4
 
-	}
+function seekDoubles(books) {
+	var combo = _.remove(books, function(book) {
+		return book !== 1;
+	});
+	return combo.length * BASE_PRICE + calculateDiscountedPrice(books);
+}
 
-// console.log(calculateDiscountedPrice([1, 2, 3]));
-console.log(listOrder([1, 1, 2]));
+console.log(seekDoubles([1, 1, 2, 2]));

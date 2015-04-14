@@ -1,5 +1,7 @@
 // kataPotter
 
+var _ = require('lodash');
+
 var BASE_PRICE = 8,
 	DISCOUNT = {
 		1: 1,
@@ -26,9 +28,10 @@ function calculateOutput(books) {
 	}
 	if (isAllElementsSame(books)) {
 		return calculateDiscountedPrice(books);
+	} else {
+		return sliceBooks(books);
 	}
-
-	return books.length * BASE_PRICE;
+	//return books.length * BASE_PRICE;
 }
 
 function calculateDiscountedPrice(books) {
@@ -46,10 +49,13 @@ function isAllElementsSame(list) {
 	return true;
 }
 
-function areElementsNotSame(list) {
-	
+function sliceBooks(books) {
+	var combo = _.remove(books, function(book) {
+		return book !== 1;
+	});
+	return combo.length * BASE_PRICE + calculateDiscountedPrice(books);
 }
 
-console.log(kataPotter([1, 2]));
+console.log(kataPotter([1, 1, 2, 2]));
 
 module.exports = kataPotter;
