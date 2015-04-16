@@ -25,10 +25,34 @@ function sliceBooks(books) {
 // example[1, 1, 2, 2] -> 30.4
 
 function seekDoubles(books) {
-	var combo = _.remove(books, function(book) {
-		return book !== 1;
+	var a = [],
+		b = [],
+		prev;
+
+	//_.sortBy(books);
+	_.forEach(books, function(book, i) {
+		if (books[i] !== prev) {
+			a.push(books[i]);
+			b.push(1);
+		} else {
+			b[b.length - 1] ++;
+		}
+		prev = books[i];
 	});
-	return combo.length * BASE_PRICE + calculateDiscountedPrice(books);
+	// return [a];
+	return _.flatten([a]);
 }
 
-console.log(seekDoubles([1, 1, 2, 2]));
+//
+
+function findPairs(books) {
+	var result = [];
+	_.forEach(books, function(item) {
+		if (result.indexOf(item) < 0) {
+			result.push(item);
+		}
+	});
+	return result;
+}
+
+console.log(findPairs([1, 2, 1, 2]));

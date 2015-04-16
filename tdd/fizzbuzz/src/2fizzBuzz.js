@@ -42,15 +42,7 @@ function isDivisible(number, divident) {
 	return number % divident === 0;
 }
 
-
 function containMagicNumbers(number) {
-
-	Array.prototype.contains = function(elem) {
-		for (var i in this) {
-			if (this[i] == elem) return true;
-		}
-		return false;
-	};
 
 	var digits = number.toString()
 		.split("")
@@ -63,6 +55,13 @@ function containMagicNumbers(number) {
 	}
 }
 
-console.log(kataFizzBuzzCalclulator(11));
+Array.prototype.contains = function(elem) {
+	for (var i in this) {
+		if (this[i] == elem) return true;
+	}
+	return false;
+};
+
+console.log(kataFizzBuzzCalclulator(13));
 
 module.exports = kataFizzBuzzCalclulator;

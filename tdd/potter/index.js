@@ -29,9 +29,8 @@ function calculateOutput(books) {
 	if (isAllElementsSame(books)) {
 		return calculateDiscountedPrice(books);
 	} else {
-		return sliceBooks(books);
+		return isOneDifferentElement(books);
 	}
-	//return books.length * BASE_PRICE;
 }
 
 function calculateDiscountedPrice(books) {
@@ -41,21 +40,21 @@ function calculateDiscountedPrice(books) {
 
 function isAllElementsSame(list) {
 	var first = list[0];
-	for (var i = 1; i < list.length; i++) {
+	_.forEach(list, function(i) {
 		if (first !== list[i]) {
 			return false;
 		}
-	}
-	return true;
+		return true;
+	});
 }
 
-function sliceBooks(books) {
+function isOneDifferentElement(books) {
 	var combo = _.remove(books, function(book) {
 		return book !== 1;
 	});
 	return combo.length * BASE_PRICE + calculateDiscountedPrice(books);
 }
 
-console.log(kataPotter([1, 1, 2, 2]));
+console.log(kataPotter([1, 2, 1, 2]));
 
 module.exports = kataPotter;
