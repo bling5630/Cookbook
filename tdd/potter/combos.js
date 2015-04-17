@@ -9,19 +9,6 @@ var BASE_PRICE = 8,
 		5: 0.75
 	};
 
-// example[1, 1, 2] -> 23.2
-
-function calculateDiscountedPrice(books) {
-	return books.length * BASE_PRICE * DISCOUNT[books.length];
-}
-
-function sliceBooks(books) {
-	var combo = _.remove(books, function(book) {
-		return book !== 1;
-	});
-	return combo.length * BASE_PRICE + calculateDiscountedPrice(books);
-}
-
 // example[1, 1, 2, 2] -> 30.4
 
 function seekDoubles(books) {
@@ -46,13 +33,17 @@ function seekDoubles(books) {
 //
 
 function findPairs(books) {
-	var result = [];
-	_.forEach(books, function(item) {
-		if (result.indexOf(item) < 0) {
-			result.push(item);
+	var a = [],
+		b = [];
+
+	_.forEach(books, function(book) {
+		if (book === 1) {
+			return a.push(book);
+		} else {
+			return b.push(book);
 		}
 	});
-	return result;
+	return a.length * BASE_PRICE * DISCOUNT[a.length] + b.length * BASE_PRICE * DISCOUNT[b.length];
 }
 
-console.log(findPairs([1, 2, 1, 2]));
+console.log(findPairs([1, 1, 2, 2]));

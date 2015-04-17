@@ -37,7 +37,6 @@ function calculateDiscountedPrice(books) {
 	return books.length * BASE_PRICE * DISCOUNT[books.length];
 }
 
-
 function isAllElementsSame(list) {
 	var first = list[0];
 	_.forEach(list, function(i) {
@@ -53,6 +52,20 @@ function isOneDifferentElement(books) {
 		return book !== 1;
 	});
 	return combo.length * BASE_PRICE + calculateDiscountedPrice(books);
+}
+
+function findPairs(books) {
+	var a = [],
+		b = [];
+
+	_.forEach(books, function(book) {
+		if (book === 1) {
+			return a.push(book);
+		} else {
+			return b.push(book);
+		}
+	});
+	return a.length * BASE_PRICE * DISCOUNT[a.length] + b.length * BASE_PRICE * DISCOUNT[b.length];
 }
 
 console.log(kataPotter([1, 2, 1, 2]));
