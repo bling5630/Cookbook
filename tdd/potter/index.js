@@ -39,7 +39,8 @@ function calculateDiscountedPrice(books) {
 
 function isAllElementsSame(list) {
 	var first = list[0];
-	_.forEach(list, function(i) {
+	// every egy true false ertek s ezert kell a return
+	return _.every(list, function(i) {
 		if (first !== list[i]) {
 			return false;
 		}
@@ -52,20 +53,6 @@ function isOneDifferentElement(books) {
 		return book !== 1;
 	});
 	return combo.length * BASE_PRICE + calculateDiscountedPrice(books);
-}
-
-function findPairs(books) {
-	var a = [],
-		b = [];
-
-	_.forEach(books, function(book) {
-		if (book === 1) {
-			return a.push(book);
-		} else {
-			return b.push(book);
-		}
-	});
-	return a.length * BASE_PRICE * DISCOUNT[a.length] + b.length * BASE_PRICE * DISCOUNT[b.length];
 }
 
 console.log(kataPotter([1, 2, 1, 2]));

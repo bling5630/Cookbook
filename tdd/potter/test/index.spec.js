@@ -3,7 +3,7 @@ var test = require("tape"),
 	kataPotter = require("../index");
 
 test("Potter", function(p) {
-	p.plan(14);
+	p.plan(15);
 
 	p.throws(function() {
 		Potter();
@@ -15,6 +15,7 @@ test("Potter", function(p) {
 	p.equal(kataPotter([1, 2, 3]), 8 * 3, 'You should pay 24 Euros!!');
 	p.equal(kataPotter([1, 4, 5]), 8 * 3, 'You should pay 24 Euros!!');
 	p.equal(kataPotter([1, 2, 3, 4]), 8 * 4, 'You should pay 32 Euros!!');
+	p.equal(kataPotter([1, 2, 3, 4, 5]), 8 * 5, 'You should pay 40 Euros!!');
 	p.equal(kataPotter([1, 1]), 8 * 2 * 0.95, 'You should pay 15.2 Euros!!');
 	p.equal(kataPotter([1, 1, 1]), 8 * 3 * 0.9, 'You should pay 21.6 Euros!!');
 	p.equal(kataPotter([1, 1, 1, 1]), 8 * 4 * 0.8, 'You should pay 25.6 Euros!!');

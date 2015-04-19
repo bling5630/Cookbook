@@ -53,3 +53,4 @@ function addDigit(number) {
 }
 
 console.log(addDigit(12456793));
+

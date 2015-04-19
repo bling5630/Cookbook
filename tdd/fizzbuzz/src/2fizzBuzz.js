@@ -42,10 +42,12 @@ function isDivisible(number, divident) {
 	return number % divident === 0;
 }
 
+// igaz-hamis is zel kezdjuk
 function containMagicNumbers(number) {
 
 	var digits = number.toString()
 		.split("")
+		// nem kell map
 		.map(function containThree(n) {
 			return parseInt(n);
 		});
@@ -61,6 +63,24 @@ Array.prototype.contains = function(elem) {
 	}
 	return false;
 };
+
+
+
+/*
+some eleg hogy egy elemre igaz legyen, ha csak 2 es van benne false, ha talal egyet akkor megall
+every mindegyiknek ugyanolyannak kell lenni, vegig nezi az osszes elemet
+*/
+
+/*
+function addDigit(number) {
+
+	var digits = number.toString();
+
+	if (digits.search(MAGIC_FIZZ) > -1) {
+		return MAGIC_FIZZ_MESSAGE;
+	}
+}
+*/
 
 console.log(kataFizzBuzzCalclulator(13));
 
