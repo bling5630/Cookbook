@@ -1,18 +1,39 @@
-var lodash = require('lodash');
+var _ = require('lodash');
 
-var BASE_RULES = {
-	'1': 'I',
-	'5': 'V',
-	'10': 'X',
-	'50': 'L',
-	'100': 'C',
-	'500': 'D',
-	'1000': 'M'
-};
+var BASE_RULES_ONES = {
+		0: '0',
+		1: 'I',
+		2: 'II',
+		3: 'III',
+		4: 'IV',
+		5: 'V',
+		6: 'VI',
+		7: 'VII',
+		8: 'VIII',
+		9: 'IX'
+	},
+
+	BASE_RULES_DOUBLES = {
+		10: "X",
+		20: "XX",
+		30: "XXX",
+		40: "XL",
+		50: "L",
+		60: "LX",
+		70: "LXX",
+		80: "LXXX",
+		90: "XC"
+	},
+	BASE_RULES_UNDER10 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 
 function romanNumerals(number) {
 	validateInput(number);
-	return transformNumeral(number);
+	if (number < 10) {
+		return transformNumeralUnderTen(number);
+	} else {
+		return transformNumeralDoubles(number);
+	}
 }
 
 function validateInput(number) {
@@ -21,12 +42,19 @@ function validateInput(number) {
 	}
 }
 
-function transformNumeral(number) {
-	if (!number.length) {
-		return 0;
-	}
+function transformNumeralUnderTen(number) {
+	return BASE_RULES_ONES[number];
 }
 
-console.log(romanNumerals([]));
+function transformNumeralDoubles(number) {
+	return BASE_RULES_DOUBLES[number];
+}
+
+
+console.log(romanNumerals([0]));
+console.log(transformNumeralUnderTen([7]));
+console.log(transformNumeralDoubles(70));
+console.log(transformNumeralBetween10_100(71));
+
 
 module.exports = romanNumerals;
