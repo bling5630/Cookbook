@@ -43,6 +43,9 @@ function validateInput(number) {
 }
 
 function transformNumeralUnderTen(number) {
+	if (!number.length) {
+		return 0;
+	}
 	return BASE_RULES_ONES[number];
 }
 
@@ -50,11 +53,8 @@ function transformNumeralDoubles(number) {
 	return BASE_RULES_DOUBLES[number];
 }
 
-
-console.log(romanNumerals([0]));
+console.log(romanNumerals([50]));
 console.log(transformNumeralUnderTen([7]));
 console.log(transformNumeralDoubles(70));
-console.log(transformNumeralBetween10_100(71));
-
 
 module.exports = romanNumerals;
