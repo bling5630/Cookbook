@@ -28,39 +28,41 @@ var BASE_RULES_ONES = {
 var BASE_DIVIDENT_2 = 2,
 	BASE_DIVIDENT_3 = 3;
 
-function joke(number) {
-	var digits = number.toString()
-		.split('');
-	return BASE_RULES_ONES[digits.pop()] + BASE_RULES_DOUBLES[digits.pop()];
-}
-
-// console.log(joke([231223129876]));
-
 function transformArabicNumberToRomanNumber(number) {
-	if (isDoubleDigitsNumber(number)) {
-		return joke(number);
+	if (number < 10) {
+		return BASE_RULES_ONES[number];
+	} else if (isDoubleDigitsNumber(number)) {
+		return implementSingleNumbersToRomanNumerals(number);
 	} else {
 		return 'Give me a new number';
 	}
 }
 
-console.log(transformArabicNumberToRomanNumber(11));
+// todo - parseInt(number / 10)
+
+function implementSingleNumbersToRomanNumerals(number) {
+	var digits = number.toString()
+		.split('');
+	return BASE_RULES_DOUBLES[digits.shift()] + BASE_RULES_ONES[digits.shift()];
+}
+
+// transform numbers between 10 and 100
 
 function isDoubleDigitsNumber(number) {
 	if (countDigits(number) === BASE_DIVIDENT_2) {
 		return 'This number has double digits ' + number;
 	} else {
 		throw new Error('Give me a new number');
-		// return 'This number has ' + countDigits(number) + ' digits';
 	}
 }
+
+// transform numbers between 100 and 1000
 
 function isTripleDigitsNumber(number) {
 	if (countDigits(number) === BASE_DIVIDENT_3) {
 		return 'This number has triple digits ' + number;
 	} else {
 		throw new Error('Give me a new number');
-		// return 'This number has ' + countDigits(number) + ' digits';
 	}
 }
 
@@ -70,23 +72,6 @@ function countDigits(number) {
 	return number.toString().length;
 }
 
-console.log(countDigits(12213214231) + ' digits');
-console.log(isDoubleDigitsNumber([23]));
-console.log(isTripleDigitsNumber(123));
+console.log(transformArabicNumberToRomanNumber(77));
 
-
-/** 
- * do it in the "mathematical" way
- * without treating the number as a string
- */
-
-var num = 45;
-var digits = [];
-while (num > 0) {
-	digits[digits.length] = num % 10;
-	num = parseInt(num / 10);
-}
-digits.reverse();
-console.log(BASE_RULES_ONES[digits.pop()] + BASE_RULES_DOUBLES[digits.pop()]);
-
-// result [ 4, 5 ]
+module.exports = transformArabicNumberToRomanNumber;

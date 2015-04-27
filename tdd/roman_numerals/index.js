@@ -23,8 +23,7 @@ var BASE_RULES_ONES = {
 		70: "LXX",
 		80: "LXXX",
 		90: "XC"
-	},
-	BASE_RULES_UNDER10 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	};
 
 
 function romanNumerals(number) {
@@ -55,6 +54,5 @@ function transformNumeralDoubles(number) {
 
 console.log(romanNumerals([50]));
 console.log(transformNumeralUnderTen([7]));
-console.log(transformNumeralDoubles(70));
 
 module.exports = romanNumerals;
