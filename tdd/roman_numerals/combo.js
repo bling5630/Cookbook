@@ -23,55 +23,53 @@ var BASE_RULES_ONES = {
 		7: "LXX",
 		8: "LXXX",
 		9: "XC"
+	},
+
+	BASE_RULES_TRIPLES = {
+		1: "C",
+		2: "CC",
+		3: "CCC",
+		4: "CD",
+		5: "D",
+		6: "DC",
+		7: "DCC",
+		8: "DCCC",
+		9: "CM"
 	};
 
 var BASE_DIVIDENT_2 = 2,
-	BASE_DIVIDENT_3 = 3;
+	BASE_DIVIDENT_3 = 3,
+	BASE_DIVIDENT_10 = 10,
+	BASE_DIVIDENT_100 = 100,
+	BASE_DIVIDENT_1000 = 1000;
 
 function transformArabicNumberToRomanNumber(number) {
-	if (number < 10) {
-		return BASE_RULES_ONES[number];
-	} else if (isDoubleDigitsNumber(number)) {
-		return implementSingleNumbersToRomanNumerals(number);
-	} else {
-		return 'Give me a new number';
-	}
-}
 
-// todo - parseInt(number / 10)
-
-function implementSingleNumbersToRomanNumerals(number) {
+	validateInput(number);
+	
 	var digits = number.toString()
 		.split('');
-	return BASE_RULES_DOUBLES[digits.shift()] + BASE_RULES_ONES[digits.shift()];
-}
 
-// transform numbers between 10 and 100
+	var ones = digits.pop(),
+		tens = parseInt(number / BASE_DIVIDENT_10),
+		hundreds = parseInt(number / BASE_DIVIDENT_100),
+		thousands = parseInt(number / BASE_DIVIDENT_1000);
 
-function isDoubleDigitsNumber(number) {
-	if (countDigits(number) === BASE_DIVIDENT_2) {
-		return 'This number has double digits ' + number;
+	if (number < BASE_DIVIDENT_10) {
+		return BASE_RULES_ONES[number];
+	} else if (number % BASE_DIVIDENT_10 === 0) {
+		return BASE_RULES_DOUBLES[tens];
 	} else {
-		throw new Error('Give me a new number');
+		return BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
 	}
 }
 
-// transform numbers between 100 and 1000
-
-function isTripleDigitsNumber(number) {
-	if (countDigits(number) === BASE_DIVIDENT_3) {
-		return 'This number has triple digits ' + number;
-	} else {
-		throw new Error('Give me a new number');
+function validateInput(number) {
+	if (!number) {
+		throw new Error('No number provided');
 	}
 }
 
-// in order to you could count the number of digits
-
-function countDigits(number) {
-	return number.toString().length;
-}
-
-console.log(transformArabicNumberToRomanNumber(77));
+console.log(transformArabicNumberToRomanNumber(8));
 
 module.exports = transformArabicNumberToRomanNumber;

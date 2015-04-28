@@ -8,7 +8,7 @@ test("romanNumerals", function(n) {
 	n.throws(function() {
 		romanNumerals();
 	});
-	n.equal(romanNumerals([]), 0, 'No book provided!!');
+	n.equal(romanNumerals([]), 0, 'No number provided!!');
 	n.equal(romanNumerals([1]), 'I', '1 equals I..well done!!');
 	n.equal(romanNumerals([2]), 'II', '2 equals II..well done!!');
 	n.equal(romanNumerals([3]), 'III', '3 equals III..well done!!');

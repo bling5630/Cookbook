@@ -3,12 +3,12 @@ var test = require('tape'),
 	transformArabicNumberToRomanNumber = require('../combo');
 
 test("transformArabicNumberToRomanNumber", function(n) {
-	n.plan(21);
+	n.plan(23);
 
 	n.throws(function() {
 		transformArabicNumberToRomanNumber();
 	});
-	n.equal(transformArabicNumberToRomanNumber([]), 0, 'No book provided!!');
+	n.equal(transformArabicNumberToRomanNumber([]), 0, 'No number provided!!');
 	n.equal(transformArabicNumberToRomanNumber([1]), 'I', '1 equals I..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([2]), 'II', '2 equals II..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([3]), 'III', '3 equals III..well done!!');
@@ -27,7 +27,9 @@ test("transformArabicNumberToRomanNumber", function(n) {
 	n.equal(transformArabicNumberToRomanNumber([70]), 'LXX', '70 equals LXX..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([80]), 'LXXX', '80 equals LXXX..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([90]), 'XC', '90 equals XC..well done!!');
-	n.equal(transformArabicNumberToRomanNumber([11]), 'XI', '11 XI..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([19]), 'XIX', '19 XIX..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([66]), 'LXVI', '66 LXVI..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([99]), 'XCIX', '99 XCIX..well done!!');
 
 	n.end();
 });
