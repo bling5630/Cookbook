@@ -37,27 +37,32 @@ var BASE_RULES_ONES = {
 		9: "CM"
 	};
 
-var BASE_DIVIDENT_2 = 2,
-	BASE_DIVIDENT_3 = 3,
-	BASE_DIVIDENT_10 = 10,
+var BASE_DIVIDENT_10 = 10,
 	BASE_DIVIDENT_100 = 100,
 	BASE_DIVIDENT_1000 = 1000;
 
 function transformArabicNumberToRomanNumber(number) {
-
 	validateInput(number);
-	
+	if (number < BASE_DIVIDENT_10) {
+		return convertNumbersUnderTen(number);
+	} else return convertNumbersBetweenTenAndHundred(number);
+}
+
+function convertNumbersUnderTen(number) {
+	if (!number.length) {
+		return 0;
+	}
+	return BASE_RULES_ONES[number];
+}
+
+function convertNumbersBetweenTenAndHundred(number) {
 	var digits = number.toString()
 		.split('');
 
 	var ones = digits.pop(),
-		tens = parseInt(number / BASE_DIVIDENT_10),
-		hundreds = parseInt(number / BASE_DIVIDENT_100),
-		thousands = parseInt(number / BASE_DIVIDENT_1000);
+		tens = parseInt(number / BASE_DIVIDENT_10);
 
-	if (number < BASE_DIVIDENT_10) {
-		return BASE_RULES_ONES[number];
-	} else if (number % BASE_DIVIDENT_10 === 0) {
+	if (number % BASE_DIVIDENT_10 === 0) {
 		return BASE_RULES_DOUBLES[tens];
 	} else {
 		return BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];

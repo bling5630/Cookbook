@@ -54,5 +54,7 @@ function transformNumeralDoubles(number) {
 
 console.log(romanNumerals([50]));
 console.log(transformNumeralUnderTen([7]));
+console.log(validateInput(10));
+
 
 module.exports = romanNumerals;
