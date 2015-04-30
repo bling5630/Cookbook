@@ -40,12 +40,32 @@ var BASE_RULES_ONES = {
 var BASE_DIVIDENT_10 = 10,
 	BASE_DIVIDENT_100 = 100,
 	BASE_DIVIDENT_1000 = 1000;
-
+/*
 function transformArabicNumberToRomanNumber(number) {
 	validateInput(number);
+
+	// 1-99
 	if (number < BASE_DIVIDENT_10) {
 		return convertNumbersUnderTen(number);
 	} else return convertNumbersBetweenTenAndHundred(number);
+}
+*/
+
+function transformArabicNumberToRomanNumber(number) {
+	validateInput(number);
+
+	// 1-10
+	if (number < BASE_DIVIDENT_10) {
+		return convertNumbersUnderTen(number);
+	}
+	// 10-99
+	else if (number >= BASE_DIVIDENT_10 && number < BASE_DIVIDENT_100) {
+		return convertNumbersBetweenTenAndHundred(number);
+	}
+	// 100-999
+	else {
+		return convertNumbersBetweenThousandAndHundred(number);
+	}
 }
 
 function convertNumbersUnderTen(number) {
@@ -56,11 +76,12 @@ function convertNumbersUnderTen(number) {
 }
 
 function convertNumbersBetweenTenAndHundred(number) {
-	var digits = number.toString()
-		.split('');
 
-	var ones = digits.pop(),
-		tens = parseInt(number / BASE_DIVIDENT_10);
+	var ones = number.toString()
+		.split('')
+		.pop();
+
+	var tens = parseInt(number / BASE_DIVIDENT_10);
 
 	if (number % BASE_DIVIDENT_10 === 0) {
 		return BASE_RULES_DOUBLES[tens];
@@ -69,12 +90,22 @@ function convertNumbersBetweenTenAndHundred(number) {
 	}
 }
 
+function convertNumbersBetweenThousandAndHundred(number) {
+
+	var hundreds = parseInt(number / BASE_DIVIDENT_100);
+
+	if (number % BASE_DIVIDENT_100 === 0)
+		return BASE_RULES_TRIPLES[hundreds];
+}
+
 function validateInput(number) {
 	if (!number) {
 		throw new Error('No number provided');
 	}
 }
 
-console.log(transformArabicNumberToRomanNumber(8));
+
+console.log(convertNumbersBetweenThousandAndHundred([500]));
+console.log(transformArabicNumberToRomanNumber([500]));
 
 module.exports = transformArabicNumberToRomanNumber;

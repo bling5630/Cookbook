@@ -3,7 +3,7 @@ var test = require('tape'),
 	transformArabicNumberToRomanNumber = require('../combo');
 
 test("transformArabicNumberToRomanNumber", function(n) {
-	n.plan(23);
+	n.plan(32);
 
 	n.throws(function() {
 		transformArabicNumberToRomanNumber();
@@ -30,6 +30,15 @@ test("transformArabicNumberToRomanNumber", function(n) {
 	n.equal(transformArabicNumberToRomanNumber([19]), 'XIX', '19 XIX..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([66]), 'LXVI', '66 LXVI..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([99]), 'XCIX', '99 XCIX..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([100]), 'C', '100 C..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([200]), 'CC', '200 CC..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([300]), 'CCC', '300 CCC..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([400]), 'CD', '400 CD..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([500]), 'D', '500 D..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([600]), 'DC', '600 DC..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([700]), 'DCC', '700 DCC..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([800]), 'DCCC', '800 DCCC..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([900]), 'CM', '900 CM..well done!!');
 
 	n.end();
 });
