@@ -1,4 +1,5 @@
 // KataFizzBuzz
+var _ = require('lodash');
 
 var FIZZ_MESSAGE = "Fizz",
 	BUZZ_MESSAGE = "Buzz",
@@ -12,17 +13,22 @@ var FIZZ_3 = 3,
 	MAGIC_FIZZ = 3;
 
 function kataFizzBuzzCalclulator(number) {
-
 	validateInput(number);
 
 	return calculateOutput(number);
 }
 
 function validateInput(number) {
-	if (typeof number !== "number") {
-		throw new Error();
+	if (!number) {
+		throw new Error('Input is undefined');
 	}
+	/*	
+		if (typeof number !== 'number') {
+			throw new Error('Input is not a number');
+		}
+		*/
 }
+
 
 function calculateOutput(number) {
 	if (isDivisible(number, FIZZ_15)) {
@@ -42,15 +48,11 @@ function isDivisible(number, divident) {
 	return number % divident === 0;
 }
 
-// igaz-hamis is zel kezdjuk
 function containMagicNumbers(number) {
 
+
 	var digits = number.toString()
-		.split("")
-		// nem kell map
-		.map(function containThree(n) {
-			return parseInt(n);
-		});
+		.split("");
 
 	if (digits.contains(MAGIC_FIZZ)) {
 		return MAGIC_FIZZ_MESSAGE;
@@ -63,8 +65,6 @@ Array.prototype.contains = function(elem) {
 	}
 	return false;
 };
-
-
 
 /*
 some eleg hogy egy elemre igaz legyen, ha csak 2 es van benne false, ha talal egyet akkor megall
@@ -82,6 +82,9 @@ function addDigit(number) {
 }
 */
 
-console.log(kataFizzBuzzCalclulator(13));
+console.log(kataFizzBuzzCalclulator(3));
+console.log(kataFizzBuzzCalclulator(5));
+console.log(kataFizzBuzzCalclulator(15));
+console.log(kataFizzBuzzCalclulator(137));
 
 module.exports = kataFizzBuzzCalclulator;

@@ -40,16 +40,6 @@ var BASE_RULES_ONES = {
 var BASE_DIVIDENT_10 = 10,
 	BASE_DIVIDENT_100 = 100,
 	BASE_DIVIDENT_1000 = 1000;
-/*
-function transformArabicNumberToRomanNumber(number) {
-	validateInput(number);
-
-	// 1-99
-	if (number < BASE_DIVIDENT_10) {
-		return convertNumbersUnderTen(number);
-	} else return convertNumbersBetweenTenAndHundred(number);
-}
-*/
 
 function transformArabicNumberToRomanNumber(number) {
 	validateInput(number);
