@@ -2,10 +2,10 @@ var test = require('tape'),
 	kataFizzBuzzCalclulator = require('../src/2fizzBuzz');
 
 test("FizzBuzz", function(f) {
-	f.plan(19);
+	f.plan(24);
 
 	f.throws(function() {
-		FizzBuzz();
+		kataFizzBuzzCalclulator();
 	});
 
 	f.equal(kataFizzBuzzCalclulator(15), "FizzBuzz");
@@ -23,12 +23,16 @@ test("FizzBuzz", function(f) {
 	f.equal(kataFizzBuzzCalclulator(33), "Fizz");
 	f.equal(kataFizzBuzzCalclulator(18), "Fizz");
 	f.equal(kataFizzBuzzCalclulator(81), "Fizz");
+	f.equal(kataFizzBuzzCalclulator(13), "**Magic_Fizz**");
+	f.equal(kataFizzBuzzCalclulator(31), "**Magic_Fizz**");
+	f.equal(kataFizzBuzzCalclulator(37), "**Magic_Fizz**");
+	f.equal(kataFizzBuzzCalclulator(73), "**Magic_Fizz**");
+	f.equal(kataFizzBuzzCalclulator(103), "**Magic_Fizz**");
 	f.equal(kataFizzBuzzCalclulator("cdc"), "Mehh");
 	f.equal(kataFizzBuzzCalclulator("sgfsgh"), "Mehh");
 	f.equal(kataFizzBuzzCalclulator("dsfas"), "Mehh");
+	//f.equal(kataFizzBuzzCalclulator("gdgg3vdfds"), "Mehh");
 	f.end();
 });
-
-// 'gdgg3vdfds'
 
 module.exports = kataFizzBuzzCalclulator;

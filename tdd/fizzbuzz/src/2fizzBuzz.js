@@ -10,7 +10,7 @@ var FIZZ_MESSAGE = "Fizz",
 var FIZZ_3 = 3,
 	BUZZ_5 = 5,
 	FIZZ_15 = 15,
-	MAGIC_FIZZ = 3;
+	MAGIC_FIZZ = "3";
 
 function kataFizzBuzzCalclulator(number) {
 	validateInput(number);
@@ -22,13 +22,12 @@ function validateInput(number) {
 	if (!number) {
 		throw new Error('Input is undefined');
 	}
-	/*	
-		if (typeof number !== 'number') {
-			throw new Error('Input is not a number');
-		}
-		*/
+	/*
+	if (typeof number !== 'number') {
+		throw new Error('Input is not a number');
+	}
+	*/
 }
-
 
 function calculateOutput(number) {
 	if (isDivisible(number, FIZZ_15)) {
@@ -49,42 +48,14 @@ function isDivisible(number, divident) {
 }
 
 function containMagicNumbers(number) {
-
-
-	var digits = number.toString()
-		.split("");
-
-	if (digits.contains(MAGIC_FIZZ)) {
+	var filter = _.some(number.toString(), function(n) {
+		return n === MAGIC_FIZZ;
+	});
+	if (filter === true) {
 		return MAGIC_FIZZ_MESSAGE;
 	}
 }
 
-Array.prototype.contains = function(elem) {
-	for (var i in this) {
-		if (this[i] == elem) return true;
-	}
-	return false;
-};
-
-/*
-some eleg hogy egy elemre igaz legyen, ha csak 2 es van benne false, ha talal egyet akkor megall
-every mindegyiknek ugyanolyannak kell lenni, vegig nezi az osszes elemet
-*/
-
-/*
-function addDigit(number) {
-
-	var digits = number.toString();
-
-	if (digits.search(MAGIC_FIZZ) > -1) {
-		return MAGIC_FIZZ_MESSAGE;
-	}
-}
-*/
-
-console.log(kataFizzBuzzCalclulator(3));
-console.log(kataFizzBuzzCalclulator(5));
-console.log(kataFizzBuzzCalclulator(15));
-console.log(kataFizzBuzzCalclulator(137));
+console.log(kataFizzBuzzCalclulator(31));
 
 module.exports = kataFizzBuzzCalclulator;

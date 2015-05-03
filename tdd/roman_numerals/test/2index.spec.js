@@ -3,7 +3,7 @@ var test = require('tape'),
 	transformArabicNumberToRomanNumber = require('../combo');
 
 test("transformArabicNumberToRomanNumber", function(n) {
-	n.plan(32);
+	n.plan(52);
 
 	n.throws(function() {
 		transformArabicNumberToRomanNumber();
@@ -28,6 +28,7 @@ test("transformArabicNumberToRomanNumber", function(n) {
 	n.equal(transformArabicNumberToRomanNumber([80]), 'LXXX', '80 equals LXXX..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([90]), 'XC', '90 equals XC..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([19]), 'XIX', '19 XIX..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([29]), 'XXIX', '29 XXIX..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([66]), 'LXVI', '66 LXVI..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([99]), 'XCIX', '99 XCIX..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([100]), 'C', '100 C..well done!!');
@@ -39,6 +40,25 @@ test("transformArabicNumberToRomanNumber", function(n) {
 	n.equal(transformArabicNumberToRomanNumber([700]), 'DCC', '700 DCC..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([800]), 'DCCC', '800 DCCC..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([900]), 'CM', '900 CM..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([911]), 'CMXI', '911 CMXI..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([655]), 'DCLV', '655 DCLV..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([431]), 'CDXXXI', '431 CDXXXI..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([822]), 'DCCCXXII', '822 DCCCXXII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([107]), 'CVII', '107 CVII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([1000]), 'M', '1000 M..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([2000]), 'MM', '2000 MM..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([1007]), 'MVII', '1007 MVII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([1077]), 'MLXXVII', '1077 MLXXVII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([1577]), 'MDLXXVII', '1577 MDLXXVII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([1701]), 'MDCCI', '1701 MDCCI..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([2077]), 'MMLXXVII', '2077 MMLXXVII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([2307]), 'MMCCCVII', '2307 MMCCCVII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([2999]), 'MMCMXCIX', '2999 MMCMXCIX..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([2002]), 'MMII', '2002 MMII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([1782]), 'MDCCLXXXII', '1782 MDCCLXXXII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([1613]), 'MDCXIII', '1613 MDCXIII..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([1955]), 'MCMLV', '1955 MCMLV..well done!!');
+	n.equal(transformArabicNumberToRomanNumber([2671]), 'MMDCLXXI', '2671 MMDCLXXI..well done!!');
 
 	n.end();
 });
