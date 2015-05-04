@@ -8,6 +8,11 @@ test("transformArabicNumberToRomanNumber", function(n) {
 	n.throws(function() {
 		transformArabicNumberToRomanNumber();
 	});
+	/*
+	n.throws(function() {
+		transformArabicNumberToRomanNumber('majom');
+	});
+	*/
 	n.equal(transformArabicNumberToRomanNumber([]), 0, 'No number provided!!');
 	n.equal(transformArabicNumberToRomanNumber([1]), 'I', '1 equals I..well done!!');
 	n.equal(transformArabicNumberToRomanNumber([2]), 'II', '2 equals II..well done!!');
@@ -66,5 +71,3 @@ test("transformArabicNumberToRomanNumber", function(n) {
 test.createStream()
 	.pipe(tapSpec())
 	.pipe(process.stdout);
-
-module.exports = transformArabicNumberToRomanNumber;

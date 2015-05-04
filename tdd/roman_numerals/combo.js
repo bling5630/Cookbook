@@ -98,19 +98,19 @@ function convertNumbersBetweenTenAndHundred(number) {
 
 function convertNumbersBetweenThousandAndHundred(number) {
 
-	var hundreds = number.toString().slice(0, 1),
-		tens = number.toString().slice(1, 2),
-		ones = number.toString().slice(2, 3);
+		var hundreds = number.toString().slice(0, 1),
+			tens = number.toString().slice(1, 2),
+			ones = number.toString().slice(2, 3);
 
-	var hundredsDivident = parseInt(number / BASE_DIVIDENT_100);
+		var hundredsDivident = parseInt(number / BASE_DIVIDENT_100);
 
-	if (number % BASE_DIVIDENT_100 === 0) {
-		return BASE_RULES_TRIPLES[hundredsDivident];
-	} else {
-		return BASE_RULES_TRIPLES[hundreds] + BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
+		if (number % BASE_DIVIDENT_100 === 0) {
+			return BASE_RULES_TRIPLES[hundredsDivident];
+		} else {
+			return BASE_RULES_TRIPLES[hundreds] + BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
+		}
 	}
-}
-// 1000-2999 part
+	// 1000-2999 part
 
 function convertNumbersBetweenThousandAndThreeThousand(number) {
 	var thousands = number.toString().slice(0, 1),
@@ -134,6 +134,11 @@ function validateInput(number) {
 	if (!number) {
 		throw new Error('No number provided');
 	}
+	/*
+		if (typeof number !== 'number') {
+			throw new Error('Input is not a number');
+		}
+		*/
 }
 
 // print and convert numbers to roman numerals
