@@ -1,0 +1,1 @@
+inspired by [Javascript and MapReduce](http://jcla1.com/blog/javascript-mapreduce/) - [Joseph Adams](http://jcla1.com/)
