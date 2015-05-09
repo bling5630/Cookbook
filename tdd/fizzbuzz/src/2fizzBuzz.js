@@ -1,4 +1,6 @@
 // KataFizzBuzz
+// Jasmine ??
+
 var _ = require('lodash');
 
 var FIZZ_MESSAGE = "Fizz",
@@ -48,12 +50,13 @@ function isDivisible(number, divident) {
 }
 
 function containMagicNumbers(number) {
-	var filter = _.some(number.toString(), function(n) {
+	return filterMagicNumbers(number) === true ? MAGIC_FIZZ_MESSAGE : false;
+}
+
+function filterMagicNumbers(number) {
+	return _.some(number.toString(), function(n) {
 		return n === MAGIC_FIZZ;
 	});
-	if (filter === true) {
-		return MAGIC_FIZZ_MESSAGE;
-	}
 }
 
 console.log(kataFizzBuzzCalclulator(31));

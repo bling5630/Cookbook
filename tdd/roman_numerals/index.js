@@ -1,5 +1,6 @@
 var _ = require('lodash');
 
+
 var BASE_RULES_ONES = {
 		0: '0',
 		1: 'I',
@@ -72,46 +73,33 @@ function transformArabicNumberToRomanNumber(number) {
 // 1-10 part
 
 function convertNumbersUnderTen(number) {
-	if (!number.length) {
-		return 0;
-	}
-	return BASE_RULES_ONES[number];
+	return !number.length ? 0 : BASE_RULES_ONES[number];
 }
 
 // 10-99 part
 
 function convertNumbersBetweenTenAndHundred(number) {
 
-	var ones = number.toString()
-		.split('')
-		.pop();
+	var ones = number.toString().slice(1);
 
 	var tens = parseInt(number / BASE_DIVIDENT_10);
 
-	if (number % BASE_DIVIDENT_10 === 0) {
-		return BASE_RULES_DOUBLES[tens];
-	} else {
-		return BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
-	}
+	return number % BASE_DIVIDENT_10 === 0 ? BASE_RULES_DOUBLES[tens] : BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
 }
 
 // 100-999 part
 
 function convertNumbersBetweenThousandAndHundred(number) {
 
-	var hundreds = number.toString().slice(0, 1),
-		tens = number.toString().slice(1, 2),
-		ones = number.toString().slice(2, 3);
+		var hundreds = number.toString().slice(0, 1),
+			tens = number.toString().slice(1, 2),
+			ones = number.toString().slice(2, 3);
 
-	var hundredsDivident = parseInt(number / BASE_DIVIDENT_100);
+		var hundredsDivident = parseInt(number / BASE_DIVIDENT_100);
 
-	if (number % BASE_DIVIDENT_100 === 0) {
-		return BASE_RULES_TRIPLES[hundredsDivident];
-	} else {
-		return BASE_RULES_TRIPLES[hundreds] + BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
+		return number % BASE_DIVIDENT_100 === 0 ? BASE_RULES_TRIPLES[hundredsDivident] : BASE_RULES_TRIPLES[hundreds] + BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
 	}
-}
-// 1000-2999 part
+	// 1000-2999 part
 
 function convertNumbersBetweenThousandAndThreeThousand(number) {
 	var thousands = number.toString().slice(0, 1),
@@ -121,12 +109,7 @@ function convertNumbersBetweenThousandAndThreeThousand(number) {
 
 	var thousandsDivident = parseInt(number / BASE_DIVIDENT_1000);
 
-	if (number % BASE_DIVIDENT_1000 === 0) {
-		return BASE_RULES_FOURTH[thousandsDivident];
-	} else {
-		return BASE_RULES_FOURTH[thousands] + BASE_RULES_TRIPLES[hundreds] + BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
-	}
-
+	return number % BASE_DIVIDENT_1000 === 0 ? BASE_RULES_FOURTH[thousandsDivident] : BASE_RULES_FOURTH[thousands] + BASE_RULES_TRIPLES[hundreds] + BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
 }
 
 // input validation
@@ -135,6 +118,11 @@ function validateInput(number) {
 	if (!number) {
 		throw new Error('No number provided');
 	}
+	/*
+	if (typeof number !== 'number') {
+		throw new Error('Input is not a number');
+	}
+	*/
 }
 
 // print and convert numbers to roman numerals

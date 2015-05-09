@@ -1,0 +1,11 @@
+{
+  "name": "dripjs",
+  "version": "1.0.0",
+  "description": "[A Drip of JavaScript](http://adripofjavascript.com/archive.html) by [Joshua Clanton @joshuacc](https://twitter.com/joshuacc)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

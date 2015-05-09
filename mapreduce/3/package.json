@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jsdom": "^3.1.2",
     "lodash": "^3.8.0"
   }
 }
