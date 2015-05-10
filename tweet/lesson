@@ -1,0 +1,29 @@
+Twitter API
+
+dev.twitter.com
+
+REST API - https://dev.twitter.com/rest/public
+
+GET adj
+
+POST adok
+
+1 - kik a barataim - GET friends list
+
+js sel leszedni a lsitat
+
+2 - Autentikacio
+
+3 - OAuth
+
+4 - kell backend is
+
+5 - Twitter tudni akarja a web cimemet, + le kell menteni a Tokent
+
+6 - letre kell majd hozni egy applikaciot Twitteren belul
+
+7 - https://github.com/BoyCook/TwitterJSClient
+
+8 - o rol, express, ami fut nalam, koszonon nekem, mostani idot vissza adja, 
+
+9 - Twitter doksit, 
