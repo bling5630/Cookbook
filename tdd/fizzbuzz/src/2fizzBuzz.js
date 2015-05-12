@@ -23,8 +23,6 @@ function validateInput(number) {
 	if (!number) {
 		throw new Error('Input is undefined');
 	}
-
-	// jo
 	if (typeof number !== 'number') {
 		throw new Error('Input is not a number');
 	}

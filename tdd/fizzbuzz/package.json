@@ -4,7 +4,8 @@
   "description": "FizzBuzzKata using tape",
   "main": "index.js",
   "scripts": {
-    "test": "node test/fizzBuzz.spec.js"
+    "test": "node test/2fizzBuzz.spec.js,
+    jasmine - node test / jasmine.index.spec.js "
   },
   "author": "@TPuski <puskitamas@gmail.com>",
   "license": "MIT",

@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "tap-spec": "^3.0.0",
     "tape": "^4.0.0"
   }
 }
