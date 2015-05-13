@@ -1,0 +1,1 @@
+inspired by Victor Savkin \ [@victorsavkin](https://twitter.com/victorsavkin) - [Functional Refactoring In Javascript](http://victorsavkin.com/post/63551894251/functional-refactoring-in-javascript)

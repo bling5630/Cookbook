@@ -1,0 +1,18 @@
+{
+  "name": "savkin",
+  "version": "1.0.0",
+  "description": "inspired by Victor Savkin \\ [@victorsavkin](https://twitter.com/victorsavkin) - [Functional Refactoring In Javascript](http://victorsavkin.com/post/63551894251/functional-refactoring-in-javascript)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine-node": "^1.14.5",
+    "lodash": "^3.8.0"
+  }
+}
