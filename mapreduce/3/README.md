@@ -1,1 +1,1 @@
-inspired by [Javascript and MapReduce](http://jcla1.com/blog/javascript-mapreduce/) - [Joseph Adams](http://jcla1.com/)
+inspired by [Javascript and MapReduce](http://jcla1.com/blog/javascript-mapreduce/) - [Joseph Adams](http://jcla1.com/) with [Cheerio](https://github.com/cheeriojs/cheerio) by [David Chambers](https://github.com/davidchambers)
