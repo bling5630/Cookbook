@@ -1,0 +1,1 @@
+inspired by [Web Scraping With Node.js](http://www.smashingmagazine.com/2015/04/08/web-scraping-with-nodejs/) - [Elliot Bonneville @bovenille](https://twitter.com/bovenille)
