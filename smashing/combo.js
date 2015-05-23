@@ -1,30 +1,44 @@
 var request = require("request"),
 	cheerio = require("cheerio"),
-	url = 'http://koponyeg.hu/t/Budapest';
+	_ = require('lodash');
+url = 'http://www.wunderground.com/cgi-bin/findweather/getForecast?&query=';
+
+var corpus = {};
 
 request(url, function(error, response, body) {
 	if (error) {
 		console.log("Couldn’t get page because of error: " + error);
 		return;
 	}
-	//console.log(body.length);
 
 	// load the body of the page into Cheerio so we can traverse the DOM
-	var $ = cheerio.load(body),
-		links = $(".r a");
+	//var $ = cheerio.load(body);
 
-	links.each(function(i, link) {
-		// get the href attribute of each link
-		var url = $(link).attr("href");
+	// print the length of the body
+	//console.log(body.length);
 
-		// strip out unnecessary junk
-		url = url.replace("/url?q=", "").split("&")[0];
+	var $page = cheerio.load(body),
+		article = $page('body').text();
 
-		if (url.charAt(0) === "/") {
+	// Throw away extra white space and non-alphanumeric characters.
+
+	var text = article.replace(/[^a-zA-Z ]/g,'')
+		.replace(/\s+/g, '')
+		.toLowerCase();
+
+	// Split on spaces for a list of all the words on that page and 
+	// loop through that list.
+	_.forEach(text, function(word) {
+		if (word.length < 4 || word.length > 20) {
 			return;
 		}
-
-		// this link counts as a result, so increment results
-		totalResults++;
+		if (corpus[word]) {
+			corpus[word] ++;
+		} else {
+			corpus[word] = 1;
+		}
 	});
+	console.log(text);
+
+
 });
