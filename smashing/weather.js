@@ -14,7 +14,7 @@ request(url, function(error, response, body) {
 	//console.log(body);
 });	
 
-url2 = "http://www.wunderground.com/cgi-bin/findweather/getForecast?&query=" + 'Szeged';
+url2 = "http://www.wunderground.com/cgi-bin/findweather/getForecast?&query=" + 'Bucharest';
 
 request(url2, function(error, response, body) {
 	if (!error) {
