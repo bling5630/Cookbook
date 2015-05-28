@@ -1,7 +1,8 @@
 var request = require("request"),
 	cheerio = require("cheerio"),
 	_ = require('lodash');
-url = 'http://www.wunderground.com/cgi-bin/findweather/getForecast?&query=';
+
+var url = 'http://www.wunderground.com/cgi-bin/findweather/getForecast?&query=';
 
 request(url, function(error, response, body) {
 	if (error) {
@@ -17,9 +18,24 @@ request(url, function(error, response, body) {
 		.toLowerCase()
 		.toString();
 
-	var wordArray = text.split(' ').slice(0, 20);
+	var wordArray = _.filter(text.split(' '), function(n) {
+		return n.length > 2 && n.length < 8;
+	});
 
-	console.log(text.length);
+	var wordArray2 = _.map(text.split(' '), function(n) {
+		return n.match(/([a-z]+)/g);
+	}).reduce(function(last, now) {
+		return last.concat(now);
+	}, []);
+
+	var wordArray3 = _.remove(wordArray2, function(n) {
+		return n !== null;
+	});
+
+
+	console.log(wordArray3);
+	//console.log(text.length);
 	console.log(wordArray.length);
-	console.log(wordArray);
+	console.log(wordArray2.length);
+	console.log(wordArray3.length);
 });
