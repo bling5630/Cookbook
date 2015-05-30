@@ -28,14 +28,24 @@ request(url, function(error, response, body) {
 		return last.concat(now);
 	}, []);
 
-	var wordArray3 = _.remove(wordArray2, function(n) {
+	var wordArray3 = _.remove(wordArray2.slice(0,10), function(n) {
 		return n !== null;
 	});
 
+	var wordArray4 = _.reduce(wordArray.slice(0,20), function(acc, curr) {
+		if (typeof acc[curr] == 'undefined') {
+			acc[curr] = 1;
+		} else {
+			acc[curr] += 1;
+		}
+		return acc;
+	}, {});
 
-	console.log(wordArray3);
-	//console.log(text.length);
+	
+	console.log(text.length);
 	console.log(wordArray.length);
 	console.log(wordArray2.length);
 	console.log(wordArray3.length);
+	console.log(wordArray3);
+	console.log(wordArray4);
 });
