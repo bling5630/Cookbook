@@ -22,7 +22,7 @@ request(url, function(error, response, body) {
 		return n.length > 2 && n.length < 8;
 	});
 
-	var wordArray4 = _.reduce(wordArray.slice(0,10), function(acc, curr) {
+	var wordArray4 = _.reduce(wordArray, function(acc, curr) {
 		if (typeof acc[curr] == 'undefined') {
 			acc[curr] = 1;
 		} else {
@@ -31,10 +31,22 @@ request(url, function(error, response, body) {
 		return acc;
 	}, {});
 
-var data = [wordArray4];
+	var data = wordArray4;
 
+	var sortable = [];
+
+	for (var word in data)
+		sortable.push([word, data[word]]);
+	sortable.sort(function(a, b) {
+		return a[1] - b[1];
+	});
+
+	console.log(sortable);
 	console.log(text.length);
-	console.log(wordArray.slice(0,10));	
 	console.log(wordArray.length);
-	console.log(data);
+	//console.log(data);
 });
+
+var sortable = [];
+
+module.exports = sortable;
