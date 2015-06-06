@@ -29,3 +29,5 @@ window.Calculator = {
 		this.current = 0;
 	}
 };
+
+//module.exports = Calculator;

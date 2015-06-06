@@ -32,7 +32,6 @@ request(url, function(error, response, body) {
 	for (word in data)
 		sortable.push([word, data[word]]);
 
-
 	sortable.sort(function(a, b) {
 		return a[1] - b[1];
 	});

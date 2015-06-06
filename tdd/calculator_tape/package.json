@@ -1,0 +1,16 @@
+{
+  "name": "calculator_tape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/calculator.spec.js"
+  },
+  "author": "@TPuski <puskitamas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "tap-spec": "^4.0.0",
+    "tape": "^4.0.0"
+  }
+}

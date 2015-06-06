@@ -1,3 +1,5 @@
+//var Calculator = require('../src/calculator');
+
 describe('Calculator', function() {
 
 	beforeEach(function() {

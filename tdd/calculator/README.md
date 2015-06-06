@@ -1,2 +1,1 @@
-The-Obligatory-Calculator inspired by
-https://www.youtube.com/watch?v=s4CIH6HVqec&index=3&list=PLOxOmO43E6Jt0SruKGxtZs-W3PJN90G_a
+Inspired by [JavaScript Testing With Jasmine - The Basics - The-Obligatory-Calculator](https://www.youtube.com/watch?v=s4CIH6HVqec&index=3&list=PLOxOmO43E6Jt0SruKGxtZs-W3PJN90G_a)
