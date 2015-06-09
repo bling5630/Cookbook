@@ -22,7 +22,7 @@ request(url, function(error, response, body) {
 		return n.length > 2 && n.length < 8;
 	});
 
-	var wordArray4 = _.reduce(wordArray.slice(0,10), function(acc, curr) {
+	var wordArray4 = _.reduce(wordArray.slice(0, 1), function(acc, curr) {
 		if (typeof acc[curr] == 'undefined') {
 			acc[curr] = 1;
 		} else {
@@ -31,10 +31,11 @@ request(url, function(error, response, body) {
 		return acc;
 	}, {});
 
-var data = [wordArray4];
+	var data = [wordArray4];
+	var jsonData = JSON.stringify(data);
 
-	console.log(text.length);
-	console.log(wordArray.slice(0,10));	
-	console.log(wordArray.length);
-	console.log(data);
+	//console.log(text.length);
+	//console.log(wordArray.slice(0,10));	
+	//console.log(wordArray.length);
+	console.log(jsonData);
 });

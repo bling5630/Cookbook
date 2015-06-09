@@ -36,10 +36,10 @@ request(url, function(error, response, body) {
 		return a[1] - b[1];
 	});
 
-	console.log(sortable.slice(-10));
+	//console.log(sortable.slice(-10));
 	//console.log(wordArray.length);
 	//console.log(text.length);
-	//console.log(data);
+	console.log(sortable);
 });
 
 function filterContent(content) {

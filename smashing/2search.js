@@ -32,40 +32,11 @@ request(url, function(error, response, body) {
 		return acc;
 	}, {});
 
-	//var data = JSON.stringify(wordArray4);
 	var jsonData = JSON.stringify(wordArray4);
-	//var parsedJsonData = JSON.parse(jsonData);
+	
 	var sortable = [];
 
-	sortable.push(wordArray4);
-	//sortable.push(jsonData);
+	sortable.push(jsonData);
 
-	/*
-		for (var word in data)
-			sortable.push([word, data[word]]);
-		sortable.sort(function(a, b) {
-			return a[1] - b[1];
-		});
-
-	var file = fs.createWriteStream('data.json');
-	file.on('error', function(err) {
-
-	});
-	sortable.forEach(function(v) {
-		file.write(v.join(', ') + '\n');
-	});
-	file.end();
-	*/
-	console.log(wordArray4);
-	//console.log(JSON.stringify(wordArray4));
-	//console.log(sortable.slice(-5));
-	//console.log(text.length);
-	//console.log(wordArray.length);
-	//console.log(data);
+	console.log(sortable);
 });
-
-/*
-var sortable = [];
-
-module.exports = sortable;
-*/
