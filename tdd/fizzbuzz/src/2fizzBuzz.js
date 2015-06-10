@@ -7,7 +7,7 @@ var FIZZ_MESSAGE = "Fizz",
 	FIZZBUZZ_MESSAGE = "FizzBuzz",
 	MEHH_MESSAGE = "Mehh",
 	MAGIC_FIZZ_MESSAGE = "**Magic_Fizz**";
-
+ 
 var FIZZ_3 = 3,
 	BUZZ_5 = 5,
 	FIZZ_15 = 15,
