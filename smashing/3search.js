@@ -20,14 +20,7 @@ request(url, function(error, response, body) {
 
 	var wordArray = filterContent(text);
 
-	var data = _.reduce(wordArray, function(acc, curr) {
-		if (typeof acc[curr] == 'undefined') {
-			acc[curr] = 1;
-		} else {
-			acc[curr] += 1;
-		}
-		return acc;
-	}, {});
+	var data = countWords(wordArray);
 
 	for (word in data)
 		sortable.push([word, data[word]]);
@@ -36,11 +29,19 @@ request(url, function(error, response, body) {
 		return a[1] - b[1];
 	});
 
-	//console.log(sortable.slice(-10));
-	//console.log(wordArray.length);
-	//console.log(text.length);
-	console.log(sortable);
+	console.log(sortable.slice(-10));
 });
+
+function countWords(content) {
+	return _.reduce(content, function(a, c) {
+		if (typeof a[c] == 'undefined') {
+			a[c] = 1;
+		} else {
+			a[c] += 1;
+		}
+		return a;
+	}, {});
+}
 
 function filterContent(content) {
 	return _.filter(content.split(' '), function(n) {
