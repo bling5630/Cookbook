@@ -2,7 +2,7 @@ var request = require("request"),
 	cheerio = require("cheerio"),
 	_ = require('lodash');
 
-var url = 'http://www.wunderground.com/cgi-bin/findweather/getForecast?&query=';
+var url = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
 var sortable = [];
 var word;
@@ -22,15 +22,27 @@ request(url, function(error, response, body) {
 
 	var data = countWords(wordArray);
 
-	for (word in data)
-		sortable.push([word, data[word]]);
+	var pushedArray = pushWordsIntoArray(data);
 
-	sortable.sort(function(a, b) {
+	sortWords(sortable);
+
+	printResult(typeof sortable.slice(-10));
+});
+
+function printResult(content) {
+	console.log(content);
+}
+
+function sortWords(array) {
+	return array.sort(function(a, b) {
 		return a[1] - b[1];
 	});
+}
 
-	console.log(sortable.slice(-10));
-});
+function pushWordsIntoArray(content) {
+	for (word in content)
+		sortable.push([word, content[word]]);
+}
 
 function countWords(content) {
 	return _.reduce(content, function(a, c) {

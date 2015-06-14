@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-node search.js
+node 3search.js
 
-node  search.js > example.json
+node  3search.js > example.json
 
