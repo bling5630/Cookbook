@@ -41,11 +41,12 @@ request(url, function(error, response, body) {
 		return acc;
 	}, {});
 
-	
+	/*
 	console.log(text.length);
 	console.log(wordArray.length);
 	console.log(wordArray2.length);
 	console.log(wordArray3.length);
 	console.log(wordArray3);
-	console.log(wordArray4);
+	*/
+	console.log(JSON.stringify(wordArray4));
 });

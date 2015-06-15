@@ -24,9 +24,15 @@ request(url, function(error, response, body) {
 
 	var pushedArray = pushWordsIntoArray(data);
 
-	sortWords(sortable);
+	var x = sortWords(sortable);
 
-	printResult(typeof sortable.slice(-10));
+	var jsonData = JSON.stringify(x);
+
+	console.log(jsonData);
+
+	/*
+	printResult(sortWords(sortable).slice(-10));
+	*/
 });
 
 function printResult(content) {
