@@ -2,6 +2,8 @@ var BASE_NUMBER = {
 	1: 'I',
 	4: 'IV',
 	5: 'V',
+	9: 'IX',
+	10: 'X',
 
 };
 
@@ -18,19 +20,20 @@ function arabicToRoman(number) {
 				break;
 			}
 		}
-	/*	if (number - NUMBERS[2] >= 0) {
-			number = number - NUMBERS[2];
-			output = output + BASE_NUMBER[NUMBERS[2]];
-		} else if (number - NUMBERS[1] >= 0) {
-			number = number - NUMBERS[1];
-			output = output + BASE_NUMBER[NUMBERS[1]];
-		} else {
-			number = number - NUMBERS[0];
-			output = output + BASE_NUMBER[NUMBERS[0]];
-		} */
+		/*	if (number - NUMBERS[2] >= 0) {
+				number = number - NUMBERS[2];
+				output = output + BASE_NUMBER[NUMBERS[2]];
+			} else if (number - NUMBERS[1] >= 0) {
+				number = number - NUMBERS[1];
+				output = output + BASE_NUMBER[NUMBERS[1]];
+			} else {
+				number = number - NUMBERS[0];
+				output = output + BASE_NUMBER[NUMBERS[0]];
+			} */
 	}
 	return output;
 }
 
+console.log(arabicToRoman(29));
 
 module.exports = arabicToRoman;
