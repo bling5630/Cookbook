@@ -20,16 +20,6 @@ function arabicToRoman(number) {
 				break;
 			}
 		}
-		/*	if (number - NUMBERS[2] >= 0) {
-				number = number - NUMBERS[2];
-				output = output + BASE_NUMBER[NUMBERS[2]];
-			} else if (number - NUMBERS[1] >= 0) {
-				number = number - NUMBERS[1];
-				output = output + BASE_NUMBER[NUMBERS[1]];
-			} else {
-				number = number - NUMBERS[0];
-				output = output + BASE_NUMBER[NUMBERS[0]];
-			} */
 	}
 	return output;
 }

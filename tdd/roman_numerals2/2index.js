@@ -8,7 +8,7 @@ var BASE_NUMBERS = {
 
 var NUMBERS = Object.keys(BASE_NUMBERS);
 
-function numberConverter(number) {
+function converter(number) {
 	var output = '';
 
 	while (number) {
@@ -17,12 +17,14 @@ function numberConverter(number) {
 			if (number - NUMBERS[i] >= 0) {
 				number = number - NUMBERS[i];
 				output = output + BASE_NUMBERS[NUMBERS[i]];
+				break;
 			}
 		}
 	}
 	return output;
 }
 
+/*
 function converter(number) {
 
 	var output = '';
@@ -49,6 +51,7 @@ function converter(number) {
 	}
 	return output;
 }
+*/
 
 /*
 function validateInput(number) {
@@ -62,27 +65,5 @@ function validateInput(number) {
 */
 
 console.log(converter(1));
-console.log(converter(2));
-console.log(converter(3));
-console.log(converter(4));
-console.log(converter(5));
-console.log(converter(9));
-console.log(converter(10));
-console.log(converter(11));
-console.log(converter(13));
-console.log(converter(19));
-console.log(converter(29));
-console.log('break');
-console.log(numberConverter(1));
-console.log(numberConverter(2));
-console.log(numberConverter(3));
-console.log(numberConverter(4));
-console.log(numberConverter(5));
-console.log(numberConverter(9));
-console.log(numberConverter(10));
-console.log(numberConverter(11));
-console.log(numberConverter(13));
-console.log(numberConverter(19));
-console.log(numberConverter(29));
 
-kkbmodule.exports = converter;
+module.exports = converter;
