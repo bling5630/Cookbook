@@ -1,0 +1,1 @@
+inspired by [Quick Start with TypeScript](http://www.typescriptlang.org/Tutorial)
