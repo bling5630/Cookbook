@@ -1,0 +1,1 @@
+Inspired by [Creating Your First Node.js Command-line Application](http://tutorialzine.com/2014/09/creating-your-first-node-js-command-line-application/)

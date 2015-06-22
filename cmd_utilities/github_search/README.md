@@ -1,0 +1,1 @@
+inspired by [Glynn Phillips - @GlynnPhillips](https://twitter.com/GlynnPhillips)[Command-line utilities with Node.js](http://cruft.io/posts/node-command-line-utilities/)
