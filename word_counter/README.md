@@ -1,0 +1,1 @@
+inspired by [Plain Text Reading and Processing with NodeJS, Ruby, and PHP](https://hafizbadrie.wordpress.com/2013/12/26/plain-text-reading-and-processing-with-nodejs-ruby-and-php/)

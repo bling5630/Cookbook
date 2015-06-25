@@ -28,11 +28,12 @@ request(url, function(error, response, body) {
 
 	var jsonData = JSON.stringify(x);
 
-	console.log(jsonData);
 
 	/*
+	console.log(jsonData);
 	printResult(sortWords(sortable).slice(-10));
 	*/
+	console.log(jsonData);
 });
 
 function printResult(content) {
