@@ -1,6 +1,5 @@
 var _ = require('lodash');
 
-
 var BASE_RULES_ONES = {
 		0: '0',
 		1: 'I',
@@ -57,11 +56,11 @@ function transformArabicNumberToRomanNumber(number) {
 		return convertNumbersUnderTen(number);
 	}
 	// 10-99
-	else if (number >= BASE_DIVIDENT_10 && number < BASE_DIVIDENT_100) {
+	else if (helper(number) === 2) {
 		return convertNumbersBetweenTenAndHundred(number);
 	}
 	// 100-999
-	else if (number >= BASE_DIVIDENT_100 && number < BASE_DIVIDENT_1000) {
+	else if (helper(number) === 3) {
 		return convertNumbersBetweenThousandAndHundred(number);
 	}
 	// 1000-2999
@@ -73,6 +72,7 @@ function transformArabicNumberToRomanNumber(number) {
 // 1-10 part
 
 function convertNumbersUnderTen(number) {
+
 	return !number.length ? 0 : BASE_RULES_ONES[number];
 }
 
@@ -80,45 +80,20 @@ function convertNumbersUnderTen(number) {
 
 function convertNumbersBetweenTenAndHundred(number) {
 
-	var ones = number.toString().slice(1);
-
-	var tens = parseInt(number / BASE_DIVIDENT_10);
-
-	var shortCut = BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
-
-	return number % BASE_DIVIDENT_10 === 0 ? BASE_RULES_DOUBLES[tens] : shortCut;
+	return number % BASE_DIVIDENT_10 === 0 ? BASE_RULES_DOUBLES[sliceFirstDigit(number)] : shortcutterDoubles(number);
 }
 
 // 100-999 part
 
 function convertNumbersBetweenThousandAndHundred(number) {
-		//intendation?
 
-		var hundreds = number.toString().slice(0, 1),
-			tens = number.toString().slice(1, 2),
-			ones = number.toString().slice(2, 3);
-
-		var hundredsDivident = parseInt(number / BASE_DIVIDENT_100);
-
-		var shortCut = BASE_RULES_TRIPLES[hundreds] + BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
-
-		return number % BASE_DIVIDENT_100 === 0 ? BASE_RULES_TRIPLES[hundredsDivident] : shortCut;
-	}
-	// 1000-2999 part
+	return number % BASE_DIVIDENT_100 === 0 ? BASE_RULES_TRIPLES[sliceFirstDigit(number)] : shortcutterTriples(number);
+}
+// 1000-2999 part
 
 function convertNumbersBetweenThousandAndThreeThousand(number) {
-	//intendation?
 
-	var thousands = number.toString().slice(0, 1),
-		hundreds = number.toString().slice(1, 2),
-		tens = number.toString().slice(2, 3),
-		ones = number.toString().slice(3, 4);
-
-	var thousandsDivident = parseInt(number / BASE_DIVIDENT_1000);
-
-	var shortCut = BASE_RULES_FOURTH[thousands] + BASE_RULES_TRIPLES[hundreds] + BASE_RULES_DOUBLES[tens] + BASE_RULES_ONES[ones];
-
-	return number % BASE_DIVIDENT_1000 === 0 ? BASE_RULES_FOURTH[thousandsDivident] : shortCut;
+	return number % BASE_DIVIDENT_1000 === 0 ? BASE_RULES_FOURTH[sliceFirstDigit(number)] : shortcutterFourth(number);
 }
 
 // input validation
@@ -127,13 +102,52 @@ function validateInput(number) {
 	if (!number) {
 		throw new Error('No number provided');
 	}
-	/*
-	if (typeof number !== 'number') {
-		throw new Error('Input is not a number');
-	}
-	*/
 }
 
+function numberBetween0_10(number) {
+	if (number < BASE_DIVIDENT_10) {
+		return convertNumbersUnderTen(number);
+	}
+}
+
+function shortcutterDoubles(number) {
+	return BASE_RULES_DOUBLES[sliceFirstDigit(number)] +
+		BASE_RULES_ONES[sliceTheSecondDigit(number)];
+
+}
+
+function shortcutterTriples(number) {
+	return BASE_RULES_TRIPLES[sliceFirstDigit(number)] +
+		BASE_RULES_DOUBLES[sliceTheSecondDigit(number)] +
+		BASE_RULES_ONES[sliceTheThirdDigit(number)];
+}
+
+function shortcutterFourth(number) {
+	return BASE_RULES_FOURTH[sliceFirstDigit(number)] +
+		BASE_RULES_TRIPLES[sliceTheSecondDigit(number)] +
+		BASE_RULES_DOUBLES[sliceTheThirdDigit(number)] +
+		BASE_RULES_ONES[sliceTheFourthDigit(number)];
+}
+
+function sliceFirstDigit(number) {
+	return number.toString().slice(0, 1);
+}
+
+function sliceTheSecondDigit(number) {
+	return number.toString().slice(1, 2);
+}
+
+function sliceTheThirdDigit(number) {
+	return number.toString().slice(2, 3);
+}
+
+function sliceTheFourthDigit(number) {
+	return number.toString().slice(3, 4);
+}
+
+function helper(number) {
+	return number.toString().length;
+}
 // print and convert numbers to roman numerals
 
 console.log(transformArabicNumberToRomanNumber([1000]));
