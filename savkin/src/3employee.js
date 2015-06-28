@@ -1,11 +1,19 @@
 var _ = require('lodash');
 
-function averageSalary(employees, minSalary, department) {
+function and(predicates) {
+  return function(e) {
+    return _.every(predicates, function(p) {
+      return p(e);
+    });
+  };
+}
+
+function averageSalary(employees, conditions) {
   var total = 0;
   var count = 0;
 
   _.each(employees, function(e) {
-    if (minSalary < e.salary && (department === undefined || department.works(e))) {
+    if (and(conditions)(e)) {
       total += e.salary;
       count += 1;
     }
