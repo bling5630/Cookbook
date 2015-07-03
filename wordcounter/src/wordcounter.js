@@ -4,10 +4,11 @@ var request = require("request"),
 
 var url = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
+// kivenni!!
 var sortable = [];
 var word;
 
-request(url, function(error, response, body) {
+var wordcounter = request(url, function(error, response, body) {
 	if (error) {
 		console.log("Couldn’t get page because of error: " + error);
 		return;
@@ -30,10 +31,9 @@ request(url, function(error, response, body) {
 
 
 	/*
-	console.log(jsonData);
-	printResult(sortWords(sortable).slice(-10));
+	console.log(typeof jsonData);
 	*/
-	console.log(jsonData);
+	printResult(sortWords(sortable).slice(-10));
 });
 
 function printResult(content) {
@@ -74,3 +74,5 @@ function clearContent(content) {
 		.toLowerCase()
 		.toString();
 }
+
+module.exports = wordcounter;

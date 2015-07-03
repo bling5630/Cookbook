@@ -1,0 +1,44 @@
+transform request
+
+request(url, function(error, response, body) {
+	if (error) {
+		console.log("Couldn’t get page because of error: " + error);
+		return;
+	}
+
+	var $page = cheerio.load(body),
+		article = $page('body').text();
+
+business logic
+
+	var wordArray = filterContent(text);
+
+	var data = countWords(wordArray);
+
+	var pushedArray = pushWordsIntoArray(data);
+
+	var x = sortWords(sortable);
+
+transform response
+
+	var jsonData = JSON.stringify(x);
+
+	masodikat konnyebb tesztelni, kozepet, array van benne dolog, konnyu tesztelni
+	hogy kell a ket veget tesztelni, a legveget konnyu tesztelni, egyszeru transzformacio, 
+	[{alma:1}] peldaul, elejet letesztelni, ott van a cheerio, ilyenkor, jon, mock olni
+
+	arra konnyu tesztet irni, ami arrayt object json...eszek s ugyanazt adja e vissza, dummy, amikor nem valos adatot nezunk, ennek van egy bonyolultabb tesztelesi dolog, ha nem dummy val tesztelek akkor gaz van, amin el tudok gondolkozni, azt meg tudom csinalnio mindenfele shit nelkul,
+
+	ezt mindig jol leszeparalva kell tartani, a business logika, legyen modul, hogy masra alkalmazom, szet kell szeparalni, erre egyszeru tesztet irni, a tobbire mar macerasabb
+
+	cheerio reszt tesztelni?
+
+	nock component tesztet irni, igen, kell, nem azt fogom letezstelni, komponensbe az egesz tesztelem, hogy az unit om ossze van e fogva, onnan tol kezdve biztos lehetek benne, hogy mukodik a dolog, vegig kell h folyjon az egeszen, 
+
+	unit test eket jol kell tudni megirni, component page nem ad vissza, nem 200 at, 500, sok fiszfasz unit teszt legyen, 
+
+	const = nem megvaltoztathao valtozo, amiert jo, nem valtoztat tobbet a valtozokon, nyugodtabban ir valtozot, okosok ha nem valtoztatsz a valtozon, minel tobb allandot csinalok annal stabilabb a kod,
+
+hazi
+
+nock os teszt, refaktorolni, 
