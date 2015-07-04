@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test - tape": "node test/search.spec.js | node_modules/.bin/tap-spec
+    "test": "node test/search.spec.js | node_modules/.bin/tap-spec
     "
   },
   "author": "",

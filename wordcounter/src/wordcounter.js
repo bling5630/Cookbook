@@ -5,8 +5,7 @@ var request = require("request"),
 var url = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
 // kivenni!!
-var sortable = [];
-var word;
+var listOfWords = [];
 
 var wordcounter = request(url, function(error, response, body) {
 	if (error) {
@@ -17,30 +16,32 @@ var wordcounter = request(url, function(error, response, body) {
 	var $page = cheerio.load(body),
 		article = $page('body').text();
 
-	var text = clearContent(article);
+	var loadedText = clearTheParsedText(article),
 
-	var wordArray = filterContent(text);
+		listedMixedWords = filterByLength(loadedText),
 
-	var data = countWords(wordArray);
+		sortedByCount = calculateByFrequency(listedMixedWords),
 
-	var pushedArray = pushWordsIntoArray(data);
+		pushedWordsInArray = pushWordsIntoArray(sortedByCount),
 
-	var x = sortWords(sortable);
+		listedWordsByFrequency = alignWordsByFrequency(listOfWords),
 
-	var jsonData = JSON.stringify(x);
+		transformedDataToJSON = JSON.stringify(listedWordsByFrequency);
 
 
 	/*
-	console.log(typeof jsonData);
+	console.log(listedWordsByFrequency);
+	console.log(listedMixedWords.slice(-10));
+	console.log(typeof transformedDataToJSON);
 	*/
-	printResult(sortWords(sortable).slice(-10));
+	printTheFinalVersion(alignWordsByFrequency(listOfWords).slice(-10));
 });
 
-function printResult(content) {
+function printTheFinalVersion(content) {
 	console.log(content);
 }
 
-function sortWords(array) {
+function alignWordsByFrequency(array) {
 	return array.sort(function(a, b) {
 		return a[1] - b[1];
 	});
@@ -48,10 +49,10 @@ function sortWords(array) {
 
 function pushWordsIntoArray(content) {
 	for (word in content)
-		sortable.push([word, content[word]]);
+		listOfWords.push([word, content[word]]);
 }
 
-function countWords(content) {
+function calculateByFrequency(content) {
 	return _.reduce(content, function(a, c) {
 		if (typeof a[c] == 'undefined') {
 			a[c] = 1;
@@ -62,13 +63,13 @@ function countWords(content) {
 	}, {});
 }
 
-function filterContent(content) {
+function filterByLength(content) {
 	return _.filter(content.split(' '), function(n) {
 		return n.length > 2 && n.length < 8;
 	});
 }
 
-function clearContent(content) {
+function clearTheParsedText(content) {
 	return content.replace(/\s+/g, " ")
 		.replace(/[^a-zA-Z ]/g, "")
 		.toLowerCase()
@@ -76,3 +77,4 @@ function clearContent(content) {
 }
 
 module.exports = wordcounter;
+//module.exports = calculateByFrequency;
