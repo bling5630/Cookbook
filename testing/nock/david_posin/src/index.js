@@ -15,9 +15,10 @@ app.use(logger('dev'));
 
 // say hello Tamas and show the time
 
-app.get('/', function(req, res) {
-	res.status(200)
-		.send('Hi, my name is Tamas');
+app.get('/', function(res) {
+	res.send({
+		message: 'Hi, my name is Tamas'
+	});
 });
 
 app.get('/time', function(req, res) {
