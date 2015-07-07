@@ -53,7 +53,7 @@ function containMagicNumbers(number) {
 function filterMagicNumbers(number) {
 	return _.some(number.toString(), function(n) {
 		return n === MAGIC_FIZZ;
-	});
+	});   
 }
 
 console.log(kataFizzBuzzCalclulator(31));
