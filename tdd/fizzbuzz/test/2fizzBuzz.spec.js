@@ -35,4 +35,4 @@ test("FizzBuzz", function(f) {
 	f.end();
 });
 
-module.exports = kataFizzBuzzCalclulator;
+//module.exports = kataFizzBuzzCalclulator;

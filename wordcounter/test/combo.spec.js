@@ -1,15 +1,25 @@
 var test = require('tape'),
 	tapSpec = require('tap-spec'),
-	printResult = require('../src/combo');
+	calculateByFrequency = require('../src/combo');
 
-test('printResult', function(n) {
-	n.plan(2);
-	n.equal(typeof printResult, 'function', 'should be a function');
-	n.equal(typeof printResult(), 'undefined', 'should be a undefined');
+test('calculateByFrequency', function(n) {
+	n.plan(5);
 
-	var input = [];
-	printResult(input);
-	n.equal([]);
+	n.equal(typeof calculateByFrequency, 'function', 'should be a function');
+	n.equal(typeof calculateByFrequency(), 'object', 'should be a object');
+
+	n.deepLooseEqual(calculateByFrequency(['musing']), {
+		'musing': 1
+	}, 'Musing should be 1');
+
+	n.deepLooseEqual(calculateByFrequency(['musing', 'dance']), {
+		'musing': 1,
+		'dance': 1
+	}, 'Musing and dance should be 1 and 1');
+
+	n.deepLooseEqual(calculateByFrequency(['car', 'car','car','car']), {
+		'car': 4
+	}, 'Car should be 4');
 
 	n.end();
 });
