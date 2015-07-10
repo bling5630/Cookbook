@@ -31,11 +31,13 @@ var wordcounter = request(url, function(error, response, body) {
 
 	/*
 	console.log(listedWordsByFrequency);
-	console.log(listedMixedWords.slice(-10));
 	console.log(typeof transformedDataToJSON);
 	printTheFinalVersion(alignWordsByFrequency(listOfWords).slice(-10));
-	*/
 	console.log(sortedByCount);
+	console.log(listedMixedWords.slice(-10));
+	*/
+
+	console.log(loadedText);
 });
 
 function printTheFinalVersion(content) {
@@ -78,4 +80,4 @@ function clearTheParsedText(content) {
 }
 
 module.exports = wordcounter;
-//module.exports = calculateByFrequency;
+module.exports = calculateByFrequency;

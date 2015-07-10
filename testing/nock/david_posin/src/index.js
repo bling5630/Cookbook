@@ -8,7 +8,6 @@ var app = require('express')(),
 
 var datetime = require('./datetime');
 
-
 // add all environments
 
 app.use(logger('dev'));
@@ -36,3 +35,4 @@ app.get('/mix', function(req, res) {
 var server = app.listen(port, function() {
 	console.log('Server started on port 3000');
 });
+

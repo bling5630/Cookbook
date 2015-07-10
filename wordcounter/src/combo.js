@@ -1,29 +1,14 @@
 var _ = require('lodash');
 
-function calculateByFrequency(content) {
-	return _.reduce(content, function(a, c) {
-		if (typeof a[c] == 'undefined') {
-			a[c] = 1;
-		} else {
-			a[c] += 1;
-		}
-		return a;
-	}, {});
+function filterByLength(content) {
+	return _.filter(content.split(' '), function(n) {
+		return n.length > 2 && n.length < 8;
+	});
 }
 
-var x = ['musing',
-	'from',
-	'tariq',
-	'and',
-	'musing',
-	'from',
-	'tariq',
-	'and',
-	'musing',
-	'from',
-	'tariq'
-];
+var x = ('abc bvosbdo ohvo expert alma korte pcnapvpfvpdsfpvdp kacsa zyk');
 
-console.log((calculateByFrequency(x)));
+var y = ('a b c d e f g h i joga ') 
+console.log(filterByLength(y + x));
 
-module.exports = calculateByFrequency;
+module.exports = filterByLength;
