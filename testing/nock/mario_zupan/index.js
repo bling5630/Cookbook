@@ -18,8 +18,6 @@ exports.stuff = function(p, c) {
 };
 
 
-
-
 app.get('/api/product/15', function(req, res) {
 	console.log('stuff method has been called');
 	res.send({

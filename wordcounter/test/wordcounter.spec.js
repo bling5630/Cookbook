@@ -2,10 +2,12 @@ var test = require('tape'),
 	tapSpec = require('tap-spec'),
 	wordcounter = require('../src/wordcounter'),
 	calculateByFrequency = require('../src/calculateByFrequency');
+//clearTheParsedText = require('../src/clearTheParsedText');
 
 test('wordcounter', function(n) {
 	n.plan(1);
 	n.equal(typeof wordcounter(), 'object', 'should be a object');
+
 	n.end();
 });
 
@@ -31,6 +33,19 @@ test('calculateByFrequency', function(n) {
 	n.end();
 });
 
+/* not works??? - return content.replace(/\s+/g, " ") TypeError: Cannot call method 'replace' of undefined 
+
+test('clearTheParsedText', function(n) {
+	n.plan(2);
+
+	n.equal(typeof clearTheParsedText, 'function',
+		'result should be a function');
+	n.equal(typeof clearTheParsedText(''), 'string',
+		'result should be a string');
+
+	n.end();
+});
+*/
 
 test.createStream()
 	.pipe(tapSpec())
