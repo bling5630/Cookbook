@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test/wordcounter.spec.js | node_modules/.bin/tap-spec"
+    "test": "node test/wordcounter.spec.js | node_modules/.bin/tap-spec",
+    "start": "node src/wordcounter.js",
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "lodash": "^3.9.1",
     "nock": "^2.7.0",
     "request": "^2.55.0",
+    "should": "^7.0.2",
     "tap-spec": "^4.0.2",
     "tape": "^4.0.0"
   }

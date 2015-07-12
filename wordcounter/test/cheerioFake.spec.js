@@ -1,48 +1,50 @@
 var cheerioFake = require('../src/cheerioFake'),
   nock = require('nock'),
-  cheerio = require("cheerio"),
+  should = require('should'),
   expect = require('expect');
 
 describe("cheerioFake", function() {
   describe("#getWordsJSON", function() {
 
     // verify that the getWordsJSON method exists
-    it("exists as a public method on cheerioFake", function() {
+    it("exists as a public method on cheerioFake", function(done) {
       expect(typeof cheerioFake.getWordsJSON).toEqual('function');
+      done();
     });
 
-    // use nock to verify that the getWordsJSON method calls the correct URL
-    it("makes the correct http call to any site based on the parameters it's passed", function(done) {
-      var x = nock('https://medium.com')
+
+    // verify that the getWordsJSON method calls the correct URL
+    it("should return the correct response", function(done) {
+
+      nock('https://medium.com')
         .get('/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363')
-        .reply(200, {
-          _id: '1',
-          username: 'xy'
-        });
+        .reply(200, 'Hello from Medium');
+
+      cheerioFake.getWordsJSON(function(error, response) {
+        response.should.equal('Hello from Medium');
+      });
+
+      done();
+    });
+
+    it("should return the error if url bad", function(done) {
+
+      nock('https://medium.com')
+        .get('/')
+        .replyWithError('something awful happened');
+
+      cheerioFake.getWordsJSON(function(error, response) {
+        response.should.equal('something awful happened');
+      });
+
+      done();
+
+
 
     });
 
 
 
   });
+
 });
-
-
-/*
-
-
-    // an example of a test that fails
-    xit("makes the correct http call to Flickr's API based on the parameters it's passed", function() {
-      nock('http://api.flickr.com')
-        .get('/some_url_that_will_not_get_called')
-        .reply(200, {
-          'some_key': 'some_value'
-        });
-
-      cheerioFake.getWordsJSON({
-        id: 'someFlickrID'
-      }, function(data) {
-        expect(JSON.parse(data).some_key).toEqual('some_value');
-      });
-    });
-*/

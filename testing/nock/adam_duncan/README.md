@@ -1,0 +1,1 @@
+inspired by [Unit testing, the Clock way](http://www.clock.co.uk/blog/tools-for-unit-testing-and-quality-assurance-in-node-js)

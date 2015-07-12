@@ -3,7 +3,7 @@ var request = require("request"),
 	_ = require('lodash');
 
 
-exports.getWordsJSON = function(params, callback) {
+exports.getWordsJSON = function(callback) {
 	var url = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
 	request(url, function(error, response, body) {
@@ -20,3 +20,4 @@ exports.getWordsJSON = function(params, callback) {
 		console.log(article);
 	});
 };
+

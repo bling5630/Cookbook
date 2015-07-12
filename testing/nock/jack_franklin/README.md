@@ -1,0 +1,1 @@
+inspired by [Mocking API Requests in Node tests](http://javascriptplayground.com/blog/2013/08/mocking-web-requests/) - [Jack Franklin](https://twitter.com/jack_franklin)
