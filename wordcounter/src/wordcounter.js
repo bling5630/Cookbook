@@ -22,6 +22,7 @@ var wordcounter = request(url, function(error, response, body) {
 
 		sortedByCount = calculateByFrequency(listedMixedWords),
 
+		// testing ??
 		pushedWordsInArray = pushWordsIntoArray(sortedByCount),
 
 		listedWordsByFrequency = alignWordsByFrequency(listOfWords),
@@ -30,18 +31,18 @@ var wordcounter = request(url, function(error, response, body) {
 
 
 	/*
-	console.log(listedWordsByFrequency);
 	console.log(typeof transformedDataToJSON);
-	printTheFinalVersion(alignWordsByFrequency(listOfWords).slice(-10));
 	console.log(sortedByCount);
 	console.log(article);
-	*/
 	console.log(listedMixedWords.slice(-10));
-
+	console.log(listedWordsByFrequency.slice(-5));
+	console.log(typeof printTheFinalVersion);
+	*/
+	console.log(printTheFinalVersion(transformedDataToJSON));
 });
 
 function printTheFinalVersion(content) {
-	console.log(content);
+	return content;
 }
 
 function alignWordsByFrequency(array) {
@@ -51,9 +52,18 @@ function alignWordsByFrequency(array) {
 }
 
 function pushWordsIntoArray(content) {
-	for (word in content)
+	for (var word in content)
 		listOfWords.push([word, content[word]]);
 }
+
+/*
+function pushWordsIntoArray(content) {
+	_.forIn(content, function(word, content) {
+		listOfWords.push([word, content[word]]);
+	});
+}
+*/
+
 
 function calculateByFrequency(content) {
 	return _.reduce(content, function(a, c) {
