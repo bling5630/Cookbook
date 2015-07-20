@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test/wordcounter.spec.js | node_modules/.bin/tap-spec",
-    "start": "node src/wordcounter.js",
+    "start": "node src/wordcounter.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "jasmine-node": "^1.14.5",
     "lodash": "^3.9.1",
     "nock": "^2.7.0",
+    "pattern-emitter": "^1.0.0",
     "request": "^2.55.0",
     "should": "^7.0.2",
     "tap-spec": "^4.0.2",

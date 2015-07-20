@@ -1,5 +1,6 @@
 var request = require("request"),
 	cheerio = require("cheerio"),
+//emitter = require('events').EventEmitter.prototype._maxListeners = 100,
 	_ = require('lodash');
 
 var url = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
@@ -37,8 +38,9 @@ var wordcounter = request(url, function(error, response, body) {
 	console.log(listedMixedWords.slice(-10));
 	console.log(listedWordsByFrequency.slice(-5));
 	console.log(typeof printTheFinalVersion);
-	*/
 	console.log(printTheFinalVersion(transformedDataToJSON));
+	*/
+	console.log(loadedText);
 });
 
 function printTheFinalVersion(content) {

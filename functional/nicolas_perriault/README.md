@@ -1,0 +1,1 @@
+inspired by [https://nicolas.perriault.net/code/2013/functional-javascript-for-crawling-the-web/](https://nicolas.perriault.net/code/2013/functional-javascript-for-crawling-the-web/) - [Nicolas Perriault](https://twitter.com/n1k0)

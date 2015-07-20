@@ -6,15 +6,15 @@ test('printTheFinalVersion', function(n) {
 	n.plan(6);
 
 
-	n.equal(typeof printTheFinalVersion, 'function', 
+	n.equal(typeof printTheFinalVersion, 'function',
 		'result should be a function');
-	n.equal(typeof printTheFinalVersion(''), 'string', 
+	n.equal(typeof printTheFinalVersion(''), 'string',
 		'result should be a undefined');
-	n.equal(typeof printTheFinalVersion('1'), 'string', 
+	n.equal(typeof printTheFinalVersion('1'), 'string',
 		'result should be a string');
-	n.equal(typeof printTheFinalVersion('abc'), 'string', 
+	n.equal(typeof printTheFinalVersion('abc'), 'string',
 		'result should be a string');
-	n.equal(typeof printTheFinalVersion(1), 'number', 
+	n.equal(typeof printTheFinalVersion(1), 'number',
 		'result should be a number');
 	var input = (' alma ');
 	n.deepLooseEqual(printTheFinalVersion(input), ' alma ',

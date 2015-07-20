@@ -1,0 +1,20 @@
+{
+  "name": "fp_nicolas",
+  "version": "1.0.0",
+  "description": "inspired by [https://nicolas.perriault.net/code/2013/functional-javascript-for-crawling-the-web/](https://nicolas.perriault.net/code/2013/functional-javascript-for-crawling-the-web/) - [Nicolas Perriault](https://twitter.com/n1k0)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esnext": "^0.14.0",
+    "lodash": "^3.10.0",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.1"
+  }
+}
