@@ -39,8 +39,8 @@ var wordcounter = request(url, function(error, response, body) {
 	console.log(listedWordsByFrequency.slice(-5));
 	console.log(typeof printTheFinalVersion);
 	console.log(printTheFinalVersion(transformedDataToJSON));
-	*/
 	console.log(loadedText);
+	*/
 });
 
 function printTheFinalVersion(content) {
@@ -93,4 +93,3 @@ function clearTheParsedText(content) {
 
 module.exports = wordcounter;
 module.exports = calculateByFrequency;
-//module.exports = clearTheParsedText;

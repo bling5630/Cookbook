@@ -3,15 +3,15 @@ var test = require('tape'),
 	filterByLength = require('../src/filterByLength');
 
 test('filterByLength', function(n) {
-	n.plan(9);
+	n.plan(10);
 
-	n.equal(typeof filterByLength, 'function', 
+	n.equal(typeof filterByLength, 'function',
 		'result should be a function');
-	n.equal(typeof filterByLength(''), 'object', 
+	n.equal(typeof filterByLength(''), 'object',
 		'result should be a object');
-	n.equal(typeof filterByLength('1'), 'object', 
+	n.equal(typeof filterByLength('1'), 'object',
 		'result should be a object');
-	n.equal(typeof filterByLength('abc'), 'object', 
+	n.equal(typeof filterByLength('abc'), 'object',
 		'result should be a object');
 
 	var input = (' alma ');
@@ -33,7 +33,10 @@ test('filterByLength', function(n) {
 	var input4 = input3 + ('bsdibfibfidbiédfbgofg bdsgb');
 	n.deepLooseEqual(filterByLength(input4), ['alma', 'bdsgb'],
 		'result should be alma and bdsgb');
-
+	
+	var err = false;
+	n.ifError(err, 'should not be an error');
+	
 	n.end();
 });
 
