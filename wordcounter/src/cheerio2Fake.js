@@ -3,9 +3,11 @@ var request = require("request"),
 	_ = require('lodash');
 
 
-var BASE_URL = 'https://medium.com';
+var BASE_URL = 'https://medium.com/life-at-confetti';
 
-var cheerioFake = request(BASE_URL, function(error, response, body) {
+//var cheerioFake = 
+
+request(BASE_URL, function(error, response, body) {
 	if (error) {
 		console.log("Couldn’t get page because of error: " + error);
 		return;
@@ -14,9 +16,8 @@ var cheerioFake = request(BASE_URL, function(error, response, body) {
 	var $page = cheerio.load(body),
 		article = $page('body').text();
 
-
-	//console.log(article);
+	console.log(article);
 });
 
 
-module.exports = cheerioFake;
+//module.exports = cheerioFake;

@@ -1,0 +1,1 @@
+inspired by [Easy Web Scraping With Node.js](http://blog.miguelgrinberg.com/post/easy-web-scraping-with-nodejs/page/2) by [Miguel Grinberg](https://twitter.com/miguelgrinberg)

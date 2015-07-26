@@ -26,22 +26,7 @@ describe("cheerioFake", function() {
 
       done();
     });
-    /*
-        it("should return the error if url bad", function(done) {
 
-          nock('https://medium.com')
-            .get('/')
-            .replyWithError('something awful happened');
-
-          cheerioFake.getWordsJSON(function(error, response) {
-            response.should.equal('something awful happened');
-          });
-
-          done();
-
-
-        });
-    */
 
 
 
