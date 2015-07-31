@@ -1,0 +1,1 @@
+inspired by [David Posin](https://twitter.com/DavidPosin) - [Building a Unit Test in Jasmine, Part 1](http://randomjavascript.blogspot.hu/2012/11/building-unit-test-in-jasmine-part-1.html)
