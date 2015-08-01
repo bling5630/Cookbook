@@ -1,0 +1,1 @@
+inspired by [An Introduction to Functional JavaScript](http://www.sitepoint.com/introduction-functional-javascript/) - [mdavidgreen @mdavidgreen](https://twitter.com/mdavidgreen)
