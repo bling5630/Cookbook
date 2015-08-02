@@ -18,6 +18,7 @@ var mini_amount = function(sum, order) {
 var totalAmount = _.reduce(orders, mini_amount, 0);
 
 console.log(totalAmount);
+
 /*
 // normal for loop
 var totalAmount = 0;
