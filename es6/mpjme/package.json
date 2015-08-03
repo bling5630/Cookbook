@@ -1,0 +1,14 @@
+{
+  "name": "es6_tutorials",
+  "version": "1.0.0",
+  "description": "Inspired by [Be a better programmer](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q/videos) - [Mattias P Johansson @mpjme](https://twitter.com/mpjme)",
+  "main": "destructuring.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esnext": "^0.14.0"
+  }
+}
