@@ -7,3 +7,5 @@ Inspired by [Be a better programmer](https://www.youtube.com/channel/UCO1cgjhGzs
 - Reduce basics - Part 3 of Functional Programming in JavaScript
 
 - Reduce Advanced - Part 4 of Functional Programming in JavaScript
+
+- Closures - Part 5 of Functional Programming in JavaScript

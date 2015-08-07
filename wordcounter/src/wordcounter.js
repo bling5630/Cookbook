@@ -7,7 +7,8 @@ var url = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b
 
 // kivenni!!
 var listOfWords = [];
-
+// wordcountert be wrappolom fn aminek az elso parametere a callback, a vegen cl helyett callback van
+// ezt menniy fog, main ben pedig semmi mas nincsen csak wordcount fn(err, body,){cl(body)}
 var wordcounter = request(url, function(error, response, body) {
 	if (error) {
 		console.log("Couldn’t get page because of error: " + error);
@@ -34,12 +35,12 @@ var wordcounter = request(url, function(error, response, body) {
 	
 	console.log(JSON.stringify(sortedByCount, null, 2));
 	/*
+	console.log(printTheFinalVersion(transformedDataToJSON));
 	console.log(listedMixedWords.slice(-10));
 	console.log(transformedDataToJSON);
 	console.log(loadedText);
-	console.log(printTheFinalVersion(transformedDataToJSON));
-	console.log(listedWordsByFrelquency.splice(-5));
 	*/
+	console.log(listedWordsByFrequency.splice(-5));
 });
 
 function printTheFinalVersion(content) {

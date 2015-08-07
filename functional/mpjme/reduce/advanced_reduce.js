@@ -12,7 +12,7 @@ var output = fs.readFileSync('data.txt', 'utf8')
 	})
 */
 	.reduce(function(customers, line) {
-		//console.log('Hello', line);
+		console.log('Hello', line);
 		customers[line[0]] = customers[line[0]] || [];
 		customers[line[0]].push({
 			name: line[1],
@@ -22,6 +22,6 @@ var output = fs.readFileSync('data.txt', 'utf8')
 		return customers;
 	}, {});
 
-console.log('output', JSON.stringify(output, null, 2));
+//console.log('output', JSON.stringify(output, null, 2));
 
 //cmd babel advanced_reduce.js | node
