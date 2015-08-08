@@ -15,7 +15,7 @@
     "faucet": "0.0.1",
     "http": "0.0.0",
     "jasmine-node": "^1.14.5",
-    "lodash": "^3.9.1",
+    "lodash": "^3.10.1",
     "nock": "^2.7.0",
     "pattern-emitter": "^1.0.0",
     "request": "^2.55.0",

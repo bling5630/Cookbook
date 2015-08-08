@@ -29,17 +29,17 @@ var wordcounter = request(url, function(error, response, body) {
 
 		listedWordsByFrequency = alignWordsByFrequency(listOfWords),
 
-		transformedDataToJSON = JSON.stringify(listedWordsByFrequency);
+		transformedDataToJSON = JSON.stringify(listedWordsByFrequency, null, 2);
 
 
 	
-	console.log(JSON.stringify(sortedByCount, null, 2));
 	/*
+	console.log(JSON.stringify(sortedByCount, null, 2));
 	console.log(printTheFinalVersion(transformedDataToJSON));
 	console.log(listedMixedWords.slice(-10));
-	console.log(transformedDataToJSON);
 	console.log(loadedText);
 	*/
+	console.log(transformedDataToJSON);
 	console.log(listedWordsByFrequency.splice(-5));
 });
 

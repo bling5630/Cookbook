@@ -1,27 +1,62 @@
-var kacsa = require('./key.txt');
-var vilmos = require('./value.txt');
+var _ = require('lodash');
+var my = require('./myfile.json');
+var input = {
+	"sign": 1,
+	"uptariq": 1,
+	"krim": 2,
+	"oct": 2,
+	"minnext": 1,
+	"author": 1
+};
 
-var myArr = [1, 2, 'alma', 'korte'];
 
-for (var i = 0; i < myArr.length; ++i) {
-	console.log(myArr[i]);
+function transform1(input) {
+
+	'use strict';
+
+	var output = [];
+	for (var key in input) {
+		output.push({
+			key: key,
+			value: input[key]
+		});
+	}
+	return output;
 }
 
-var myObj = {};
 
-myObj.word = kacsa;
-myObj.quantity = vilmos;
+var x = JSON.stringify(transform1(input));
 
-var json = JSON.stringify(myObj, null, 2);
-console.log(json);
+//console.log(x);
 
-var key = kacsa;
-var value = vilmos;
+// valid JSON
+var y = [
+  {
+    "key": "sign",
+    "value": 1
+  },
+  {
+    "key": "uptariq",
+    "value": 1
+  },
+  {
+    "key": "krim",
+    "value": 2
+  },
+  {
+    "key": "oct",
+    "value": 2
+  },
+  {
+    "key": "minnext",
+    "value": 1
+  },
+  {
+    "key": "author",
+    "value": 1
+  }
+]
+;
 
-var json = "{ ";
-for (var i = 0; i < key.length; i++) {
-	(i + 1) == key.length ? json += "\"" + key[i] + "\" : \"" + value[i] + "\"" : json += "\"" + key[i] + "\" : \"" + value[i] + "\",";
-}
-json += " }";
-//var obj = json.evalJSON(true);
-console.log(json);
+//console.log(_.sortBy(y, 'value'));
+console.log(JSON.stringify(_.map(_.sortByOrder(my, 'age', 'desc')), null, 2));
