@@ -1,0 +1,1 @@
+Inspired by [D3 Bubble Chart with PubNub Live JSON Demo](https://github.com/pubnub/d3-bubble) - [Tomomi ❤ Imura](https://github.com/girliemac)

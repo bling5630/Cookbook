@@ -10,7 +10,7 @@
 
   <script> 
 
-    d3.csv("data.csv" , function (data) {
+    d3.json("final_data.json" , function (data) {
 
       var canvas = d3.select("body").append("svg")
           .attr("width" , 2000)
@@ -20,7 +20,7 @@
           .data (data)
           .enter()
             .append("rect")
-            .attr("width", function (d) {return d.quantity * 100; })
+            .attr("width", function (d) {return d.quantity * 20; })
             .attr("height", 48)
             .attr("y", function (d ,i){return i * 50; })
             .attr("fill", "red")

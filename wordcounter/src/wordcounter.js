@@ -33,14 +33,14 @@ var wordcounter = request(url, function(error, response, body) {
 
 
 	
-	/*
 	console.log(JSON.stringify(sortedByCount, null, 2));
+	/*
 	console.log(printTheFinalVersion(transformedDataToJSON));
 	console.log(listedMixedWords.slice(-10));
 	console.log(loadedText);
-	*/
-	console.log(transformedDataToJSON);
 	console.log(listedWordsByFrequency.splice(-5));
+	console.log(transformedDataToJSON);
+	*/
 });
 
 function printTheFinalVersion(content) {

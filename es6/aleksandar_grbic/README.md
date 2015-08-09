@@ -7,3 +7,5 @@ Inspired by [JSBroadcast](https://www.youtube.com/watch?v=_lGYG_s_yTM&index=1&li
 - 03. Getting started with ES6 - class
 
 - 04. Getting started with ES6 - Promises 
+
+- 05. Getting started with ES6 - Destructuring
