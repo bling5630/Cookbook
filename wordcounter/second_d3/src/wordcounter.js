@@ -31,6 +31,8 @@ var wordcounter = request(url, function(error, response, body) {
 
 });
 
+console.log(typeof wordcounter);
+
 function transformDataToJSON(input) {
 
 	var output = [];

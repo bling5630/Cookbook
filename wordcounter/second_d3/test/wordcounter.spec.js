@@ -11,7 +11,7 @@ var test = require('tape'),
 
 test('wordcounter', function(n) {
 	n.plan(1);
-	n.equal(typeof wordcounter(), 'object', 'should be a object');
+	n.equal(typeof wordcounter, 'object', 'should be a object');
 
 	n.end();
 });
@@ -139,5 +139,4 @@ test('filter check', function(c) {
 });
 
 test.createStream()
-	.pipe(tapSpec())
-	.pipe(process.stdout);
+	.pipe(tapSpec());
