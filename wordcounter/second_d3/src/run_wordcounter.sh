@@ -2,7 +2,7 @@
 
 node wordcounter.js > wordcounter.json
 
-sleep 5
+sleep 3
 
-firefox wordcount.html
+firefox barchart.html
 

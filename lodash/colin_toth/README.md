@@ -1,0 +1,1 @@
+Inspired by [Lodash: 10 Javascript Utility Functions That You Should Probably Stop Rewriting](http://colintoh.com/blog/lodash-10-javascript-utility-functions-stop-rewriting?utm_source=javascriptweekly&utm_medium=email) by [Colin Toh](https://twitter.com/p0larBoy)

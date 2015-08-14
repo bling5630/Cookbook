@@ -12,6 +12,8 @@
 
     d3.json("wordcounter.json" , function (data) {
 
+      var color = d3.scale.category10();
+
       var canvas = d3.select("body").append("svg")
           .attr("width" , 2000)
           .attr("height" , 50000)
@@ -23,7 +25,7 @@
             .attr("width", function (d) {return d.quantity * 20; })
             .attr("height", 48)
             .attr("y", function (d ,i){return i * 50; })
-            .attr("fill", "red")
+            .attr("fill", function(d, i) { return color(i%5); })
 
       canvas.selectAll("text")
           .data(data)

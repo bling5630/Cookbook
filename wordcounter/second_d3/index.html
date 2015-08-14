@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+
+<body>
+    <svg width="5000" height="5000"></svg>
+</body>
+
+
+  <title>D3 Tutorial</title>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  
+</head>
+
+<body>
+
+  <script> 
+
+          $colorScale = d3.scale.category20c();
+        drawSomeCircles();
+
+        function drawSomeCircles() {
+            var data = []
+            var t = 0;
+            var interva = setInterval(function () {
+                var value = Math.random() * 100;
+                data.push({
+                    time: ++t,
+                    value: value
+                });
+                redraw(data);
+            }, 1000);
+        }
+
+        function redraw(theData) {
+            var localColorScale = d3.scale.category20c();
+            var svg = d3.select("svg");
+            var circles = svg.selectAll("circle")
+                .data(theData)
+                .enter()
+                .append("circle")
+            var circleAttributes = circles.attr("cx", getRandomInt(50, 450))
+                .attr("cy", getRandomInt(50, 450))
+                .attr("r", function (d) {
+                return d.value;
+            })
+                .style("fill", function () {
+                return $colorScale(getRandomInt(0, 19));
+            });
+        }
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+  </script>
+
+</body>
+
+</html>

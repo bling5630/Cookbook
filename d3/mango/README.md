@@ -1,0 +1,1 @@
+Inspired by [Pre-render d3.js charts at server side ](http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html) 

@@ -36,9 +36,25 @@ function transform1(input) {
   return output;
 }
 
+function transform2(input) {
+
+  'use strict';
+
+
+
+
+  return _.forIn(input, function(value, key) {
+      var output = [];
+    return output.push({
+      name: key,
+      quantity: input[key]
+    });
+  });
+}
+
 //var y = JSON.stringify(transform1(input), null, 2);
 //console.log(y);
-var x = JSON.stringify(transform1(my), null, 2);
+var x = JSON.stringify(transform2(input), null, 2);
 console.log(x);
 
 // valid JSON

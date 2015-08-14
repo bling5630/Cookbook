@@ -27,33 +27,28 @@ var wordcounter = request(url, function(error, response, body) {
 		unsortedJSON = transformDataToJSON(sortedByCount);
 
 
-	console.log(JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc')).splice(-5), null, 2));
+	console.log(JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
+		.splice(-5), null, 2));
 
 });
 
-console.log(typeof wordcounter);
-
-function transformDataToJSON(input) {
+function transformDataToJSON(content) {
 
 	var output = [];
 
-	for (var key in input) {
+	_.forIn(content, function(value, key) {
 		output.push({
 			name: key,
-			quantity: input[key]
+			quantity: content[key]
 		});
-	}
+	});
 	return output;
 }
 
 function calculateByFrequency(content) {
-	return _.reduce(content, function(a, c) {
-		if (typeof a[c] == 'undefined') {
-			a[c] = 1;
-		} else {
-			a[c] += 1;
-		}
-		return a;
+	return _.reduce(content, function(countMap, word) {
+		countMap[word] = ++countMap[word] || 1;
+		return countMap;
 	}, {});
 }
 
