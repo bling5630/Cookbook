@@ -1,0 +1,1 @@
+Inspired by [Practical Functional Javascript with Ramda](http://developer.telerik.com/featured/practical-functional-javascript-ramda/) - [Andrew D’Amelio](https://twitter.com/andrewdamelio) & [Yuri Takhteyev](https://twitter.com/qaramazov)

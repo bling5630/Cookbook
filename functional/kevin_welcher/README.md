@@ -1,0 +1,1 @@
+Inspired by [Talk functional javascript!](https://www.youtube.com/watch?v=L7b7AW14rYE) - Kevin Welcher
