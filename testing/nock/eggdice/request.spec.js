@@ -2,7 +2,6 @@ var nock = require('nock'),
 	test = require('tape'),
 	http = require('https'),
 	cheerio = require("cheerio"),
-	request = require('request'),
 	tapSpec = require('tap-spec');
 
 var wordCount = require('./request');
@@ -22,12 +21,15 @@ var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future
 var BASE_MAIN_URL = 'https://medium.com';
 var BASE_GET = '/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
+// ok
+
 test('#1 - has wordCount method', function(t) {
 	t.plan(1);
 	t.equals(typeof wordCount, 'function', 'First test: wordCount is a function');
 	t.end();
 });
 
+// ok callback meghivode e, meglett erequest elve a url
 test('#2 - wordCount method makes the correct api call', function(t) {
 	t.plan(1);
 
@@ -35,7 +37,7 @@ test('#2 - wordCount method makes the correct api call', function(t) {
 		.get(BASE_GET)
 		.reply(200, 'mivan?');
 
-	request(BASE_URL, function(err) {
+	wordCount(function(err) {
 		//t.error(err);
 		t.ok(scope.isDone(),
 			'Second test: requests satisfied');
@@ -44,13 +46,34 @@ test('#2 - wordCount method makes the correct api call', function(t) {
 
 });
 
+// legyen atirva, folyo szioveg legyen, 
+
+test('mivan?', function(t) {
+	nock(BASE_MAIN_URL)
+		.get(BASE_GET)
+		// fake html legyen, legyen benne tartalom, s konkretan wordcountert tesztelem le
+		// ultimate nagy rendszert fogom letesztelni
+		// azert haromszog, mert minel valosagosabb a teszt
+		// minel inkabb unit teszt annal inkabb nuansz
+		// egyet emeljek ki, azt tesztelem, hogy az egesz ossze lesz e kotve 
+		// ha sok nock teszt van akkor nem solid
+
+	.reply(200, 'mivan?');
+
+	wordCount(function(err, body) {
+		t.equals(body, 'mivan?');
+		t.end();
+	});
+});
+
+/*
 test('#3 statusCode check', function(t) {
 
 	nock(BASE_MAIN_URL)
 		.get(BASE_GET)
 		.reply(200, 'mivan?');
 
-	request(BASE_URL)
+	wordCount(BASE_URL)
 		.on('response', function(response) {
 			t.equals(typeof response.statusCode,
 				'number', 'Third test: statusCode is a number');
@@ -65,7 +88,7 @@ test('#4 filter check', function(t) {
 		.get(BASE_GET)
 		.reply(200, 'mivan?');
 
-	request(BASE_URL, function(error, response, body) {
+	wordCount(BASE_URL, function(error, response, body) {
 		if (error) {
 			console.log(error);
 			return;
@@ -103,6 +126,6 @@ test('#4 whatever', function(t) {
 
 
 });
-
+*/
 test.createStream()
 	.pipe(tapSpec());
