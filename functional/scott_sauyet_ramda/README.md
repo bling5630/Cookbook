@@ -1,0 +1,1 @@
+Inspired by [Why Ramda?](http://fr.umio.us/why-ramda/) - [Scott Sauyet](https://github.com/CrossEye)
