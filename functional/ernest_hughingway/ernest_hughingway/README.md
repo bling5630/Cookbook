@@ -1,0 +1,1 @@
+Inspired by [Why Curry Helps](https://hughfdjackson.com/javascript/why-curry-helps/) - [ernest hughingway](https://twitter.com/hughfdjackson)
