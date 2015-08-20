@@ -1,8 +1,8 @@
 var nock = require('nock'),
 	test = require('tape'),
-	http = require('https'),
 	cheerio = require("cheerio"),
-	tapSpec = require('tap-spec');
+	tapSpec = require('tap-spec'),
+	fs = require('fs');
 
 var wordCount = require('./request');
 
@@ -56,18 +56,22 @@ test('#3 - wordCount body mivan?', function(t) {
 
 test('mivan?', function(t) {
 
+	var BASE_MOCK_HTML =
+		[
+			'<!DOCTYPE html>',
+			'<body>',
+			'<div id="comic">',
+			'</div>',
+			'<p> My first paragraph. </p>',
+			'<p> My second paragraph. </p>',
+			'<p> My third paragraph. </p>',
+			'<p> My fourth paragraph. </p>',
+			'</body>',
+			'</html>'
 
-	var BASE_HTML =
-		'<html>' +
-		'<body>' +
-		'<div id="comic">' +
-		'</div>' +
-		'<h1>My First Heading</h1>' +
-		'<p> My first paragraph. </p>' +
-		'</body>' +
-		'</html>';
+		].join('');
 
-	nock(BASE_HTML)
+	nock(BASE_MOCK_HTML)
 		.get('/')
 		.reply(200, 'mivan?');
 

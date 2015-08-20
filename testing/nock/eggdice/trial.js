@@ -1,9 +1,6 @@
-var http = require("http");
 var nock = require('nock'),
-	test = require('tape'),
-	http = require('http'),
-	request = require('request'),
-	tapSpec = require('tap-spec');
+	test = require('tape');
+	
 
 var wordCount = require('./request');
 
