@@ -1,11 +1,19 @@
 {
-  "name": "brian_lonsdorf",
+  "name": "FP_JS_exercises",
   "version": "1.0.0",
-  "description": "",
+  "description": "Isnpired by [Mostly adequate guide to FP (in JavaScript)](https://github.com/DrBoolean/mostly-adequate-guide) - [Brian Lonsdorf](https://github.com/DrBoolean)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.3.0",
+    "chai": "^3.2.0",
+    "immutable": "^3.7.4",
+    "lodash": "^3.10.1",
+    "lodash.curry": "^3.0.2",
+    "ramda": "^0.17.1"
+  }
 }

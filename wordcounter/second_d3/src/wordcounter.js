@@ -14,7 +14,7 @@ var wordcounter = request(url, function(error, response, body) {
 	var $page = cheerio.load(body),
 		article = $page('body').text();
 
-		// print the raw text
+	// print the raw text
 	var loadedText = clearTheParsedText(article),
 
 		// print  text ['musing','from','tariq' ]
@@ -59,7 +59,8 @@ function filterByLength(content) {
 }
 
 function clearTheParsedText(content) {
-	return content.replace(/\s+/g, " ")
+	return content
+		.replace(/\s+/g, " ")
 		.replace(/[^a-zA-Z ]/g, "")
 		.toLowerCase()
 		.toString();
