@@ -1,5 +1,7 @@
 var cheerio = require('cheerio'),
+	request = require('request'),
 	_ = require('lodash');
+
 
 var BASE_MOCK_HTML =
 	[
@@ -15,10 +17,6 @@ var BASE_MOCK_HTML =
 		'</html>'
 	].join('');
 
-var $something = cheerio.load(content),
-	parsedTheThing = $something('body').text();
-
-// console.log(parsedTheThing);
 
 function wordcounter(content) {
 
@@ -34,13 +32,12 @@ function wordcounter(content) {
 		// print transformed JSON from invalid JSON
 		unsortedJSON = transformDataToJSON(sortedByCount);
 
-
 	console.log(JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
-		.splice(-5), null, 2));
+		.splice(-2), null, 2));
 
 }
 
-console.log(wordcounter(parsedTheThing));
+console.log(wordcounter(BASE_MOCK_HTML));
 
 
 function transformDataToJSON(content) {
