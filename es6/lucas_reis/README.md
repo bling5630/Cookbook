@@ -1,0 +1,1 @@
+Inspired by [Pointfree Javascript Modularity at the function level](http://lucasmreis.github.io/blog/pointfree-javascript/) - [Lucas Reis](https://github.com/lucasmreis)
