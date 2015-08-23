@@ -10,7 +10,6 @@ var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future
 	BASE_MAIN_URL = 'https://medium.com',
 	BASE_GET = '/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
-// var BASE_HTML = require('./sample.html').toString();
 // ok
 
 test('#1 - has wordCount method', function(t) {
@@ -73,7 +72,7 @@ test('mivan?', function(t) {
 
 	nock(BASE_MAIN_URL)
 		.get(BASE_GET)
-		.reply(200, );
+		.reply(200, 'mivan?');
 
 	// fake html legyen, legyen benne tartalom, s konkretan wordcountert tesztelem le
 	// ultimate nagy rendszert fogom letesztelni
@@ -83,7 +82,7 @@ test('mivan?', function(t) {
 	// ha sok nock teszt van akkor nem solid
 
 	wordCount(function(err, body) {
-		t.equals(body, );
+		t.equals(body,'mivan?' );
 		t.end();
 	});
 });

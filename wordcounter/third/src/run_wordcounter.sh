@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-node wordcounter.js > wordcounter.json
+node index.js > wordcounter.json
 
 sleep 3
 

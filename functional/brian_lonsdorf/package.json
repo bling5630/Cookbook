@@ -9,10 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "accounting": "^0.4.1",
     "assert": "^1.3.0",
     "chai": "^3.2.0",
     "immutable": "^3.7.4",
+    "lambda-js": "^0.1.5",
+    "lambdajs": "^1.0.1",
     "lodash": "^3.10.1",
+    "lodash.compose": "^2.4.1",
     "lodash.curry": "^3.0.2",
     "ramda": "^0.17.1"
   }

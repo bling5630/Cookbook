@@ -1,12 +1,16 @@
 var test = require('tape'),
 	tapSpec = require('tap-spec'),
-	request = require("request"),
+	//request = require("request"),
 	cheerio = require("cheerio"),
 	nock = require('nock'),
 	wordcounter = require('../src/wordcounter'),
 	calculateByFrequency = require('../src/calculateByFrequency'),
 	clearTheParsedText = require('../src/clearTheParsedText'),
 	filterByLength = require('../src/filterByLength');
+
+var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363',
+	BASE_MAIN_URL = 'https://medium.com',
+	BASE_GET = '/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
 
 test('wordcounter', function(n) {
@@ -90,12 +94,93 @@ test('clearTheParsedText', function(n) {
 		'result should be an alma');
 
 	var mixedWords = ('and Sections":[{"type":2,"COLLECTION HeaderMetada": ');
-	n.equal(clearTheParsedText(mixedWords), 'and sectionstypecollection headermetada ',
+
+	n.equal(clearTheParsedText(mixedWords),
+		'and sectionstypecollection headermetada ',
 		'result should be a and sectionstype collection headermetada');
 
 	n.end();
 });
 
+// ok
+
+test('has wordcounter function', function(t) {
+	t.plan(1);
+	t.equals(typeof wordcounter, 'function',
+		'First test: wordcounter is a function');
+	t.end();
+});
+
+// ok callback meghivode e, meglett e request elve a url
+test('wordcounter method makes the correct api call', function(t) {
+	//t.plan(2);
+
+	var scope = nock(BASE_MAIN_URL)
+		.get(BASE_GET)
+		.reply(200, 'mivan?');
+
+	wordcounter(function(err) {
+
+		t.error(err, 'Works without error!');
+		t.ok(scope.isDone(),
+			'Second test: requests satisfied');
+		t.end();
+	});
+
+});
+
+// legyen atirva, folyo szoveg legyen, 
+
+test('wordcounter body mivan?', function(t) {
+	//t.plan(2);
+
+	nock(BASE_MAIN_URL)
+		.get(BASE_GET)
+		.reply(200, 'mivan?');
+
+	wordcounter(function(err, body) {
+		t.error(err, 'Works without error!');
+		t.equals(body, 'mivan?');
+		t.end();
+	});
+});
+
+// legyen atirva, folyo szoveg legyen, 
+
+test('mivan?', function(t) {
+
+	var BASE_MOCK_HTML =
+		[
+			'<!DOCTYPE html>',
+			'<body>',
+			'<div id="comic">',
+			'</div>',
+			'<p> My first paragraph. </p>',
+			'<p> My second paragraph. </p>',
+			'<p> My third paragraph. </p>',
+			'<p> My fourth paragraph. </p>',
+			'</body>',
+			'</html>'
+
+		].join('');
+
+	nock(BASE_MAIN_URL)
+		.get(BASE_GET)
+		.reply(200, 'mivan?');
+
+	// fake html legyen, legyen benne tartalom, s konkretan wordcountert tesztelem le
+	// ultimate nagy rendszert fogom letesztelni
+	// azert haromszog, mert minel valosagosabb a teszt
+	// minel inkabb unit teszt annal inkabb nuansz
+	// egyet emeljek ki, azt tesztelem, hogy az egesz ossze lesz e kotve 
+	// ha sok nock teszt van akkor nem solid
+
+	wordcounter(function(err, body) {
+		t.equals(body, 'mivan?');
+		t.end();
+	});
+});
+/*
 test('module works', function(c) {
 	c.plan(3);
 
@@ -137,6 +222,6 @@ test('filter check', function(c) {
 		c.equal(typeof article, 'string', 'type of article is a string');
 	});
 });
-
+*/
 test.createStream()
 	.pipe(tapSpec());

@@ -7,34 +7,41 @@ var request = require("request"),
 var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
 // szetbontani load & parse ra?
+function something(t) {
+	return wordcounter(BASE_URL);
+}
 
 function wordcounter(callback) {
 	// body undefined lesz s beakasztja az egesz grafikonos dolgot
 	request(BASE_URL, function(error, response, body) {
-		// callback(error, body); igy a teszt torik el, 3*[]
-
-		var $page = cheerio.load(body),
-			article = $page('body').text();
-
-		// print the raw text
-		var loadedText = clearTheParsedText(article),
-
-			// print  text ['musing','from','tariq' ]
-			listedMixedWords = filterByLength(loadedText),
-
-			// print write: 1, months: 2, nni: 1 }
-			sortedByCount = calculateByFrequency(listedMixedWords),
-
-			// print transformed JSON from invalid JSON
-			unsortedJSON = transformDataToJSON(sortedByCount);
-
-		console.log(JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
-			.splice(-3), null, 2));
-		/*
-		 */
+		callback(error, body); // igy a teszt torik el, 3*[]
 	});
 }
+// console.log(wordcounter(BASE_URL));
 
+function parser(content) {
+	var $page = cheerio.load(content),
+		article = $page('content').text();
+}
+
+function converter(content) {
+	// print the raw text
+	var loadedText = clearTheParsedText(content),
+
+		// print  text ['musing','from','tariq' ]
+		listedMixedWords = filterByLength(loadedText),
+
+		// print write: 1, months: 2, nni: 1 }
+		sortedByCount = calculateByFrequency(listedMixedWords),
+
+		// print transformed JSON from invalid JSON
+		unsortedJSON = transformDataToJSON(sortedByCount);
+
+	console.log(JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
+		.splice(-3), null, 2));
+	/*
+	 */
+}
 
 function transformDataToJSON(content) {
 
@@ -71,7 +78,7 @@ function clearTheParsedText(content) {
 }
 
 
-module.exports = wordcounter;
+module.exports = something;
 
 // ezeket miert nem tudom betenni?
 //module.exports = calculateByFrequency;

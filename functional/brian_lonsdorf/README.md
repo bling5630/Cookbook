@@ -8,7 +8,7 @@ Isnpired by [Mostly adequate guide to FP (in JavaScript)](https://github.com/DrB
 
 - [Chapter 4: Currying](https://github.com/bling5630/mostly-adequate-guide/blob/master/ch4.md)
 
-- []()
+- [Chapter 5: Coding by Composing](https://github.com/bling5630/mostly-adequate-guide/blob/master/ch5.md)
 
 - []()
 
