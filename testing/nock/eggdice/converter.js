@@ -1,5 +1,6 @@
 var cheerio = require('cheerio'),
 	request = require('request'),
+	ljs = require('lambdajs').expose(global),
 	_ = require('lodash');
 
 
