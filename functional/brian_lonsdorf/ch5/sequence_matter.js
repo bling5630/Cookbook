@@ -5,7 +5,7 @@ var _ = require('lodash'),
 var head = function(x) {
 	return x[0];
 };
-// fail
+
 var reverse = reduce(function(acc, x) {
 	return [x].concat(acc);
 }, []);

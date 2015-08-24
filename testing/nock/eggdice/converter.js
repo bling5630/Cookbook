@@ -62,7 +62,7 @@ function calculateByFrequency(content) {
 }
 
 function filterByLength(content) {
-	return _.filter(content.split(' '), function(n) {
+	return _.filter(split(' ', content), function(n) {
 		return n.length > 2 && n.length < 10;
 	});
 }
