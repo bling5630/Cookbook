@@ -82,7 +82,41 @@ test('mivan?', function(t) {
 	// ha sok nock teszt van akkor nem solid
 
 	wordCount(function(err, body) {
-		t.equals(body,'mivan?' );
+		t.equals(body, 'mivan?');
+		t.end();
+	});
+});
+
+test('mivan?', function(t) {
+
+	var BASE_MOCK_HTML =
+		[
+			'<!DOCTYPE html>',
+			'<body>',
+			'<div id="comic">',
+			'</div>',
+			'<p> My first paragraph. </p>',
+			'<p> My second paragraph. </p>',
+			'<p> My third paragraph. </p>',
+			'<p> My fourth paragraph. </p>',
+			'</body>',
+			'</html>'
+
+		].join('');
+
+	nock(BASE_MAIN_URL)
+		.get(BASE_GET)
+		.reply(200, BASE_MOCK_HTML);
+
+	// fake html legyen, legyen benne tartalom, s konkretan wordcountert tesztelem le
+	// ultimate nagy rendszert fogom letesztelni
+	// azert haromszog, mert minel valosagosabb a teszt
+	// minel inkabb unit teszt annal inkabb nuansz
+	// egyet emeljek ki, azt tesztelem, hogy az egesz ossze lesz e kotve 
+	// ha sok nock teszt van akkor nem solid
+
+	wordCount(function(err, body) {
+		t.equals(body, BASE_MOCK_HTML);
 		t.end();
 	});
 });

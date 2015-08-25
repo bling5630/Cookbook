@@ -7,9 +7,4 @@ function clearTheParsedText(content) {
 		.toString();
 }
 
-var x = ('and Sections":[{"type":2, "COLLECTION HeaderMetada":');
-
-
-console.log(clearTheParsedText(x));
-
 module.exports = clearTheParsedText;

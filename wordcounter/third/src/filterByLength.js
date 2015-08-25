@@ -6,9 +6,4 @@ function filterByLength(content) {
 	});
 }
 
-var x = ('abc bvosbdo ohvo expert alma korte pcnapvpfvpdsfpvdp kacsa zyk');
-
-var y = ('a b c d e f g h i joga ') 
-console.log(filterByLength(y + x));
-
 module.exports = filterByLength;

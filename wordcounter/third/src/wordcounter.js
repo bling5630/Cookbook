@@ -6,17 +6,14 @@ var request = require("request"),
 
 var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
-// szetbontani load & parse ra?
-
 function wordcounter(callback) {
-	// body undefined lesz s beakasztja az egesz grafikonos dolgot
+
 	request(BASE_URL, function(error, response, body) {
-		callback(error, body); //igy a teszt torik el, 3*[]
 
 		var $page = cheerio.load(body),
 			article = $page('body').text();
 
-		// print the raw text
+			// print the raw text
 		var loadedText = clearTheParsedText(article),
 
 			// print  text ['musing','from','tariq' ]
@@ -28,10 +25,9 @@ function wordcounter(callback) {
 			// print transformed JSON from invalid JSON
 			unsortedJSON = transformDataToJSON(sortedByCount);
 
-		console.log(JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
+		callback(error, JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
 			.splice(-3), null, 2));
-		/*
-		 */
+
 	});
 }
 
@@ -77,13 +73,3 @@ module.exports = wordcounter;
 //module.exports = calculateByFrequency;
 //module.exports = clearTheParsedText;
 //module.exports = filterByLength;
-
-/*
-		.replace(/\s+/g, " ")
-		 ^
-TypeError: Cannot call method 'replace' of undefined
-
-	return _.filter(content.split(' '), function(n) {
-	                        ^
-TypeError: Cannot call method 'split' of undefined
-*/

@@ -7,19 +7,4 @@ function calculateByFrequency(content) {
 	}, {});
 }
 
-var x = ['musing',
-	'from',
-	'tariq',
-	'and',
-	'musing',
-	'from',
-	'tariq',
-	'and',
-	'musing',
-	'from',
-	'tariq'
-];
-
-console.log((calculateByFrequency(x)));
-
 module.exports = calculateByFrequency;

@@ -1,7 +1,5 @@
 var test = require('tape'),
 	tapSpec = require('tap-spec'),
-	//request = require("request"),
-	cheerio = require("cheerio"),
 	nock = require('nock'),
 	wordcounter = require('../src/wordcounter'),
 	calculateByFrequency = require('../src/calculateByFrequency'),
@@ -13,215 +11,204 @@ var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future
 	BASE_GET = '/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
 
-test('wordcounter', function(n) {
-	n.plan(1);
-	n.equal(typeof wordcounter, 'function', 'should be a function');
+test('has wordcounter function', function(t) {
 
-	n.end();
+	t.plan(1);
+
+	t.equals(typeof wordcounter, 'function',
+		'wordcounter is a function');
+
+	t.end();
 });
 
-test('calculateByFrequency', function(n) {
-	n.plan(5);
+test('calculateByFrequency', function(t) {
 
-	n.equal(typeof calculateByFrequency, 'function', 'should be a function');
-	n.equal(typeof calculateByFrequency(), 'object', 'should be a object');
+	t.plan(5);
 
-	n.deepLooseEqual(calculateByFrequency(['musing']), {
+	t.equal(typeof calculateByFrequency,
+		'function', 'should be a function');
+
+	t.equal(typeof calculateByFrequency(),
+		'object', 'should be a object');
+
+	t.deepLooseEqual(calculateByFrequency(['musing']), {
 		'musing': 1
 	}, 'Musing should be 1');
 
-	n.deepLooseEqual(calculateByFrequency(['musing', 'dance']), {
+	t.deepLooseEqual(calculateByFrequency(['musing', 'dance']), {
 		'musing': 1,
 		'dance': 1
 	}, 'Musing and dance should be 1 and 1');
 
-	n.deepLooseEqual(calculateByFrequency(['car', 'car', 'car', 'car']), {
+	t.deepLooseEqual(calculateByFrequency(['car', 'car', 'car', 'car']), {
 		'car': 4
 	}, 'Car should be 4');
 
-	n.end();
-});
-
-test('filterByLength', function(n) {
-	n.plan(9);
-
-	n.equal(typeof filterByLength, 'function',
-		'result should be a function');
-	n.equal(typeof filterByLength(''), 'object',
-		'result should be a object');
-	n.equal(typeof filterByLength('1'), 'object',
-		'result should be a object');
-	n.equal(typeof filterByLength('abc'), 'object',
-		'result should be a object');
-
-	var input = (' alma ');
-	n.deepLooseEqual(filterByLength(input), ['alma'],
-		'result should be alma');
-
-	var input1 = ('a b c d e f g h i j ');
-	n.deepLooseEqual(filterByLength(input1), [],
-		'result should be an empty array');
-
-	var input2 = ('bsdifidbiédfbgofgbdsgb');
-	n.deepLooseEqual(filterByLength(input2), [],
-		'result should be an empty array');
-
-	var input3 = input + input1 + input2;
-	n.deepLooseEqual(filterByLength(input3), ['alma'],
-		'result should be alma');
-
-	var input4 = input3 + ('bsdibfibfidbiédfbgofg bdsgb');
-	n.deepLooseEqual(filterByLength(input4), ['alma', 'bdsgb'],
-		'result should be alma and bdsgb');
-
-	n.end();
-});
-
-test('clearTheParsedText', function(n) {
-	n.plan(7);
-
-	n.equal(typeof clearTheParsedText, 'function',
-		'result should be a function');
-	n.equal(typeof clearTheParsedText(''), 'string',
-		'result should be a string');
-	n.equal(typeof clearTheParsedText('alma'), 'string',
-		'result should be a string');
-	n.equal(clearTheParsedText('alma'), 'alma',
-		'result should be a alma');
-	n.equal(clearTheParsedText('5'), '',
-		'result should be an empty string');
-	n.equal(clearTheParsedText('5alma'), 'alma',
-		'result should be an alma');
-
-	var mixedWords = ('and Sections":[{"type":2,"COLLECTION HeaderMetada": ');
-
-	n.equal(clearTheParsedText(mixedWords),
-		'and sectionstypecollection headermetada ',
-		'result should be a and sectionstype collection headermetada');
-
-	n.end();
-});
-
-// ok
-
-test('has wordcounter function', function(t) {
-	t.plan(1);
-	t.equals(typeof wordcounter, 'function',
-		'First test: wordcounter is a function');
 	t.end();
 });
 
-// ok callback meghivode e, meglett e request elve a url
-test('wordcounter method makes the correct api call', function(t) {
-	//t.plan(2);
+test('filterByLength', function(t) {
 
-	var scope = nock(BASE_MAIN_URL)
-		.get(BASE_GET)
-		.reply(200, 'mivan?');
+	t.plan(9);
 
-	wordcounter(function(err) {
+	t.equal(typeof filterByLength, 'function',
+		'result should be a function');
+	t.equal(typeof filterByLength(''), 'object',
+		'result should be a object');
+	t.equal(typeof filterByLength('1'), 'object',
+		'result should be a object');
+	t.equal(typeof filterByLength('abc'), 'object',
+		'result should be a object');
 
-		t.error(err, 'Works without error!');
-		t.ok(scope.isDone(),
-			'Second test: requests satisfied');
-		t.end();
-	});
+	var BASE_INPUT = (' alma ');
+	t.deepLooseEqual(filterByLength(BASE_INPUT), ['alma'],
+		'result should be alma');
 
+	var BASE_INPUT_1 = ('a b c d e f g h i j ');
+	t.deepLooseEqual(filterByLength(BASE_INPUT_1), [],
+		'result should be an empty array');
+
+	var BASE_INPUT_2 = ('bsdifidbiédfbgofgbdsgb');
+	t.deepLooseEqual(filterByLength(BASE_INPUT_2), [],
+		'result should be an empty array');
+
+	var BASE_INPUT_3 = BASE_INPUT + BASE_INPUT_1 + BASE_INPUT_2;
+	t.deepLooseEqual(filterByLength(BASE_INPUT_3), ['alma'],
+		'result should be alma');
+
+	var BASE_INPUT_4 = BASE_INPUT_3 + ('bsdibfibfidbiédfbgofg bdsgb');
+	t.deepLooseEqual(filterByLength(BASE_INPUT_4), ['alma', 'bdsgb'],
+		'result should be alma and bdsgb');
+
+	t.end();
 });
 
-// legyen atirva, folyo szoveg legyen, 
+test('clearTheParsedText', function(t) {
 
-test('wordcounter body mivan?', function(t) {
-	//t.plan(2);
+	t.plan(7);
 
-	nock(BASE_MAIN_URL)
-		.get(BASE_GET)
-		.reply(200, 'mivan?');
+	t.equal(typeof clearTheParsedText, 'function',
+		'result should be a function');
+	t.equal(typeof clearTheParsedText(''), 'string',
+		'result should be a string');
+	t.equal(typeof clearTheParsedText('alma'), 'string',
+		'result should be a string');
+	t.equal(clearTheParsedText('alma'), 'alma',
+		'result should be a alma');
+	t.equal(clearTheParsedText('5'), '',
+		'result should be an empty string');
+	t.equal(clearTheParsedText('5alma'), 'alma',
+		'result should be an alma');
 
-	wordcounter(function(err, body) {
-		t.error(err, 'Works without error!');
-		t.equals(body, 'mivan?');
-		t.end();
-	});
+	var BASE_WORDS = ('and Sections":[{"type":2,"COLLECTION HeaderMetada": ');
+
+	t.equal(clearTheParsedText(BASE_WORDS),
+		'and sectionstypecollection headermetada ',
+		'result should be a and sectionstype collection headermetada');
+
+	t.end();
 });
 
-// legyen atirva, folyo szoveg legyen, 
+test('wordcounter method makes the correct api call',
+	function(t) {
 
-test('mivan?', function(t) {
+		t.plan(2);
 
-	var BASE_MOCK_HTML =
-		[
-			'<!DOCTYPE html>',
-			'<body>',
-			'<div id="comic">',
-			'</div>',
-			'<p> My first paragraph. </p>',
-			'<p> My second paragraph. </p>',
-			'<p> My third paragraph. </p>',
-			'<p> My fourth paragraph. </p>',
-			'</body>',
-			'</html>'
+		var scope = nock(BASE_MAIN_URL)
+			.get(BASE_GET)
+			.reply(200, 'what\'s up?');
 
-		].join('');
+		wordcounter(function(err) {
 
-	nock(BASE_MAIN_URL)
-		.get(BASE_GET)
-		.reply(200, 'mivan?');
+			t.error(err, 'Works without error!');
+			t.ok(scope.isDone(),
+				'wordcounter request is satisfied');
+			t.end();
+		});
 
-	// fake html legyen, legyen benne tartalom, s konkretan wordcountert tesztelem le
-	// ultimate nagy rendszert fogom letesztelni
-	// azert haromszog, mert minel valosagosabb a teszt
-	// minel inkabb unit teszt annal inkabb nuansz
-	// egyet emeljek ki, azt tesztelem, hogy az egesz ossze lesz e kotve 
-	// ha sok nock teszt van akkor nem solid
-
-	wordcounter(function(err, body) {
-		t.equals(body, 'mivan?');
-		t.end();
 	});
-});
-/*
-test('module works', function(c) {
-	c.plan(3);
 
-	nock('https://medium.com')
-		.get('/life-at-confetti')
-		.reply(200, 'Hello from Medium');
+test('wordcounter body testing, saying what\'s up?',
+	function(t) {
 
-	var scope = nock('https://medium.com')
-		.get('/life-at-confetti')
-		.reply(200, 'Hello from Medium');
+		t.plan(2);
 
-	request('https://medium.com/life-at-confetti', function(err) {
-		c.error(err, 'error');
+		nock(BASE_MAIN_URL)
+			.get(BASE_GET)
+			.reply(200, 'what\'s up');
 
-		request('https://medium.com/life-at-confetti', function(err) {
-			c.error(err, 'error');
-			c.ok(scope.isDone(), 'request satisfied');
-			c.end();
+		wordcounter(function(err, body) {
+			t.error(err, 'Works without error!');
+			t.equals(body, '[]', 'this is an empty array');
+			t.end();
 		});
 	});
-});
 
+test('wordcounter mocked HTML like name: alma, quantity: 1',
+	function(t) {
 
-test('filter check', function(c) {
-	c.plan(1);
+		t.plan(1);
 
-	nock('https://medium.com')
-		.get('/life-at-confetti')
-		.reply(200, 'Hello from Medium');
+		var BASE_MOCK_HTML_ALMA =
+			[
+				'<!DOCTYPE html>',
+				'<body>',
+				'alma',
+				'</body>',
+				'</html>'
 
-	request('https://medium.com/life-at-confetti', function(error, response, body) {
-		if (error) {
-			console.log(error);
-			return;
-		}
-		var $page = cheerio.load(body);
-		var article = $page('body').text();
+			].join('');
 
-		c.equal(typeof article, 'string', 'type of article is a string');
+		nock(BASE_MAIN_URL)
+			.get(BASE_GET)
+			.reply(200, BASE_MOCK_HTML_ALMA);
+
+		wordcounter(function(err, body) {
+			t.deepEqual(JSON.parse(body), [{
+				"name": "alma",
+				"quantity": 1
+			}], 'result is - name: alma, quantity: 1');
+			t.end();
+		});
 	});
-});
-*/
+
+test('wordcounter mocked HTML like name: second, quantity: 1, name: third, quantity: 1, name: fourth, quantity: 1',
+	function(t) {
+
+		t.plan(1);
+
+		var BASE_MOCK_HTML =
+			[
+				'<!DOCTYPE html>',
+				'<body>',
+				'<div id="comic">',
+				'</div>',
+				'<p> My second paragraph. </p>',
+				'<p> My third paragraph. </p>',
+				'<p> My fourth paragraph. </p>',
+				'</body>',
+				'</html>'
+
+			].join('');
+
+		nock(BASE_MAIN_URL)
+			.get(BASE_GET)
+			.reply(200, BASE_MOCK_HTML);
+
+		wordcounter(function(err, body) {
+			t.deepEqual(JSON.parse(body), [{
+				name: 'second',
+				quantity: 1
+			}, {
+				name: 'third',
+				quantity: 1
+			}, {
+				name: 'fourth',
+				quantity: 1
+			}], 'result is - name: second, quantity: 1, name: third, quantity: 1, name: fourth, quantity: 1');
+			t.end();
+		});
+	});
+
 test.createStream()
 	.pipe(tapSpec());
