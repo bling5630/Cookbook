@@ -11,3 +11,5 @@ Inspired by [Be a better programmer](https://www.youtube.com/channel/UCO1cgjhGzs
 - Closures - Part 5 of Functional Programming in JavaScript
 
 - Currying - Part 6 of Functional Programming in JavaScript
+
+- Recursion - Part 7 of Functional Programming in JavaScript
