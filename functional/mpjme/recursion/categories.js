@@ -39,6 +39,7 @@ console.log(
 	JSON.stringify(
 		makeTree(categories, null),
 		null, 2));
+
 /*
 // result
 {

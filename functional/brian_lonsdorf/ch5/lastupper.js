@@ -1,7 +1,6 @@
 var _ = require('lodash'),
 	ljs = require('lambdajs').expose(global);
 
-
 var head = function(x) {
 	return x[0];
 };
