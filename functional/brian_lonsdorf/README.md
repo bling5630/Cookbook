@@ -10,7 +10,7 @@ Isnpired by [Mostly adequate guide to FP (in JavaScript)](https://github.com/DrB
 
 - [Chapter 5: Coding by Composing](https://github.com/bling5630/mostly-adequate-guide/blob/master/ch5.md)
 
-- []()
+- [Chapter 6: Example Application](https://github.com/bling5630/mostly-adequate-guide/blob/master/ch6.md)
 
 - []()
 
