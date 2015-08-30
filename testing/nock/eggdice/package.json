@@ -15,6 +15,7 @@
     "jasmine-node": "^1.14.5",
     "lambdajs": "^1.0.1",
     "lodash": "^3.10.1",
+    "lodash.curry": "^3.0.2",
     "nock": "^2.10.0",
     "ramda": "^0.17.1",
     "request": "^2.60.0",

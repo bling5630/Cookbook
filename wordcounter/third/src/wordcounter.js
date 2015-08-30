@@ -13,7 +13,7 @@ function wordcounter(callback) {
 		var $page = cheerio.load(body),
 			article = $page('body').text();
 
-			// print the raw text
+		// print the raw text
 		var loadedText = clearTheParsedText(article),
 
 			// print  text ['musing','from','tariq' ]
@@ -73,3 +73,4 @@ module.exports = wordcounter;
 //module.exports = calculateByFrequency;
 //module.exports = clearTheParsedText;
 //module.exports = filterByLength;
+

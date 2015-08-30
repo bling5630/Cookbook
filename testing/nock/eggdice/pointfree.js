@@ -1,7 +1,20 @@
 var _ = require('lodash'),
+	curry = require('ramda').curry,
 	ljs = require('lambdajs').expose(global);
 
-var DATA = ' apad alma korte barack mege21gy nvpnsfvnpsnvfFDSVND FÉBVÉBVDSVBSBDV AVNWOÉNVOÉAN FLNW FNWEAP1424 SPF8342846+!""+%_fsvseer"+%__DS';
+var DATA = ' alma apad alma korte alma korte barack meg21gy nvpnsfvnpsnvfFDSVND FÉBVÉBVDSVBSBDV AVNWOÉNVOÉAN FLNW FNWEAP1424 SPF8342846+!""+%_fsvseer"+%__DS';
+
+// step #5
+
+var calculateByFrequency = function(xs) {
+	return reduce(calculateFrequencySimple, {}, xs);
+};
+
+// step #4
+var calculateFrequencySimple = function(x, y) {
+	x[y] = ++x[y] || 1;
+	return x;
+};
 
 // step #3
 var filterEverythingByLength = filter(function(n) {
@@ -18,8 +31,11 @@ var clearTheParsedText = compose(toString,
 	replace(/\s+/g, " "));
 
 // pointfree way
-var result = compose(filterEverythingByLength,
+var result = compose(
+	calculateByFrequency,
+	filterEverythingByLength,
 	splitTheContent,
 	clearTheParsedText);
 
 console.log(result(DATA));
+//console.log(calculateByFrequency(result(DATA)));
