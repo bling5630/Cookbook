@@ -10,15 +10,12 @@ var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future
 	BASE_MAIN_URL = 'https://medium.com',
 	BASE_GET = '/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
-// ok
-
 test('#1 - has wordCount method', function(t) {
 	t.plan(1);
 	t.equals(typeof wordCount, 'function', 'First test: wordCount is a function');
 	t.end();
 });
 
-// ok callback meghivode e, meglett e request elve a url
 test('#2 - wordCount method makes the correct api call', function(t) {
 	t.plan(2);
 
@@ -35,8 +32,6 @@ test('#2 - wordCount method makes the correct api call', function(t) {
 
 });
 
-// legyen atirva, folyo szoveg legyen, 
-
 test('#3 - wordCount body mivan?', function(t) {
 	t.plan(2);
 
@@ -50,8 +45,6 @@ test('#3 - wordCount body mivan?', function(t) {
 		t.end();
 	});
 });
-
-// legyen atirva, folyo szoveg legyen, 
 
 test('mivan?', function(t) {
 
@@ -73,13 +66,6 @@ test('mivan?', function(t) {
 	nock(BASE_MAIN_URL)
 		.get(BASE_GET)
 		.reply(200, 'mivan?');
-
-	// fake html legyen, legyen benne tartalom, s konkretan wordcountert tesztelem le
-	// ultimate nagy rendszert fogom letesztelni
-	// azert haromszog, mert minel valosagosabb a teszt
-	// minel inkabb unit teszt annal inkabb nuansz
-	// egyet emeljek ki, azt tesztelem, hogy az egesz ossze lesz e kotve 
-	// ha sok nock teszt van akkor nem solid
 
 	wordCount(function(err, body) {
 		t.equals(body, 'mivan?');
@@ -107,13 +93,6 @@ test('mivan?', function(t) {
 	nock(BASE_MAIN_URL)
 		.get(BASE_GET)
 		.reply(200, BASE_MOCK_HTML);
-
-	// fake html legyen, legyen benne tartalom, s konkretan wordcountert tesztelem le
-	// ultimate nagy rendszert fogom letesztelni
-	// azert haromszog, mert minel valosagosabb a teszt
-	// minel inkabb unit teszt annal inkabb nuansz
-	// egyet emeljek ki, azt tesztelem, hogy az egesz ossze lesz e kotve 
-	// ha sok nock teszt van akkor nem solid
 
 	wordCount(function(err, body) {
 		t.equals(body, BASE_MOCK_HTML);

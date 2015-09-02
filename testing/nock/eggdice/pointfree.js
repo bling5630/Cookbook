@@ -4,8 +4,21 @@ var _ = require('lodash'),
 
 var DATA = ' alma apad alma korte alma korte barack meg21gy nvpnsfvnpsnvfFDSVND FÉBVÉBVDSVBSBDV AVNWOÉNVOÉAN FLNW FNWEAP1424 SPF8342846+!""+%_fsvseer"+%__DS';
 
-// step #5
+// step #7
+function transformDataToJSON(content) {
 
+	var output = [];
+
+	_.forIn(content, function(value, key) {
+		output.push({
+			name: key,
+			quantity: content[key]
+		});
+	});
+	return output;
+}
+
+// step #5
 var calculateByFrequency = function(xs) {
 	return reduce(calculateFrequencySimple, {}, xs);
 };
@@ -37,5 +50,5 @@ var result = compose(
 	splitTheContent,
 	clearTheParsedText);
 
-console.log(result(DATA));
-//console.log(calculateByFrequency(result(DATA)));
+//console.log(result(DATA));
+console.log(transformDataToJSON(result(DATA)));
