@@ -1,0 +1,1 @@
+Inspired by [Put callback first for elegance](http://bahmutov.calepin.co/put-callback-first-for-elegance.html) - [Gleb Bahmutov](https://twitter.com/bahmutov)

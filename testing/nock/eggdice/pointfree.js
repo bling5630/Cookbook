@@ -1,11 +1,13 @@
-var _ = require('lodash'),
-	curry = require('ramda').curry,
-	R = require('ramda'),
+var R = require('ramda'),
 	ljs = require('lambdajs').expose(global);
 
-// ``` 
+var BASE_DATA= require('./data');
 
-var DATA = ' alma apad alma korte alma korte barack meg21gy nvpnsfvnpsnvfFDSVND FÉBVÉBVDSVBSBDV AVNWOÉNVOÉAN FLNW FNWEAP1424 SPF8342846+!""+%_fsvseer"+%__DS';
+//step #8
+//var sliceTheFirstThree = R.slice(0, 3);
+
+// step #7
+var sortByQuantity = R.sortBy(R.prop('quantity'));
 
 // step #6
 var transformDataToJSON = R.pipe(R.toPairs, R.map(R.zipObj(["name", "quantity"])));
@@ -23,33 +25,39 @@ var calculateFrequencySimple = function(x, y) {
 	return x;
 };
 
-// step #3
-var filterEverythingByLength = filter(function(n) {
-	return n.length > 2 && n.length < 10;
-});
 
-// step #2
+// step #3
+var wordsGreaterThankSix = R.gt(6),
+	wordsLessThanThree = R.lt(3);
+
+var filterWordsByLength = R.filter(R.where({
+	length: R.both(wordsGreaterThankSix, wordsLessThanThree)
+}));
+
 var splitTheContent = R.split(' ');
 
-// step #1
-var clearTheMessyText = compose(
-	replace(/[^a-zA-Z ]/g, ""),
-	replace(/\s+/g, " "));
+var replaceMixedLetters = R.replace(/[^a-zA-Z ]/g, "");
+
+var replaceTheUndeedCharacters = R.replace(/\s+/g, " ");
+
+var doLowerCaseTheText = R.toLower;
 
 var stringTheText = R.toString;
 
-var doLowerCaseTheText = R.toLower;
 
 
 // pointfree way
 var result = compose(
-	transformDataToJSON,
-	calculateByFrequency,
-	filterEverythingByLength,
+	//sliceTheFirstThree,
+	//sortByQuantity,
+	//transformDataToJSON,
+	//calculateByFrequency,
+	filterWordsByLength,
 	splitTheContent,
-	clearTheMessyText,
+	replaceMixedLetters,
+	replaceTheUndeedCharacters,
 	doLowerCaseTheText,
 	stringTheText
 );
 
-console.log((result(DATA)));
+console.log((result(BASE_DATA)));
