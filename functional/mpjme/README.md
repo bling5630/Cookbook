@@ -13,3 +13,5 @@ Inspired by [Be a better programmer](https://www.youtube.com/channel/UCO1cgjhGzs
 - Currying - Part 6 of Functional Programming in JavaScript
 
 - Recursion - Part 7 of Functional Programming in JavaScript
+
+- Promises - Part 8 of Functional Programming in JavaScript
