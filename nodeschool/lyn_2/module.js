@@ -1,14 +1,13 @@
-var fs = require('fs');
-var path = require('path');
+var filterFn = require('./mymodule.js')
+var dir = process.argv[2]
+var filterStr = process.argv[3]
 
-module.exports = function(dir, ext, callback) {
-	fs.readdir(dir, function(err, list) {
-		if (err);
-			return callback(err);
+filterFn(dir, filterStr, function (err, list) {
+  if (err)
+    return console.error('There was an error:', err)
 
-		list = list.filter(function(data) {
-			return (path.extname(data) === '.' + ext);
-		});
-		callback(null, list);
-	});
-};
+  list.forEach(function (file) {
+    console.log(file)
+  })
+})
+
