@@ -1,0 +1,1 @@
+Inspired by [Demystifying JavaScript Closures, Callbacks and IIFEs](http://www.sitepoint.com/demystifying-javascript-closures-callbacks-iifes/)

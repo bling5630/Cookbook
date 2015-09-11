@@ -1,0 +1,1 @@
+Inspired by [Understanding JavaScript callbacks - unlocking the asynchronous powers of node.js](http://cwbuecheler.com/web/tutorials/2013/javascript-callbacks/)
