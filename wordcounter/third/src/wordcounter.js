@@ -73,4 +73,3 @@ module.exports = wordcounter;
 //module.exports = calculateByFrequency;
 //module.exports = clearTheParsedText;
 //module.exports = filterByLength;
-

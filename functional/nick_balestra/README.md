@@ -1,0 +1,1 @@
+Inspired by [JS Functional Programming Libraries](http://nick.balestra.ch/2015/javascript-functional-libraries/)
