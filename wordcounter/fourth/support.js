@@ -1,6 +1,5 @@
-
-
 // ```
+
 
 // filterWordsByLength
 
@@ -31,3 +30,12 @@ var filterByLength = R.filter(R.compose(R.contains(R.__, R.range(4, 6)), R.prop(
 R.lt(R.__, 3);
 
 R.flip(R.lt)(3);
+
+// calculateByFrequency
+
+function calculateByFrequency(content) {
+	return _.reduce(content, function(countMap, word) {
+		countMap[word] = ++countMap[word] || 1;
+		return countMap;
+	}, {});
+}

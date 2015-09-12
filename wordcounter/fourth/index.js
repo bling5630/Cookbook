@@ -3,24 +3,13 @@ var R = require('ramda'),
 
 var BASE_DATA = require('./data');
 
-//var sliceTheFirstThree = R.slice(0, 3);
+var sliceTheFirstThree = R.slice(0, 3);
 
 var sortByQuantity = R.sortBy(R.prop('quantity'));
 
 var transformDataToJSON = R.pipe(R.toPairs, R.map(R.zipObj(["name", "quantity"])));
 
-//console.log(transformData(input));
-
-// step #5
-var calculateByFrequency = function(xs) {
-	return reduce(calculateFrequencySimple, {}, xs);
-};
-
-// step #4
-var calculateFrequencySimple = function(x, y) {
-	x[y] = ++x[y] || 1;
-	return x;
-};
+var calculateByFrequency = R.countBy(R.identity);
 
 var wordsGreaterThankSix = R.gt(6),
 	wordsLessThanThree = R.lt(3);
@@ -42,12 +31,9 @@ var stringTheText = R.toString;
 
 var result = compose(
 	//sliceTheFirstThree,
-	//sortByQuantity,
-	//transformDataToJSON,
-
-
-	//calculateByFrequency,
-
+	sortByQuantity,
+	transformDataToJSON,
+	calculateByFrequency,
 	filterWordsByLength,
 	splitTheContent,
 	replaceMixedLetters,
