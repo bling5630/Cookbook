@@ -1,0 +1,1 @@
+Inspired by [Currying vs Partial Application](http://www.datchley.name/currying-vs-partial-application/)

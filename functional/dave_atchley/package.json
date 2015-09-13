@@ -1,0 +1,14 @@
+{
+  "name": "dave_atchley",
+  "version": "1.0.0",
+  "description": "Inspired by [Currying vs Partial Application](http://www.datchley.name/currying-vs-partial-application/)",
+  "main": "curried_add.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ramda": "^0.17.1"
+  }
+}
