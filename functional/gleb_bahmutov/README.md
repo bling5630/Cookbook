@@ -1,0 +1,1 @@
+Inspired by [Essence of functional programming](http://glebbahmutov.com/blog/essence-of-functional-programming/)
