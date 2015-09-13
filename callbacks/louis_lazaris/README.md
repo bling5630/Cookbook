@@ -1,0 +1,1 @@
+Inspired by [Callback Functions in JavaScript](http://www.impressivewebs.com/callback-functions-javascript/)

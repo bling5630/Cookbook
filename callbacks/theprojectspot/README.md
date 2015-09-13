@@ -1,0 +1,1 @@
+Inspired by [Node.js for beginners - Callbacks](http://www.theprojectspot.com/tutorial-post/nodejs-for-beginners-callbacks/4)
