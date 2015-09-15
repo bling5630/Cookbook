@@ -1,0 +1,1 @@
+Ispired by [What are callbacks?](https://docs.nodejitsu.com/articles/getting-started/control-flow/what-are-callbacks)
