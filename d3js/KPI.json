@@ -1,0 +1,20 @@
+{
+"name": "Max",
+"value": "100",
+"children": [
+{"name":"Zoho Upload", "value": 50},
+{"name":"MeetUp", "value": 1},
+{"name":"BD Meeting", "value": 1},
+{"name":"Interview", "value": 3},
+{"name":"Introduced", "value": 3},
+{"name":"1st Round", "value": 1},
+{"name":"Placement", "value": 1},
+{"name":"Zoho Upload", "value": 40},
+{"name":"MeetUp", "value": 2},
+{"name":"BD Meeting", "value": 0},
+{"name":"Interview", "value": 3},
+{"name":"Introduced", "value": 5},
+{"name":"1st Round", "value": 3},
+{"name":"Placement", "value": 3}
+]
+}

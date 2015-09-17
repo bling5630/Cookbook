@@ -1,0 +1,13 @@
+{
+"name": "Max",
+"value": "100",
+"children": [
+{"name":"Zoho Upload", "value": 40},
+{"name":"MeetUp", "value": 2},
+{"name":"BD Meeting", "value": 0},
+{"name":"Interview", "value": 3},
+{"name":"Introduced", "value": 5},
+{"name":"1st Round", "value": 3},
+{"name":"Placement", "value": 3}
+]
+}

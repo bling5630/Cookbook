@@ -5,17 +5,17 @@ var BASE_DATA = require('./data');
 
 var sliceTheFirstThree = R.slice(0, 3);
 
-var sortByQuantity = R.sortBy(R.prop('quantity'));
+var sortWordsByQuantity = R.sortBy(R.prop('quantity'));
 
 var transformDataToJSON = R.pipe(R.toPairs, R.map(R.zipObj(["name", "quantity"])));
 
-var calculateByFrequency = R.countBy(R.identity);
+var calculatWordseByFrequency = R.countBy(R.identity);
 
-var wordsGreaterThankSix = R.gt(6),
-	wordsLessThanThree = R.lt(3);
+var wordsLegnthGreaterThankSix = R.gt(6),
+	wordsLengthLessThanThree = R.lt(3);
 
 var filterWordsByLength = R.filter(R.where({
-	length: R.both(wordsGreaterThankSix, wordsLessThanThree)
+	length: R.both(wordsLegnthGreaterThankSix, wordsLegnthGreaterThankSix)
 }));
 
 var splitTheContent = R.split(' ');
@@ -31,9 +31,9 @@ var stringTheText = R.toString;
 
 var result = compose(
 	//sliceTheFirstThree,
-	sortByQuantity,
+	sortWordsByQuantity,
 	transformDataToJSON,
-	calculateByFrequency,
+	calculatWordseByFrequency,
 	filterWordsByLength,
 	splitTheContent,
 	replaceMixedLetters,

@@ -1,0 +1,15 @@
+{
+  "name": "meteor_singapore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "expect": "^1.10.0",
+    "should": "^7.1.0"
+  }
+}

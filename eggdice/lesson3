@@ -1,0 +1,139 @@
+// map reduce stuff
+
+'use strict'
+
+var arr = [0, 1, 2, 3, 4, 5];
+
+arr.forEach(function(number) {
+	console.log(number);
+});
+
+or lodash ?
+
+	for on kivul az i elni fog - >
+	for (var i = 0; i < Things.length; i++) {
+		Things[i]
+	};
+
+rendes nyelvben, block scope lesz, 2 curly braces kozotti dolog lesz ervenyes,
+var ugy mukodik itt,
+	fuggveny scope van, i addig hasznalhato lesz, ameddig ugyanabban a fuggvenyben lesz, utana is hasznalhato lesz
+var fuggveny socpe, nem block scope, az a baj ezzel, hogy - >
+
+
+	megnezni
+let vs
+var ?
+
+
+foreach - >
+
+	closure - >
+
+	function counter() {
+		var count = 0;
+		console.log(count);
+	}
+
+counter(); - > 0
+
+------------------------------------
+
+var count = 0;
+
+function counter() {
+
+	count++;
+	console.log(count);
+}
+
+counter();
+counter();
+counter(); - > 1, 2, 3
+
+------------------------------------
+
+foreach - >
+
+------------------------------------
+
+filter -> fuggvenyt var, e,i,tomb, filter, olyan fuggvenyt ami true false 
+szal jon vissza, ha true benne hagyja ha false kiveszi
+visszater egy uj tombbel, nem az erdetein valtoztat
+
+------------------------------------
+
+map -> van egy tombom, ezen mappolok egy fuggvenyt, az elemek
+legyenek, uj tombbel ter vissza, older, mapped tomb, van egy cuccom
+s erre csinal egy uj cuccot
+
+------------------------------------
+
+map filter uj tomb, foreach csak mindegyiken lefuttat valamit
+
+------------------------------------
+
+some es every is true false szal ter vissza, 
+some eleg hogy egy elemre igaz legyen, ha csak 2 es van benne false,
+ha talal egyet akkor megall
+every mindegyiknek ugyanolyannak kell lenni, vegig nezi az osszes elemet
+
+------------------------------------
+
+sort, uj tombbel ter vissza, fuggvenyt kell adni, itt nem az lesz, 
+ket elemet fog kapni, random sorrendben megy, sort meghivogatja, 
+comparator fuggvenyt kell, adni emiatt, 3 allas miatt nem jo a tru false, ><=
+0,1-1
+sort algoritmus, sorting algoritmus ok, quick sort a leggyorsabb atlagos esetben,
+n negyzetes algoritmust nem szeretjuk, sok elemnel sok ido
+n szeres mert linearisan fugg tole, log n jellegu cumo, 
+
+------------------------------------
+
+concat, osszerakja, 
+
+------------------------------------
+
+indexof, megmondja
+
+------------------------------------
+pop & push
+
+push rateszi a vegere, pop leveszi a vegerol
+
+------------------------------------
+
+ennek az ellentete, shift\unshift, masik oldalrol, veszi, tolti
+
+------------------------------------
+
+reverse, megforditja az egeszet,
+
+------------------------------------
+
+slice, ha szeletet kerek belole, a meddig mar nem lesz benne, a honnan meg benne lesz
+
+------------------------------------
+
+splice, honnan, hany darabot toroljon ki, 
+
+------------------------------------
+
+reduce, ertekkel fog visszaterni, leegyszerusiti egy ertekre az egesz tombot
+2 parametere van, fuggveny, masik a kezdo ertek, accumlator, element, index, array,
+accumlator erteket tudom buzeralni, arra jo, hogy tombbol valami mast csinaljak,
+reduce if e true novel egyet, ha false akkor nem 
+
+sort dance, you tube.
+
+------------------------------------
+
+romai szamos,
+
+feladat, sima arabszamokbol romai szamot csinalni
+roman(3) -> "III"
+
+1000 alatti jo, max 3000ig kell menni
+ki kell vonogatni a nagyobbakat, folyamatosan kivonogatos, 
+ha gyorsan megy, s megvan, akkor romaibol arab szamot,
+
