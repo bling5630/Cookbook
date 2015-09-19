@@ -1,0 +1,1 @@
+Inspired by [Simple examples to understand javascript callback](https://github.com/acveer/callback)

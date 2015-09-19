@@ -1,0 +1,1 @@
+Inspired by [Information about async javascript programming](https://github.com/maxogden/callback-hell)
