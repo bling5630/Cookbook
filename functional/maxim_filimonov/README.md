@@ -1,0 +1,1 @@
+Inspired by [Maxim Filimonov](https://gist.github.com/Maxim-Filimonov/48c4ec6a3430fa7d8d2b)
