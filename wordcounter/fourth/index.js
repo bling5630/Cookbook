@@ -30,7 +30,7 @@ var stringTheText = R.toString;
 
 
 var result = compose(
-	//sliceTheFirstThree,
+	sliceTheFirstThree,
 	sortWordsByQuantity,
 	transformDataToJSON,
 	calculatWordseByFrequency,

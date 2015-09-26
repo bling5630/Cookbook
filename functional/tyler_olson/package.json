@@ -1,16 +1,17 @@
 {
   "name": "tyler_olson",
   "version": "1.0.0",
-  "description": "",
+  "description": "Inspired by",
   "main": "index.js",
   "scripts": {
     "test": "jasmine-node ./spec --autotest"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "dependencies": {
-    "babel": "^5.8.23",
-    "jasmine-node": "^1.14.5",
-    "ramda": "^0.17.1"
-  }
+    "babel": "~5.8.23",
+    "jasmine-node": "~1.14.5",
+    "ramda": "~0.17.1"
+  },
+  "devDependencies": {}
 }
