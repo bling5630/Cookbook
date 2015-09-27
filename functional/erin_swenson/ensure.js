@@ -1,3 +1,5 @@
+var _ = require('ramda');
+
 function ensure(notOkCode, notOkMessage, response, okFx) {
   return function(err) {
     if (err) {
@@ -21,7 +23,8 @@ expressRouter.get("/api/ledgers/:id", function(req, res) {
 
 expressRouter.patch("/api/users/:id", function(req, res) {
   UserService.getUserById(req.params.id, ensureFound(res, function(user) {
-    UserService.updateUser(user, req.body, ensureValid(res, function(updated) {
+    UserService.updateUser(user, req.body, ensureValid(res, function(
+      updated) {
       res.status(200).json(updated);
     }));
   }));

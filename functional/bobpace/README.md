@@ -1,1 +1,0 @@
-Inspired by [Ramda Demo by Bob Pace](https://www.youtube.com/watch?v=digajAH_5IU)

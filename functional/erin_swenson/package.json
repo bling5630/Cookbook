@@ -8,7 +8,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^1.4.2",
-    "ramda": "^0.17.1"
+    "async": "~1.4.2",
+    "ramda": "~0.17.1",
+    "asyncify": "~2.1.2",
+    "express": "~4.13.3"
   }
 }

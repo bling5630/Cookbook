@@ -1,33 +1,47 @@
-var _ = require('ramda');
+var R = require('ramda');
 
-function takePrimes(n) {
-	var primes = [];
+var GeneratorUtils = require('./generator-utils');
 
-	for (var i = 2; primes.length < n; i++) {
-		if (isPrime(i)) {
-			primes.push(i);
+
+function* primes() {
+	yield 2;
+
+	var n = 3;
+
+	while (true) {
+		if (isPrime(n)) {
+			yield n;
 		}
+
+		n++;
 	}
-	return primes;
 }
 
-function isPrime(n) {
 
+function takePrimes(n) {
+	return GeneratorUtils.take(n, primes());
+}
+
+
+function isPrime(n) {
 	if (n === 2) {
 		return true;
 	}
 
-	var possibleFactors = _.range(2, n - 1),
-		hasFactor = _.any(isFactorOf(n), possibleFactors);
+	var possibleFactors = R.range(2, Math.ceil(Math.sqrt(n)) + 1);
+	var hasFactor = R.any(isFactorOf(n), possibleFactors);
 
-	return _.not(hasFactor);
+	return R.not(hasFactor);
 }
 
-var isFactorOf = _.curry(function(n, factor) {
+
+var isFactorOf = R.curry(function(n, factor) {
 	return n % factor === 0;
 });
 
+
 module.exports = {
-	isPrime: isPrime,
+	primes: primes,
 	takePrimes: takePrimes,
+	isPrime: isPrime
 };
