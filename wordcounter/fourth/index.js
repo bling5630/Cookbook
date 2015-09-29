@@ -15,7 +15,7 @@ var wordsLegnthGreaterThankSix = R.gt(6),
 	wordsLengthLessThanThree = R.lt(3);
 
 var filterWordsByLength = R.filter(R.where({
-	length: R.both(wordsLegnthGreaterThankSix, wordsLegnthGreaterThankSix)
+	length: R.both(wordsLengthLessThanThree, wordsLegnthGreaterThankSix)
 }));
 
 var splitTheContent = R.split(' ');
