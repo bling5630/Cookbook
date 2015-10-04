@@ -1,0 +1,17 @@
+{
+  "name": "drboolean",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "ramda": "~0.17.1",
+    "pointfree-fantasy": "~0.1.1",
+    "lambdajs": "~1.0.1",
+    "lenses": "~0.1.0"
+  }
+}
