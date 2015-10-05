@@ -1,6 +1,5 @@
 var express = require('express'),
   app = express(),
-  path = require('path'),
   logger = require('morgan'),
   port = process.env.PORT || 3000;
 
@@ -8,35 +7,36 @@ app.use(logger("dev"));
 app.use(express.static("public"));
 
 
-app.get('/', function(req, res) {
+app.get('/', function(req, res, next) {
   res.send('Just sayin!');
 });
 
+app.get('../public/kitten', function(req, res, next) {
+  res.sendFile('kitten.jpg', function(err) {
+    if (err) {
+      console.log(err);
+      res.status(err.status).end();
+    } else {
+      console.log('Sent: ', 'kitten.jpg');
+    }
+  });
+});
 
-app.get('../public/kitten', function(req, res) {
-  res.sendFile(path.join(__dirname + 'kitten.jpg'));
+app.get('../public/button', function(req, res, next) {
+  res.sendFile('button.html', function(err) {
+    if (err) {
+      console.log(err);
+      res.status(err.status).end();
+    } else {
+      console.log('Sent: ', 'button.html');
+    }
+  });
 });
 
 
-
-/*
-app.get('/want', function(req, res) {
-  res.send('Do you want something?');
-});
-
-app.get('/book', function(req, res) {
-  res.send('Read more buddy!');
-});
-
-app.get('/eat', function(req, res) {
-  res.send('Which is your favorite dish?');
-});
-
-app.get('/ignore', function(req, res) {
-  res.send('Sorry, I am not your friend!');
-});
-*/
 
 var server = app.listen(port, function() {
   console.log('Server started on %s', server.address().port);
 });
+
+module.exports.index = app;

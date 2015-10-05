@@ -1,6 +1,9 @@
-var platform = require('../src/index'),
-  nock = require('nock'),
-  request = require('request');
+var supertest = require('supertest'),
+  platform = require('../src/index'),
+  request = require('request'),
+  should = require('should');
+
+var app = require('../src/index').index;
 
 describe("platform", function() {
   it("should respond with just sayin!", function(done) {
@@ -17,37 +20,24 @@ describe("platform", function() {
     request('http://localhost:3000/kitten.jpg',
       function(err, res,
         body) {
-        expect(body).toEqual('kitten.jpg');
+        expect(typeof body).toEqual('string');
         done();
       });
   });
 
-  /*
-  it("should respond with want!", function(done) {
-    request('http://localhost:3000/want', function(err, res, body) {
-      expect(body).toEqual('Do you want something?');
-      done();
-    });
+
+
+});
+
+describe("GET/kitten.jpg", function() {
+
+  it("respond with kitten.jpg", function(done) {
+    request(app)
+      .get('/kitten.jpg')
+      .set('Accept', 'application/jpg')
+      .expect('Content-Type', /jpg/)
+      .expect(200, done);
   });
-  it("should  respond with book!", function(done) {
-    request('http://localhost:3000/book', function(err, res, body) {
-      expect(body).toEqual('Read more buddy!');
-      done();
-    });
-  });
-  it("should respond with eat!", function(done) {
-    request('http://localhost:3000/eat', function(err, res, body) {
-      expect(body).toEqual('Which is your favorite dish?');
-      done();
-    });
-  });
-  it("should respond with ignore!", function(done) {
-    request('http://localhost:3000/ignore', function(err, res, body) {
-      expect(body).toEqual('Sorry, I am not your friend!');
-      done();
-    });
-  });
-*/
 
 
 
