@@ -1,0 +1,19 @@
+{
+  "name": "marcus_oft",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha gettest.js",
+    "start": "node getApp.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.13.3",
+    "supertest": "~1.1.0",
+    "jasmine-node": "~1.14.5",
+    "body-parser": "~1.14.1",
+    "connect": "~3.4.0"
+  }
+}
