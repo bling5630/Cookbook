@@ -1,0 +1,17 @@
+{
+  "name": "shaky_shane",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -w"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "http": "0.0.0",
+    "chai": "~3.3.0",
+    "connect": "~3.4.0",
+    "path": "~0.12.7"
+  }
+}
