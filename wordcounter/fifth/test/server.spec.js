@@ -1,11 +1,13 @@
 var supertest = require('supertest'),
-  platform = require('../src/index'),
+  platform = require('../src/server'),
   request = require('request'),
   should = require('should');
 
-var app = require('../src/index').index;
+var app = require('../src/server').server;
 
 describe("platform", function() {
+
+
   it("should respond with just sayin!", function(done) {
     request('http://localhost:3000',
       function(err, res, body) {
@@ -13,7 +15,6 @@ describe("platform", function() {
         done();
       });
   });
-
 
   it("should respond with a cute kitten", function(done) {
 
@@ -29,6 +30,7 @@ describe("platform", function() {
 
 });
 
+/*
 describe("GET/kitten.jpg", function() {
 
   it("respond with kitten.jpg", function(done) {
@@ -40,5 +42,5 @@ describe("GET/kitten.jpg", function() {
   });
 
 
-
 });
+*/

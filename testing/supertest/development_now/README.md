@@ -1,0 +1,1 @@
+Inspired by [Are you working with a node.js RESTful API, but you’re not exactly sure how to test your endpoints? It’s easier than you think, if you choose the right tools for the job](https://developmentnow.com/2015/02/05/make-your-node-js-api-bulletproof-how-to-test-with-mocha-chai-and-supertest/)
