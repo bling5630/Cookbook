@@ -22,6 +22,17 @@ app.get('../public/button', function(req, res, next) {
   });
 });
 
+app.get('../public/button_cancel', function(req, res, next) {
+  res.send('button_cancel.html', function(err) {
+    if (err) {
+      console.log(err);
+      res.status(err.status).end();
+    } else {
+      console.log('Sent: ', 'button_cancel.html');
+    }
+  });
+});
+
 app.get('../public/kitten', function(req, res, next) {
   res.sendFile('kitten.jpg', function(err) {
     if (err) {
