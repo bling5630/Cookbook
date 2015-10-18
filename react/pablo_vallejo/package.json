@@ -1,0 +1,15 @@
+{
+  "name": "pablo_vallejo",
+  "version": "0.0.0",
+  "description": "Inspired by [Beginner's introduction to React.js](http://axiacore.com/blog/beginners-introduction-reactjs/)",
+  "main": "todo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "react": "~0.14.0",
+    "react-dom": "~0.14.0"
+  }
+}
