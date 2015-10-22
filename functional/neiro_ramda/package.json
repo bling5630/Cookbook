@@ -1,7 +1,7 @@
 {
-  "name": "curry_examples",
-  "version": "1.0.0",
-  "description": "ERROR: No README data found!",
+  "name": "neiro_ramda",
+  "version": "0.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +9,10 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "should": "~7.1.1",
+    "mocha": "~2.3.3",
+    "ramda": "~0.18.0",
     "esnext": "~0.14.0",
-    "lodash": "~3.10.1",
-    "ramda": "~0.17.1",
-    "babel-core": "~5.8.25"
+    "babel": "~5.8.23"
   }
 }

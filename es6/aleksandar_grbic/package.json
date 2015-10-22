@@ -1,15 +1,15 @@
 {
   "name": "es6_tutorials",
   "version": "1.0.0",
-  "description": "",
+  "description": "Inspired by [JSBroadcast](https://www.youtube.com/watch?v=_lGYG_s_yTM&index=1&list=PLEKIsm9AjY8LfH5cYnhJE-L5A7NWis6qB) - [Aleksandar Grbic](https://twitter.com/upbis_cto)",
   "main": "index.js",
   "scripts": {
-    "start":"babel main.js --watch --out-file compiled.js",
+    "start": "babel main.js --watch --out-file compiled.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "dependencies": {
-    "esnext": "^0.14.0"
+    "esnext": "~0.14.0"
   }
 }

@@ -1,15 +1,16 @@
 {
   "name": "pointfree_exercises",
   "version": "1.0.0",
-  "description": "",
+  "description": "Inspired by [Pointfree Javascript Modularity at the function level](http://lucasmreis.github.io/blog/pointfree-javascript/) - [Lucas Reis](https://github.com/lucasmreis)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "dependencies": {
-    "esnext": "^0.14.0",
-    "ramda": "^0.17.1"
+    "esnext": "~0.14.0",
+    "ramda": "~0.17.1",
+    "babel": "~5.8.23"
   }
 }

@@ -46,19 +46,19 @@ describe("square code challenge", () => {
   //columns = ceiling of length / rows
   //var determineNumberOfColumns = _.identity; show the desired result
 
-var determineNumberOfColumns = (input)=>{
-  var length = input.length,
-  columnsFor=_.pipe(
-    Math.sqrt,
-    //_.tap(console.log),
-    Math.floor,
-    //_.tap(console.log),
-    _.divide(length),
-    Math.ceil
-    //_.tap(console.log)
-  );
-  return columnsFor(length);
-};
+  var determineNumberOfColumns = (input) => {
+    var length = input.length,
+      columnsFor = _.pipe(
+        Math.sqrt,
+        //_.tap(console.log),
+        Math.floor,
+        //_.tap(console.log),
+        _.divide(length),
+        Math.ceil
+        //_.tap(console.log)
+      );
+    return columnsFor(length);
+  };
 
   it("#2 exercise - determine number of columns", () => {
     var checkColumns = _.map(_.pipe(cleanInput,
@@ -68,7 +68,7 @@ var determineNumberOfColumns = (input)=>{
 
   //var turnIntoSquare = _.always(_.identity); show the desired result
 
-var turnIntoSquare= (columns)=>_.splitEvery(columns);
+  var turnIntoSquare = (columns) => _.splitEvery(columns);
 
   it("#3 exercise - turn input into square", () => {
     var input = 'haveaniceday';
@@ -80,107 +80,106 @@ var turnIntoSquare= (columns)=>_.splitEvery(columns);
   });
 
 
-    //var fillSquare = _.always(_.identity); show the desired result
+  //var fillSquare = _.always(_.identity); show the desired result
 
-var fillSquare = (columns)=>_.map(
-  _.ifElse(
-  _.pipe(_.length, _.equals(columns)),
-  _.identity,
-  (row)=>{
-    var fillSpaces = _.pipe(
-      _.length(),
-      _.subtract(columns),
-      _.times(_.always(' ')),
-      _.concat(row),
-      _.join('')
-    );
-    return fillSpaces(row);
-  }
-  )
-);
+  var fillSquare = (columns) => _.map(
+    _.ifElse(
+      _.pipe(_.length, _.equals(columns)),
+      _.identity, (row) => {
+        var fillSpaces = _.pipe(
+          _.length(),
+          _.subtract(columns),
+          _.times(_.always(' ')),
+          _.concat(row),
+          _.join('')
+        );
+        return fillSpaces(row);
+      }
+    )
+  );
 
-    it("#4 exercise - fill in spaces for any uneven rows", () => {
-      var squareWithUneven_ows = [
-        'feed',
-        'thed',
-        'og'
-      ];
-      fillSquare(4)(squareWithUneven_ows).should.eql([
-        'feed',
-        'thed',
-        'og  '
-      ]);
-    });
+  it("#4 exercise - fill in spaces for any uneven rows", () => {
+    var squareWithUneven_ows = [
+      'feed',
+      'thed',
+      'og'
+    ];
+    fillSquare(4)(squareWithUneven_ows).should.eql([
+      'feed',
+      'thed',
+      'og  '
+    ]);
+  });
 
-    //var transposeSquare = _.identity; show the desired result
-
-
-var transposeSquare= _.converge(
-  _.reduce((acc, row)=>{
-    var flattenAndTrim = _.pipe(_.flatten, _.join(''), _.trim());
-    var zipWithAcc = _.pipe(
-      _.zip(acc),
-      _.map(flattenAndTrim)
-    );
-    return zipWithAcc(row);
-  }),
-  _.pipe(_.head, _.map(_.of)),
-  _.tail()
-);
-
-    it("#5 exercise - transpose a square", () => {
-      var square = [
-        'have',
-        'anic',
-        'eday'
-      ];
-
-      transposeSquare(square).should.eql([
-        'hae',
-        'and',
-        'via',
-        'ecy'
-      ]);
-    });
+  //var transposeSquare = _.identity; show the desired result
 
 
-    it("#6 exercise - tranpose an uneven rows square", () => {
-      var square = [
-        'feed',
-        'thed',
-        'og'
-      ];
-
-      _.pipe(fillSquare(4), transposeSquare)(square).should.eql([
-        'fto',
-        'ehg',
-        'ee',
-        'dd'
-      ]);
-    });
-
-    //var encode = _.identity;show the desired result
-
-    var encode = (input) => {
-      var cleanedInput = cleanInput(input);
-      var columns = determineNumberOfColumns(cleanedInput);
-      var encodeInput = _.pipe(
-        turnIntoSquare(columns),
-        fillSquare(columns),
-        transposeSquare,
-        _.join(' ')
+  var transposeSquare = _.converge(
+    _.reduce((acc, row) => {
+      var flattenAndTrim = _.pipe(_.flatten, _.join(''), _.trim());
+      var zipWithAcc = _.pipe(
+        _.zip(acc),
+        _.map(flattenAndTrim)
       );
-      return encodeInput(cleanedInput);
-    };
+      return zipWithAcc(row);
+    }),
+    _.pipe(_.head, _.map(_.of)),
+    _.tail()
+  );
 
-    it("#7 exercise - encode inputs", () => {
-      _.map(encode, inputs).should.eql(outputs);
-    });
+  it("#5 exercise - transpose a square", () => {
+    var square = [
+      'have',
+      'anic',
+      'eday'
+    ];
 
-    //var decode = _.identity; the desired result
+    transposeSquare(square).should.eql([
+      'hae',
+      'and',
+      'via',
+      'ecy'
+    ]);
+  });
 
-    var decode = (output)=>{
-      var decodeOutput=_.pipe(
+
+  it("#6 exercise - tranpose an uneven rows square", () => {
+    var square = [
+      'feed',
+      'thed',
+      'og'
+    ];
+
+    _.pipe(fillSquare(4), transposeSquare)(square).should.eql([
+      'fto',
+      'ehg',
+      'ee',
+      'dd'
+    ]);
+  });
+
+  //var encode = _.identity;show the desired result
+
+  var encode = (input) => {
+    var cleanedInput = cleanInput(input);
+    var columns = determineNumberOfColumns(cleanedInput);
+    var encodeInput = _.pipe(
+      turnIntoSquare(columns),
+      fillSquare(columns),
+      transposeSquare,
+      _.join(' ')
+    );
+    return encodeInput(cleanedInput);
+  };
+
+  it("#7 exercise - encode inputs", () => {
+    _.map(encode, inputs).should.eql(outputs);
+  });
+
+  //var decode = _.identity; the desired result
+
+  var decode = (output) => {
+    var decodeOutput = _.pipe(
       _.split(' '),
       _.converge(
         _.call,
@@ -190,15 +189,15 @@ var transposeSquare= _.converge(
       transposeSquare,
       _.join(' ')
     );
-      return decodeOutput(output);
-    };
+    return decodeOutput(output);
+  };
 
-    it.only("#8 exercise - decode outputs", () => {
-      _.map(decode, outputs).should.eql([
-        'ifmanwas meanttos tayonthe groundgo dwouldha vegivenu sroots',
-        'have anic eday',
-        'feed thed og',
-        'chil lout'
-      ]);
-    });
+  it("#8 exercise - decode outputs", () => {
+    _.map(decode, outputs).should.eql([
+      'ifmanwas meanttos tayonthe groundgo dwouldha vegivenu sroots',
+      'have anic eday',
+      'feed thed og',
+      'chil lout'
+    ]);
+  });
 });
