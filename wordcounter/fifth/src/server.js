@@ -22,13 +22,13 @@ app.get('../public/button', function(req, res, next) {
   });
 });
 
-app.get('../public/button_cancel', function(req, res, next) {
-  res.send('button_cancel.html', function(err) {
+app.get('../public/add_url', function(req, res, next) {
+  res.send('add_url.html', function(err) {
     if (err) {
       console.log(err);
       res.status(err.status).end();
     } else {
-      console.log('Sent: ', 'button_cancel.html');
+      console.log('Sent: ', 'add_url.html');
     }
   });
 });

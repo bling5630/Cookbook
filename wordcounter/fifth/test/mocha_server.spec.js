@@ -3,6 +3,8 @@ var should = require('chai').should,
   supertest = require('supertest'),
   app = supertest('http://localhost:3000');
 
+// node src/server.js
+// mocha test/mocha_server.spec.js --watch --colors
 
 describe("wordcounter", function() {
 
@@ -34,9 +36,9 @@ describe("wordcounter", function() {
         .expect(200, done);
     });
 
-  it("#5 - should return a 200 response and button and cancel",
+  it("#5 - should return a 200 response and show add url",
     function(done) {
-      app.get('/button_cancel.html')
+      app.get('/add_url.html')
         .set('Accept', 'application/html')
         .expect(200, done);
     });
