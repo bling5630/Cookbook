@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express'),
   app = express(),
   logger = require('morgan'),
@@ -10,6 +12,11 @@ app.use(express.static("public"));
 app.get('/', function(req, res, next) {
   res.send('Just sayin!');
 });
+
+app.get('/result', function(req, res, next) {
+  res.send('Here you go!');
+});
+
 
 app.get('../public/button', function(req, res, next) {
   res.send('button.html', function(err) {
@@ -33,27 +40,6 @@ app.get('../public/add_url', function(req, res, next) {
   });
 });
 
-app.get('../public/kitten', function(req, res, next) {
-  res.sendFile('kitten.jpg', function(err) {
-    if (err) {
-      console.log(err);
-      res.status(err.status).end();
-    } else {
-      console.log('Sent: ', 'kitten.jpg');
-    }
-  });
-});
-
-app.get('../public/koala', function(req, res, next) {
-  res.sendFile('koala.jpg', function(err) {
-    if (err) {
-      console.log(err);
-      res.status(err.status).end();
-    } else {
-      console.log('Sent: ', 'koala.jpg');
-    }
-  });
-});
 
 
 

@@ -15,28 +15,21 @@ describe("wordcounter", function() {
         .expect(200, done);
     });
 
-  it("#2 - should return a 200 response and kitten.jpg",
+  it("#1 - should return a 200 response and Here you go!",
     function(done) {
-      app.get('/kitten.jpg')
-        .set('Accept', 'application/jpg')
+      app.get('/result')
+        .set('Accept', 'application/text')
         .expect(200, done);
     });
 
-  it("#3 - should return a 200 response and koala.jpg",
+  it("#2 - should return a 200 response and unicorn.jpg",
     function(done) {
-      app.get('/koala.jpg')
-        .set('Accept', 'application/jpg')
+      app.get('/unicorn.png')
+        .set('Accept', 'application/png')
         .expect(200, done);
     });
 
-  it("#4 - should return a 200 response and button",
-    function(done) {
-      app.get('/button.html')
-        .set('Accept', 'application/html')
-        .expect(200, done);
-    });
-
-  it("#5 - should return a 200 response and show add url",
+  it("#3 - should return a 200 response and show add url",
     function(done) {
       app.get('/add_url.html')
         .set('Accept', 'application/html')

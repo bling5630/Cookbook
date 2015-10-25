@@ -7,3 +7,19 @@
 [positioning](http://stackoverflow.com/questions/9778903/positioning-the-input-text-box-in-the-center)
 
 [codementor](https://www.codementor.io/reactjs/tutorial/build-a-fancy-focus-text-box-using-react-js-and-less-css)
+
+[URL Parameters and Routing in Express.js](http://webapplog.com/url-parameters-and-routing-in-express-js/)
+
+[Use ExpressJS to Get URL and POST Parameters](https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters)
+
+[POST / GET Request Handling in Node.js Express](http://www.hacksparrow.com/post-get-request-handling-in-node-js-express.html)
+
+http://stackoverflow.com/questions/2276463/how-can-i-get-form-data-with-javascript-jquery
+
+http://stackoverflow.com/questions/15168954/how-do-i-access-form-data-submitted-by-a-user-in-javascript
+
+http://stackoverflow.com/questions/13950921/access-post-data-using-javascript-or-check-which-submit-button-was-used-to-sub
+
+https://www.google.hu/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=get%20submitted%20form%20data%20nodejs
+
+http://stackoverflow.com/questions/4295782/how-do-you-extract-post-data-in-node-js
