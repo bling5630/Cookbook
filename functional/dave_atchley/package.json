@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "dependencies": {
-    "ramda": "^0.17.1"
+    "ramda": "~0.17.1",
+    "esnext": "~0.14.0"
   }
 }

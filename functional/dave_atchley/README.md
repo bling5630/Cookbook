@@ -5,3 +5,5 @@ Inspired by
 - [Basic Scope](http://www.datchley.name/basic-scope/)
 
 - [Functions](http://www.datchley.name/functions/)
+
+[.map, .reduce & .filter, Oh My!](http://www.datchley.name/working-with-collections/)

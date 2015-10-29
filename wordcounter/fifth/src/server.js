@@ -15,6 +15,7 @@ app.get('/', function(req, res, next) {
 
 app.get('/result', function(req, res, next) {
   res.send('Here you go!');
+  
 });
 
 
