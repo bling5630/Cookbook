@@ -6,4 +6,4 @@ Inspired by
 
 - [Functions](http://www.datchley.name/functions/)
 
-[.map, .reduce & .filter, Oh My!](http://www.datchley.name/working-with-collections/)
+- [.map, .reduce & .filter, Oh My!](http://www.datchley.name/working-with-collections/)

@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 
 app.get('/api/user', function(req, res) {
-  var user_id = req.param('id');
-  var token = req.param('token');
-  var geo = req.param('geo');
+  var user_id = req.params('id');
+  var token = req.params('token');
+  var geo = req.params('geo');
 
   res.send(user_id + ' ' + token + ' ' + geo);
 

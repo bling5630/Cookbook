@@ -3,20 +3,26 @@
 var express = require('express'),
   app = express(),
   logger = require('morgan'),
+  bodyParser = require('body-parser'),
   port = process.env.PORT || 3000;
 
 app.use(logger("dev"));
 app.use(express.static("public"));
 
+// Config body-parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res, next) {
   res.send('Just sayin!');
 });
 
-app.get('/result', function(req, res, next) {
+app.get('/result/:url', function(req, res, next) {
   res.send('Here you go!');
-  
+
 });
+
+
 
 
 app.get('../public/button', function(req, res, next) {
@@ -29,6 +35,18 @@ app.get('../public/button', function(req, res, next) {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.get('../public/add_url', function(req, res, next) {
   res.send('add_url.html', function(err) {
