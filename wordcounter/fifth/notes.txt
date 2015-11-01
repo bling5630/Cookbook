@@ -14,12 +14,18 @@
 
 [POST / GET Request Handling in Node.js Express](http://www.hacksparrow.com/post-get-request-handling-in-node-js-express.html)
 
-http://stackoverflow.com/questions/2276463/how-can-i-get-form-data-with-javascript-jquery
+# How to access query string parameters
 
-http://stackoverflow.com/questions/15168954/how-do-i-access-form-data-submitted-by-a-user-in-javascript
+[How to access query string parameters](https://docs.nodejitsu.com/articles/HTTP/clients/how-to-access-query-string-parameters)
 
-http://stackoverflow.com/questions/13950921/access-post-data-using-javascript-or-check-which-submit-button-was-used-to-sub
+[url-parse](https://www.npmjs.com/package/url-parse)
 
-https://www.google.hu/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=get%20submitted%20form%20data%20nodejs
+[busboy](https://www.npmjs.com/package/busboy)
 
-http://stackoverflow.com/questions/4295782/how-do-you-extract-post-data-in-node-js
+https://github.com/rjanson/gcp-backend
+
+https://github.com/jacshfr/Simple-JSON-Database
+
+https://github.com/substack/attr-submit
+
+https://github.com/ForbesLindesay/submit
