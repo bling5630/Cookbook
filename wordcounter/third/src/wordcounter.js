@@ -1,10 +1,19 @@
 'use strict';
 
 var request = require("request"),
-	cheerio = require("cheerio"),
-	_ = require('lodash');
+		cheerio = require("cheerio"),
+		_ = require('lodash'),
+		fs = require('fs');
+
+/*
+		var data = fs.readFile('/etc/passwd', function (err, data) {
+		  if (err) throw err;
+		  console.log(data);
+		});
+*/
 
 var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
+
 
 function wordcounter(callback) {
 

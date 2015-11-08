@@ -7,3 +7,5 @@ Inspired by
 - [Functions](http://www.datchley.name/functions/)
 
 - [.map, .reduce & .filter, Oh My!](http://www.datchley.name/working-with-collections/)
+
+- [Object-ively Javascript](http://www.datchley.name/delegate-object-to-classical-inheritance/)
