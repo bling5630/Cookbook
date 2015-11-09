@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -w"
   },
   "author": "",
   "license": "BSD-2-Clause",
@@ -12,6 +12,7 @@
     "big-integer": "~1.6.2",
     "should": "~7.1.0",
     "ramda": "~0.18.0",
-    "babel": "~5.8.23"
+    "babel": "~5.8.23",
+    "esnext": "~0.14.0"
   }
 }
