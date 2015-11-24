@@ -9,7 +9,7 @@ var sortWordsByQuantity = R.sortBy(R.prop('quantity'));
 
 var transformDataToJSON = R.pipe(R.toPairs, R.map(R.zipObj(["name", "quantity"])));
 
-var calculatWordseByFrequency = R.countBy(R.identity);
+var calculateWordsByFrequency = R.countBy(R.identity);
 
 var wordsLegnthGreaterThankSix = R.gt(6),
 	wordsLengthLessThanThree = R.lt(3);
@@ -33,7 +33,7 @@ var result = compose(
 	sliceTheFirstThree,
 	sortWordsByQuantity,
 	transformDataToJSON,
-	calculatWordseByFrequency,
+	calculateWordsByFrequency,
 	filterWordsByLength,
 	splitTheContent,
 	replaceMixedLetters,
