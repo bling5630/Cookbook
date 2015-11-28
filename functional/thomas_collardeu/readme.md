@@ -1,3 +1,3 @@
 Inspired by
 
-- [An Intro to Functional Programming Concepts in JavaScript](layton Christensen, professor at Harvard Business School talks about the job to be done)
+- [An Intro to Functional Programming Concepts in JavaScript](https://medium.com/@collardeau/intro-to-functional-programming-concepts-in-javascript-b0650773139c#.keqdetibv)

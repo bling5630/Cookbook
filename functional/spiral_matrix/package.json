@@ -1,0 +1,19 @@
+{
+  "name": "spiral_matrix",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -w"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "ramda": "~0.18.0",
+    "babel": "~6.1.18",
+    "should": "~7.1.1",
+    "mocha": "~2.3.4",
+    "esnext": "~0.14.0",
+    "babel-register": "~6.2.0"
+  }
+}
