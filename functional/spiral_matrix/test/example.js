@@ -1,21 +1,23 @@
 var _ = require('ramda');
 
-var BASE_NUMBER = 5;
-var total = _.multiply(BASE_NUMBER);
-var result= [];
 
-function converter(n) {
+function converter(BASE_NUMBER) {
+var BASE_TOTAL = BASE_NUMBER*BASE_NUMBER;
+var BASE_RESULT= [];
 
-  for(var i=0;i<n;i++) {
+
+  for(var i=0;i<BASE_NUMBER;i++) {
 
       var rs = [];
-      for(var j=0;j<n;j++) {
+      for(var j=0;j<BASE_NUMBER;j++) {
           rs.push(0);
       }
-      result.push(rs);
+      BASE_RESULT.push(rs);
   }
-  return result;
+
+
+  return BASE_RESULT;
 }
 
 
-console.log(converter(BASE_NUMBER));
+console.log(converter(5));
