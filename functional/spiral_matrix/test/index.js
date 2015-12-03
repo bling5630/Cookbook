@@ -1,11 +1,8 @@
 var _ = require('ramda');
 
 var BASE_RESULT= [];
-
-
 function generateMatrix(n) {
   var total = n*n;
-
 
     for(var i=0;i<n;i++) {
         _.reduce([]);
