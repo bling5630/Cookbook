@@ -11,3 +11,5 @@ Inspired by
 - [Object-ively Javascript](http://www.datchley.name/delegate-object-to-classical-inheritance/)
 
 - [Getting Functional with Javascript (Part 1)](http://www.datchley.name/getting-functional-with-javascript-part-1/)
+
+- [Getting Functional with Javascript (Part 2)](http://www.datchley.name/getting-functional-with-javascript-part-2/)
