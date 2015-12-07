@@ -9,10 +9,8 @@ var transformDataToJSON = _.pipe(_.toPairs, _.map(_.zipObj(["name", "number"])))
 var randomNumberGenerator = _.times(Math.random, BASE_RANDOM_NUMBER);
 var splitTheContent = _.split(' ');
 
-var TEAM = splitTheContent(BASE_TEAM);
-var RANDOM = randomNumberGenerator;
-var zipTeamMembersWithRandomNumbers = _.zipObj(TEAM,RANDOM);
+var BASE_SPLITTED_TEAM = splitTheContent(BASE_TEAM);
+var BASE_RANDOM_NUMBERS = randomNumberGenerator;
+var zipTeamMembersWithRandomNumbers = _.zipObj(BASE_SPLITTED_TEAM, BASE_RANDOM_NUMBERS);
 
-
-// console.log(sliceTheItems(sortNamesByTheRule(transformDataToJSON(zipTeamMembersWithRandomNumbers))));
-console.log(TEAM);
+console.log(sliceTheItems(sortNamesByTheRule(transformDataToJSON(zipTeamMembersWithRandomNumbers))));

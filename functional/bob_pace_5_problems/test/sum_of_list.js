@@ -38,18 +38,14 @@ var _ = require('ramda'),
       sum.should.eql(21);
     });
 
-    it("#3 - with recursion", function() {
-      var sum = (list, acc) => {
-        return list.length > 0 ? sum(_.tail(list), _.head(list) + acc)
-          : acc;
-      };
+  it("#3 - with recrusion", function () {
+    var sum = (list, acc) => {
+          return list.length > 0 ? sum(_.tail(list), _.head(list) + acc)
+            : acc;
+        };
 
-      sum(list, 0).should.eql(21);
-    });
-
-
-
-
+        sum(list, 0).should.eql(21);
+      });
 
 // end
   });

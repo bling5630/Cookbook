@@ -15,7 +15,7 @@ function filterWith(fn) {
 var list = [1,2,3,4,5,6,7,8,9];
 
 var justEvens = filterWith(function(n) {
-  return n%BASE_NUMBER === 0;
+  return n % BASE_NUMBER === 0;
 });
 
 console.log(justEvens(list));
