@@ -3,3 +3,4 @@ test
 --require should
 --require es6
 --bail
+--mocha-clean

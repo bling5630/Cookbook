@@ -1,3 +1,4 @@
+/*
 var _ = require('ramda'),
   bigInt = require('big-integer');
 
@@ -22,3 +23,4 @@ describe("fibonacci sequence", function () {
 
 // end
 });
+*/
