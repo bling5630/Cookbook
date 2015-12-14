@@ -1,4 +1,3 @@
-/*
 var _ = require('ramda'),
   bigInt = require('big-integer');
 
@@ -14,7 +13,7 @@ describe("fibonacci sequence", function () {
 
     it("compute first 100 numbers", function () {
       var result = _.map(
-      _.compose(toString, fib),
+      _.compose(_.toString, fib),
       _.range(0, 101).map((x) => bigInt(x))
     );
 
@@ -23,4 +22,3 @@ describe("fibonacci sequence", function () {
 
 // end
 });
-*/

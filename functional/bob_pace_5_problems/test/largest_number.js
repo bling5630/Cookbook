@@ -1,15 +1,22 @@
 var _ = require('ramda');
 
-var BASE_LIST = [50, 2, 1, 9];
+describe("given list of non negative integers with my solution", function() {
+  var BASE_LIST = [50, 2, 1, 9];
 
-var BASE_DIFFERNCE = function(a,b) {
-  return a - b;
-};
+  it("arranges them to form largest number possible", function() {
+    var SPACER = _.join('');
 
-var BASE_CONCAT = function(a,b,c,d) {
-  return a + b + c + d;
-};
+    var SORT_BY = _.sortBy,
+        TO_STRING = _.toString,
+        REVERSE = _.reverse;
 
-console.log(_.reverse(_.sort(BASE_DIFFERNCE, BASE_LIST)));
-console.log('break');
-console.log(BASE_CONCAT('ABC', 'DEF', 'cdksfgdks', '34324234'));
+
+    var BASE_DESC = _.compose(REVERSE, SORT_BY(TO_STRING));
+
+    var result = parseInt(SPACER(BASE_DESC(BASE_LIST)));
+    result.should.eql(95021);
+  });
+
+});
+
+//console.log(parseInt(SPACER(BASE_DESC(BASE_LIST))));

@@ -3,7 +3,7 @@ var _ = require('ramda');
 var BASE_TEAM = 'csikiandras bondicibalazs tothdavid lassulilla malanchuknatalia kovacspeter batizpeter nemethtamas tothzsofia feketezsofia szilagyiagnes komarbalazs egbewunmidiana szabozsofia';
 var BASE_RANDOM_NUMBER = 14;
 
-var sliceTheItems = _.slice(0,4);
+var sliceTheItems = _.slice(0,1);
 var sortNamesByTheRule = _.sortBy(_.prop("number"));
 var transformDataToJSON = _.pipe(_.toPairs, _.map(_.zipObj(["name", "number"])));
 var randomNumberGenerator = _.times(Math.random, BASE_RANDOM_NUMBER);
