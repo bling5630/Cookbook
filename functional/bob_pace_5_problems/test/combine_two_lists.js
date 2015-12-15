@@ -2,7 +2,7 @@ var _ = require('ramda'),
   bigInt = require('big-integer');
 
 
-  describe("combine two list", function () {
+  describe("combine two list with the original way", function () {
 
   var one = [1,2,3,4];
   var two = ['a','s','d','e'];

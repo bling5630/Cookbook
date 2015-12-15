@@ -1,7 +1,7 @@
 var _ = require('ramda'),
   bigInt = require('big-integer');
 
-describe("fibonacci sequence", function () {
+describe("fibonacci sequence with the original way", function () {
   var fib = _.memoize((n) => {
       if (n.isZero() || n.eq(1)) {
         return n;
