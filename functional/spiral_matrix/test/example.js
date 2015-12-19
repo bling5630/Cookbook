@@ -17,10 +17,10 @@ var BASE_RESULT= [];
   return BASE_RESULT;
 }
 
-//console.log(converter(5));
+console.log(converter(5));
 
 
-
+/*
 var BASE_THING = 5;
 var BASE_MATRIX = [];
 
@@ -34,3 +34,4 @@ function spiralRow(number) {
 console.log(_.insert(0 ,spiralRow(BASE_THING*BASE_THING), []));
 console.log(spiralRow(BASE_THING));
 console.log(spiralColumn(BASE_THING));
+*/

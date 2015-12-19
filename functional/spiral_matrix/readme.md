@@ -10,3 +10,10 @@ Inspired by
 - [Ramda way](http://stackoverflow.com/questions/17428587/transposing-a-2d-array-in-javascript)
 
 - [Print 2D Array Matrix Spiral Order](http://www.technicalinterviewquestions.net/2009/03/print-2d-array-matrix-spiral-order.html)
+
+
+- [How to Create a 2D Array in JavaScript](http://www.stephanimoroni.com/how-to-create-a-2d-array-in-javascript/)
+
+- [Javascript and MapReduce](http://jcla1.com/blog/javascript-mapreduce/)
+
+- [Creating two dimensional array in javascript](https://www.youtube.com/watch?v=2IcTWhNnRI8)
