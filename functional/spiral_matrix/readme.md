@@ -1,5 +1,11 @@
 Inspired by
 
+- [R.transpose (was R.unzip) #1526](https://github.com/ramda/ramda/pull/1526)
+
+- [Ramda Transpose2](http://bit.ly/1NgIt1O)
+
+- [Ramda Transpose](http://bit.ly/1PR1NBA)
+
 - [Generate Spiral Matrix Using JavaScript](http://blog.sodhanalibrary.com/2015/06/generate-spiral-matrix-using-javascript.html#.VlnZlHyrQ8q)
 
 - [Programming Interview 19: Print out a 2-D array in spiral order](https://www.youtube.com/watch?v=cjJWA__WL-g)
