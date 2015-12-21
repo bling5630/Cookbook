@@ -17,8 +17,3 @@ var a = [
 ];
 
 console.log(transpose(a));
-/*
-var matrix = [[1,2,3,4,5], [1,2,3,4,5], [1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]];
-console.log(_.zip.apply(_, matrix));
-console.log(matrix);
-*/

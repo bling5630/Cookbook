@@ -1,6 +1,7 @@
 var _ = require('ramda');
 
 var BASE_RESULT = [];
+
 function generateMatrix(n) {
 var total = n*n;
 
@@ -52,48 +53,3 @@ var total = n*n;
 }
 
 console.log(generateMatrix(5));
-
-/*
-var x=0;
-var y=0;
-var step = 0;
-
-for(var i=0;i<total;){
-    while(y+step<n){
-        i++;
-        BASE_RESULT[x][y]=i;
-        y++;
-
-    }
-    y--;
-    x++;
-
-    while(x+step<n){
-        i++;
-        BASE_RESULT[x][y]=i;
-        x++;
-    }
-    x--;
-    y--;
-
-    while(y>=step){
-        i++;
-        BASE_RESULT[x][y]=i;
-        y--;
-    }
-    y++;
-    x--;
-    step++;
-
-    while(x>=step){
-        i++;
-        BASE_RESULT[x][y]=i;
-        x--;
-    }
-    x++;
-    y++;
-}
-
-
-
-*/

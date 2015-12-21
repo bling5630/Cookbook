@@ -2,6 +2,8 @@ Inspired by
 
 - [R.transpose (was R.unzip) #1526](https://github.com/ramda/ramda/pull/1526)
 
+- [Ramda Transpose3](http://bit.ly/1YpsALP)
+
 - [Ramda Transpose2](http://bit.ly/1NgIt1O)
 
 - [Ramda Transpose](http://bit.ly/1PR1NBA)
