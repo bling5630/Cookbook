@@ -2,5 +2,4 @@
 
 node index.js > wordcounter.json
 
-firefox barchart.html
-
+firefox bubble_layout_chart.html
