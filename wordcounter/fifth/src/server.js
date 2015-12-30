@@ -3,6 +3,7 @@
 var express = require('express'),
   app = express(),
   fs = require('fs'),
+  //favicon = require('serve-favicon'),
   logger = require('morgan'),
   bodyParser = require('body-parser'),
   port = process.env.PORT || 3000;
@@ -13,6 +14,7 @@ app.use(express.static("public"));
 // Config body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.get('/', function(req, res, next) {
   res.send('Hello dear!');

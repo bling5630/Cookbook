@@ -1,0 +1,14 @@
+{
+  "name": "mongoedu",
+  "version": "0.0.0",
+  "description": "M101JS: MongoDB for Node.js Developers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "mongodb": "~2.1.2"
+  }
+}
