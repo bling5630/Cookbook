@@ -11,10 +11,6 @@ readTXT('sample', function(err, data) {
   console.log(data);
 });
 
-/*
-
-*/
-
 setTimeout(function() {
   console.log("end2");
 }, 500);
