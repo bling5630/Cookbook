@@ -3,6 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Superhero = mongoose.model('superheros');
 
+//http://localhost:3000/api/superheros
 
 router.get('/superheros', function(req, res) {
   Superhero.find(function(err, superheros){
