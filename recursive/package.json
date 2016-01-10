@@ -1,0 +1,11 @@
+{
+  "name": "recursive",
+  "version": "0.0.0",
+  "description": "Inspired by [Recursion](https://medium.com/functional-javascript/recursion-282a6abbf3c5)",
+  "main": "async.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}
