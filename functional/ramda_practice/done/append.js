@@ -5,11 +5,11 @@ module.exports = curry_2(function append(el, list) {
     return _.concat(list, [el]);
 });
 
-/*
-@example
+//@example
 
 var tool = require('./append');
 
+/*
 console.log(tool('more', ['1', 'test']));
 console.log(tool('more', []));
 console.log(tool(['tests'], ['write', 'cherry']));

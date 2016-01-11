@@ -2,6 +2,7 @@
 
 var express = require('express'),
   app = express(),
+  wc = require('./wordcounter'),
   fs = require('fs'),
   //favicon = require('serve-favicon'),
   logger = require('morgan'),
@@ -27,7 +28,22 @@ app.get('/result/', function(req, res, next) {
   //res.json({querystring_url: req.query.url});
   // http://localhost:8080/result/?url=www.port.hu
   // {"querystring_url":"www.port.hu"}
-  fs.writeFile('text.txt', req.query.url);
+  wc(req.query.url, function(error, words) {
+  	console.log(words);
+    res.send(words);
+    /*
+azt kellene megcsinalni, hogy
+valahogy, a html csinalja a cuccot
+azt kellene kiszolgalni, megjelenjen a buborekos cucc,
+itt redirecterlni, express redirect, arra az url re ami a html
+kell a static, ha public ba tudok redirectelni, piblic ba json be ki kell irni
+src be kene beleirnia a tartalmat, utana kellene
+redirectelnihivatkozasokat megcsinalni, json filet is akar kihagyni
+    */
+  });
+
+  // itt kell meghivni
+  //fs.writeFile('text.txt', req.query.url);
   // write the url into text.txt
 });
 

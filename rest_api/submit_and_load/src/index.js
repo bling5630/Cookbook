@@ -2,7 +2,6 @@
 
 var wordcounter = require('./wordcounter');
 
-wordcounter(function(error, callback) {
+wordcounter('http://index.hu', function(error, callback) {
 	console.log(callback);
 });
-

@@ -1,9 +1,3 @@
-var tool = require('./append');
+var tool = require('./assoc');
 
-console.log(tool('more', ['1', 'test']));
-console.log(tool('more', []));
-console.log(tool(['tests'], ['write', 'cherry']));
-
-console.log(tool('tests', ['write', 'more']));
-console.log(tool('tests', []));
-console.log(tool(['tests'], ['write', 'more']));
+console.log(tool('c', 3, {a: 1, b: 2})); //=> {a: 1, b: 2, c: 3}

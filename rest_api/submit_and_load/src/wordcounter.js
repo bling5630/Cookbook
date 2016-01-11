@@ -6,7 +6,7 @@ var request = require("request"),
 	_ = require('lodash');
 
 
-var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
+// var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
 
 
 fs.readFile("./text.txt", function (err, data) {
@@ -14,9 +14,9 @@ fs.readFile("./text.txt", function (err, data) {
     console.log(data.toString());
 });
 
-function wordcounter(callback) {
+function wordcounter(url, callback) {
 
-	request(BASE_URL, function(error, response, body) {
+	request(url, function(error, response, body) {
 
 		var $page = cheerio.load(body),
 			article = $page('body').text();
