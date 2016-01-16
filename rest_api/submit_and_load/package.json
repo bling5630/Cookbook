@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "test": "jasmine-node test/server.spec.js --color --verbose --watch",
-    "wc_test": "node test/wordcounter.spec.js | node_modules/.bin/tap-spec",
-    "wc_start": "node src/index.js"
+    "start": "nodemon src/server.js",
   },
   "author": "",
   "license": "BSD-2-Clause",

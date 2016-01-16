@@ -8,7 +8,7 @@
 
 <body>
 
-  <script> 
+  <script>
 
     d3.json("wordcounter.json" , function (data) {
 
@@ -34,8 +34,8 @@
             .attr("fill" , "black")
             .attr("y", function (d ,i){return i * 50 + 24; })
             .text(function (d) { return d.name + ' : '+ d.quantity; })
-            
- 
+
+
 
 
     })

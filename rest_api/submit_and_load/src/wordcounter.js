@@ -5,15 +5,6 @@ var request = require("request"),
 	fs = require('fs'),
 	_ = require('lodash');
 
-
-// var BASE_URL = 'https://medium.com/tariqs-thoughts/30-years-ago-i-saw-the-future-ed0b4fc2b363';
-
-
-fs.readFile("./text.txt", function (err, data) {
-    if (err) throw err;
-    console.log(data.toString());
-});
-
 function wordcounter(url, callback) {
 
 	request(url, function(error, response, body) {
@@ -76,8 +67,3 @@ function clearTheParsedText(content) {
 
 
 module.exports = wordcounter;
-
-// ezeket miert nem tudom betenni?
-//module.exports = calculateByFrequency;
-//module.exports = clearTheParsedText;
-//module.exports = filterByLength;
