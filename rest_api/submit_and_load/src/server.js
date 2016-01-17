@@ -1,12 +1,12 @@
 'use strict';
 
 var express = require('express'),
-  app = express(),
-  wordCounter = require('./wordcounter'),
-  fs = require('fs'),
-  logger = require('morgan'),
-  bodyParser = require('body-parser'),
-  port = process.env.PORT || 8080;
+    app = express(),
+    wordCounter = require('./wordcounter'),
+    fs = require('fs'),
+    logger = require('morgan'),
+    bodyParser = require('body-parser'),
+    port = process.env.PORT || 8080;
 
 app.use(logger("dev"));
 app.use(express.static("public"));
@@ -23,7 +23,6 @@ app.get('/result/', function(req, res, next) {
   	console.log(words);
     res.send(words);
 
-// @example http://localhost:8080/button.html => http//:index.hu
 
 /*
 a html csinalja a cuccot, azt kellene kiszolgalni,
@@ -36,10 +35,13 @@ redirectelni hivatkozasokat megcsinalni,
 json filet is akar kihagyni
 */
   });
-
   // itt kell meghivni
-  //fs.writeFile('text.txt', req.query.url);
+  //fs.writeFile('../public/bubble_chart_data.json', req.query.url);
   // write the url into text.txt
+});
+
+app.get('/majom', function(req, res){
+  res.redirect('rackoon.png');
 });
 
 var server = app.listen(port, function() {

@@ -1,14 +1,24 @@
-[
-  {
-    "name": "var",
-    "quantity": 16
-  },
-  {
-    "name": "nem",
-    "quantity": 27
-  },
-  {
-    "name": "egy",
-    "quantity": 31
-  }
-]
+{
+  "children": [
+    {
+      "name": "volt",
+      "quantity": 13
+    },
+    {
+      "name": "meg",
+      "quantity": 13
+    },
+    {
+      "name": "var",
+      "quantity": 16
+    },
+    {
+      "name": "nem",
+      "quantity": 24
+    },
+    {
+      "name": "egy",
+      "quantity": 33
+    }
+  ]
+}
