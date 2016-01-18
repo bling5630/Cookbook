@@ -1,11 +1,13 @@
 'use strict';
 
 var express = require('express'),
-    app = express(),
-    wordCounter = require('./wordcounter'),
-    fs = require('fs'),
-    logger = require('morgan'),
+    redirect = require("express-redirect"),
+    htmlRedirect = require('html-redirect'),
     bodyParser = require('body-parser'),
+    wordCounter = require('./wordcounter'),
+    logger = require('morgan'),
+    fs = require('fs'),
+    app = express(),
     port = process.env.PORT || 8080;
 
 app.use(logger("dev"));
@@ -22,7 +24,6 @@ app.get('/result/', function(req, res, next) {
   wordCounter(req.query.url, function(error, words) {
   	console.log(words);
     res.send(words);
-
 
 /*
 a html csinalja a cuccot, azt kellene kiszolgalni,
