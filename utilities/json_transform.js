@@ -1,5 +1,3 @@
-'use strict';
-
 var _ = require('ramda');
 
 var input = {
@@ -10,6 +8,8 @@ var input = {
 };
 
 function transform(input) {
+  'use strict';
+
   var output = [];
   for (var key in input) {
     output.push({

@@ -13,24 +13,17 @@ function wordcounter(url, callback) {
 		var $page = cheerio.load(body),
 			article = $page('body').text();
 
-		// print the raw text
 		var loadedText = clearTheParsedText(article),
 
-			// print  text ['musing','from','tariq' ]
-			listedMixedWords = filterByLength(loadedText),
+				listedMixedWords = filterByLength(loadedText),
 
-			// print write: 1, months: 2, nni: 1 }
-			sortedByCount = calculateByFrequency(listedMixedWords),
+				sortedByCount = calculateByFrequency(listedMixedWords),
 
-			// print transformed JSON from invalid JSON
-			unsortedJSON = transformDataToJSON(sortedByCount);
+				unsortedJSON = transformDataToJSON(sortedByCount);
 
-			var sort = _.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
-									.splice(-5);
-/*
-		callback(error, JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
-			.splice(-3), null, 2));
-*/
+		var sort = _.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
+									.splice(-7);
+
 	callback(error, JSON.stringify({children:sort}, null, 2));
 	});
 

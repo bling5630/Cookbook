@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon -i public src/server.js"
   },
   "author": "",
   "license": "BSD-2-Clause",
@@ -29,6 +29,7 @@
     "serve-favicon": "~2.3.0",
     "swig": "~1.4.2",
     "express-redirect": "~1.2.2",
-    "html-redirect": "~0.3.0"
+    "html-redirect": "~0.3.0",
+    "path": "~0.12.7"
   }
 }
