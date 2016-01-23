@@ -18,14 +18,6 @@ app.get('/', function(req, res, next) {
   res.send('Hello !');
 });
 
-app.get('/getdata', function(req, res) {
-  res.send('{"children": [{"name": "hogy","quantity": 9}]}');
-});
-
-/*
-get data, kicserelem a html ben is hogy onnan olvasssa, fs readfile, send eredmenzt
-*/
-
 app.get('/result/', function(req, res, next) {
   wordCounter(req.query.url, function(error, words) {
   	console.log(words);
@@ -36,6 +28,15 @@ app.get('/result/', function(req, res, next) {
     });
   });
 });
+
+
+app.get('/getdata', function(req, res) {
+  res.send('{"children": [{"name": "hogy","quantity": 9}]}');
+});
+
+/*
+get data, kicserelem a html ben is hogy onnan olvasssa, fs readfile, send eredmenzt
+*/
 
 var server = app.listen(port, function() {
   console.log('Server started on %s', server.address().port);

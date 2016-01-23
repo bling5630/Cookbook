@@ -1,5 +1,2 @@
-#1 run node src/server.js -> http://localhost:3000/button.html
-
-#2 submit something
-
-#3 run node src/wordcounter.js
+[reference](http://www.infocaptor.com/bubble-my-page)
+[D3 Bubble chart](http://bl.ocks.org/phuonghuynh/54a2f97950feadb45b07)

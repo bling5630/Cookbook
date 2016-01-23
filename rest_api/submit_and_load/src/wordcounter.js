@@ -22,7 +22,7 @@ function wordcounter(url, callback) {
 				unsortedJSON = transformDataToJSON(sortedByCount);
 
 		var sort = _.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
-									.splice(-7);
+									.splice(-5);
 
 	callback(error, JSON.stringify({children:sort}, null, 2));
 	});
