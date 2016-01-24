@@ -2,7 +2,6 @@
 
 var request = require("request"),
 	cheerio = require("cheerio"),
-	_ = require('ramda'),
 	fs = require('fs'),
 	_ = require('lodash');
 
@@ -22,7 +21,7 @@ function wordcounter(url, callback) {
 				unsortedJSON = transformDataToJSON(sortedByCount);
 
 		var sort = _.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
-									.splice(-5);
+									.splice(-15);
 
 	callback(error, JSON.stringify({children:sort}, null, 2));
 	});

@@ -12,7 +12,7 @@ text {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script>
 var color = d3.scale.category20c();
-var diameter = 960,
+var diameter = 500,
     format = d3.format(",d"),
     color = d3.scale.category20c();
 
@@ -26,7 +26,8 @@ var svg = d3.select("body").append("svg")
     .attr("height", diameter)
     .attr("class", "bubble");
 
-d3.json("/bubble_chart_data.json", function(error, root) {
+//d3.json("/bubble_chart_data.json", function(error, root)
+d3.json("/getdata", function(error, root) {
   if (error) throw error;
 
   var node = svg.selectAll(".node")
@@ -66,3 +67,7 @@ function classes(root) {
 d3.select(self.frameElement).style("height", diameter + "px");
 
 </script>
+
+<br>
+Hey you, this your personalized buuble chart :)
+<br>
