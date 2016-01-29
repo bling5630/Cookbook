@@ -1,64 +1,64 @@
 {
   "children": [
     {
-      "name": "magyar",
-      "quantity": 1
-    },
-    {
-      "name": "norsk",
-      "quantity": 1
-    },
-    {
-      "name": "polski",
-      "quantity": 1
-    },
-    {
-      "name": "romn",
-      "quantity": 1
-    },
-    {
-      "name": "suomi",
-      "quantity": 1
-    },
-    {
-      "name": "svenska",
-      "quantity": 1
-    },
-    {
-      "name": "trke",
-      "quantity": 1
-    },
-    {
-      "name": "ting",
-      "quantity": 1
-    },
-    {
-      "name": "vit",
-      "quantity": 1
-    },
-    {
-      "name": "cgknt",
-      "quantity": 1
-    },
-    {
-      "name": "tervezi",
-      "quantity": 1
-    },
-    {
-      "name": "jvjt",
-      "quantity": 1
-    },
-    {
-      "name": "fejlett",
-      "quantity": 2
-    },
-    {
-      "name": "here",
-      "quantity": 3
-    },
-    {
-      "name": "nokia",
+      "name": "mvstart",
       "quantity": 5
+    },
+    {
+      "name": "vasutas",
+      "quantity": 5
+    },
+    {
+      "name": "tanul",
+      "quantity": 5
+    },
+    {
+      "name": "kztt",
+      "quantity": 5
+    },
+    {
+      "name": "napos",
+      "quantity": 5
+    },
+    {
+      "name": "var",
+      "quantity": 5
+    },
+    {
+      "name": "item",
+      "quantity": 5
+    },
+    {
+      "name": "zrt",
+      "quantity": 6
+    },
+    {
+      "name": "egy",
+      "quantity": 6
+    },
+    {
+      "name": "min",
+      "quantity": 6
+    },
+    {
+      "name": "brlet",
+      "quantity": 7
+    },
+    {
+      "name": "szemly",
+      "quantity": 8
+    },
+    {
+      "name": "janur",
+      "quantity": 8
+    },
+    {
+      "name": "ksrje",
+      "quantity": 9
+    },
+    {
+      "name": "djm",
+      "quantity": 10
     }
   ]
 }
