@@ -1,8 +1,8 @@
 {
   "children": [
     {
-      "name": "mvstart",
-      "quantity": 5
+      "name": "cstrtk",
+      "quantity": 4
     },
     {
       "name": "vasutas",
@@ -10,10 +10,6 @@
     },
     {
       "name": "tanul",
-      "quantity": 5
-    },
-    {
-      "name": "kztt",
       "quantity": 5
     },
     {
@@ -33,6 +29,10 @@
       "quantity": 6
     },
     {
+      "name": "mvstart",
+      "quantity": 6
+    },
+    {
       "name": "egy",
       "quantity": 6
     },
@@ -45,11 +45,11 @@
       "quantity": 7
     },
     {
-      "name": "szemly",
-      "quantity": 8
+      "name": "janur",
+      "quantity": 7
     },
     {
-      "name": "janur",
+      "name": "szemly",
       "quantity": 8
     },
     {

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style> /* set the CSS */
+
+body { font: 20px Arial;}
+
+td, th {
+    padding: 1px 4px;
+}
+
+td, th {
+    font-weight: bold;
+}
+
+small {
+  font-size: 20px;
+}
+
+text {
+  font: 20px sans-serif;
+}
+
+
+</style>
+<body>
+  <h1 class="title">
+    <center>Word density checker</center>
+  </h1>
+  <small class="title" style="margin-left: 50px;">
+    <center>Visualizing word ditribution within your chosen site</center>
+  </small>
+
+<!-- load the d3.js library -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<div align="right" id="container">
+
+</div>
+
+<script>
+
+// select bubble layout pack
+var color = d3.scale.category20c();
+var diameter = 500,
+    format = d3.format(",d"),
+    color = d3.scale.category20c();
+
+var bubble = d3.layout.pack()
+    .sort(null)
+    .size([diameter, diameter])
+    .padding(1.5);
+
+var svg = d3.select("body")
+    .append("svg")
+        .attr("width", diameter)
+        .attr("height", diameter)
+        .attr("class", "bubble");
+
+d3.json("./bubble_chart_data.json", function(error, root) {
+          if (error) throw error;
+
+          var node = svg.selectAll(".node")
+              .data(bubble.nodes(classes(root))
+              .filter(function(d) { return !d.children; }))
+              .enter().append("g")
+              .attr("class", "node")
+              .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+
+          node.append("title")
+              .text(function(d) { return d.className + ": " + format(d.value); });
+
+          node.append("circle")
+              .attr("r", function(d) { return d.r; })
+              .style("fill", function(d, i) { return color(i%10); });
+
+          node.append("text")
+              .attr("dy", ".3em")
+              .style("text-anchor", "middle")
+              .text(function(d) { return d.className.substring(0, d.r / 3); });
+        });
+
+        // Returns a flattened hierarchy containing all leaf nodes under the root.
+        function classes(root) {
+          var classes = [];
+                    //.attr("style", "margin-left: 50px"),
+
+          function recurse(name, node) {
+            if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });
+            else classes.push({name: name, className: node.name, value: node.quantity});
+          }
+
+          recurse(null, root);
+          return {children: classes};
+        }
+
+        d3.select(self.frameElement).style("height", diameter + "px");
+
+// end of bubble chart
+
+// create a table
+function tabulate(data, columns) {
+    var table = d3.select("#container").append("table"),
+        thead = table.append("thead"),
+        tbody = table.append("tbody");
+
+    // append the header row
+    thead.append("tr")
+        .selectAll("th")
+        .data(columns)
+        .enter()
+        .append("th")
+            .text(function(column) { return column; });
+
+    // create a row for each object in the data
+    var rows = tbody.selectAll("tr")
+        .data(data)
+        .enter()
+        .append("tr");
+
+    // create a cell in each row for each column
+    var cells = rows.selectAll("td")
+        .data(function(row) {
+            return columns.map(function(column) {
+                return {column: column, value: row[column]};
+            });
+        })
+        .enter()
+        .append("td")
+            .text(function(d) { return d.value; });
+
+    return table;
+}
+
+// create some words
+
+var words = [
+             {
+               "name": "cstrtk",
+               "quantity": 4
+             },
+             {
+               "name": "vasutas",
+               "quantity": 5
+             },
+             {
+               "name": "tanul",
+               "quantity": 5
+             },
+             {
+               "name": "napos",
+               "quantity": 5
+             }
+             ]
+
+// render the table
+var wordTable = tabulate(words, ["name", "quantity"]);
+
+// uppercase the column headers
+wordTable.selectAll("thead th")
+    .text(function(column) {
+        return column.charAt(0).toUpperCase() + column.substr(1);
+    });
+
+// sort by quantity
+wordTable.selectAll("tbody tr")
+    .sort(function(a, b) {
+        return d3.descending(a.quantity, b.quantity);
+    });
+
+
+</script>
+</body>
