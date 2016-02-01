@@ -29,7 +29,7 @@ var thead = d3.select("thead").selectAll("th")
 
 var tr = d3.select("tbody").selectAll("tr")
   .data(sessions).enter().append("tr")
-  
+
 // cells
 var td = tr.selectAll("td")
   .data(function(d){return d3.values(d)})

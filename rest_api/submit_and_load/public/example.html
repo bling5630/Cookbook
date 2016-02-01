@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style> /* set the CSS */
+<style> /* set the CSS ahijiangtao.github.io/ss-vis-component/ */
 
       body {
-          background-color: white;
+          background-color: pink;
           font: 20px Arial;
       }
 
       body {
           margin:50px auto;
-          width:1000px;
+          width:1200px;
       }
       td, th {
           padding: 1px 4px;
@@ -31,7 +31,9 @@
         background: yellow;
         border: 2px solid black;
       }
-
+      .container {
+        float: left;
+      }
 </style>
 
 <body>
@@ -41,9 +43,12 @@
   <small class="title" style="margin-left: 50px;">
     <center>Visualizing word ditribution within your chosen site</center>
   </small>
-
+<br>
 <!-- load the d3.js library -->
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<div class="container" id="chart1"></div>
+<div class="container" id="chart2"></div>
+<div class="container" id="chart3"></div>
 
 <script>
 
@@ -58,7 +63,7 @@ var bubble = d3.layout.pack()
     .size([diameter, diameter])
     .padding(1.5);
 
-var svg = d3.select("body")
+var svg = d3.select("#chart1")
     .append("svg")
         .attr("width", diameter)
         .attr("height", diameter)
@@ -88,6 +93,8 @@ d3.json("./bubble_chart_data.json", function(error, root) {
               .text(function(d) { return d.className.substring(0, d.r / 3); });
         });
 
+
+
         // Returns a flattened hierarchy containing all leaf nodes under the root.
         function classes(root) {
           var classes = [];
@@ -108,7 +115,8 @@ d3.json("./bubble_chart_data.json", function(error, root) {
 
 // create a table
 function tabulate(data, columns) {
-    var table = d3.select("body").append("table"),
+    var table = d3.select("#chart2").append("table")
+            .attr("style", "margin-left: 50px"),
         thead = table.append("thead"),
         tbody = table.append("tbody");
 
@@ -140,10 +148,12 @@ function tabulate(data, columns) {
     return table;
 }
 
-var svg_2 = d3.select("body")
+
+var svg_2 = d3.select("#chart3")
     .append("svg")
-        .attr("width", 400)
-        .attr("height", 400);
+        .attr("width", 300)
+        .attr("height", 300)
+        .attr("class", "table")
 
 // create some words
 
@@ -163,6 +173,18 @@ var words = [
              {
                "name": "napos",
                "quantity": 5
+             },
+             {
+               "name": "kaki",
+               "quantity": 5
+             },
+             {
+               "name": "maki",
+               "quantity": 5
+             },
+             {
+               "name": "vaki",
+               "quantity": 5
              }
              ]
 
@@ -180,6 +202,7 @@ wordTable.selectAll("tbody tr")
     .sort(function(a, b) {
         return d3.descending(a.quantity, b.quantity);
     });
+
 
 
 </script>
