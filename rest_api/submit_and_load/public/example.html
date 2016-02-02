@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style> /* set the CSS ahijiangtao.github.io/ss-vis-component/ */
+<style> /* set the CSS http://hijiangtao.github.io/ss-vis-component/ */
 
       body {
           background-color: pink;
@@ -9,7 +9,7 @@
 
       body {
           margin:50px auto;
-          width:1200px;
+          width:1250px;
       }
       td, th {
           padding: 1px 4px;
@@ -148,45 +148,39 @@ function tabulate(data, columns) {
     return table;
 }
 
-
+/*
 var svg_2 = d3.select("#chart3")
     .append("svg")
         .attr("width", 300)
         .attr("height", 300)
         .attr("class", "table")
+*/
 
 // create some words
 
-var words = [
-             {
-               "name": "cstrtk",
-               "quantity": 4
-             },
-             {
-               "name": "vasutas",
-               "quantity": 5
-             },
-             {
-               "name": "tanul",
-               "quantity": 5
-             },
-             {
-               "name": "napos",
-               "quantity": 5
-             },
-             {
-               "name": "kaki",
-               "quantity": 5
-             },
-             {
-               "name": "maki",
-               "quantity": 5
-             },
-             {
-               "name": "vaki",
-               "quantity": 5
-             }
-             ]
+var words = [{
+  "name": "cstrtk",
+  "quantity": 10
+}, {
+  "name": "vasutas",
+  "quantity": 8
+}, {
+  "name": "tanul",
+  "quantity": 6
+}, {
+  "name": "napos",
+  "quantity": 4
+}, {
+  "name": "kaki",
+  "quantity": 2
+}, {
+  "name": "maki",
+  "quantity": 12
+}, {
+  "name": "vaki",
+  "quantity": 14
+}]
+
 
 // render the table
 var wordTable = tabulate(words, ["name", "quantity"]);
@@ -203,6 +197,36 @@ wordTable.selectAll("tbody tr")
         return d3.descending(a.quantity, b.quantity);
     });
 
+// end of table
+
+function barChart(data) {
+
+      var color = d3.scale.category10();
+
+      var canvas = d3.select("body").append("svg")
+          .attr("width" , 400)
+          .attr("height" , 300)
+
+      canvas.selectAll("rect")
+          .data (data)
+          .enter()
+            .append("rect")
+            .attr("width", function (d) {return d.quantity * 20; })
+            .attr("height", 48)
+            .attr("y", function (d ,i){return i * 50; })
+            .attr("fill", function(d, i) { return color(i%5); })
+
+      canvas.selectAll("text")
+          .data(data)
+          .enter()
+            .append("text")
+            .attr("fill" , "black")
+            .attr("y", function (d ,i){return i * 50 + 24; })
+            .text(function (d) { return d.name + ' : '+ d.quantity; })
+
+    }
+    // render the bar-chart
+    var newBar = barChart(words, ["name", "quantity"]);
 
 
 </script>
