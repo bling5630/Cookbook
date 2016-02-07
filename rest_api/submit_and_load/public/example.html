@@ -9,15 +9,7 @@
           margin:50px auto;
           width:1250px;
       }
-      td, th {
-          padding: 1px 4px;
-      }
-      td, th {
-          font-weight: bold;
-      }
-      small {
-        font-size: 20px;
-      }
+
       text {
         font: 20px sans-serif;
       }
@@ -25,160 +17,145 @@
         background: yellow;
         border: 2px solid black;
       }
-      .container {
-        float: left;
+      #chart svg {
+        background: green;
+        border: 2px solid black;
+      }
+
+      #chart rect{
+        fill: #4aaeea;
+      }
+
+      #chart text{
+        fill: black;
+        font: 10px sans-serif;
+        text-anchor: end;
+      }
+      #chart {
+        float: right;
       }
 </style>
 
 <body>
-  <h1 class="title">
-    <center>Word density checker</center>
-  </h1>
-  <small class="title" style="margin-left: 50px;">
     <center>Visualizing word ditribution within your chosen site</center>
-  </small>
-<br>
+    <br>
 <!-- load the d3.js library -->
+<div id="chart"></div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<div class="container" id="chart1"></div>
-<div class="container" id="chart2"></div>
-<div class="container" id="chart3"></div>
 
 <script>
-// select bubble layout pack
-var color = d3.scale.category20c();
-var diameter = 500,
-    format = d3.format(",d"),
-    color = d3.scale.category20c();
-var bubble = d3.layout.pack()
-    .sort(null)
-    .size([diameter, diameter])
-    .padding(1.5);
-var svg = d3.select("#chart1")
-    .append("svg")
-        .attr("width", diameter)
-        .attr("height", diameter)
-        .attr("class", "bubble");
-d3.json("./bubble_chart_data.json", function(error, root) {
-          if (error) throw error;
-          var node = svg.selectAll(".node")
-              .data(bubble.nodes(classes(root))
-              .filter(function(d) { return !d.children; }))
-              .enter().append("g")
-              .attr("class", "node")
-              .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-          node.append("title")
-              .text(function(d) { return d.className + ": " + format(d.value); });
-          node.append("circle")
-              .attr("r", function(d) { return d.r; })
-              .style("fill", function(d, i) { return color(i%10); });
-          node.append("text")
-              .attr("dy", ".3em")
-              .style("text-anchor", "middle")
-              .text(function(d) { return d.className.substring(0, d.r / 3); });
-        });
-        // Returns a flattened hierarchy containing all leaf nodes under the root.
-        function classes(root) {
-          var classes = [];
-                    //.attr("style", "margin-left: 50px"),
-          function recurse(name, node) {
-            if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });
-            else classes.push({name: name, className: node.name, value: node.quantity});
-          }
-          recurse(null, root);
-          return {children: classes};
-        }
-        d3.select(self.frameElement).style("height", diameter + "px");
-// end of bubble chart
-// create a table
-function tabulate(data, columns) {
-    var table = d3.select("#chart2").append("table")
-            .attr("style", "margin-left: 50px"),
-        thead = table.append("thead"),
-        tbody = table.append("tbody");
-    // append the header row
-    thead.append("tr")
-        .selectAll("th")
-        .data(columns)
-        .enter()
-        .append("th")
-            .text(function(column) { return column; });
-    // create a row for each object in the data
-    var rows = tbody.selectAll("tr")
-        .data(data)
-        .enter()
-        .append("tr");
-    // create a cell in each row for each column
-    var cells = rows.selectAll("td")
-        .data(function(row) {
-            return columns.map(function(column) {
-                return {column: column, value: row[column]};
-            });
-        })
-        .enter()
-        .append("td")
-            .text(function(d) { return d.value; });
-    return table;
-}
+var margin ={top:20, right:30, bottom:30, left:40},
+    width=500-margin.left - margin.right,
+    height=500-margin.top-margin.bottom;
 
-// create some words
-var words = [{
-  "name": "cstrtk",
-  "quantity": 10
-}, {
-  "name": "vasutas",
-  "quantity": 8
-}, {
-  "name": "tanul",
-  "quantity": 6
-}, {
-  "name": "napos",
-  "quantity": 4
-}, {
-  "name": "kaki",
-  "quantity": 2
-}, {
-  "name": "maki",
-  "quantity": 12
-}, {
-  "name": "vaki",
-  "quantity": 14
-}]
-// render the table
-var wordTable = tabulate(words, ["name", "quantity"]);
-// uppercase the column headers
-wordTable.selectAll("thead th")
-    .text(function(column) {
-        return column.charAt(0).toUpperCase() + column.substr(1);
-    });
-// sort by quantity
-wordTable.selectAll("tbody tr")
-    .sort(function(a, b) {
-        return d3.descending(a.quantity, b.quantity);
-    });
-// end of table
-function barChart(data) {
-      var color = d3.scale.category10();
-      var canvas = d3.select("body").append("svg")
-          .attr("width" , 400)
-          .attr("height" , 350)
-      canvas.selectAll("rect")
-          .data (data)
-          .enter()
-            .append("rect")
-            .attr("width", function (d) {return d.quantity * 20; })
-            .attr("height", 48)
-            .attr("y", function (d ,i){return i * 50; })
-            .attr("fill", function(d, i) { return color(i%5); })
-      canvas.selectAll("text")
-          .data(data)
-          .enter()
-            .append("text")
-            .attr("fill" , "black")
-            .attr("y", function (d ,i){return i * 50 + 24; })
-            .text(function (d) { return d.name + ' : '+ d.quantity; })
-    }
-    // render the bar-chart
-    var newBar = barChart(words, ["name", "quantity"]);
+// scale to ordinal because x axis is not numerical
+var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
+
+//scale to numerical value by height
+var y = d3.scale.linear().range([height, 5]);
+
+var chart = d3.select("#chart")
+              .append("svg")  //append svg element inside #chart
+              .attr("width", width+(2*margin.left)+margin.right)    //set width
+              .attr("height", height+margin.top+margin.bottom);  //set height
+var xAxis = d3.svg.axis()
+              .scale(x)
+              .orient("bottom");  //orient bottom because x-axis will appear below the bars
+
+var yAxis = d3.svg.axis()
+              .scale(y)
+              .orient("left");
+
+// create a barChart
+
+d3.json("./wordcounter.json", function(error, data) {
+  x.domain(data.map(function(d){ return d.name}));
+  y.domain([0, d3.max(data, function(d){return d.quantity})]);
+
+
+  var bar = chart.selectAll("g")
+                  .data(data)
+                .enter()
+                  .append("g")
+                  .attr("transform", function(d, i){
+                    return "translate("+x(d.name)+", 0)";
+                  });
+
+                  bar.append("rect")
+                      .attr("y", function(d) {
+                        return y(d.quantity);
+                      })
+                      .attr("x", function(d,i){
+                        return x.rangeBand()+(margin.left/4);
+                      })
+                      .attr("height", function(d) {
+                        return height - y(d.quantity);
+                      })
+                      .attr("width", x.rangeBand());
+
+                      bar.append("text")
+                          .attr("x", x.rangeBand()+margin.left )
+                          .attr("y", function(d) { return y(d.frequency) -10; })
+                          .attr("dy", ".75em")
+                          .text(function(d) { return d.frequency; });
+
+                          chart.append("g")
+                                  .attr("class", "x axis")
+                                  .attr("transform", "translate("+margin.left+","+ height+")")
+                                  .call(xAxis);
+
+                                  chart.append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate("+margin.left+",0)")
+      .call(yAxis)
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Frequency");
+
+});
+
+function type(d) {
+    d.name = +d.name; // coerce to number
+    return d;
+  }
+
+
+d3.json("./wordcounter.json", function(error, data) {
+
+  var w = 400;
+  var h = 350;
+  var color = d3.scale.category10();
+
+  var canvas = d3.select("body")
+      .append("svg")
+      .attr("width" , w)
+      .attr("height" , h);
+
+  canvas.selectAll("rect")
+      .data (data)
+      .enter()
+        .append("rect")
+        .attr("width", function (d) {return d.quantity * 20; })
+        .attr("height", 48)
+        .attr("y", function (d ,i){return i * 50; })
+        .attr("fill", function(d, i) { return color(i%5); })
+  canvas.selectAll("text")
+      .data(data)
+      .enter()
+        .append("text")
+        .attr("fill" , "black")
+        .attr("y", function (d ,i){return i * 50 + 24; })
+        .text(function (d) { return d.name + ' : '+ d.quantity; })
+
+
+
+})
+
+
+
+// var newBar = barChart(words, ["name", "quantity"]);
 </script>
 </body>

@@ -133,7 +133,7 @@ function tabulate(data, columns) {
 // render the table
 var peopleTable = tabulate(data, ["date", "close", "open", "diff"]);
 
-/*
+
 peopleTable.selectAll("tbody tr")
         .sort(function(a, b) {
                 return d3.descending(a.close, b.close);
@@ -143,7 +143,6 @@ peopleTable.selectAll("thead th")
         .text(function(column) {
                 return column.charAt(0).toUpperCase()+column.substr(1);
         });
-*/
 });
 
 </script>
