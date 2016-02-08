@@ -89,7 +89,12 @@ d3.json("./bubble_chart_data.json", function(error, root) {
           return {children: classes};
         }
         d3.select(self.frameElement).style("height", diameter + "px");
+
+
 // end of bubble chart
+//
+//
+//
 // create a table
 function tabulate(data, columns) {
     var table = d3.select("#chart2").append("table")
@@ -156,7 +161,10 @@ wordTable.selectAll("tbody tr")
     .sort(function(a, b) {
         return d3.descending(a.quantity, b.quantity);
     });
+
 // end of table
+
+
 function barChart(data) {
       var color = d3.scale.category10();
       var canvas = d3.select("body").append("svg")

@@ -95,12 +95,12 @@ d3.csv("data2.csv", function(error, data) {
 
 // The table generation function
 function tabulate(data, columns) {
-    var table = d3.select("body").append("table")
-            .attr("style", "margin-left: 200px")
-            .style("border-collapse", "collapse")// <= Add this line in
-            .style("border", "2px black solid"), // <= Add this line in
-        thead = table.append("thead"),
-        tbody = table.append("tbody");
+  var table = d3.select("body").append("table")
+          .attr("style", "margin-left: 200px")
+          .style("border-collapse", "collapse")// <= Add this line in
+          , // <= Add this line in
+      thead = table.append("thead"),
+      tbody = table.append("tbody");
 
     // append the header row
     thead.append("tr")
