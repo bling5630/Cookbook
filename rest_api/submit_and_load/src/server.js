@@ -38,18 +38,14 @@ app.get('/getdata', function(req, res) {
   });
 });
 
-/*
-sync way
-app.get('/getdata', function(req, res) {
-  //res.send('{"children": [{"name": "hogy","quantity": 9}, {"name": "vagy","quantity": 19}, {"name": "aha","quantity": 2}]}');
-  var dataFromJSON = fs.readFileSync(__dirname + '/../public/bubble_chart_data.json');
-  res.send(dataFromJSON);
+app.get('/getdata_2', function(req, res) {
+  fs.readFile(__dirname + '/../public/wordcounter.json', 'utf8', function(err, data) {
+    if (err)
+      throw err;
+    res.send(data);
+  });
 });
-*/
 
-/*
-get data, kicserelem a html ben is hogy onnan olvasssa, fs readfile, send eredmenyt
-*/
 
 var server = app.listen(port, function() {
   console.log('Server started on %s', server.address().port);
