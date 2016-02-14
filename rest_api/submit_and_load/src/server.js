@@ -21,10 +21,18 @@ app.get('/', function(req, res, next) {
 app.get('/result/', function(req, res, next) {
   wordCounter(req.query.url, function(error, words) {
   	console.log(words);
+    // null? cmd ?
     // res.send(words); => print words out on the UI
+    // http://nba.com empty ?
     fs.writeFile(__dirname + '/../public/bubble_chart_data.json', words, function(err) {
       console.log(err);
       res.redirect('/bubble_chart.html');
+    });
+  });
+  wordCounter(req.query.url, function(error, words) {
+    fs.writeFile(__dirname + '/../public/wordcounter.json', words, function(err) {
+      console.log(err);
+      //res.redirect('/bubble_chart.html');
     });
   });
 });

@@ -25,7 +25,11 @@ function wordcounter(url, callback) {
 
 	callback(error, JSON.stringify({children:sort}, null, 2));
 	});
-
+	/*
+		callback(error, JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
+				.splice(-3), null, 2));
+		});
+	*/
 }
 
 
