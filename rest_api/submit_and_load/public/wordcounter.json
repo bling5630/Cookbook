@@ -1,31 +1,42 @@
-[{
-  "name": "fot",
-  "quantity": 8
-}, {
-  "name": "utn",
-  "quantity": 8
-}, {
-  "name": "volt",
-  "quantity": 9
-}, {
-  "name": "hogy",
-  "quantity": 9
-}, {
-  "name": "magyar",
-  "quantity": 10
-}, {
-  "name": "van",
-  "quantity": 10
-}, {
-  "name": "meg",
-  "quantity": 13
-}, {
-  "name": "var",
-  "quantity": 19
-}, {
-  "name": "egy",
-  "quantity": 28
-}, {
-  "name": "nem",
-  "quantity": 29
-}]
+[
+  {
+    "name": "jabb",
+    "quantity": 8
+  },
+  {
+    "name": "van",
+    "quantity": 8
+  },
+  {
+    "name": "lett",
+    "quantity": 8
+  },
+  {
+    "name": "hirdets",
+    "quantity": 8
+  },
+  {
+    "name": "magyar",
+    "quantity": 10
+  },
+  {
+    "name": "sem",
+    "quantity": 10
+  },
+  {
+    "name": "meg",
+    "quantity": 15
+  },
+  {
+    "name": "var",
+    "quantity": 19
+  },
+  {
+    "name": "nem",
+    "quantity": 26
+  },
+  {
+    "name": "egy",
+    "quantity": 36
+  }
+]

@@ -2,7 +2,6 @@
 
 var request = require("request"),
 	cheerio = require("cheerio"),
-	fs = require('fs'),
 	_ = require('lodash');
 
 function wordcounter(url, callback) {
@@ -20,15 +19,13 @@ function wordcounter(url, callback) {
 
 				unsortedJSON = transformDataToJSON(sortedByCount);
 
-		var sort = _.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
-									.splice(-10);
-
-	callback(error, JSON.stringify({children:sort}, null, 2));
+		callback(error, _.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
+									.splice(-10));
 	});
 	/*
-		callback(error, JSON.stringify(_.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
-				.splice(-3), null, 2));
-		});
+	var sort = _.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
+	.splice(-10);
+	callback(error, JSON.stringify({children:sort}, null, 2));
 	*/
 }
 
@@ -66,6 +63,5 @@ function clearTheParsedText(content) {
 		.toLowerCase()
 		.toString();
 }
-
 
 module.exports = wordcounter;

@@ -24,15 +24,14 @@ app.get('/result/', function(req, res, next) {
     // null? cmd ?
     // res.send(words); => print words out on the UI
     // http://nba.com empty ?
-    fs.writeFile(__dirname + '/../public/bubble_chart_data.json', words, function(err) {
+    fs.writeFile(__dirname + '/../public/bubble_chart_data.json', JSON.stringify({children:words}, null, 2), function(err) {
       console.log(err);
       res.redirect('/bubble_chart.html');
     });
   });
   wordCounter(req.query.url, function(error, words) {
-    fs.writeFile(__dirname + '/../public/wordcounter.json', words, function(err) {
+    fs.writeFile(__dirname + '/../public/wordcounter.json', JSON.stringify(words, null, 2), function(err) {
       console.log(err);
-      //res.redirect('/bubble_chart.html');
     });
   });
 });

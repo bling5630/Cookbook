@@ -111,9 +111,6 @@ text, small {
 body {
       color: white;
       font: 12px Arial;
-/*
-      background-color:rgba(192,192,192,0.3);
-*/
     }
 
 #chart2 {
@@ -143,6 +140,9 @@ body {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 <script>
 
+
+// create bubble-chart
+
 var diameter = 500,
     format = d3.format(",d"),
     color = d3.scale.category20();
@@ -157,7 +157,6 @@ var svg = d3.select("body").append("svg")
     .attr("height", diameter)
     .attr("class", "bubble");
 
-//d3.json("/bubble_chart_data.json", function(error, root)
 d3.json("/getdata", function(error, root) {
   if (error) throw error;
 
@@ -182,7 +181,6 @@ d3.json("/getdata", function(error, root) {
       .text(function(d) { return d.className.substring(0, d.r / 3); });
 });
 
-// Returns a flattened hierarchy containing all leaf nodes under the root.
 function classes(root) {
   var classes = [];
 
@@ -197,32 +195,28 @@ function classes(root) {
 
 d3.select(self.frameElement).style("height", diameter + "px");
 
-// create a table
+// create table
 
 d3.json('/getdata_2', function (error,data) {
 
   function tabulate(data, columns) {
 		var table = d3.select('#chart1').append('table')
     .style("border-collapse", "collapse")
-    //.style("border", "3px black solid")
 
 		var thead = table.append('thead');
 		var	tbody = table.append('tbody');
 
-		// append the header row
 		thead.append('tr')
 		  .selectAll('th')
 		  .data(columns).enter()
 		  .append('th')
 		    .text(function (column) { return column; });
 
-		// create a row for each object in the data
 		var rows = tbody.selectAll('tr')
 		  .data(data)
 		  .enter()
 		  .append('tr');
 
-		// create a cell in each row for each column
 		var cells = rows.selectAll('td')
 		  .data(function (row) {
 		    return columns.map(function (column) {
@@ -236,16 +230,13 @@ d3.json('/getdata_2', function (error,data) {
 	  return table;
 	}
 
-	// render the table(s)
 var wordTable =	tabulate(data, ['name', 'quantity']);
 
-wordTable.selectAll("thead th")
-    .text(function(column) {
+    wordTable.selectAll("thead th")
+        .text(function(column) {
         return column.charAt(0).toUpperCase() + column.substr(1);
     });
 
-
-// sort by quantity
 wordTable.selectAll("tbody tr")
     .sort(function(a, b) {
         return d3.descending(a.quantity, b.quantity);
@@ -254,7 +245,7 @@ wordTable.selectAll("tbody tr")
 });
 
 
-// barChart
+// create bar-chart
 
 d3.json("/getdata_2", function(error, data) {
 
