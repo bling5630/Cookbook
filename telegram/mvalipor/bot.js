@@ -1,4 +1,6 @@
-var token = '160579290:AAENI_8O1JMXwkWR30VJ9Bnjo6wLZlZI0jk';
+var token = '190536300:AAFPPCPraAoGPvZdfbrPodLU0rmY5HHqHQU';
+
+// 147386010:AAGYxXo4z4zDiw6VM0BderWaAlM3AeSzehM
 
 var Bot = require('node-telegram-bot-api'),
     bot = new Bot(token, { polling: true });

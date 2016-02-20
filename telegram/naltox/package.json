@@ -1,0 +1,17 @@
+{
+  "name": "naltox",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "telegram-node-bot": "~2.0.5",
+    "esnext": "~1.14.3",
+    "babel": "~6.5.2",
+    "babel-preset-es2015": "~6.5.0"
+  }
+}
