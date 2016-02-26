@@ -1,44 +1,44 @@
 {
   "children": [
     {
-      "name": "jabb",
+      "name": "sem",
       "quantity": 8
     },
     {
       "name": "van",
-      "quantity": 8
+      "quantity": 9
     },
     {
-      "name": "lett",
-      "quantity": 8
-    },
-    {
-      "name": "hirdets",
-      "quantity": 8
-    },
-    {
-      "name": "magyar",
-      "quantity": 10
-    },
-    {
-      "name": "sem",
-      "quantity": 10
-    },
-    {
-      "name": "meg",
-      "quantity": 15
+      "name": "volt",
+      "quantity": 9
     },
     {
       "name": "var",
+      "quantity": 12
+    },
+    {
+      "name": "meg",
+      "quantity": 12
+    },
+    {
+      "name": "rja",
       "quantity": 19
     },
     {
       "name": "nem",
-      "quantity": 26
+      "quantity": 20
+    },
+    {
+      "name": "tovbb",
+      "quantity": 22
     },
     {
       "name": "egy",
-      "quantity": 36
+      "quantity": 25
+    },
+    {
+      "name": "hogy",
+      "quantity": 25
     }
   ]
 }
