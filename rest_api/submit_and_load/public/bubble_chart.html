@@ -157,7 +157,7 @@ var svg = d3.select("body").append("svg")
     .attr("height", diameter)
     .attr("class", "bubble");
 
-d3.json("/getdata", function(error, root) {
+d3.json("/dataBubbleChart", function(error, root) {
   if (error) throw error;
 
   var node = svg.selectAll(".node")
@@ -197,7 +197,7 @@ d3.select(self.frameElement).style("height", diameter + "px");
 
 // create table
 
-d3.json('/getdata_2', function (error,data) {
+d3.json('/dataTable', function (error,data) {
 
   function tabulate(data, columns) {
 		var table = d3.select('#chart1').append('table')
@@ -247,7 +247,7 @@ wordTable.selectAll("tbody tr")
 
 // create bar-chart
 
-d3.json("/getdata_2", function(error, data) {
+d3.json("/dataBarChart", function(error, data) {
 
   var w = 500;
   var h = 1000;

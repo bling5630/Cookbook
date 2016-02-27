@@ -9,7 +9,7 @@ function wordcounter(url, callback) {
 	request(url, function(error, response, body) {
 
 		var $page = cheerio.load(body),
-			article = $page('body').text();
+				article = $page('body').text();
 
 		var loadedText = clearTheParsedText(article),
 
@@ -22,11 +22,6 @@ function wordcounter(url, callback) {
 		callback(error, _.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
 									.splice(-10));
 	});
-	/*
-	var sort = _.map(_.sortByOrder(unsortedJSON, 'quantity', 'asc'))
-	.splice(-10);
-	callback(error, JSON.stringify({children:sort}, null, 2));
-	*/
 }
 
 

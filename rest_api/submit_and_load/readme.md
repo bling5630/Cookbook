@@ -4,7 +4,7 @@
 
 #### 2. next, type http://localhost:8080/bear_button.html and you see an empty box
 
-#### 3. type your desired site such as http://example.com and push the submit button
+#### 3. type your desired site such as http://imdb.com and push the submit button
 
 #### 4. finally you see the result:
 ![alt text][logo]

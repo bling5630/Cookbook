@@ -24,29 +24,43 @@ app.get('/result/', function(req, res, next) {
     // null? cmd ?
     // res.send(words); => print words out on the UI
     // http://nba.com empty ?
-    fs.writeFile(__dirname + '/../public/bubble_chart_data.json', JSON.stringify({children:words}, null, 2), function(err) {
+    // sample site http://hijiangtao.github.io/ss-vis-component/
+    fs.writeFile(__dirname + '/../public/dataBubbleChart.json', JSON.stringify({children:words}, null, 2), function(err) {
       console.log(err);
       res.redirect('/bubble_chart.html');
     });
   });
   wordCounter(req.query.url, function(error, words) {
-    fs.writeFile(__dirname + '/../public/wordcounter.json', JSON.stringify(words, null, 2), function(err) {
+    fs.writeFile(__dirname + '/../public/dataBarChart.json', JSON.stringify(words, null, 2), function(err) {
+      console.log(err);
+    });
+  });
+  wordCounter(req.query.url, function(error, words) {
+    fs.writeFile(__dirname + '/../public/dataTable.json', JSON.stringify(words, null, 2), function(err) {
       console.log(err);
     });
   });
 });
 
 
-app.get('/getdata', function(req, res) {
-  fs.readFile(__dirname + '/../public/bubble_chart_data.json', 'utf8', function(err, data) {
+app.get('/dataBubbleChart', function(req, res) {
+  fs.readFile(__dirname + '/../public/dataBubbleChart.json', 'utf8', function(err, data) {
     if (err)
       throw err;
     res.send(data);
   });
 });
 
-app.get('/getdata_2', function(req, res) {
-  fs.readFile(__dirname + '/../public/wordcounter.json', 'utf8', function(err, data) {
+app.get('/dataBarChart', function(req, res) {
+  fs.readFile(__dirname + '/../public/dataBarChart.json', 'utf8', function(err, data) {
+    if (err)
+      throw err;
+    res.send(data);
+  });
+});
+
+app.get('/dataTable', function(req, res) {
+  fs.readFile(__dirname + '/../public/dataTable.json', 'utf8', function(err, data) {
     if (err)
       throw err;
     res.send(data);
