@@ -1,0 +1,17 @@
+{
+  "name": "thenorthcode_composition",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "ramda": "~0.19.1",
+    "lodash": "~4.6.1",
+    "esnext": "~1.14.3",
+    "babel": "~6.5.2"
+  }
+}

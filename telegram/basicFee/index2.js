@@ -24,7 +24,7 @@ bot.get(/money (.+)$/, function(message) {
       organica=24;
   var yourFee = function feeCalculator(fee, salary) {
                     return fee/100*salary*12;};
-  var answer = new Message().text('Yo, Bro you get ' + yourFee(incepteam, 500000)).to(message.chat.id);
+  var answer = new Message().text('Yo, Bro you get ' + yourFee(cheppers, 500000)).to(message.chat.id);
 
   bot.send(answer);
 });

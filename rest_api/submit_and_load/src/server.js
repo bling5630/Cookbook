@@ -21,10 +21,6 @@ app.get('/', function(req, res, next) {
 app.get('/result/', function(req, res, next) {
   wordCounter(req.query.url, function(error, words) {
   	console.log(words);
-    // null? cmd ?
-    // res.send(words); => print words out on the UI
-    // http://nba.com empty ?
-    // sample site http://hijiangtao.github.io/ss-vis-component/
     fs.writeFile(__dirname + '/../public/dataBubbleChart.json', JSON.stringify({children:words}, null, 2), function(err) {
       console.log(err);
       res.redirect('/bubble_chart.html');
