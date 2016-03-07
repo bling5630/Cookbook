@@ -3,7 +3,7 @@ var Message = require('telegram-api/types/Message');
 var File = require('telegram-api/types/File');
 
 var bot = new Bot({
-  //token: '198828258:AAH6M0XziBewxYIi10bYMeojZiqvewmYdOE'
+  token: '198828258:AAH6M0XziBewxYIi10bYMeojZiqvewmYdOE'
 });
 
 console.log('bot server started...');

@@ -1,7 +1,7 @@
 {
-  "name": "ramda_practice",
+  "name": "andrew_puch_sqs",
   "version": "0.0.0",
-  "description": "ERROR: No README data found!",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "ramda": "~0.19.1"
-  },
-  "devDependencies": {}
+    "express": "~4.13.4",
+    "aws-sdk": "~2.2.41"
+  }
 }
