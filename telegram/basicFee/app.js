@@ -37,6 +37,9 @@ bot.onText(/^\/sum((\s+\d+)+)$/, function (msg, match) {
   });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 
@@ -50,7 +53,9 @@ bot.onText(/^\/gawker((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
-    return 'yay';
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 
@@ -64,6 +69,9 @@ bot.onText(/^\/liligo((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 bot.onText(/^\/odigeo((\s+\d+)+)$/, function (msg, match) {
@@ -74,6 +82,9 @@ bot.onText(/^\/odigeo((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 bot.onText(/^\/realeyes((\s+\d+)+)$/, function (msg, match) {
@@ -84,6 +95,9 @@ bot.onText(/^\/realeyes((\s+\d+)+)$/, function (msg, match) {
   });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 
@@ -97,6 +111,9 @@ bot.onText(/^\/9gag((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 bot.onText(/^\/balabit((\s+\d+)+)$/, function (msg, match) {
@@ -107,6 +124,9 @@ bot.onText(/^\/balabit((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 bot.onText(/^\/falcon((\s+\d+)+)$/, function (msg, match) {
@@ -117,6 +137,9 @@ bot.onText(/^\/falcon((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 
@@ -130,6 +153,9 @@ bot.onText(/^\/cognex((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 bot.onText(/^\/scarab((\s+\d+)+)$/, function (msg, match) {
@@ -140,6 +166,9 @@ bot.onText(/^\/scarab((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 
@@ -153,6 +182,9 @@ bot.onText(/^\/chemaxon((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 bot.onText(/^\/ultinous((\s+\d+)+)$/, function (msg, match) {
@@ -163,6 +195,9 @@ bot.onText(/^\/ultinous((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 
@@ -176,6 +211,9 @@ bot.onText(/^\/benovative((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
 bot.onText(/^\/grabowski((\s+\d+)+)$/, function (msg, match) {
@@ -186,6 +224,25 @@ bot.onText(/^\/grabowski((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
+  });
+});
+
+// feeCalculator 23%
+
+bot.onText(/^\/leopoly((\s+\d+)+)$/, function (msg, match) {
+  var result = 0;
+  match[1].split(/\s+/).forEach(function (i) {
+    var fee = numberWithDots(Math.floor(23/100*12*i));
+        result = 'OMG you did ' + fee + ' HUF ' + ' hard to believe it';
+      });
+  bot.sendMessage(msg.chat.id, result).then(function () {
+    // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/shaq.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "huh-huh"});
   });
 });
 
@@ -195,10 +252,13 @@ bot.onText(/^\/organica((\s+\d+)+)$/, function (msg, match) {
   var result = 0;
   match[1].split(/\s+/).forEach(function (i) {
     var fee = numberWithDots(Math.floor(24/100*12*i));
-        result = 'Yo, Dawg you get ' + fee + ' HUF ' + ' you are amazing';
+        result = 'Yo, ni**gg**aa you get ' + fee + ' HUF ' + ' you are awesome';
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/kevinhart.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....I am Kevin Hart"});
   });
 });
 
@@ -208,20 +268,26 @@ bot.onText(/^\/cheppers((\s+\d+)+)$/, function (msg, match) {
   var result = 0;
   match[1].split(/\s+/).forEach(function (i) {
     var fee = numberWithDots(Math.floor(25/100*12*i));
-        result = 'Yo, Dawg you get ' + fee + ' HUF ' + ' you are amazing';
+        result = 'Hey, hey you get ' + fee + ' HUF ' + ' it was a good day';
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/cat.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "want beef"});
   });
 });
 bot.onText(/^\/docler((\s+\d+)+)$/, function (msg, match) {
   var result = 0;
   match[1].split(/\s+/).forEach(function (i) {
     var fee = numberWithDots(Math.floor(25/100*12*i));
-        result = 'Yo, Dawg you get ' + fee + ' HUF ' + ' you are amazing';
+        result = 'Yo, you get ' + fee + ' HUF';
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/dicaprio.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "I am the winner man :)"});
   });
 });
 bot.onText(/^\/waltdisney((\s+\d+)+)$/, function (msg, match) {
@@ -232,6 +298,9 @@ bot.onText(/^\/waltdisney((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/goldshirt.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "ohh....my new gold shirt is nice"});
   });
 });
 
@@ -245,53 +314,8 @@ bot.onText(/^\/incepteam((\s+\d+)+)$/, function (msg, match) {
       });
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
+    var chatId = msg.chat.id;
+    var photo = __dirname + '/public/bling.jpg';
+    bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
-
-bot.onText(/^\/example((\s+\d+)+)$/, function (msg, match) {
-  var result = 0;
-  match[1].split(/\s+/).forEach(function (i) {
-    var fee = 27/100*12*i;
-        result = 'Yo, Dawg you get ' + fee + ' HUF ' + ' you are amazing';
-      });
-  bot.sendMessage(msg.chat.id, result).then(function () {
-    // reply sent!
-  });
-  // why not pop up in the group
-  var fromId = msg.from.id;
-  var response = 'yay....bling-bling';
-  var photo = 'xzibit.jpg';
-  bot.sendMessage(fromId, response);
-  bot.sendPhoto(fromId, photo);
-});
-
-/*
-// Matches /echo [whatever]
-bot.onText(/e/, function (msg, match) {
-var fromId = msg.from.id;
-//var resp = match[1];
-var response = 'nem a hetfo a gaz hanem a munkad szar';
-var photo = 'cat.jpg';
-bot.sendMessage(fromId, response);
-bot.sendPhoto(fromId, photo);
-});
-
-
-// Matches /echo [whatever]
-bot.onText(/\/e (hi|hello|yo|nigga|szia+)/, function (msg, match) {
-  var fromId = msg.from.id;
-  var resp = match[1];
-  var response = 'nem a hetfo a gaz hanem a munkad szar';
-  var photo = 'cat.jpg';
-  bot.sendMessage(fromId, response);
-  bot.sendPhoto(fromId, photo);
-});
-
-// show picture
-bot.on('message', function (msg) {
-  var chatId = msg.chat.id;
-  // photo can be: a file path, a stream or a Telegram file_id
-  var photo = 'cat.jpg';
-  bot.sendPhoto(chatId, photo, {caption: 'You wanna fuck w/ me??'});
-});
-*/
