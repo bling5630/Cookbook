@@ -1,0 +1,15 @@
+{
+  "name": "jrsinclair",
+  "version": "0.0.0",
+  "description": "Inspired by [A GENTLE INTRODUCTION TO FUNCTIONAL JAVASCRIPT: PART 1](http://jrsinclair.com/articles/2016/gentle-introduction-to-functional-javascript-intro/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "ramda": "~0.19.1",
+    "lodash": "~4.6.1"
+  }
+}
