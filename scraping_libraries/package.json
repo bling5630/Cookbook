@@ -1,0 +1,19 @@
+{
+  "name": "scraping_libraries",
+  "version": "0.0.0",
+  "description": "inspired by [Node.js Scraping Libraries](http://blog.webkid.io/nodejs-scraping-libraries/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "noodlejs": "~0.3.2",
+    "osmosis": "~0.1.3",
+    "x-ray": "~2.0.3",
+    "yakuza": "~1.0.7",
+    "cheerio": "~0.20.0",
+    "ineed": "~1.0.4"
+  }
+}

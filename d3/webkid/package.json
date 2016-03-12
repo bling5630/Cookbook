@@ -1,0 +1,14 @@
+{
+  "name": "webkid",
+  "version": "0.0.0",
+  "description": "inspired by [Some simple tricks for creating responsive charts with D3](http://blog.webkid.io/responsive-chart-usability-d3/#Create_test_data)",
+  "main": "chart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "d3": "~3.5.16"
+  }
+}
