@@ -9,25 +9,12 @@ AWS.config = new AWS.Config({
   region: 'us-east-1'
 });
 
-
-/*
-AWS.config.update({
-"accessKeyId": "",
-"secretAccessKey": ""
-});
-
-AWS.config.update({
-region: 'us-east-1'
-});
-AWS.config.loadFromPath('./config.json');
-*/
-
 // Create an S3 client
 var s3 = new AWS.S3();
 
 // Create a bucket and upload something into it
 var bucketName = 'node-sdk-sample-' + uuid.v4();
-var keyName = 'hello_world_4.txt';
+var keyName = 'FML.txt';
 
 s3.createBucket({Bucket: bucketName}, function() {
   var params = {Bucket: bucketName, Key: keyName, Body: 'Hello World!'};

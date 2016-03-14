@@ -1,82 +1,82 @@
 [
   {
-    "name": "daily",
-    "quantity": 8
-  },
-  {
-    "name": "pass",
-    "quantity": 8
-  },
-  {
-    "name": "russell",
-    "quantity": 8
-  },
-  {
-    "name": "gsw",
-    "quantity": 8
-  },
-  {
-    "name": "mia",
-    "quantity": 8
-  },
-  {
-    "name": "allstar",
+    "name": "assists",
     "quantity": 9
   },
   {
-    "name": "stats",
+    "name": "week",
     "quantity": 9
   },
   {
-    "name": "hassan",
-    "quantity": 9
-  },
-  {
-    "name": "with",
-    "quantity": 10
-  },
-  {
-    "name": "okc",
+    "name": "all",
     "quantity": 10
   },
   {
     "name": "league",
+    "quantity": 10
+  },
+  {
+    "name": "out",
+    "quantity": 10
+  },
+  {
+    "name": "from",
+    "quantity": 10
+  },
+  {
+    "name": "lac",
+    "quantity": 10
+  },
+  {
+    "name": "video",
     "quantity": 11
   },
   {
-    "name": "and",
-    "quantity": 12
+    "name": "cousins",
+    "quantity": 11
   },
   {
     "name": "nbacom",
+    "quantity": 12
+  },
+  {
+    "name": "plays",
     "quantity": 13
   },
   {
-    "name": "top",
-    "quantity": 13
+    "name": "points",
+    "quantity": 16
   },
   {
     "name": "for",
-    "quantity": 19
+    "quantity": 18
   },
   {
-    "name": "videoid",
-    "quantity": 28
+    "name": "and",
+    "quantity": 26
+  },
+  {
+    "name": "top",
+    "quantity": 27
   },
   {
     "name": "season",
-    "quantity": 32
+    "quantity": 35
   },
   {
     "name": "leader",
     "quantity": 36
   },
   {
+    "name": "videoid",
+    "quantity": 38
+  },
+  {
     "name": "nba",
-    "quantity": 75
+    "quantity": 71
   },
   {
     "name": "the",
-    "quantity": 78
+    "quantity": 103
   }
 ]
