@@ -1,5 +1,7 @@
 var supertest = require('supertest'),
   platform = require('../src/server'),
+  expect = require('chai').expect,
+  supertest = require('supertest'),
   request = require('request'),
   should = require('should');
 
@@ -11,7 +13,7 @@ describe("platform", function() {
   it("should respond with just sayin!", function(done) {
     request('http://localhost:3000',
       function(err, res, body) {
-        expect(body).toEqual('Just sayin!');
+        expect(body).to.eql('Hello dear!');
         done();
       });
   });
@@ -21,7 +23,7 @@ describe("platform", function() {
     request('http://localhost:3000/kitten.jpg',
       function(err, res,
         body) {
-        expect(typeof body).toEqual('string');
+        expect(typeof body).to.eql('string');
         done();
       });
   });
