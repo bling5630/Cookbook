@@ -72,7 +72,7 @@ function curry (fn) {
                 return given(updatedArgsSoFar);
             }
         }
-    }
+
 
     return given([]);
 }
