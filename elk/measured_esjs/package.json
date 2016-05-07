@@ -1,0 +1,17 @@
+{
+  "name": "measured_esjs",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "measured": "~1.1.0",
+    "elasticsearch": "~11.0.1",
+    "measured-elasticsearch": "~1.6.1",
+    "http": "0.0.0"
+  }
+}
