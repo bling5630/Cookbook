@@ -1,0 +1,6 @@
+function (error) {
+      if (error) {
+        return console.log(error);
+      }
+      //res.redirect('/bubble_chart.html');
+    }
