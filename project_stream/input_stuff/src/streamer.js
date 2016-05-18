@@ -1,25 +1,25 @@
 var _ = require('lodash');
 
 
-function streamer(items, callback) {
+function streamer(item, callback) {
   'use strict';
+  function transformDataToJSON(content) {
+  	var output = [];
 
-  console.log(transformDataToJSON(items));
+  	_.forIn(content, function(value, key) {
+  		output.push({
+  			fee: content[0],
+  			name: content[1],
+  			company: content[2],
+  			role: content[3]
+  		});
+  	});
+  	return output;
+  }
+  //console.log(transformDataToJSON(item));
+  callback(transformDataToJSON(item));
 }
 
-function transformDataToJSON(content) {
-	'use strict';
-	var output = [];
 
-	_.forIn(content, function(value, key) {
-		output.push({
-			fee: content[0],
-			name: content[1],
-			company: content[2],
-			role: content[3]
-		});
-	});
-	return output;
-}
 
 module.exports = streamer;

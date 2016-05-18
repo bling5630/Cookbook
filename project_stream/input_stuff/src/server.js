@@ -20,8 +20,16 @@ app.get('/', function(req, res, next) {
 
 app.get('/result/', function(req, res, next) {
   'use strict';
+  streamer_stuff(req.query.url, function(error, items) {
+    // this is okey
+    fs.writeFile(__dirname + '/../public/data.json', JSON.stringify({children:req.query.url}, null, 2));
+  });
+  streamer_stuff(req.query.url, function(error, items) {
+    // this is okey
+    console.log(items);
+    //undefined
+  });
 //data okey but different form
-  fs.writeFile(__dirname + '/../public/data.json', req.query.url);
 //redirect okey
   res.redirect('/bbc.gif');
   //res.redirect('http://nba.com');
