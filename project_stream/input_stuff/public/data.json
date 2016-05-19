@@ -1,8 +1,8 @@
 {
-  "children": [
-    "abel",
-    "7654321",
-    "kocsi",
-    "---------------------------"
-  ]
+  "summary": {
+    "fee": "25%",
+    "name": "david",
+    "company": "skyscanner",
+    "role": "vp"
+  }
 }

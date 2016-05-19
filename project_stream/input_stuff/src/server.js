@@ -19,74 +19,19 @@ app.get('/', function(req, res, next) {
 
 
 app.get('/result/', function(req, res, next) {
+
   'use strict';
-  streamer_stuff(req.query.url, function(error, items) {
-    // this is okey
-    fs.writeFile(__dirname + '/../public/data.json', JSON.stringify({children:req.query.url}, null, 2));
-  });
-  streamer_stuff(req.query.url, function(error, items) {
-    // this is okey
-    console.log(items);
-    //undefined
-  });
-//data okey but different form
-//redirect okey
-  res.redirect('/bbc.gif');
-  //res.redirect('http://nba.com');
 
-/*
+  var json_summary_template = {
+        fee:req.query.url[0],
+        name:req.query.url[1],
+        company:req.query.url[2],
+        role:req.query.url[3]
+              };
 
-streamer_stuff(req.query.url, function(error, content) {
-  // this is okey
-  //console.log(content);
-  fs.writeFile('text.txt',
-    content, function(error) {
-
-  });
-});
+    fs.writeFile(__dirname + '/../public/data.json', JSON.stringify({summary:json_summary_template}, null, 2));
 
   res.redirect('/bbc.gif');
-  //res.redirect('http://nba.com');
-
-
-
-
-
-
-
-app.get('/result/', function(req, res, next) {
-  'use strict';
-  streamer_stuff(req.query.url, function(error, items) {
-    // this is okey
-    console.log(items);
-  });
-// data.json file is filled but not exacly that I want
-  fs.writeFile(__dirname + '/../public/data.json', JSON.stringify({children:req.query.url}, null, 2), function(error) {
-    if (error) {
-      return console.log(error);
-    }
-    //redirect is okey
-    res.redirect('/bbc.gif');
-  });
-*/
-/*
-app.get('/result/', function(req, res, next) {
-  'use strict';
-  streamer_stuff(req.query.url, function(error, items) {
-    // data.json file is empty???
-    fs.writeFile(__dirname + '/../public/data.json', JSON.stringify({children:items}, null, 2), function(error) {
-      if (error) {
-        return console.log(error);
-      }
-      // no redirect???
-      res.redirect('/bbc.gif');
-    });
-  });
-*/
-
-
-
-
 });
 
 
