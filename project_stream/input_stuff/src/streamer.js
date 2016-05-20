@@ -14,8 +14,6 @@ function streamer(item, callback) {
     return output;
   }
 
-  console.log(transformDataToJSON(item));
-
   //console.log(transformDataToJSON(item));
   callback(transformDataToJSON(item));
 }
