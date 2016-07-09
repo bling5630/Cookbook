@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>contract( )</title>
+	<meta name="description" content="contract( ) (pronounced 'do contract') is a free agreement generator for game developers. Fill in the data, save, discuss, sign.">
+	<meta name="keywords" content="contract, agreement, free, template, generator, automatic, automated, generated, creator, custom, game, developer, freelance, deal, work for hire, IP, NDA, builder, attorney, lawyer, revenue share, contractor, license">
+	<meta name="author" content="Adriaan de Jongh">
+	<meta name="viewport" content="width=1000">
+
+	<!-- easy relative urls for files and images -->
+	<base href="/">
+
+	<!-- Font: Open Sans -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!-- JQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!-- <script src="jquery2.1.3.js"></script> -->
+
+	<!-- contract builder -->
+	<script type="text/javascript" src="/min/f=contractBuilder.js"></script>
+	<!-- <script type="text/javascript" src="contractBuilder.js"></script> -->
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="/min/f=style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/min/f=print.css" media="print">
+
+	<!-- faviconit.com -->
+	<link rel="shortcut icon" href="favicon/favicon.ico?v=01">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="favicon/favicon.ico?v=01">
+	<link rel="icon" type="image/png" sizes="196x196" href="favicon/favicon-192.png?v=01">
+	<link rel="icon" type="image/png" sizes="160x160" href="favicon/favicon-160.png?v=01">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96.png?v=01">
+	<link rel="icon" type="image/png" sizes="64x64" href="favicon/favicon-64.png?v=01">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png?v=01">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png?v=01">
+	<link rel="apple-touch-icon" href="favicon/favicon-57.png?v=01">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/favicon-114.png?v=01">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/favicon-72.png?v=01">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/favicon-144.png?v=01">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/favicon-60.png?v=01">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/favicon-120.png?v=01">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/favicon-76.png?v=01">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/favicon-152.png?v=01">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon-180.png?v=01">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="favicon/favicon-144.png?v=01">
+	<meta name="msapplication-config" content="favicon/browserconfig.xml">
+
+	<!-- Twitter & Facebook Open Graph -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="@adriaandejongh" />
+	<meta property="og:url" content="http://docontract.com" />
+	<meta property="og:title" content="contract( )" />
+	<meta property="og:description" content="contract( ) (pronounced 'do contract') generates free, plain language agreements for and between game developers." />
+	<meta property="og:image" content="http://docontract.com/images/docontract-howitworks.png" />
+	<meta property="og:image:width" content="768" />
+	<meta property="og:image:height" content="600" />
+	<meta property="og:type" content="website" />
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-2042607-20', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+<body>
+
+	<div class="container">
+
+		<header class="hideForPrint">
+
+
+		<p><span style="font-size: 1.1em; font-weight: bolder;"><i class="fa fa-file-text fa-fw"></i> contract( )</span> is a free agreement generator for game developers. <i class="fa fa-warning fa-fw"></i> <a href="javascript:ScrollTo('about')">This generator is not legal advice</a> and is not written by attorneys. <i class="fa fa-info-circle fa-fw"></i> <a href="javascript:ScrollTo('faq')">FAQ</a>. <span id="customInterfaceShow"><i class="fa fa-wrench fa-fw"></i> <a href="javascript:ShowCustomAgreement()">Load custom template.</a></span><span id="defaultInterfaceShow" style="display: none;"><i class="fa fa-wrench"></i> <a href="javascript:ShowDefaultAgreement()">Load default template.</a></span></p>
+
+		<hr>
+
+		</header>
+
+		<div class="sidebar hideForPrint">
+
+			<div id="customInterface" style="display: none;">
+				<h2><i class="fa fa-wrench fa-lg fa-fw"></i> Custom template&nbsp;&nbsp;<span class="beta">BETA</span></h2>
+
+				<p>Check the <a href="reference" target="_blank">reference</a> on how to make changes to the default agreement template or write your own. This feature is in beta. Found a bug? Let me know.</p>
+
+				<p><span id="fileSelectorLabel"><span style="font-size: 0.9em;">Your template: </span></span><span id="fileSelector"><input style="display: inline; width: 220px;" type="file" id="fileInput" accept="application/json"></span></p>
+
+				<hr>
+			</div>
+
+
+
+			<div id="dataSidebar">
+
+			</div>
+
+			<h2>Clear, save, or sign this agreement:</h2>
+			<p id="resetButton"><i class="fa fa-trash-o fa-lg fa-fw"></i> <a href="javascript:RequestDataReset()">Clear data and reset agreement</a>.</p>
+			<p><i class="fa fa-copy fa-lg fa-fw"></i> <a id="toggleBold" href="javascript:ToggleBoldText()">Toggle text <strong>markup</strong></a> to copy / paste agreement.</p>
+			<p id="printButton"><i class="fa fa-print fa-lg fa-fw"></i> <a href="javascript:TryPrint()">Print agreement or save it as PDF</a>.</p>
+			<!-- <p><i class="fa fa-pencil fa-lg fa-fw"></i> (Recommended) Sign using <a href="https://www.hellosign.com/" target="_blank">HelloSign</a>.</p> -->
+			<p><i class="fa fa-twitter fa-lg fa-fw"></i> <a href="http://twitter.com/home?status=A%20free%20agreement%20generator%20for%20game%20developers%3A%20http%3A%2F%2Fdocontract.com" target="_blank">Tell others</a> about contract( ).</p>
+
+			<hr>
+
+			<p class="faded"><i class="fa fa-file-text-o fa-lg fa-fw"></i> <span id="versionInfo">No agreement template was selected...</span></p>
+			<p class="faded"><i class="fa fa-envelope fa-lg fa-fw"></i> Suggest a change: <a href="mailto:hello@docontract.com?Subject=Suggestion%20for%20contract(%20)" target="_blank">hello@docontract.com</a>.</p>
+			<p class="faded"><i class="fa fa-file-text fa-lg fa-fw"></i> contract( ) is made by <i class="fa fa-twitter fa-lg"></i> <a href="http://www.twitter.com/AdriaandeJongh" target="_blank">adriaandejongh</a>.</p>
+			<p class="faded"><i class="fa fa-remove fa-lg fa-fw"></i> Don't sell agreements from contract( ).</p>
+
+		</div>
+		<div class="content whiteBackground">
+			<div id="content">
+
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div>
+
+		<!-- <h3><i class="fa fa-language fa-lg fa-fw"></i> Language</h3>
+		<p>contract( )'s default agreement is in <a href="javascript:LoadFromServer('./contracts/workforhire-en.json');">English</a>.  --><!-- Help me <a href="mailto:hello@docontract.com?Subject=Localizing%20contract(%20)%20to%20..." target="_blank">translate</a> to other languages! --> <!-- Prefer <a href="javascript:LoadFromServer('./contracts/workforhire-de.json');">German</a>, <a href="javascript:LoadFromServer('./contracts/workforhire-nl.json');">Dutch</a>, <a href="javascript:LoadFromServer('./contracts/workforhire-it.json');">Italian</a>, <a href="javascript:LoadFromServer('./contracts/workforhire-es.json');">Spanish</a>, or <a href="javascript:LoadFromServer('./contracts/workforhire-fr.json');">French</a>?</p> -->
+
+	</div>
+
+	<hr id="about" class="containerSeparator hideForPrint">
+
+	<div id="whatyouneedtoknow" class="container hideForPrint">
+
+		<h1>What you need to know about agreements and contract( )</h1>
+
+		<p>Making your agreements explicit from the very start of your project sets expectations right, sets the tone of your working relationship, and can motivate those working on the project. However, consulting an attorney to make you an agreement is not cheap, so most game developers who can't afford an attorney scour the internet for something that looks reasonable. Unfortunately, most agreements you'll find on the internet are fear-spreading, full of incomprehensive legalese, terribly biased towards a single party, or based on laws from a different country or state.</p>
+
+		<p>contract( ) (pronounced '<em>do contract</em>') generates a free agreement in plain language, covering most things you want to agree on before working together with someone in the games industry. contract( ) is based on the idea that 1) developers do not need difficult language to come to an agreement or to resolve a disagreement, and that 2) a comprehensible agreement is a much better start of a working relationship than a document with incomprehensible language. contract( ) is for developers, by developers; not for attorneys, by attorneys.</p>
+
+		<h2>When not to use contract( )</h2>
+
+		<p>The law is very advanced in handling situations between people or companies. When attorneys write a legal document, they tries to match the terminology of those laws so that they connect one-to-one and make sure that the agreement is enforceable. However, this does not mean that a document with a different terminology is automatically invalid. Every written agreement you make can be considered a legal document, even if your agreement is two sentences on a napkin. In case you and the contractor get into a disagreement and decide to take it to court (which is uncommon), much of the conversation in court will be about what is what, and only sections of the agreement that are very unclear or in direct conflict with country- or state-specific laws may be held unenforceable.</p>
+
+		<p>Several lawyers have reviewed the default agreement of contract( ) to make sure it doesn't conflict with most legal systems. However, the agreement is not and should not be misunderstood as legal advice: it is not written by an attorney. So if you have the money to hire an attorney, or the stakes are very high, or your project will span a long period of time, or you want to be sure your agreement is rock solid, I recommend hiring an attorney-at-law specialised in game development agreements instead of using contract( ).</p>
+
+		<h2>A legal document without legalese?</h2>
+
+		<p>For the sake of simplicity and clarification, the default agreement of contract( ) tries not to use the specific terminology of the laws of any country or state. One example of country-specific legalese is the use of the words 'work made for hire', a term used in many U.S. agreements. These exact words are used because this is how they appear in the Title 17 of the United States Code, which deals with copyrights. The default agreement of contract( ) does not use these exact words because maybe U.S. law doesn’t apply to your agreement and it wouldn’t make sense to refer to a U.S. term. And, using such words implicitly, and maybe emotionally, refer to an employer-employee type relationship that may not be the case at all.</p>
+
+		<p>Another example of country-specific legalese is the transfer of intellectual property rights, commonly known as 'IP'. Some countries do not allow the ownership of IP to transfer from one person or company to another. When your agreement proposes to transfer ownership of IP in a country or state where such transfer is impossible, the section on IP in the agreement may be held invalid in court. In this case, your only option is to get an unlimited exclusive license. This is why the default agreement of contract( ) explicitly mentions what these rights mean, instead of using words such as 'license' or 'transfer'.</p>
+
+		<p>Other examples of other legalese not included in contract( ) agreements are:</p>
+
+		<ul>
+			<li>Any specific obligation for the company to use the work resulting from the services.</li>
+			<li>What happens if you forgot to specify something that needs to be specified, such as a deliverable, or money made from awards.</li>
+			<li>If the contractor delivers pre-existing work under a license, in addition to transferring his or her work's IP to the company, this needs to be added to the agreement as well.</li>
+			<li>The ability to subcontract (contractor hires someone else to do the work) is not specifically allowed or excluded.</li>
+			<li>Any specific obligation to the company to provide sales reports in case of sharing revenue ('audit right').</li>
+			<li>General boilerplate clauses about force-majeure, entire agreement, etc.</li>
+		</ul>
+
+		<p>In short: while the default agreement of contract( ) is designed to cover most cases, it is also designed to be short and straight forward. Be aware that the default agreement therefore still relies on local laws for a number of things like those listed above.</p>
+
+		<h2>A personal note</h2>
+
+		<p>I have been in numerous tricky situations with contractors and intellectual property right transfers, and found that it was never the legalese that saved my relationship with a collaborator or contractor, but rather the inclusiveness of the contract and how making the contract together helped to clarify mutual expectations: a contract in common language, simple and straightforward, can serve an equally good purpose if it reflects the conversation between two people rather than the conversation between two attorneys.</p>
+
+		<p>The default agreement that contract( ) offers is my attempt to transfer my experience, but also the experiences of dozens of other developers and attorneys, to other game developers. I (Adriaan de Jongh) use the default agreement from contract( ) myself, and feel that this is the only way to make it as unbiased, practical, honest, but also as legit as possible. I'm not responsible for your agreements with others, but I do not want to push anyone into an agreement I would not want to be in myself.</p>
+
+		<p>I repeat: I am not an attorney and the default agreement from contract( ) is not legal advice. If you are looking for legal advice, wish to cover any of the legalese mentioned earlier, or want to know what the law provides if cases are not included in the default agreement of contract( ), hire a qualified attorney-at-law from your country or state to go over the agreement from contract( ) before signing it.</p>
+
+
+
+		<h1 id="faq">Frequently Asked Questions</h1>
+
+		<h2>Q: How can I make changes to the agreement?</h2><p>A: First of all, if you feel that the change you would like to make to the agreement is common in the games industry, be sure to <a href="mailto:hello@docontract.com?Subject=Suggestion%20for%20contract(%20)" target="_blank">suggest a change</a> so that everyone will benefit from this change. To make changes to the agreement, you can either: </p>
+		<ul>
+			<li>(recommended) download the <a href="../contracts/workforhire-en.json" download>latest version</a> of the template agreement, modify the JSON file, and load it using the custom template interface at the top of the page.</li>
+			<li>use the 'Toggle text markup' button right below the variable data to remove the bold text and header margins, and simply copy / paste the agreement in your favorite text editor.</li>
+		</ul>
+
+		<h2>Q: Can I sign the agreements from contract( ) as a sole proprietor?</h2><p>A: Yes. Simply use your own name or the contractor's name.</p>
+
+		<h2>Q: Is the data I fill in on contract( ) saved on a server?</h2><p>A: No. The data you fill in is only saved on your computer (as a cookie for each textfield) for 1 day.</p>
+
+		<h2>Q: Can I use contract( ) for projects other than games?</h2><p>A: Probably, but as I would not advise anyone into an agreement I would not want to be in myself, and considering I am a game developer, I would only use this agreement for projects other than games after having done a good amount of research into your industry's standard agreements to see if the agreement from contract( ) covers all areas.</p>
+
+		<h2>Q: Is contract( ) also available in my language?</h2><p>A: contract( ) is currently only available in English, but I'm am planning to localize the default agreement template. Want to help me localize? <a href="mailto:hello@docontract.com?Subject=Localizing%20contract(%20)%20to%20..." target="_blank">Let me know</a>.</p>
+
+		<h2>Q: Can I use contract( ) to hire employees?</h2><p>A: No. An employee agreement is very different from a work-for-hire agreement. It's so specific to your country or state that I decided not to offer a template for it.</p>
+
+
+
+		<!-- <h1>Attorneys recommended by other developers</h1>
+
+		<p>In case you feel that this agreement does not fit your needs, this is a list of attorneys that other game developers have recommended. If you would like to recommend an attorney that is not on this list, send an email to <a href="mailto:hello@docontract.com?Subject=Attorney%20Suggestion">hello@docontract.com</a> with his or her name, a webpage stating an email or phone number, and the country or state in which the attorney can practice law.</p>
+
+		<h2>Europe</h2>
+		<p>
+			<a target="_blank" href="http://leopoldmeijnenoosterbaan.nl/EN/Lawyers.aspx">Olivier Oosterbaan</a> - attorney-at-law of The Netherlands<br>
+			<a target="_blank" href="http://de.linkedin.com/pub/florian-glatz/a6/ba/914/en">Florian Glatz</a>, attorney-at-law of Germany
+		</p>
+
+		<h2>North America</h2>
+		<p>
+			<a target="_blank" href="http://apeb-law.com/attorneys/neal-black">Neal Black</a> - attorney-at-law of Washington (USA), Oregon (USA)<br>
+			<a target="_blank" href="http://chrisreidlaw.com/contact/">Chris Reid</a> - attorney-at-law of New York (USA)<br>
+			<a href="http://www.charnelaw.com/">Jim Charne</a> - attorney-at-law of California (USA), New York (USA), New Jersey (USA), Wisconsin (USA)<br>
+			<a target="_blank" href="http://www.mbbp.com/attorneys/cavaretta_michael.html">Mike Cavaretta</a> - attorney-at-law of Massachusetts (USA)<br>
+			<a target="_blank" href="http://voyerlaw.com/">Kellen Voyer</a> - attorney-at-law of British Columbia (Canada), California (USA)<br>
+		</p> -->
+
+		<h1>Made by &amp; thanks to</h1>
+
+		<p>contract( ) was made by game designer <a target="_blank" href="https://www.twitter.com/adriaandejongh">Adriaan de Jongh</a> with the help of dozens of experienced game developers and attorneys. Specifically, it was never possible to create contract( ) without the support of these people: </p>
+		<ul class="fa-ul">
+			<li><i class="fa-li fa fa-gavel fa-lg"></i><a target="_blank" href="http://leopoldmeijnenoosterbaan.nl/EN/Lawyers.aspx">Olivier Oosterbaan</a>, friend and attorney-at-law of the Netherlands, spent many hours reviewing the agreement and helping me rewrite sections to include important nuances. (hire him for legal advice!)</li>
+			<li><i class="fa-li fa fa-gavel fa-lg"></i>Thanks to <a target="_blank" href="http://de.linkedin.com/pub/florian-glatz/a6/ba/914/en">Florian Glatz</a>, attorney-at-law of Germany, for his extensive review on the agreement from a European law perspective.</li>
+			<li><i class="fa-li fa fa-user fa-lg"></i><a target="_blank" href="http://twitter.com/dejobaan">Ichiro Lambe</a> and <a target="_blank" href="http://twitter.com/sarah_northway">Sarah Northway</a> helped to include a few situations and little but important things that were missing.</li>
+			<li><i class="fa-li fa fa-user fa-lg"></i>Thanks to <a target="_blank" href="http://www.firehosegames.com/">Eitan Glinert</a>, <a target="_blank" href="http://twitter.com/glassbottommeg">Megan Fox</a>, <a target="_blank" href="http://twitter.com/pyjamads">Mads Johansen Lassen</a>, and <a target="_blank" href="http://twitter.com/godatplay">Josh Larson</a> for keeping me sharp in the payment template structures.</li>
+			<li><i class="fa-li fa fa-user fa-lg"></i>Many thanks to <a target="_blank" href="http://ramiismail.com/">Rami Ismail</a> for showing me how free and public tools can help an industry as a whole, and for all his feedback on the agreement builder.</li>
+			<li><i class="fa-li fa fa-users fa-lg"></i>Many thanks to friends and the indie community at large for the huge amounts of feedback and support. To name a few: Scott Brodie, Alex Amsel, Alex Schwartz, Ryan Clark, Aaron Isaksen, Tyler Glaiel, Pietro Righi Riva, Michael Carriere, Joost van Dongen, Sos Sosowski, John Murphy, Sam Castree, Robert Zubek, and many others!</li>
+		</ul>
+
+	</div>
+
+	<script type="text/javascript"> $(document).ready(function() { LoadDefaultAgreement(); }); </script>
+
+
+</body>
+</html>
