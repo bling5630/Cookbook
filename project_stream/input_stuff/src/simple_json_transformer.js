@@ -1,7 +1,6 @@
 var _ = require('lodash');
 
 var data = ["12%", "agi", "cheppers", "devops"];
-
 function transformDataToJSON(content) {
 var output = [];
 

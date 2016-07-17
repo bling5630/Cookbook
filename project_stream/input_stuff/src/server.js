@@ -32,7 +32,9 @@ app.get('/result/', function(req, res, next) {
     fs.writeFile(__dirname + '/../public/data.json', JSON.stringify({summary:json_summary_template}, null, 2));
 
   res.redirect('/bbc.gif');
+  //res.json({querystring_url: req.query.url})
 });
+
 
 
 var server = app.listen(port, function() {
