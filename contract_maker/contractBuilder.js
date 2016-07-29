@@ -12,10 +12,11 @@ $(document).ready(function() {
     EnableTemplateFileInput();
 });
 
+/*
 function LoadDefaultAgreement() {
-    LoadFromServer('./contracts/workforhire-en.json');
+    LoadFromServer('./contracts/iseeq.json');
 }
-
+*/
 function LoadFromLocal(plainText) {
     loadedObject = plainText;
     agreementIsCustom = true;
