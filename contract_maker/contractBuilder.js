@@ -12,11 +12,10 @@ $(document).ready(function() {
     EnableTemplateFileInput();
 });
 
-/*
 function LoadDefaultAgreement() {
     LoadFromServer('./contracts/iseeq.json');
 }
-*/
+
 function LoadFromLocal(plainText) {
     loadedObject = plainText;
     agreementIsCustom = true;
