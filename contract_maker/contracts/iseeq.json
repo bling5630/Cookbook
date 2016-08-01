@@ -6,82 +6,11 @@
 		"lastModification": "22 Dec. 2015"
 	},
 
-
-
-
-
-	"agreement": {
-		"header": "MEGBÍZÁSI SZERZŐDÉS MUNKAERŐ-KÖZVETÍTÉS SZOLGÁLTATÁS NYÚJTÁSÁRA ",
-		"template": [{
-			"text": "<p> 1./ Definíciók \"Díj\" IseeQ szolgáltatásainak ellenértéke, Közvetített Személy (i) bármely, az IseeQ által az Ügyfél részére munkaválallói vagy tanácsadói pozícióra toborzott és kiválasztott természetes személy, (ii) bármely, az által az Ügyfél részére toborzott és kiválasztott jogi személy, Megbízás IseeQ és az Ügyfél közötti megállapodás, melynek alapján IseeQ minden tőle elvárhatót megtesz annak érdekében, hogy az Ügyfél részére Közvetített Személyt toborozzon, Ügyfél a fent megjelölt megbízóként szerződő természetes, vagy jogi személy, aki Közvetített Személy toborzására és kiválasztására irányuló megbízást ad, továbbá minden természetes és jogi személy, aki kapcsolatban áll ezzel a természetes, vagy jogi személlyel.</p>",
-			"variables": {
-				"companyLegal": {
-					"label": "Your legal (company) name",
-					"placeholder": "Full Company Name LLC",
-					"description": "The name of your company as registered in your country.",
-					"examples": ["Vlambeer vof", "Adriaan de Jongh LLC"]
-				},
-
-				"company": {
-					"label": "Your (company's) short name",
-					"placeholder": "Company",
-					"description": "The simplified name of your company to be used in this agreement to make it less difficult to read.",
-					"examples": ["Vlambeer", "Adriaan"]
-				},
-
-				"companyAddress": {
-					"label": "Your full (company) address",
-					"placeholder": "Vondelpark 5, 1071 AA, Amsterdam, the Netherlands",
-					"description": "The full address of the office of your company.",
-					"examples": ["Vondelpark 5, 1071 AA, Amsterdam, the Netherlands", "747 Howard Street, San Francisco, CA 94103, United States"]
-				},
-
-				"contractorLegal": {
-					"label": "Contractors' legal (company) name",
-					"placeholder": "Contractor",
-					"description": "The registered company name of the contractor.",
-					"examples": ["John Freelancer", "HisCompany LLC"]
-				},
-
-				"contractor": {
-					"label": "Contractors' (company) short name",
-					"placeholder": "Contractor",
-					"description": "The simplified name of the contractors' company to be used in this agreement to make it less difficult to read.",
-					"examples": ["John", "HisCompany"]
-				},
-
-				"contractorAddress": {
-					"label": "Contractors' full (company) address",
-					"placeholder": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
-					"description": "The full address of the office of the contractors' company.",
-					"examples": ["Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France", "10900 NE 4th street, #500 Bellevue, WA 98004, United States"]
-				},
-
-				"projectName": {
-					"label": "Name of the project",
-					"placeholder": "Game",
-					"description": "The (work-in-progress) title of the game or project.",
-					"examples": ["Fingle", "Thirty Flights of Loving"]
-				}
-			}
-		}]
-	},
-
-
-
-
 	"scope": {
-		"header": "Services and deadlines",
-		"select": {
-			"label": "How do you want to define the work and services?",
-			"description": "It may be important to keep the list of services in this agreement broad enough so that edge cases are also included. However, if it is absolutely clear what [contractor] will be doing, you can still get as specific as you would like. In many cases, work and services are defined per milestone so that [contractor] can also get paid per milestone instead of once at the end or through a fixed fee.",
-			"options": [
-				"Project-based",
-				"Milestone-based"
-			]
-		},
+		"header": "MEGBÍZÁSI SZERZŐDÉS MUNKAERŐ-KÖZVETÍTÉS SZOLGÁLTATÁS NYÚJTÁSÁRA ",
+
 		"template": [{
-			"text": "<p>The services that [contractor] will perform for [projectName] include:</p>[workToPerformList]<p>[company] needs to approve the work resulting from the services before it is considered complete and payable, and [company] will approve or disapprove the work as soon as possible. [contractor] is aware that minor adjustments and fixes to the work are also part of the services. The deadline for [contractor] to complete the services is [workCompletedDate].</p><p>When [contractor] becomes aware that [contractor] is unable to complete the services on the deadline, [contractor] will immediately notify [company]. Together, [company] and [contractor] can agree to set a new deadline or redefine the services to be performed for an existing deadline. If [contractor] is unable to complete the services on the deadline and [company] and [contractor] cannot agree on a new deadline, [company] can decide to no longer use [contractor]’s services.</p>",
+			"text": "<p> amely létrejött</p><br>egyrészről a......, mint Megbízó között<br><br>székhely:......<br><br>adószám:......<br><br>cégjegyzékszám:......<br><br>képviseletében eljár:......<br><br>szakmai kapcsolattartó:......<br><p></p><table style='width: 100%; border: 0;'><tr><td style='width: 50%;'></td><td style='width: 50%;'></td></tr><tr><td>másrészről az IseeQ Kft (az „IseeQ” brand tulajdonosa), mint Megbízott<br>székhely: 1075 Budapest, Madách Imre út 13-14.;<br>adószám: 24078067-2-42<br>cégjegyzékszám: 01-09-989390<br>képviseletében eljár: Bondici Balázs, Ügyvezető<br>szakmai kapcsolattartók: Püski Tamás, Batiz Péter<br><br></td><td><br><br><br></td></tr><tr><td><br><br><br><br></td><td><br><br><br><br></td></tr></table>",
 			"variables": {
 				"workToPerformList": {
 					"type": "list",
@@ -112,11 +41,79 @@
 					"prefix": "Milestone ",
 					"separator": ", ",
 					"description": "A list of the milestones specifying the work and services to be performed by [contractor] for each milestone, including the dates on which they have to be finished.",
-					"examples": ["due Jan 3rd 2025: Concept art and rough interface sketches", "due Mar 23rd 2025: Concept art for all characters"]
+					"examples": [
+						"due Jan 3rd 2025: Concept art and rough interface sketches",
+						"due Mar 23rd 2025: Concept art for all characters"
+					]
 				}
 			}
 		}]
 	},
+
+
+	"agreement": {
+		"header": "1./ Definíciók",
+		"template": [{
+			"text": "<p>\"Díj\" IseeQ szolgáltatásainak ellenértéke, Közvetített Személy (i) bármely, az IseeQ által az Ügyfél részére munkaválallói vagy tanácsadói pozícióra toborzott és kiválasztott természetes személy, (ii) bármely, az által az Ügyfél részére toborzott és kiválasztott jogi személy, Megbízás IseeQ és az Ügyfél közötti megállapodás, melynek alapján IseeQ minden tőle elvárhatót megtesz annak érdekében, hogy az Ügyfél részére Közvetített Személyt toborozzon, Ügyfél a fent megjelölt megbízóként szerződő természetes, vagy jogi személy, aki Közvetített Személy toborzására és kiválasztására irányuló megbízást ad, továbbá minden természetes és jogi személy, aki kapcsolatban áll ezzel a természetes, vagy jogi személlyel.</p>",
+			"variables": {
+				"companyLegal": {
+					"label": "Your legal (company) name",
+					"placeholder": "Full Company Name LLC",
+					"description": "The name of your company as registered in your country.",
+					"examples": ["Vlambeer vof", "Adriaan de Jongh LLC"]
+				},
+
+				"company": {
+					"label": "Your (company's) short name",
+					"placeholder": "Company",
+					"description": "The simplified name of your company to be used in this agreement to make it less difficult to read.",
+					"examples": ["Vlambeer", "Adriaan"]
+				},
+
+				"companyAddress": {
+					"label": "Your full (company) address",
+					"placeholder": "Vondelpark 5, 1071 AA, Amsterdam, the Netherlands",
+					"description": "The full address of the office of your company.",
+					"examples": ["Vondelpark 5, 1071 AA, Amsterdam, the Netherlands",
+						"747 Howard Street, San Francisco, CA 94103, United States"
+					]
+				},
+
+				"contractorLegal": {
+					"label": "Contractors' legal (company) name",
+					"placeholder": "Contractor",
+					"description": "The registered company name of the contractor.",
+					"examples": ["John Freelancer", "HisCompany LLC"]
+				},
+
+				"contractor": {
+					"label": "Contractors' (company) short name",
+					"placeholder": "Contractor",
+					"description": "The simplified name of the contractors' company to be used in this agreement to make it less difficult to read.",
+					"examples": ["John", "HisCompany"]
+				},
+
+				"contractorAddress": {
+					"label": "Contractors' full (company) address",
+					"placeholder": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
+					"description": "The full address of the office of the contractors' company.",
+					"examples": [
+						"Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
+						"10900 NE 4th street, #500 Bellevue, WA 98004, United States"
+					]
+				},
+
+				"projectName": {
+					"label": "Name of the project",
+					"placeholder": "Game",
+					"description": "The (work-in-progress) title of the game or project.",
+					"examples": ["Fingle", "Thirty Flights of Loving"]
+				}
+			}
+		}]
+	},
+
+
 
 	"scope2": {
 		"template": [{
@@ -126,8 +123,6 @@
 			}
 		}]
 	},
-
-
 
 
 
@@ -361,14 +356,19 @@
 					"label": "Ending date of gross receipt percentage",
 					"placeholder": "for as long as the game is for sale",
 					"description": "The date until which [contractor] receives a percentage of the gross receipts.",
-					"examples": ["for as long as the game is for sale", "until one year after release of the game", "until February 30th, 2025"]
+					"examples": ["for as long as the game is for sale",
+						"until one year after release of the game",
+						"until February 30th, 2025"
+					]
 				},
 
 				"platforms": {
 					"label": "Platforms for gross receipt percentage",
 					"placeholder": "Steam, PS4, and PS Vita",
 					"description": "A list of hardware and / or software distribution platforms (sales channels) from which [contractor] will earn a percentage of the gross receipts. It is common for a contractor to receive a percentage of gross receipt for all platforms on which the game is sold.",
-					"examples": ["all platforms on which the game is sold", "Steam, iOS App Store, and Google Play Store"]
+					"examples": ["all platforms on which the game is sold",
+						"Steam, iOS App Store, and Google Play Store"
+					]
 				},
 
 				"minimumPayment": {
@@ -439,14 +439,13 @@
 					"label": "Expenses covered by [company]",
 					"placeholder": "software and travelling expenses",
 					"description": "A list of expenses covered by [company].",
-					"examples": ["software, hardware, and travelling", "expenses related to GDC San Francisco"]
+					"examples": ["software, hardware, and travelling",
+						"expenses related to GDC San Francisco"
+					]
 				}
 			}
 		}]
 	},
-
-
-
 
 
 
@@ -467,7 +466,9 @@
 					"label": "Scope of the granted rights",
 					"placeholder": "worldwide, indefinitely, for every distribution platform",
 					"description": "Where, for how long, and for what platforms [company] may use the work that [contractor] delivers to [company] for this agreement.",
-					"examples": ["worldwide, indefinitely, on every distribution platform", "worldwide, for two years after first launch, on the Apple iOS App Store"]
+					"examples": ["worldwide, indefinitely, on every distribution platform",
+						"worldwide, for two years after first launch, on the Apple iOS App Store"
+					]
 				}
 			}
 		}, {
@@ -510,12 +511,13 @@
 					"label": "[contractor] can use the work for",
 					"description": "A list of things that [contractor] can use the delivered work for.",
 					"placeholder": "selling the work on Bandcamp",
-					"examples": ["selling the work on Bandcamp", "selling the work on Shapeways and society6"]
+					"examples": ["selling the work on Bandcamp",
+						"selling the work on Shapeways and society6"
+					]
 				}
 			}
 		}]
 	},
-
 
 
 
@@ -528,7 +530,6 @@
 			}
 		}]
 	},
-
 
 
 
@@ -549,17 +550,11 @@
 
 
 
-
-
-
-
-
-
 	"signatures": {
 		"header": "Signatures",
 		"avoidPageBreak": true,
 		"template": [{
-			"text": "<p>[company] and [contractor] have both signed every page of this agreement, and each have their own copy of the signed agreement for future reference. This agreement starts on the latest date that [company] or [contractor] signs.</p><table style='width: 100%; border: 0;'><tr><td style='width: 50%;'>[companyLegal]</td><td style='width: 50%;'>[contractorLegal]</td></tr><tr><td>Name and title:<br><br><br></td><td>Name and title:<br><br><br></td></tr><tr><td>Signature:<br><br><br><br></td><td>Signature:<br><br><br><br></td></tr><tr><td>Date:<br><br></td><td>Date:<br><br></td></tr></table>",
+			"text": "<p>[company] and [contractor] have both signed every page of this agreement, and each have their own copy of the signed agreement for future reference. This agreement starts on the latest date that [company] or [contractor] signs.</p><table style='width: 100%; border: 0;'><tr><td style='width: 50%;'>[companyLegal]</td><td style='width: 50%;'>[contractorLegal]</td></tr><tr><td>Name and title:<br><br><br></td><td>Name and title:<br><br><br></td></tr><tr><td>Signature:<br><br><br><br></td><td>Signature:<br><br><br><br></td></tr><tr><td>Date:2015<br><br></td><td>Date:2016<br><br></td></tr></table>",
 			"variables": {
 
 			}
