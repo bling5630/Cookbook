@@ -1,10 +1,5 @@
 {
-	"contractInfo": {
-		"language": "en",
-		"version": 1.11,
-		"basedOnEnglishVersion": 1.11,
-		"lastModification": "22 Dec. 2015"
-	},
+	"contractInfo": {},
 
 	"scope": {
 		"header": "MEGBÍZÁSI SZERZŐDÉS MUNKAERŐ-KÖZVETÍTÉS SZOLGÁLTATÁS NYÚJTÁSÁRA ",
@@ -12,14 +7,11 @@
 		"template": [{
 			"text": "<p> amely létrejött</p><br>egyrészről a......, mint Megbízó között<br><br>székhely:......<br><br>adószám:......<br><br>cégjegyzékszám:......<br><br>képviseletében eljár:......<br><br>szakmai kapcsolattartó:......<br><p></p><table style='width: 100%; border: 0;'><tr><td style='width: 50%;'></td><td style='width: 50%;'></td></tr><tr><td>másrészről az IseeQ Kft (az „IseeQ” brand tulajdonosa), mint Megbízott<br>székhely: 1075 Budapest, Madách Imre út 13-14.;<br>adószám: 24078067-2-42<br>cégjegyzékszám: 01-09-989390<br>képviseletében eljár: Bondici Balázs, Ügyvezető<br>szakmai kapcsolattartók: Püski Tamás, Batiz Péter<br><br></td><td><br><br><br></td></tr><tr><td><br><br><br><br></td><td><br><br><br><br></td></tr></table>",
 			"variables": {
-				"workToPerformList": {
-					"type": "list",
-					"list": [],
-					"label": "List of work or services to be performed",
-					"placeholderItem": "Work or services",
-					"placeholderAdd": "Add work or services item...",
-					"description": "A general list of the work and services that [contractor] will perform.",
-					"examples": ["Concept art", "Two promotional videos"]
+				"serviceFee": {
+					"label": "Fee that we offer for our work",
+					"placeholder": "Add work or services fee...",
+					"description": "A general fee of the work and services that will be the key number to calculate our fee",
+					"examples": ["25%"]
 				},
 
 				"workCompletedDate": {
@@ -117,7 +109,6 @@
 
 	"scope2": {
 		"template": [{
-			"text": "<p>If [company] does not pay on time, [contractor] can delay deadlines with as many days as [company] delays the owed payment. If [company] wants [contractor] to perform services that are not listed above, [company] and [contractor] can agree to add services to this agreement or sign a new agreement.</p>",
 			"variables": {
 
 			}
@@ -139,7 +130,6 @@
 			]
 		},
 		"template": [{
-			"text": "<p>After [company] has approved the work delivered by [contractor], [company] agrees to pay [contractor] [receivePaymentOnSigning] [paymentAmount] on [paymentDate].</p>",
 			"variables": {
 				"receivePaymentOnSigning": {
 					"type": "checkbox",
