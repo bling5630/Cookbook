@@ -54,7 +54,7 @@ bot.onText(/^\/gawker((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/cat.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -70,7 +70,7 @@ bot.onText(/^\/liligo((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/dicaprio.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -83,7 +83,7 @@ bot.onText(/^\/odigeo((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/goldshirt.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -96,7 +96,7 @@ bot.onText(/^\/realeyes((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/kevinhart.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -112,7 +112,7 @@ bot.onText(/^\/9gag((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/shaq.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -125,7 +125,7 @@ bot.onText(/^\/balabit((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/xzibit.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -154,7 +154,7 @@ bot.onText(/^\/cognex((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/cat.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -167,7 +167,7 @@ bot.onText(/^\/scarab((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/dicaprio.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -183,7 +183,7 @@ bot.onText(/^\/chemaxon((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/goldshirt.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -196,7 +196,7 @@ bot.onText(/^\/ultinous((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/kevinhart.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -212,7 +212,7 @@ bot.onText(/^\/benovative((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/shaq.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
@@ -225,7 +225,7 @@ bot.onText(/^\/grabowski((\s+\d+)+)$/, function (msg, match) {
   bot.sendMessage(msg.chat.id, result).then(function () {
     // reply sent!
     var chatId = msg.chat.id;
-    var photo = __dirname + '/public/bling.jpg';
+    var photo = __dirname + '/public/xzibit.jpg';
     bot.sendPhoto(chatId, photo, {caption: "yay....bling-bling"});
   });
 });
