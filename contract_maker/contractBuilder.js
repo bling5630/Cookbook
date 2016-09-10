@@ -13,7 +13,7 @@ $(document).ready(function() {
 });
 
 function LoadDefaultAgreement() {
-    LoadFromServer('./contracts/iseeq.json');
+    LoadFromServer('./contracts/iseeq_percentage.json');
 }
 
 function LoadFromLocal(plainText) {
