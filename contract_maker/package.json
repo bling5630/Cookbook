@@ -1,0 +1,14 @@
+{
+  "name": "contract_maker",
+  "version": "0.0.0",
+  "description": "[run the contract_maker$ static . command in order to simulate a local host use the ](http://localhost:8080/contract.html)",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "ramda": "~0.22.1"
+  }
+}
