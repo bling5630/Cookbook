@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#"> <!--<![endif]-->
+<head>
+
+	<!-- easy relative urls for files and images -->
+	<base href="/">
+
+	<!-- Font: Open Sans -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!-- JQuery -->
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<!-- contract builder -->
+	<script type="text/javascript" src="contractBuilder.js"></script>
+	<!-- <script type="text/javascript" src="contractBuilder.js"></script> -->
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="/min/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/min/print.css" media="print">
+
+	<!-- faviconit.com -->
+	<link rel="shortcut icon" href="favicon/favicon.ico?v=01">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="favicon/favicon.ico?v=01">
+	<link rel="icon" type="image/png" sizes="196x196" href="favicon/favicon-192.png?v=01">
+	<link rel="icon" type="image/png" sizes="160x160" href="favicon/favicon-160.png?v=01">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96.png?v=01">
+	<link rel="icon" type="image/png" sizes="64x64" href="favicon/favicon-64.png?v=01">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png?v=01">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png?v=01">
+	<link rel="apple-touch-icon" href="favicon/favicon-57.png?v=01">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/favicon-114.png?v=01">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/favicon-72.png?v=01">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/favicon-144.png?v=01">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/favicon-60.png?v=01">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/favicon-120.png?v=01">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/favicon-76.png?v=01">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/favicon-152.png?v=01">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon-180.png?v=01">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="favicon/favicon-144.png?v=01">
+	<meta name="msapplication-config" content="favicon/browserconfig.xml">
+
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-2042607-20', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+
+</head>
+
+<body>
+	<script type="text/javascript"> $(document).ready(function() { LoadDefaultAgreement(); }); </script>
+</body>
+</html>
+
+<body>
+
+	<div class="container">
+
+		<header class="hideForPrint">
+
+
+		<p><span style="font-size: 1.1em; font-weight: bolder;"><i class="fa fa-file-text fa-fw"></i> IseeQ_contract_maker( )</span> is an agreement generator for inhouse use. <i class="fa fa-warning fa-fw"></i><span id="customInterfaceShow"><i class="fa fa-wrench fa-fw"></i> <a href="javascript:ShowCustomAgreement()">Load custom template.</a></span><span id="defaultInterfaceShow" style="display: none;"><i class="fa fa-wrench"></i> <a href="javascript:ShowDefaultAgreement()">Load default template.</a></span></p>
+
+		<hr>
+
+		</header>
+
+		<div class="sidebar hideForPrint">
+
+			<div id="customInterface" style="display: none;">
+				<h2><i class="fa fa-wrench fa-lg fa-fw"></i> Custom template&nbsp;&nbsp;<span class="beta">BETA</span></h2>
+
+				<p>Check the <a href="reference" target="_blank">reference</a> on how to make changes to the default agreement template or write your own. This feature is in beta. Found a bug? Let me know.</p>
+
+				<p><span id="fileSelectorLabel"><span style="font-size: 0.9em;">Your template: </span></span><span id="fileSelector"><input style="display: inline; width: 220px;" type="file" id="fileInput" accept="application/json"></span></p>
+
+				<hr>
+			</div>
+
+
+
+			<div id="dataSidebar"><div id="agreementSidebar"><h2>Agreement</h2><div class="variables"><p><label>Your legal (company) name:</label> <span class="noborder"><a href="#" data-tooltip="The name of your company as registered in your country." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="companyLegal" value="" placeholder="Full Company Name LLC"><br><label id="companyLegalExamples" style="display: none;" class="exampleLabel">For example: 'Vlambeer vof' or 'Adriaan de Jongh LLC'.</label></p><p><label>Your (company's) short name:</label> <span class="noborder"><a href="#" data-tooltip="The simplified name of your company to be used in this agreement to make it less difficult to read." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="company" value="" placeholder="Company"><br><label id="companyExamples" style="display: none;" class="exampleLabel">For example: 'Vlambeer' or 'Adriaan'.</label></p><p><label>Your full (company) address:</label> <span class="noborder"><a href="#" data-tooltip="The full address of the office of your company." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="companyAddress" value="" placeholder="Vondelpark 5, 1071 AA, Amsterdam, the Netherlands"><br><label id="companyAddressExamples" style="display: none;" class="exampleLabel">For example: 'Vondelpark 5, 1071 AA, Amsterdam, the Netherlands' or '747 Howard Street, San Francisco, CA 94103, United States'.</label></p><p><label>Contractors' legal (company) name:</label> <span class="noborder"><a href="#" data-tooltip="The registered company name of the contractor." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="contractorLegal" value="" placeholder="Contractor"><br><label id="contractorLegalExamples" style="display: none;" class="exampleLabel">For example: 'John Freelancer' or 'HisCompany LLC'.</label></p><p><label>Contractors' (company) short name:</label> <span class="noborder"><a href="#" data-tooltip="The simplified name of the contractors' company to be used in this agreement to make it less difficult to read." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="contractor" value="" placeholder="Contractor"><br><label id="contractorExamples" style="display: none;" class="exampleLabel">For example: 'John' or 'HisCompany'.</label></p><p><label>Contractors' full (company) address:</label> <span class="noborder"><a href="#" data-tooltip="The full address of the office of the contractors' company." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="contractorAddress" value="" placeholder="Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France"><br><label id="contractorAddressExamples" style="display: none;" class="exampleLabel">For example: 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France' or '10900 NE 4th street, #500 Bellevue, WA 98004, United States'.</label></p><p><label>Name of the project:</label> <span class="noborder"><a href="#" data-tooltip="The (work-in-progress) title of the game or project." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="projectName" value="" placeholder="Game"><br><label id="projectNameExamples" style="display: none;" class="exampleLabel">For example: 'Fingle' or 'Thirty Flights of Loving'.</label></p></div></div><div id="scopeSidebar"><h2>Services and deadlines</h2><p class="selector"><label>How do you want to define the work and services? </label> <span class="noborder"><a href="javascript:void(0)" data-tooltip="It may be important to keep the list of services in this agreement broad enough so that edge cases are also included. However, if it is absolutely clear what [contractor] will be doing, you can still get as specific as you would like. In many cases, work and services are defined per milestone so that [contractor] can also get paid per milestone instead of once at the end or through a fixed fee." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><select><option value="scope0" selected="">Project-based</option><option value="scope1">Milestone-based</option></select></p><div class="variables"><p><label>List of work or services to be performed:</label> <span class="noborder"><a href="#" data-tooltip="A general list of the work and services that [contractor] will perform." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="workToPerformList0" value="" placeholder="Add work or services item..."><br><label id="workToPerformListExamples" style="display: none;" class="exampleLabel">For example: 'Concept art' or 'Two promotional videos'.</label></p><p><label>Date of work completed:</label> <span class="noborder"><a href="#" data-tooltip="The date [contractor] will have completed all work and services for this agreement." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="workCompletedDate" value="" placeholder="the release of the game"><br><label id="workCompletedDateExamples" style="display: none;" class="exampleLabel">For example: 'the release of the game' or 'November 15th, 2025'.</label></p></div></div><div id="scope2Sidebar"><div class="variables"></div></div><div id="compensationSidebar"><h2>Compensation</h2><p class="selector"><label>What kind of compensation will [contractor] receive? </label> <span class="noborder"><a href="javascript:void(0)" data-tooltip="To decide which kind of compensation fits your agreement, you need to consider the risk vs payoff for both parties. With a fixed fee, fixed rate, or payments per milestone, the risk is low for [contractor] (he or she will get paid, no matter the success of the game), high for [company] (it's a fixed cost, even if the game doesn’t do well), the payoff low for [contractor] (who won't make more money if the game becomes a success) and potentially high for [company] (if the game becomes a success, the costs of [contractor] will become marginal). With a percentage of gross receipt, the risks are high for [contractor] (if the game flops, he or she doesn't get paid), low for [company] (no expense unless money is made), the payoff potentially high for [contractor] (in case of success) but lower for [company] (makes less in the long term). Keep in mind that gross receipts is the money that [company] receives, not the price of the game to the consumer or the money that any publisher receives." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><select><option value="compensation0" selected="">A fixed fee</option><option value="compensation1">A fixed rate</option><option value="compensation2">A fee per milestone</option><option value="compensation3">A percentage of gross receipts</option></select></p><div class="variables"><p><input type="checkbox" id="receivePaymentOnSigning" name="receivePaymentOnSigning"><label for="receivePaymentOnSigning">Include payment on signing.</label> <span class="noborder"><a href="#" data-tooltip="Will [contractor] receive a payment on signing this document?" tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span></p><p><label>Fee to be paid on payment date + currency:</label> <span class="noborder"><a href="#" data-tooltip="The amount of money [contractor] will receive on the payment date." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="paymentAmount" value="" placeholder="3,000 USD"><br><label id="paymentAmountExamples" style="display: none;" class="exampleLabel">For example: '13,000 USD' or '10.000 EUR'.</label></p><p><label>Payment date:</label> <span class="noborder"><a href="#" data-tooltip="The date [contractor] will receive the payment." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="paymentDate" value="" placeholder="the release date of the game"><br><label id="paymentDateExamples" style="display: none;" class="exampleLabel">For example: 'the release date of the game' or 'November 15th, 2025'.</label></p></div></div><div id="compensationInvoicingSidebar"><div class="variables"><p><input type="checkbox" id="contractorSendsInvoices" name="contractorSendsInvoices" checked=""><label for="contractorSendsInvoices">[contractor] sends invoices to receive payments.</label> <span class="noborder"><a href="#" data-tooltip="Will [contractor] send an invoice to receive payment from [company]? It is often useful to have the [contractor] send invoices for their payments so that [company] doesn't have to do any additional tax administration." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span></p><p><label>Payment method:</label> <span class="noborder"><a href="#" data-tooltip="How [company] will transfer the money to [contractor]." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="paymentMethod" value="" placeholder="bank transfer"><br><label id="paymentMethodExamples" style="display: none;" class="exampleLabel">For example: 'wire or bank transfer' or 'cheque'.</label></p><p><input type="checkbox" id="companyCoversExpenses" name="companyCoversExpenses"><label for="companyCoversExpenses">Some expenses are covered by [company].</label> <span class="noborder"><a href="#" data-tooltip="Will [company] cover specific expenses that [contractor] needs to make in order to perform his services?" tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span></p></div></div><div id="ipSidebar"><h2>Rights to the work</h2><p class="selector"><label>What happens to the rights of the work? </label> <span class="noborder"><a href="javascript:void(0)" data-tooltip="For games and other creative projects, intellectual property rights (IP) protect everything tangible created by people, from visuals to code to music to videos, but not design concepts. IP is automatically owned by its maker. [contractor] and [company] can use this agreement to give [company] the right to use [contractor]'s IP ([company] gets most rights), or to transfer the IP from [contractor] to [company] ([company] gets all rights)." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><select><option value="ip0" selected="">[company] can use [contractor]'s work</option><option value="ip1">[company] will own [contractor]'s work</option></select></p><div class="variables"><p><label>Scope of the granted rights:</label> <span class="noborder"><a href="#" data-tooltip="Where, for how long, and for what platforms [company] may use the work that [contractor] delivers to [company] for this agreement." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="scopeOfRights" value="" placeholder="worldwide, indefinitely, for every distribution platform"><br><label id="scopeOfRightsExamples" style="display: none;" class="exampleLabel">For example: 'worldwide, indefinitely, on every distribution platform' or 'worldwide, for two years after first launch, on the Apple iOS App Store'.</label></p></div></div><div id="ip2Sidebar"><div class="variables"><p><input type="checkbox" id="allowContractorUses" name="allowContractorUses"><label for="allowContractorUses">Allow [contractor] to use the work for specific purposes.</label> <span class="noborder"><a href="#" data-tooltip="Allow [contractor] to use the delivered work for specific purposes." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span></p></div></div><div id="confidentialitySidebar"><h2>Confidential information</h2><label>This section has no variable data.</label><div class="variables"></div></div><div id="disagreementSidebar"><h2>In case of a disagreement</h2><div class="variables"><p><label>Country or state of law and courts:</label> <span class="noborder"><a href="#" data-tooltip="Choose here what laws apply to the agreement, and what courts are allowed to rule if there is a conflict over this agreement." tabindex="-1"><i class="fa fa-question-circle" style="vertical-align: middle;"></i></a></span><br><input type="text" name="jurisdiction" value="" placeholder="Massachusetts, USA"><br><label id="jurisdictionExamples" style="display: none;" class="exampleLabel">For example: 'Massachusetts, USA' or 'The Netherlands'.</label></p></div></div><div id="signaturesSidebar"><h2>Signatures</h2><label>This section has no variable data.</label><div class="variables"></div></div></div>
+
+			<h2>Clear, save, or sign this agreement:</h2>
+			<p id="resetButton"><i class="fa fa-trash-o fa-lg fa-fw"></i> <a href="javascript:RequestDataReset()">Clear data and reset agreement</a>.</p>
+			<p id="printButton"><i class="fa fa-print fa-lg fa-fw"></i> <a href="javascript:TryPrint()">Print agreement or save it as PDF</a>.</p>
+			<!-- <p><i class="fa fa-pencil fa-lg fa-fw"></i> (Recommended) Sign using <a href="https://www.hellosign.com/" target="_blank">HelloSign</a>.</p> -->
+
+			<hr>
+
+
+		</div>
+		<div class="content whiteBackground">
+			<div id="content"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div>
+
+
+
+
+	<script type="text/javascript"> $(document).ready(function() { LoadDefaultAgreement(); }); </script>
+
+
+
+</body>

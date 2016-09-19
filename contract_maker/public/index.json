@@ -1,0 +1,171 @@
+{
+  "contractInfo": {},
+
+  "scope": {
+    "header": "Megbízási szerződés munkaerő-közvetítés szolgáltatás nyújtására",
+
+    "template": [{
+      "text": "<p> amely létrejött</p><br>egyrészről a [hereinafter_client], mint Megbízó között<br><br>székhely: [address]<br><br>adószám: [tax_registration_number]<br><br>registration number: [registration_number]<br><br>képviseletében eljár: [represented_by]<br><br>szakmai kapcsolattartó: [contact]<br><p></p><table style='width: 100%; border: 0;'><tr><td style='width: 50%;'></td><td style='width: 50%;'></td></tr><tr><td>másrészről az IseeQ Kft (az „IseeQ” brand tulajdonosa), mint Megbízott<br>székhely: 1075 Budapest, Madách Imre út 13-14.;<br>adószám: 24078067-2-42<br>cégjegyzékszám: 01-09-989390<br>képviseletében eljár: Bondici Balázs, Ügyvezető<br>szakmai kapcsolattartók: [contact_1]<br><br></td><td><br><br><br></td></tr></table>",
+      "variables": {
+        "hereinafter_client": {
+          "label": "name of the partner",
+          "placeholder": "9gag, ustream, amazon",
+          "examples": ["Uber, Twitter, Google, Emarsys"]
+        },
+        "address": {
+          "label": "address of the partner",
+          "placeholder": "Budapest, 1074, Dob u. 25, 1074",
+          "examples": ["1075 Budapest, Madach Imre str. 13-14"]
+        },
+        "tax_registration_number": {
+          "label": "tax_registration_number",
+          "placeholder": "24078067-2-42",
+          "examples": ["24082567-0-11"]
+        },
+        "registration_number": {
+          "label": "registration_number",
+          "placeholder": "01-09-989390",
+          "examples": ["01-09-989390, 08-02-123456"]
+        },
+        "represented_by": {
+          "label": "represented_by",
+          "placeholder": "Sebestyén Balazs, Gera Zoltá, Elon Musk",
+          "examples": ["Constance Bonacieux, James Bond, Frank Semyon"]
+        },
+        "contact": {
+          "label": "contact",
+          "placeholder": "Tom McHale, Larry Bird, Oszkó Péter",
+          "examples": [
+            "Magic Johnson, John Carmack, Marty Cagan, Hosszú Katinka"
+          ]
+        }
+      }
+    }]
+  },
+
+  "agreement": {
+    "header": "1./ Definíciók",
+    "template": [{
+      "text": "<p>\"Díj\" IseeQ szolgáltatásainak ellenértéke, Közvetített Személy (i) bármely, az IseeQ által az Ügyfél részére munkaválallói vagy tanácsadói pozícióra toborzott és kiválasztott természetes személy, (ii) bármely, az által az Ügyfél részére toborzott és kiválasztott jogi személy, Megbízás IseeQ és az Ügyfél közötti megállapodás, melynek alapján IseeQ minden tőle elvárhatót megtesz annak érdekében, hogy az Ügyfél részére Közvetített Személyt toborozzon, Ügyfél a fent megjelölt megbízóként szerződő természetes, vagy jogi személy, aki Közvetített Személy toborzására és kiválasztására irányuló megbízást ad, továbbá minden természetes és jogi személy, aki kapcsolatban áll ezzel a természetes, vagy jogi személlyel.</p>",
+      "variables": {
+        "contact_1": {
+          "label": "contact_1",
+          "placeholder": "Tomas Lindahl, Petőfi Sándor, Angus Deaton",
+          "examples": [
+            "Fischer Iván, Bruce Arians, Phil Jackson, Mike Krzyzewski"
+          ]
+        }
+      }
+    }]
+  },
+
+  "scope2": {
+    "header": "2./ Megbízás",
+    "template": [{
+      "text": "<p>Ügyfél megbízza IseeQ-t a csatolt Megrendelőlapon megjelölt pozíciók kapcsán munkaerő-közvetítés szolgáltatások nyújtására. IseeQ a megbízást elfogadja.</p>",
+      "variables": {}
+    }]
+  },
+
+  "scope3": {
+    "header": "3./ A Megbízás teljesítése",
+    "template": [{
+      "text": "<p>3.1 IseeQ köteles tőle elvárható módon mindent megtenni a Megbízás teljesítése érdekében. A szerződés aláírása után IseeQ átbeszéli az Ügyfél által megjelölt kapcsolattartóval és az Ügyfél megfelelő szakmai vezetőjével a munkakör részleteit, illetve a céggel kapcsolatos tudnivalókat, minekután nekikezd a (IT) szakmai közösségekben a megfelelő szakemberek felkutatásának. A szerződés aláírását követő négy hétben IseeQ elkezdi bemutatni az első jelölteket a szerződésben megfogalmazott feladatkörökre, és teszi ezt folyamatosan mindaddig, amíg azok betöltésre nem kerülnek. A jelöltek bemutatása első lépésben egy, a pályázó által küldött önéletrajzból, illetve a IseeQ által a jelölttel létrejött személyes interjú során készített bemutatóból áll. IseeQ a szolgáltatás nyújtásának teljes időtartama alatt rendelkezésre áll, hogy a felek közötti kommunikációt elősegítse és mediáljon.</p><br>3.2 A Megbízás teljesítettnek tekintendő abban az esetben, ha a Megbízás hatályosulását követő 12 hónapon belül egy IseeQ által ajánlott Közvetített Személy (a) munkaviszonyt, vagy munkavégzésre irányuló egyéb jogviszonyt; vagy (b) egyéb szerződéses jogviszonyt létesít az Ügyféllel; vagy (c) az Ügyfél részére munkát végez.<br><br>3.3 Amennyiben a meghatározott három hónapos Garanciaidőszakon belül a Közvetített Személy jogviszonya megszűnik, úgy az IseeQ külön díjazás nélkül egy alkalommal ismételten eljár Közvetített Személy toborzásának érdekében az eredeti feltételek szerint.<br><br>A garancia nem érvényes abban az esetben, ha a Közvetített Személy jogviszonya azért szűnik meg, mert a toborzás kezdetén rögzített munkaköri specifikációtól lényegesen eltérő tényleges munka- vagy feladatkörben kerül az Ügyfél által alkalmazásra. Amennyiben a garancia keretében ismételten Közvetített Személy jogviszonya a fenti feltételek szerint megszüntetésre kerül, úgy IseeQ az eredeti Díj 80% mértékének megfelelő Díj ellenében vállal új toborzást és kiválasztást. Abban az esetben, ha harmadjára is Közvetített Személy jogviszonya a fenti feltételek szerint megszüntetésre kerül, úgy IseeQ az eredeti Díj 100% mértékének megfelelő Díj ellenében vállal új toborzást és kiválasztást.<br><br>3.4 Ügyfél köteles az IseeQ által Közvetített Személy szakmai alkalmasságát megállapítani és a személyes megbeszélés időpontját meghatározni az adott jelölt személyi anyagának átadásától számított legkésőbb 8 munkanapon belül.<br><br>3.5 Abban az esetben, ha a kiválasztási folyamat alatt az Ügyfél az IseeQ által közvetített jelöltön keresztül kerül kapcsolatba, új potenciális szakemberekkel, Őket az IseeQ-hoz köteles irányítani. Ezen jelöltek a IseeQ által Közvetített Személyeknek minősülnek. Miután a jelölt felvételt nyert az Ügyfélhez, ez a pont érvényességét veszti.<br><br>3.6 Ügyfél köteles a körülményeiben esetlegesen beállt változást – amely a szakember szükségletét, a szakemberrel szembeni követelmények esetleges változását eredményezi, vagy eredményezheti, - haladéktalanul, írásban, az IseeQ tudomására hozni.<br><br>3.7 Ügyfél tudomásul veszi, hogy az IseeQ által hozzá eljuttatott személyi anyagokat, ill. információkat csak jelen szerződés tárgyát képező tevékenység során használhatja fel.<br><br>3.8 Ügyfél teljes anyagi és morális felelősséget és készfizető kezességet vállal az általa képviselt cégek fizetési hajlandósága kapcsán.<br>",
+      "variables": {}
+    }]
+  },
+
+  "scope4": {
+    "header": "4./ Díj",
+    "template": [{
+      "text": "<p>4.1 A Megbízás teljesítésének ellenértékeként IseeQ a jelölt éves bruttó alapfizetésének [amount] %-os Díjára jogosult. A teljes Díj akkor válik esedékessé, (1) amikor az Ügyfél a jogviszony feltételeiről a Közvetített Személlyel megállapodik, vagy azon a napon, (2) mikor a Közvetített Személy az Ügyfél részére először munkát végez, vagy (3) a Közvetített Személy alkalmazásának kezdőnapján, amennyiben ezen utóbbi időpontok (2) vagy (3) korábbiak lennének annál, amikor (1) az Ügyfél és a Közvetített Személy a jogviszony feltételeiről megállapodik.</p><br>4.2 Abban az esetben, ha több, a IseeQ által Közvetített Személy létesít jogviszonyt az Ügyféllel, úgy IseeQ jogosult minden egyes Közvetített Személy tekintetében a Díjat felszámítani.<br><br>4.3 Amennyiben az Ügyfél és a Közvetített Személy megállapodást köt, úgy ezen megállapodás megkötésének időpontját követő három munkanapon belül az Ügyfél IseeQ-t értesíteni köteles. Egyúttal Ügyfél köteles minden olyan, az 4.1 és 4.2 pontok szempontjából lényeges információt közölni ISEEQ-rel, amelyek a Díj megállapítása szempontjából fontosak.<br>",
+      "variables": {
+        "amount": {
+          "label": "amount",
+          "placeholder": "20, ,21, 22, 23, 24, 25.....",
+          "examples": ["20, 23, 25, 27, 30"]
+        }
+      }
+    }]
+  },
+
+  "scope5": {
+    "header": "5./ Kizárólagosság",
+    "template": [{
+      "text": "<p>5.1 Amennyiben IseeQ és az Ügyfél kizárólagossági időtartamban állapodnak meg, úgy az Ügyfél köteles ezen időszak alatt tartózkodni attól, hogy a Megbízással érintett pozíciót függetlenül, illetve harmadik felek közreműködése útján töltse be. A kizárólagosság időtartama alatt a IseeQ kizárólagosan jogosult az Ügyfélhez Közvetített Személyt javasolni.</p><br>5.2 Abban az esetben, ha az Ügyfélnek a kizárólagosság időtartama alatt jelöltek állnak rendelkezésére, köteles azokat a IseeQ-hez irányítani. Ezen jelöltek a IseeQ által Közvetített Személyeknek minősülnek.<br>",
+      "variables": {}
+    }]
+  },
+
+  "scope6": {
+    "header": "6./ Fizetés",
+    "template": [{
+      "text": "<p>6.1 Az Ügyfél a IseeQ által kiszámlázott összegeket a számla kiállításának napjától számított [invoice_date] napon belül köteles megfizetni. A fizetés banki átutalás útján, a IseeQ által megjelölt bankszámlára történik. A IseeQ számlájának kézhezvételét követően az Ügyfél azt egy héten belül megvizsgálni köteles. Abban az esetben, ha az Ügyfél nem vitatja a számlát írásban a fenti határidőn belül, úgy azt befogadottnak kell tekinteni.</p><br>6.2 Az Ügyfél felé kiszámlázott összegek levonás és visszatartás nélkül teljesítendőek. Az Ügyfél nem jogosult beszámításra. Az Ügyfél nem jogosult a IseeQ felé fennálló fizetési kötelezettségének felfüggesztésére.<br><br>6.3 Az Ügyfél a fizetési határidő lejártakor automatikusan késedelembe esik. Ebben az esetben a ISEEQ bármilyen jogalapon az Ügyféllel szemben fennálló követelése azonnal esedékessé válik.<br><br>6.4 Ügyfél az időben meg nem fizetett összegek tekintetében a Ptk. szerinti késedelmi kamatot köteles a IseeQ felé fizetni a késedelembe esés napjától kezdődően a teljesítésig fennálló időtartamra.<br><br>6.5 Ügyfél késedelembe esésének esetén az Ügyfél köteles a a IseeQ minden vonatkozó bírósági és bíróságon kívüli költségét megtéríteni. A bírósági eljáráson kívüli költségek a meg nem fizetett összeg 15%-át, de minimum 50.000,- Ft összeget tesznek ki.<br>",
+      "variables": {
+        "invoice_date": {
+          "label": "amount",
+          "placeholder": "5, 10, 15, 20, 25.....",
+          "examples": ["15, 30"]
+        }
+      }
+    }]
+  },
+
+  "scope7": {
+    "header": "7./ Ügyfél kötelezettségei",
+    "template": [{
+      "text": "<p> Ügyfél kötelezettséget vállal arra, hogy a IseeQ bevonása nélkül, a IseeQ általi bemutatástól számított 12 hónap időtartam alatt a Közvetített Személyekkel nem lép munka-, vagy egyéb szolgáltatási (megbízás, vállalkozási stb.) jogviszonyba. Amennyiben az Ügyfél ezen kötelezettségét megsérti, úgy kötbért köteles a IseeQ felé fizetni, mely azonnal esedékes, és amelynek mértéke megegyezik a Díj mértékével. A kötbéren túl IseeQ jogosult felmerült kárának megtérítésére.</p>",
+      "variables": {
+
+      }
+    }]
+  },
+
+  "scope8": {
+    "header": "8./ Felelősség",
+    "template": [{
+      "text": "<p>IseeQ felelőssége abban az összegben kerül korlátozásra, amelyet az Ügyfél a Megbízás tekintetében IseeQ részére a kár bekövetkezésének időpontjáig megfizetett. IseeQ nem vállal kártérítési vagy egyéb felelősséget az általa Közvetített Személy által az Ügyfélnél, vagy harmadik személynél okozott károk tekintetében.</p>",
+      "variables": {
+
+      }
+    }]
+  },
+  "scope9": {
+    "header": "9./ Magatartási Szabályok",
+    "template": [{
+      "text": "<p>9.1 A Megbízás – melynek során Közvetített Személy jogviszonyba lépett az Ügyfélnél – teljesítésétől számított 12 hónapos időtartam alatt a IseeQ nem keres meg aktívan az Ügyfélnél munkát végző / szolgáltatást teljesítő Személyt.</p><br>9.2 A Közvetített Személyek kizárólag az után kerülnek az Ügyfél részére bemutatásra, hogy meghallgatásra és a kérdéses pozícióról tájékoztatásra kerültek.<br><br>9.3 IseeQ az Ügyfél és a Közvetített Személy szervezeti és személyes adatai tekintetében titoktartásra kötelezett. Személyes adat kizárólag az érintett Közvetített Személy jóváhagyása alapján kerül továbbításra.<br>",
+      "variables": {
+
+      }
+    }]
+  },
+  "scope10": {
+    "header": "10./ Alkalmazandó jog; eljáró bíróság",
+    "template": [{
+      "text": "<p>A jelen Megbízás és egyéb vonatkozó jogviszony tekintetében a magyar jog az irányadó. Bírósági hatásköri és illetékességi kikötést a felek nem tesznek, a jogvitákra a Polgári Perrendtartás szerinti bíróság jogosult.</p>",
+      "variables": {
+
+      }
+    }]
+  },
+  "scope11": {
+    "template": [{
+      "text": "<p>Kelt: Budapest, [dated].</p>",
+      "variables": {
+        "dated": {
+          "label": "date",
+          "placeholder": "2016. szeptember 12, 1815. június 18",
+          "examples": ["1969. július 20, 1867. július 28"]
+        }
+      }
+    }]
+  },
+  "scope12": {
+    "template": [{
+      "text": "<br><p>Megbízó __________________ ISEEQ Kft</p><p>Megbízott __________________</p><br>",
+      "variables": {
+
+      }
+    }]
+  }
+}

@@ -4,11 +4,16 @@
   "description": "[run the contract_maker$ static . command in order to simulate a local host use the ](http://localhost:8080/contract.html)",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "ramda": "~0.22.1"
+    "ramda": "~0.22.1",
+    "express": "~4.14.0",
+    "path": "~0.12.7",
+    "morgan": "~1.7.0",
+    "fs": "0.0.1-security",
+    "body-parser": "~1.15.2"
   }
 }
