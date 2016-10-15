@@ -1,18 +1,18 @@
 var fs = require('fs');
 
 // sync
-var file = fs.readFileSync('alma');
+var file = fs.readFileSync('alma.txt');
 console.log(file.toString());
 
 
 // async
 
-fs.readFile('alma', function(err, file) {
+fs.readFile('sample.txt', function(err, file) {
   console.log(file.toString());
 });
 
 function getAlmaContentAndKorte(cb) {
-  fs.readFile('alma', function(err, file) {
+  fs.readFile('alma.txt', function(err, file) {
     var output = '';
     output = file.toString();
     output = 'korte';

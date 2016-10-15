@@ -13,7 +13,7 @@ readTXT('sample', function(err, data) {
 
 setTimeout(function() {
   console.log("end2");
-}, 500);
+}, 50);
 
 setTimeout(function() {
   readTXT('alma', function(err, data) {
