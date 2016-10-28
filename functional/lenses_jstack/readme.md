@@ -1,0 +1,1 @@
+inspired by [using functional lenses to handle complex json structures in javascript](http://jstack.eu/using-functional-lenses-to-handle-complex-json-structures-in-javascript/?utm_content=buffer223e3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)

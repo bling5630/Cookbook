@@ -1,0 +1,10 @@
+{
+	"name": "John Doe",
+	"date-of-birth": 123456789,
+	"email": "j.doe@provider.com",
+	"address": {
+		"street": "Main"
+		"houseNumber": "3454",
+		"bus": "2b"
+	}
+}
