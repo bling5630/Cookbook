@@ -1,50 +1,10 @@
--- sudo apt-get install sublime-text
--- haskell-platform haskell.org-rol
--- sublime text 2
---kifejezes `futtasd` strategia
-
 
 main = do
-    --putStrLn (show 2)
-    print 6
-    print 3434
-    --print (multiply 2 3)
-    --print (2 `multiply` 3)
     --print (isTwo 2)
     --print (isThisKutya Beka)
     putStrLn (show2 (Macska2 20 "bela"))
     --print ()
     print (getRuhaMarkaFromAllatIfItIsPulover (Macska3 20 "bela" (Pulover "H&M")))
-
-
-
-multiply :: Int -> Int -> Int
-multiply x1 x2 = x1 * x2
-
-ketto :: Int
-ketto = 2
-
-isTwo :: Double -> Bool
-isTwo x =
-    if (x == 2)
-        then True
-        else False
-
-isTwo2 :: Double -> Bool
-isTwo2 x
-    | x == 2 = True
-    | otherwise = False
-
-isTwoOrFour :: Int -> Bool
-isTwoOrFour x =
-    if (x == 2)
-        then True
-        else if (x == 4)
-            then True
-            else False
-
--- == , /=
-
 
 -- ADT
 data Allat
@@ -112,6 +72,5 @@ bonyolultAlgebraiSzamolas x = k
 bonyolultAlgebraiSzamolas2 :: Int -> Int
 bonyolultAlgebraiSzamolas2 x =
     let y = x + 2 in 10 + y
-
 
 
