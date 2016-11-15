@@ -4,4 +4,6 @@ multiply x1 x2 = x1 * x2
 
 main = do
 	print (multiply 2 3)
-	print (2 `multiply` 10)
+	print (2 `multiply` 14)
+	
+

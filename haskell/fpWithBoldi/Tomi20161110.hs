@@ -1,12 +1,9 @@
 
 main = do
-    --print (isTwo 2)
-    --print (isThisKutya Beka)
     putStrLn (show2 (Macska2 20 "bela"))
-    --print ()
     print (getRuhaMarkaFromAllatIfItIsPulover (Macska3 20 "bela" (Pulover "H&M")))
 
--- ADT
+-- AlgebraicDataTypes
 data Allat
     = Macska
     | Kutya
