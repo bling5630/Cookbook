@@ -1,1 +1,0 @@
-etree = Node (Node (Node Tip 1 Tip) 3 (Node Tip 4 Tip)) 5 (Node Tip 7 Tip)

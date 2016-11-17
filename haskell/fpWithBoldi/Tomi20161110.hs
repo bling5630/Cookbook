@@ -1,4 +1,3 @@
-
 main = do
     putStrLn (show2 (Macska2 20 "bela"))
     print (getRuhaMarkaFromAllatIfItIsPulover (Macska3 20 "bela" (Pulover "H&M")))
