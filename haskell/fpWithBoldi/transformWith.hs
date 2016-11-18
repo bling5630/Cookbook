@@ -12,4 +12,5 @@ addThree x = x + 3
 
 main = do
 	print $ transformWith multiplyBy2 3	
-	print $ transformWith addThree 6
+	print $ transformWith addThree 6	
+	print $ transformWith addThree 9

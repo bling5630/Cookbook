@@ -30,7 +30,7 @@ main = do
 
     print $ myMap multiplyBy2 [1,2,3]
 
-    print $ vilagvegeigRekurzio [1,2,3]
+    -- print $ vilagvegeigRekurzio [1,2,3]
 
 
     where
@@ -62,9 +62,6 @@ addTwoToAllElements (head:tail) = (head + 2) : addTwoToAllElements tail
 
 transformWith :: (Int -> Int) -> Int -> Int
 transformWith f x = f x
-
-
-
 
 multiplyBy2 :: Int -> Int
 multiplyBy2 x = x * 2
