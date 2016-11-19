@@ -102,7 +102,6 @@ reverseList :: [a] -> [a]
 reverseList [] = []
 reverseList (x:xs) = reverseList xs +++ [x]
 
-
 myMap :: (a -> b) -> [a] -> [b]
 myMap _ [] = []
 myMap f (head:tail) = f head : myMap f tail
