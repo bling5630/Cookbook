@@ -16,3 +16,5 @@ main = do
 	print (zipWith (flip div) [2,2..] [10,8,6,4,2])
 	print $ flip' zip [1,2,3,4,5] "hello"
 	print $ flip' zip [9,8,7,6,5] "bello"
+	print $ flip zip [9,8,7,6,5] [1,2,3,4,5]
+	print $ flip zip "hello" "bello"
