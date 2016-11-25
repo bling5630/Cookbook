@@ -1,0 +1,1 @@
+main = print $ let (fw, rest) = span (/=' ') "This is a sentence" in "First word:" ++ fw ++ ", the rest:" ++ rest 
