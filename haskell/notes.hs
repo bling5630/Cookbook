@@ -24,4 +24,8 @@ search needle haystack =
     let nlen = length needle  
     in  foldl (\acc x -> if take nlen x == needle then True else acc) False (tails haystack)  
 
-5
+5 webservers, frameworks?
+
+6 stack?
+
+7 http://www.yesodweb.com/book/basics

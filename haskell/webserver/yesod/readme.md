@@ -1,0 +1,1 @@
+inspired by [yesodweb.com/page/quickstart](http://www.yesodweb.com/page/quickstart)
