@@ -29,3 +29,8 @@ search needle haystack =
 6 stack?
 
 7 http://www.yesodweb.com/book/basics
+http://stackoverflow.com/questions/32200773/getting-could-not-find-module-yesod-when-i-try-to-run-first-example-from-yes
+
+8 https://www.youtube.com/watch?v=BEWJnDgrmp0
+/home/tamas/my_cookbok/haskell/webserver/yesdBasics/helloWorld.hs:6:8:
+    Could not find module `Yesod'
