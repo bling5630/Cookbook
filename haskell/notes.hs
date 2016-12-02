@@ -34,3 +34,13 @@ http://stackoverflow.com/questions/32200773/getting-could-not-find-module-yesod-
 8 https://www.youtube.com/watch?v=BEWJnDgrmp0
 /home/tamas/my_cookbok/haskell/webserver/yesdBasics/helloWorld.hs:6:8:
     Could not find module `Yesod'
+
+9 https://gist.github.com/aaronlevin/0ac2df65a8aafcd4fe3240454e37e26d
+-- tamas@tamas-S400:~/my_cookbok/haskell/aaronlevin$ runhaskell http.hs 
+-- http.hs:6:8:
+--     Could not find module `Network.Wai.Handler.Warp'
+--     Perhaps you meant
+--       Network.Wai.Handler.CGI (from wai-extra-3.0.1.2)
+--       Network.Wai.Handler.SCGI (from wai-extra-3.0.1.2)
+--     Use -v to see a list of the files searched for.
+-- tamas@tamas-S400:~/my_cookbok/haskell/aaronlevin$
