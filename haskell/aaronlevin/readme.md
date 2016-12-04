@@ -1,0 +1,1 @@
+inspired by [Minimal Haskell HTTP server written on top of warp via the Web Application Interface (no frameworks)](https://gist.github.com/aaronlevin/0ac2df65a8aafcd4fe3240454e37e26d)

@@ -1,0 +1,1 @@
+inspired by [02-importing-code-assignment](https://github.com/seanhess/practical-haskell/tree/master/02-importing-code)

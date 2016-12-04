@@ -13,7 +13,7 @@ application req continuation =
       path = pathInfo req
    in case (method, path) of
         ("GET", ["hello" , "world"]) ->
-          continuation (responseLBS status200 [] "!")
+          continuation (responseLBS status200 [] "hello tamas!")
         _ ->
           continuation (responseLBS status401 [] "ERROR")
 

@@ -1,0 +1,1 @@
+inspired by [practical-haskell-importing-code](http://seanhess.github.io/2015/08/17/practical-haskell-importing-code.html)

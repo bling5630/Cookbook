@@ -1,0 +1,108 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-04 09:38:39.842894 UTC
+
+interface main@main:Main 8001
+  interface hash: ef131867219cd9734bb72c355b1f6823
+  ABI hash: a6174b94907492f06a3dc928559823a3
+  export-list hash: 990282355568899741ea26e64e3cca2f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 440f4263caa5fe58b00d61313ab1348f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.greet
+  Main.main
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+6074c6d68e255df5e5100942d67bfa07
+  greet :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (name :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   "Hello "#
+                   (GHC.Base.++ @ GHC.Types.Char name Main.greet1)) -}
+71362e62726a5fd2d1b6ff45f2c02e1a
+  greet1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "!"#) -}
+e941919bc7bca416cb91564319afa5a0
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+ca12f065c7217e599d9728d45a21c076
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main6
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main4
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.main2
+                   GHC.Types.True
+                   ipv2 } }) -}
+ae768ff41e6d669125a168a969839dcd
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (Main.greet Main.main3) -}
+6e0e7ba5a87c8b7ffd7e7b7ff0fdc75b
+  main3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "everyone"#) -}
+c60476ff46eaa5911c73c9d1c40afd91
+  main4 :: [GHC.Types.Char]
+  {- Unfolding: (Main.greet Main.main5) -}
+c80a4858adf0632b868f2b00d3dadc71
+  main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "bobby"#) -}
+26bf250209342d9974c658257fed6a09
+  main6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "hello world"#) -}
+26bd3f91198108666c60049b823b7500
+  main7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

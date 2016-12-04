@@ -26,7 +26,7 @@ search needle haystack =
 
 5 webservers, frameworks?
 
-6 stack?
+6 stack, ghc, haskellPlatform ?
 
 7 http://www.yesodweb.com/book/basics
 http://stackoverflow.com/questions/32200773/getting-could-not-find-module-yesod-when-i-try-to-run-first-example-from-yes
@@ -44,3 +44,5 @@ http://stackoverflow.com/questions/32200773/getting-could-not-find-module-yesod-
 --       Network.Wai.Handler.SCGI (from wai-extra-3.0.1.2)
 --     Use -v to see a list of the files searched for.
 -- tamas@tamas-S400:~/my_cookbok/haskell/aaronlevin$
+
+10 packages errors
