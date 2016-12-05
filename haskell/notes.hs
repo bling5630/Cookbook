@@ -46,3 +46,15 @@ http://stackoverflow.com/questions/32200773/getting-could-not-find-module-yesod-
 -- tamas@tamas-S400:~/my_cookbok/haskell/aaronlevin$
 
 10 packages errors
+
+11 
+
+-- putStrLn :: String -> IO ()
+
+-- action :: IO ()
+-- action = putStrLn "Hello World"
+
+-- runhaskell index.hs
+-- PutStrLn.hs:3:1:
+--     The type signature for `putStrLn' lacks an accompanying binding
+--       (The type signature must be given where `putStrLn' is declared)

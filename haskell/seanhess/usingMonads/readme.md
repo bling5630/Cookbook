@@ -1,0 +1,1 @@
+inspired by [practical-haskell-using-monads](http://seanhess.github.io/2015/08/18/practical-haskell-using-monads.html)
