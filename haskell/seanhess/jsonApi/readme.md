@@ -1,0 +1,1 @@
+inspired by [practical-haskell-json-api](practical-haskell-json-api)
