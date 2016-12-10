@@ -1,0 +1,1 @@
+inspired by [The wai package](http://hackage.haskell.org/package/wai)
