@@ -1,7 +1,7 @@
 import Data.Char (isDigit)
 
 removeNonNumbers :: String -> String
-removeNonNumbers = filter isDigit
+removeNonNumbers = filter (not . isDigit)
 
 main :: IO ()
 main = do

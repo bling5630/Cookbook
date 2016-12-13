@@ -1,13 +1,18 @@
+import Data.Char (isNumber, isSymbol, isLetter)
+import Data.List.Split (splitOn)
+
 main :: IO ()
 main = do
   input <- readFile "myIntroduction.txt"
-  print $ (removePunctuation . replaceSpecialSymbols) input
+  -- print $ (removePunctuation . filterNumbers . filterSymbol) input
+  print $ (splitOn " " . filterNumbers . removePunctuation) input
 
 -- Removes punctuation
-punctuations = ['!', '"', '#', '$', '%', '(', ')', '.', ',', '?']  
+punctuations = ['!', '"', '#', '$', '%', '(', ')', '.', '?', '*', '/', '-', '=', '*', '[', '|', ']', '{', '}', '&', '+', '<', '>', '@', ':']  
 removePunctuation = filter (`notElem` punctuations)
 
--- Replaces some symbols with a space
-specialSymbols = ['/', '-', '=', '*', '[', '|', ']', '{', '}', '&', '+', '<', '>', '@', ':']
-replaceSpecialSymbols = map $ (\c -> if c `elem` specialSymbols 
-                                     then ' ' else c)
+filterNumbers = filter (not . isNumber) 
+
+filterSymbol = filter (not . isSymbol)
+
+

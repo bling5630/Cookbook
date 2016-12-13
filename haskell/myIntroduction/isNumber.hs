@@ -1,6 +1,6 @@
 import Data.Char (isNumber)
 
-filterNumbers = filter isNumber
+filterNumbers = filter (not . isNumber) 
 
 main :: IO ()
 main = do
