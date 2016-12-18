@@ -1,18 +1,25 @@
-import Data.Char (isNumber, isSymbol, isLetter)
-import Data.List.Split (splitOn)
+import Data.Char (isNumber)
+-- import Data.List (unwords)
 
 main :: IO ()
 main = do
   input <- readFile "myIntroduction.txt"
-  -- print $ (removePunctuation . filterNumbers . filterSymbol) input
-  print $ (splitOn " " . filterNumbers . removePunctuation) input
+  print $ introduction input ++ "thats all folks, from data to tada!!!!:)"
+  print $ (words . introduction) input
+  print $ (words . introduction . filterComas) input
+  print $ filterLetters input
+  print $ input
 
--- Removes punctuation
-punctuations = ['!', '"', '#', '$', '%', '(', ')', '.', '?', '*', '/', '-', '=', '*', '[', '|', ']', '{', '}', '&', '+', '<', '>', '@', ':']  
-removePunctuation = filter (`notElem` punctuations)
+punctuations = ['Ł','¤','ß','÷','”','_','×','Đ','đ','!', '"', '#', '$', '%', '(', ')', '.', '?', '*', '/', '-', '=', '*', '[', '|', ']', '{', '}', '&', '+', '<', '>', '@', ':']  
+removePunctuations = filter (`notElem` punctuations)
 
 filterNumbers = filter (not . isNumber) 
 
-filterSymbol = filter (not . isSymbol)
+introduction = (removePunctuations . filterNumbers)
+
+filterLetters = filter (`elem` ['a'..'z'])
+
+filterComas = filter (`notElem` [','])
+
 
 
