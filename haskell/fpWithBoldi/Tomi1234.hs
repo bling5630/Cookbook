@@ -1,5 +1,5 @@
 main = do
-    print feladat11
+    print feladat11 
     print feladat12
     print feladat2
     print feladat3
@@ -14,7 +14,7 @@ main = do
 --   Vagy az egeszet osszegezni?
 
 -- reszlistak osszege
-feladat11 = map sum $ [[0,3,5,9],[10,0,0,9],[8,5,1,-1]]
+feladat11 = map sum $ [[0,3,5,9],[10,0,0,9],[8,5,1,-1]] 
 -- egesz osszege
 feladat12 = sum $ map sum $ [[0,3,5,9],[10,0,0,9],[8,5,1,-1]]
 
