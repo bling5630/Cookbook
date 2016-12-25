@@ -1,6 +1,12 @@
 main = do
     putStrLn (show2 (Macska2 20 "bela"))
+    putStrLn (show2 (Kutya2 212 "jozsi"))
+    putStrLn (show2 (Beka2 212 "jozsi"))
     print (getRuhaMarkaFromAllatIfItIsPulover (Macska3 20 "bela" (Pulover "H&M")))
+    print $ isKetto 2
+    print $ isKetto 5
+    print $ isThisKutya Kutya
+    print $ isThisKutya Macska
 
 -- AlgebraicDataTypes
 data Allat
@@ -32,6 +38,7 @@ data Allat2
 
 show2 :: Allat2 -> String
 show2 (Macska2 kora neve) = "En egy macska vagyok, aki " ++ show kora ++ " eves es " ++ neve ++ "-nak hivjak."
+show2 (Kutya2 kora neve) = "En egy macska vagyok, aki " ++ show kora ++ " eves es " ++ neve ++ "-nak hivjak."
 show2 _ = "akarmi"
 
 data AllatRuha
