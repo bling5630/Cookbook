@@ -8,9 +8,12 @@ data Car a b c = Car { company :: a
                      , year :: c
                      } deriving (Show)
 
-tellCar :: Car -> String
+tellCar :: (Show a) => Car String String a -> String 
 tellCar (Car {company = c, model = m, year = y}) = "This " ++ c ++ " " ++ m ++ " was made in " ++ show y
 
 stang = Car {company="Ford", model="Mustang", year=1967}
 
-main = print $ tellCar stang
+main = do 
+	print $ tellCar stang
+	print $ tellCar (Car "Ford" "Mustang" 1967)  
+	print $ tellCar (Car "Ford" "Mustang" "nineteen sixty seven")  
