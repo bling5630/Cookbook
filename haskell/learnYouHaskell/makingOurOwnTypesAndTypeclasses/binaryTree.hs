@@ -20,8 +20,24 @@ treeElem x (Node a left right)
 nums = [8,6,4,1,7,3,5] 
 numsTree = foldr treeInsert EmptyTree nums  
 
+numsSecond = [21,121,21,21,34,56,7,8,9,32,35,656,878,9,3,2,6]
+numsTreeSecond = foldr treeInsert EmptyTree numsSecond  
+
+numsThird = [13, 3, 4, 12, 14, 10, 5, 1, 8, 2, 7, 9, 11, 6, 18]
+numsTreeThird = foldr treeInsert EmptyTree numsThird  
+
 main = do
 	print $ numsTree
+	print $ "break"
+	print $ "break"
+	print $ "break"
+	print $ "break"
+	print $ numsTreeSecond
+	print $ "break"
+	print $ "break"
+	print $ "break"
+	print $ "break"
+	print $ numsTreeThird
 	print $ 8 `treeElem` numsTree 
 	print $ 100 `treeElem` numsTree  
 	print $ 1 `treeElem` numsTree  
