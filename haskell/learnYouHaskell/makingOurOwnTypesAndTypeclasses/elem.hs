@@ -26,5 +26,5 @@ instance Show TrafficLight where
 main = do
 	print $ Red === Red
 	print $ Red === Yellow 
-	print $ Red `elem` [Red, Yellow]
 	print $ [Red, Yellow, Green] 
+	print $ Red `elem` [Red, Yellow]

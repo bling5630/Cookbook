@@ -1,0 +1,1 @@
+inspired by [The type signature...lacks an accompanying binding](http://stackoverflow.com/questions/33607508/the-type-signature-lacks-an-accompanying-binding)
