@@ -1,1 +1,1 @@
-Take a look at this piece of code. Is it valid?
+putStr is much like putStrLn in that it takes a string
