@@ -50,7 +50,7 @@ addTwoToAllElements (head:tail) = (head + 2) : addTwoToAllElements tail
 
 
 
-    --print $ map ($ 2) [multiplyBySomething 2, addThree]
+--print $ map ($ 2) [multiplyBySomething 2, addThree]
 
 --($ 2) (multiplyBySomething 2)
 
