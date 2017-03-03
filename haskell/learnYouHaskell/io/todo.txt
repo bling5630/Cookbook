@@ -1,0 +1,2 @@
+abrakadabra
+Let's say we have a file todo.txt that has one task per line that we have to do. Now let's make a program that takes a line from the standard input and adds that to our to-do list.

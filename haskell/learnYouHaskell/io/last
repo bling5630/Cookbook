@@ -1,1 +1,1 @@
-readFile has a type signature of readFile :: FilePath -> IO String
+We can also use hFlush, which is a function that t
