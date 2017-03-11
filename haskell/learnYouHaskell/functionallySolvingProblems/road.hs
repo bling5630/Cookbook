@@ -1,3 +1,10 @@
+import Data.List  
+
+groupsOf :: Int -> [a] -> [[a]]  
+groupsOf 0 _ = undefined  
+groupsOf _ [] = []  
+groupsOf n xs = take n xs : groupsOf n (drop n xs)  
+  
 data Node = Node Road (Maybe Road)  
 data Road = Road Int Node  
 
@@ -32,6 +39,12 @@ optimalPath roadSystem =
             then reverse bestAPath  
             else reverse bestBPath  
 
-main = do 
-	print $ roadStep ([], []) (head heathrowToLondon)  
-	print $ optimalPath heathrowToLondon
+main = do  
+    contents <- getContents  
+    let threes = groupsOf 3 (map read $ lines contents)  
+        roadSystem = map (\[a,b,c] -> Section a b c) threes  
+        path = optimalPath roadSystem  
+        pathString = concat $ map (show . fst) path  
+        pathPrice = sum $ map snd path  
+    putStrLn $ "The best path to take is: " ++ pathString  
+    putStrLn $ "The price is: " ++ show pathPrice  
