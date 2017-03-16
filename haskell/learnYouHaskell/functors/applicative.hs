@@ -12,4 +12,4 @@ main = do
 	print $ pure (+3) <*> Just 10
 	print $ pure (+3) <*> Just 9 
 	print $ Just (++"hahah") <*> Nothing  
-	print $ Nothing <*> Just "woot"
+	print $ (( Nothing <*> Just "woot") :: Maybe Int)
