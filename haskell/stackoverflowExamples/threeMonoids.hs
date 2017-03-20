@@ -1,0 +1,3 @@
+ -- here's a challenge: write at least three different Monoid instances 
+ -- for lists that behave differently, and prove that each of them 
+ -- satisfies the monoid laws. Some of these instances will have constraints
