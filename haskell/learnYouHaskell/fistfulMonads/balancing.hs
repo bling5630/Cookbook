@@ -1,4 +1,4 @@
-type Birds = Int  
+wtype Birds = Int  
 type Pole = (Birds,Birds)
 
 landLeft :: Birds -> Pole -> Pole  
