@@ -1,17 +1,17 @@
-var ml = require('ml-regression');
-var csv = require('csvtojson');
-var SLR = ml.SLR; // Simple Linear Regression
+const ml = require('ml-regression');
+const csv = require('csvtojson');
+const SLR = ml.SLR; // Simple Linear Regression
 
-var csvFilePath = 'advertising.csv'; // Data
+const csvFilePath = 'advertising.csv'; // Data
 let csvData = [], // parsed Data
     X = [], // Input
     y = []; // Output
 
 let regressionModel;
 
-var readline = require('readline'); // For user prompt to allow predictions
+const readline = require('readline'); // For user prompt to allow predictions
 
-var rl = readline.createInterface({
+const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
